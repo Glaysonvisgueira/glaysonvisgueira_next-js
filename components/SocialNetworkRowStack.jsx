@@ -1,70 +1,108 @@
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
 //Material icons
-import FacebookIcon from '@mui/icons-material/Facebook';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const SocialMediaContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+
+	@media (max-width: 600px) {
+		justify-content: space-between;
+	}
 `;
 
 const ButtonSocialMediaIcon = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3px;
-    width: 40px;
-    height: 40px;
-    background-color: #29313C;
-    border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 5px;
+	width: 36px;
+	height: 36px;
+	//background-color: #29313c;
+	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 
-    &:hover {
-        cursor: pointer;
-        opacity: 0.8;
-    }
+	border-radius: 4px;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+
+	@media (max-width: 600px) {
+		margin: 5px;
+	}
 `;
 
 export default function SocialNetworkRowStack() {
-  return (    
-      <SocialMediaContainer>
-        
-        <ButtonSocialMediaIcon>
-            <FacebookIcon sx={{color: '#FCD434'}}/>
-        </ButtonSocialMediaIcon>
+	const router = useRouter();
 
-        <ButtonSocialMediaIcon>
-            <GitHubIcon sx={{color: '#FCD434'}} />
-        </ButtonSocialMediaIcon>
+	function redirectToFacebook() {
+		window.open("https://www.facebook.com/glayson.visgueira", "_ blank");
+	}
 
-        <ButtonSocialMediaIcon>
-            <ContactMailIcon sx={{color: '#FCD434'}} />
-        </ButtonSocialMediaIcon>
+	function redirectToGithub() {
+		window.open("https://github.com/Glaysonvisgueira", "_ blank");
+	}
 
-        <ButtonSocialMediaIcon>
-            <WhatsAppIcon  sx={{color: '#FCD434'}}/>
-        </ButtonSocialMediaIcon>
+	function redirectToEmail() {
+		window.open("mailto:glaysonwow@gmail.com", "_ blank");
+	}
 
-        <ButtonSocialMediaIcon>
-            <TelegramIcon  sx={{color: '#FCD434'}}/>
-        </ButtonSocialMediaIcon>
+	function redirectToWhatsapp() {
+		window.open("https://wa.me/5586999277101/?text=Olá%20Glayson,%20tudo%20bem?%20Vim através de sua página pessoal!", "_ blank");
+	}
 
-        <ButtonSocialMediaIcon>
-            <InstagramIcon sx={{color: '#FCD434'}} />
-        </ButtonSocialMediaIcon>
+	function redirectToTelegram() {
+		window.open("https://t.me/glayson_visgueira", "_ blank");
+	}
 
-        <ButtonSocialMediaIcon>
-            <LinkedInIcon  sx={{color: '#FCD434'}}/>
-        </ButtonSocialMediaIcon>
+	function redirectToInstagram() {
+		window.open("https://www.instagram.com/glayson_visgueira", "_ blank");
+	}
 
-      </SocialMediaContainer>
-     
-  )
+	function redirectToLinkedin() {
+		window.open("https://www.linkedin.com/in/glayson-visgueira-7433a61b3/", "_ blank");
+	}
+
+	return (
+		<SocialMediaContainer>
+			<ButtonSocialMediaIcon onClick={redirectToFacebook}>
+				<FacebookIcon sx={{ color: "#FCD434" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToGithub}>
+				<GitHubIcon sx={{ color: "#FCD434" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToEmail}>
+				<ContactMailIcon sx={{ color: "#FCD434" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToWhatsapp}>
+				<WhatsAppIcon sx={{ color: "#FCD434" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToTelegram}>
+				<TelegramIcon sx={{ color: "#FCD434" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToInstagram}>
+				<InstagramIcon sx={{ color: "#FCD434" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToLinkedin}>
+				<LinkedInIcon sx={{ color: "#FCD434" }} />
+			</ButtonSocialMediaIcon>
+		</SocialMediaContainer>
+	);
 }

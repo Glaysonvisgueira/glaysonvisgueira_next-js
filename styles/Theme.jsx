@@ -1,28 +1,35 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-
-// #171E26
-// #FCD434
-
-
-
-const theme = {
-  colors: {
-    powderWhite: "#FFFDF9",
-    persianGreen: "#06B49A",
-    lightBlue: "#AFDBD2",
-    onyx: "#36313D"
-  },
-  fonts: ["sans-serif", "Roboto"],
-  fontSizes: {
-    small: "1em",
-    medium: "2em",
-    large: "3em"
-  }
+export const blueTheme = {
+	colors: {
+		background: "#171e26",
+		backgroundSecondary: "#29313c",
+		textColorTitle: "#FCD434",
+		textTitle: "#fff",
+		textSubTitle: "#585E68",
+		textBody: "#979797",
+	},
+	fontSizes: {
+		xs: 12,
+		sm: 14,
+		md: 16,
+		lg: 18,
+		xl: 20,
+	},
 };
 
-const Theme = ({ children }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-);
-
-export default Theme;
+export const whiteTheme = {
+	colors: {
+		background: "#fff",
+		backgroundSecondary: "#ccc",
+		textColorTitle: "#FCD434",
+		textTitle: "#000",
+		textSubTitle: "#585E68",
+		textBody: "#979797",
+	},
+	fontSize: {
+		xs: 12,
+		sm: 14,
+		md: 16,
+		lg: 18,
+		xl: 20,
+	},
+};

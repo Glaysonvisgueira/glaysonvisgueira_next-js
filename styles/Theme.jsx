@@ -1,3 +1,10 @@
+/* Created with https://www.css-gradient.com 
+background: #32445C;
+background: -webkit-radial-gradient(center, #32445C, #171E26);
+background: -moz-radial-gradient(center, #32445C, #171E26);
+background: radial-gradient(ellipse at center, #32445C, #171E26);
+*/
+
 export const blueTheme = {
 	colors: {
 		backgroundGradient: "linear-gradient(to right top, #171e26, #1b232b, #202731, #242c36, #29313c)",

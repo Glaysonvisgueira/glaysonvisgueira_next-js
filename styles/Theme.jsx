@@ -35,3 +35,22 @@ export const whiteTheme = {
 		xl: 20,
 	},
 };
+
+export const yellowTheme = {
+	colors: {
+		backgroundGradient: "linear-gradient(to right top, #fcd434, #f9d546, #f6d656, #f3d664, #f0d771)",
+		background: "#fff",
+		backgroundSecondary: "#f0d771",
+		textColorTitle: "#000",
+		textTitle: "#000",
+		textSubTitle: "#362d07",
+		textBody: "#362d07",
+	},
+	fontSizes: {
+		xs: 12,
+		sm: 14,
+		md: 16,
+		lg: 18,
+		xl: 20,
+	},
+};

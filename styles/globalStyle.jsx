@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   html, body, :root {
     font-family: "Quicksand", sans-serif;
     font-weight: 400;
-    min-height: 100%;
-  }
+    min-height: 100%;    
+  }  
 `;
 export default GlobalStyle;

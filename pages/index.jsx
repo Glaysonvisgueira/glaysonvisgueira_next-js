@@ -108,26 +108,24 @@ export default function HomePage(props) {
 	};
 
 	return (
-		<>
-			<Grow in={checked}>
-				<LandingPageContainer>
-					<Head title="Homepage" metaDescription="" keywords="" />
+		<Grow in={checked}>
+			<LandingPageContainer>
+				<Head title="Homepage" metaDescription="" keywords="" />
 
-					<TitleLandingContainer>
-						<TitleLanding>
-							&lt;Glayson Visgueira
-							<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
-							/&gt;
-						</TitleLanding>
-						<HrBorder />
-						<SocialNetworkRowStack />
-					</TitleLandingContainer>
+				<TitleLandingContainer>
+					<TitleLanding>
+						&lt;Glayson Visgueira
+						<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
+						/&gt;
+					</TitleLanding>
+					<HrBorder />
+					<SocialNetworkRowStack />
+				</TitleLandingContainer>
 
-					<ImageLandingContainer>
-						<LandingAnimation />
-					</ImageLandingContainer>
-				</LandingPageContainer>
-			</Grow>
-		</>
+				<ImageLandingContainer>
+					<LandingAnimation />
+				</ImageLandingContainer>
+			</LandingPageContainer>
+		</Grow>
 	);
 }

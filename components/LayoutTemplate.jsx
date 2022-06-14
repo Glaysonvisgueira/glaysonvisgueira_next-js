@@ -12,7 +12,7 @@ const Main = styled.main`
 	width: 100%;
 	min-height: 100vh;
 	//background-color: ${(props) => props.theme.colors.background};
-	background-image: linear-gradient(to right top, #171e26, #1b232b, #202731, #242c36, #29313c);
+	background-image: ${(props) => props.theme.colors.backgroundGradient};
 `;
 
 const HeaderContainer = styled.header`
@@ -84,12 +84,11 @@ const BurgerMenuContainer = styled.div`
 const NavbarOption = styled.span`
 	color: ${(props) => props.theme.colors.textBody};
 	font-family: "Quicksand", sans-serif;
-	font-weight: 400;
-	//font-size: 18px;
+	font-weight: 700;
 	margin-left: 5px;
 	margin-right: 5px;
+	text-decoration: none;
 	border-bottom: 4px solid transparent;
-	//text-decoration: none;
 	transition: border-color 0.5s ease;
 
 	&:hover {
@@ -111,6 +110,31 @@ const NavbarOption = styled.span`
 	}
 `;
 
+const NavbarOptionHome = styled(NavbarOption)`
+	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+`;
+
+const NavbarOptionSobre = styled(NavbarOption)`
+	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+`;
+
+const NavbarOptionPortifolio = styled(NavbarOption)`
+	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+`;
+
+const NavbarOptionExperiencia = styled(NavbarOption)`
+	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+`;
+
+const NavbarOptionContatos = styled(NavbarOption)`
+	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+`;
+
 const SideBarTheme = styled.aside`
 	display: flex;
 	align-items: center;
@@ -127,11 +151,45 @@ const SideBarTheme = styled.aside`
 `;
 
 export default function LayoutTemplate({ children }) {
-	const [homeSelected, setHomeSelected] = useState(true);
-	const [sobreSelected, seSobreSelected] = useState(false);
-	const [portifolioSelected, setPortifolioSelected] = useState(false);
-	const [experienciaSelected, setExperienciaSelected] = useState(false);
-	const [contatosSelected, setContatosSelected] = useState(false);
+	const [selectedHome, setSelectedHome] = useState(false);
+	const [selectedSobre, setSelectedSobre] = useState(false);
+	const [selectedPortifolio, setSelectedPortifolio] = useState(false);
+	const [selectedExperiencia, setSelectedExperiencia] = useState(false);
+	const [selectedContatos, setSelectedContatos] = useState(false);
+
+	function handleActiveOption(option) {
+		if (option == "home") {
+			setSelectedHome(true);
+			setSelectedSobre(false);
+			setSelectedPortifolio(false);
+			setSelectedExperiencia(false);
+			setSelectedContatos(false);
+		} else if (option == "sobre") {
+			setSelectedHome(false);
+			setSelectedSobre(true);
+			setSelectedPortifolio(false);
+			setSelectedExperiencia(false);
+			setSelectedContatos(false);
+		} else if (option == "portifolio") {
+			setSelectedHome(false);
+			setSelectedSobre(false);
+			setSelectedPortifolio(true);
+			setSelectedExperiencia(false);
+			setSelectedContatos(false);
+		} else if (option == "experiencia") {
+			setSelectedHome(false);
+			setSelectedSobre(false);
+			setSelectedPortifolio(false);
+			setSelectedExperiencia(true);
+			setSelectedContatos(false);
+		} else if (option == "contatos") {
+			setSelectedHome(false);
+			setSelectedSobre(false);
+			setSelectedPortifolio(false);
+			setSelectedExperiencia(false);
+			setSelectedContatos(true);
+		}
+	}
 
 	return (
 		<Main>
@@ -146,21 +204,29 @@ export default function LayoutTemplate({ children }) {
 
 				<NavbarOptionContainer>
 					<Link href="/" passHref>
-						<NavbarOption id="home" selected={homeSelected}>
+						<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
 							HOME
-						</NavbarOption>
+						</NavbarOptionHome>
 					</Link>
 					<Link href="/sobre-mim" passHref>
-						<NavbarOption id="sobre">SOBRE MIM</NavbarOption>
+						<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)}>
+							SOBRE MIM
+						</NavbarOptionSobre>
 					</Link>
 					<Link href="/portifolio" passHref>
-						<NavbarOption id="portifolio">PORTIFÓLIO</NavbarOption>
+						<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
+							PORTIFÓLIO
+						</NavbarOptionPortifolio>
 					</Link>
 					<Link href="/experiencia" passHref>
-						<NavbarOption id="experiencia">EXPERIÊNCIA</NavbarOption>
+						<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
+							EXPERIÊNCIA
+						</NavbarOptionExperiencia>
 					</Link>
 					<Link href="/contatos" passHref>
-						<NavbarOption id="contatos">CONTATOS</NavbarOption>
+						<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
+							CONTATOS
+						</NavbarOptionContatos>
 					</Link>
 				</NavbarOptionContainer>
 

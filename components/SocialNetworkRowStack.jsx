@@ -1,14 +1,15 @@
 import { useRouter } from "next/router";
 import styled from "styled-components";
 
+import { Facebook } from "@styled-icons/entypo-social/Facebook";
+import { Instagram } from "@styled-icons/icomoon/Instagram";
+import { Telegram } from "@styled-icons/boxicons-logos/Telegram";
+import { MailSend } from "@styled-icons/boxicons-regular/MailSend";
+import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare";
+import { Github } from "@styled-icons/bootstrap/Github";
+import { LogoWhatsapp } from "@styled-icons/ionicons-solid/LogoWhatsapp";
+
 //Material icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const SocialMediaContainer = styled.div`
 	display: flex;
@@ -36,6 +37,12 @@ const ButtonSocialMediaIcon = styled.div`
 	&:hover {
 		cursor: pointer;
 		opacity: 0.8;
+	}
+
+	svg {
+		color: ${(props) => props.theme.colors.textColorTitle};
+		width: 24px;
+		height: 24px;
 	}
 
 	@media (max-width: 600px) {
@@ -77,31 +84,31 @@ export default function SocialNetworkRowStack() {
 	return (
 		<SocialMediaContainer>
 			<ButtonSocialMediaIcon onClick={redirectToFacebook}>
-				<FacebookIcon sx={{ color: "#FCD434" }} />
+				<Facebook />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToGithub}>
-				<GitHubIcon sx={{ color: "#FCD434" }} />
+				<Github sx={{ color: "#FCD434" }} />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToEmail}>
-				<ContactMailIcon sx={{ color: "#FCD434" }} />
+				<MailSend sx={{ color: "#FCD434" }} />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToWhatsapp}>
-				<WhatsAppIcon sx={{ color: "#FCD434" }} />
+				<LogoWhatsapp sx={{ color: "#FCD434" }} />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToTelegram}>
-				<TelegramIcon sx={{ color: "#FCD434" }} />
+				<Telegram sx={{ color: "#FCD434" }} />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToInstagram}>
-				<InstagramIcon sx={{ color: "#FCD434" }} />
+				<Instagram sx={{ color: "#FCD434" }} />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToLinkedin}>
-				<LinkedInIcon sx={{ color: "#FCD434" }} />
+				<LinkedinSquare sx={{ color: "#FCD434" }} />
 			</ButtonSocialMediaIcon>
 		</SocialMediaContainer>
 	);

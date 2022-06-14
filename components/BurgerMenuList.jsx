@@ -15,6 +15,7 @@ const Ul = styled.ul`
 		font-weight: 700;
 		padding: 18px 10px;
 		text-align: left;
+		//color: ${(props) => props.theme.colors.textColorTitle};
 		border-bottom: 1px solid ${(props) => props.theme.colors.textSubTitle};
 		border-left: 4px solid transparent;
 
@@ -26,7 +27,8 @@ const Ul = styled.ul`
 
 	@media (max-width: 768px) {
 		//flex-flow: column nowrap;
-		background-color: #0d2538;
+		background-color: ${(props) => props.theme.colors.backgroundSecondary};
+
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		z-index: 3;
@@ -38,7 +40,7 @@ const Ul = styled.ul`
 		transition: transform 0.3s ease-in-out;
 
 		li {
-			color: #fff;
+			color: ${(props) => props.theme.colors.textTitle};
 		}
 	}
 `;

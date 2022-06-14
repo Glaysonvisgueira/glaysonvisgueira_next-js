@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<GlobalStyle />
-			<ThemeProvider theme={blueTheme}>
+			<ThemeProvider theme={whiteTheme}>
 				<LayoutTemplate>
 					<Component {...pageProps} />
 				</LayoutTemplate>

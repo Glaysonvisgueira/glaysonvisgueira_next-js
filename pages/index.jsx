@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-//Mui components
+//MUI components
 import Grow from "@mui/material/Grow";
 
 //Custom components

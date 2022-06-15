@@ -48,8 +48,8 @@ export const yellowTheme = {
 		backgroundGradient: "linear-gradient(to right top, #fcd434, #f9d546, #f6d656, #f3d664, #f0d771)",
 		background: "#fff",
 		backgroundSecondary: "#f0d771",
-		textColorTitle: "#000",
-		textTitle: "#000",
+		textColorTitle: "#161925",
+		textTitle: "#fff",
 		textSubTitle: "#362d07",
 		textBody: "#362d07",
 	},
@@ -64,11 +64,11 @@ export const yellowTheme = {
 
 export const greenTheme = {
 	colors: {
-		backgroundGradient: "linear-gradient(to right top, #45b69c, #49bca2, #4cc2a7, #50c9ad, #54cfb3)",
+		backgroundGradient: "linear-gradient(45deg, hsla(158, 65%, 38%, 1) 0%, hsla(158, 100%, 50%, 1) 100%)",
 		background: "#45b69c",
 		backgroundSecondary: "#54cfb3",
-		textColorTitle: "#000",
-		textTitle: "#000",
+		textColorTitle: "#004466",
+		textTitle: "#004466",
 		textSubTitle: "#000300",
 		textBody: "#384d48",
 	},

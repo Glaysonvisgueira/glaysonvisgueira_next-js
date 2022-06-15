@@ -7,20 +7,26 @@ import Grow from "@mui/material/Grow";
 //Custom components
 import Head from "@/components/Head";
 
-const TitlePage = styled.h1`
-	color: ${(props) => props.theme.colors.textColorTitle};
-	font-size: 50px;
-	font-weight: 700;
+const ContainerSkillBox = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 400px;
+	height: 300px;
+	padding: 10px;
+	background: #fff;
+	border-radius: 8px;
 `;
 
 const ContainerSkill = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 400px;
-	height: 60px;
-	padding: 10px;
-	background: #fff;
+	width: 100%;
+	height: 30px;
+	background-color: #ccc;
+	margin: 5px;
 
 	p {
 		margin-right: 5px;
@@ -56,12 +62,23 @@ export default function Portifolio() {
 		<>
 			<Head title="Portifólio" metaDescription="" keywords="" />
 			<Grow in={checked}>
-				<ContainerSkill>
-					<p>aa</p>
-					<ProgressBar>
-						<div></div>
-					</ProgressBar>
-				</ContainerSkill>
+				<div>
+					<ContainerSkillBox>
+						<ContainerSkill>
+							<p>asd</p>
+							<ProgressBar>
+								<div></div>
+							</ProgressBar>
+						</ContainerSkill>
+
+						<ContainerSkill>
+							<p>aasda</p>
+							<ProgressBar>
+								<div></div>
+							</ProgressBar>
+						</ContainerSkill>
+					</ContainerSkillBox>
+				</div>
 			</Grow>
 		</>
 	);

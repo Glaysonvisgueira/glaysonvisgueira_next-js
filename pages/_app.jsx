@@ -1,19 +1,16 @@
 import GlobalStyle from "../styles/globalStyle";
 import LayoutTemplate from "../components/LayoutTemplate";
-import { ThemeProvider } from "styled-components";
 
-import { blueTheme, whiteTheme, yellowTheme } from "@/styles/Theme";
+import SettingsContext from "@/context/SettingsContext";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<>
+		<SettingsContext>
 			<GlobalStyle />
-			<ThemeProvider theme={whiteTheme}>
-				<LayoutTemplate>
-					<Component {...pageProps} />
-				</LayoutTemplate>
-			</ThemeProvider>
-		</>
+			<LayoutTemplate>
+				<Component {...pageProps} />
+			</LayoutTemplate>
+		</SettingsContext>
 	);
 }
 

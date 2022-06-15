@@ -1,4 +1,6 @@
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
+import { SettingsContext } from "@/context/SettingsContext";
 
 const ThemeButtonsContainer = styled.div`
 	display: flex;
@@ -32,11 +34,17 @@ const ButtonTheme = styled.div`
 `;
 
 export default function ThemeButtons() {
+	const { changeTheme } = useContext(SettingsContext);
+
+	function selectTheme(e) {
+		changeTheme(e.target.id);
+	}
+
 	return (
 		<ThemeButtonsContainer>
-			<ButtonTheme style={{ background: "#171E26" }} />
-			<ButtonTheme style={{ background: "#fff" }} />
-			<ButtonTheme style={{ background: "#FCD434" }} />
+			<ButtonTheme id="blue" style={{ background: "#171E26" }} onClick={selectTheme} />
+			<ButtonTheme id="white" style={{ background: "#fff" }} onClick={selectTheme} />
+			<ButtonTheme id="yellow" style={{ background: "#FCD434" }} onClick={selectTheme} />
 			<ButtonTheme style={{ background: "#4C18DF" }} />
 			<ButtonTheme style={{ background: "#17A536" }} />
 		</ThemeButtonsContainer>

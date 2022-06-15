@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import ThemeButtons from "@/components/ThemeButtons";
@@ -13,6 +13,26 @@ const Main = styled.main`
 	min-height: 100vh;
 	//background-color: ${(props) => props.theme.colors.background};
 	background-image: ${(props) => props.theme.colors.backgroundGradient};
+`;
+
+const ContainerContent = styled.main`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+	min-height: 100vh;
+
+	@media (max-width: 1600px) {
+		width: 80%;
+	}
+
+	@media (max-width: 1200px) {
+		width: 90%;
+	}
+
+	@media (max-width: 1000px) {
+		width: 100%;
+	}
 `;
 
 const HeaderContainer = styled.header`
@@ -237,7 +257,7 @@ export default function LayoutTemplate({ children }) {
 			<SideBarTheme>
 				<ThemeButtons />
 			</SideBarTheme>
-			{children}
+			<ContainerContent>{children}</ContainerContent>
 		</Main>
 	);
 }

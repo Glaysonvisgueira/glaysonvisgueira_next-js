@@ -61,3 +61,41 @@ export const yellowTheme = {
 		xl: 20,
 	},
 };
+
+export const greenTheme = {
+	colors: {
+		backgroundGradient: "linear-gradient(to right top, #45b69c, #49bca2, #4cc2a7, #50c9ad, #54cfb3)",
+		background: "#45b69c",
+		backgroundSecondary: "#54cfb3",
+		textColorTitle: "#000",
+		textTitle: "#000",
+		textSubTitle: "#000300",
+		textBody: "#384d48",
+	},
+	fontSizes: {
+		xs: 12,
+		sm: 14,
+		md: 16,
+		lg: 18,
+		xl: 20,
+	},
+};
+
+export const purpleTheme = {
+	colors: {
+		backgroundGradient: "linear-gradient(to right top, #72195a, #8e2e73, #aa428d, #c757a8, #e56cc4)",
+		background: "#72195A",
+		backgroundSecondary: "#E56CC4",
+		textColorTitle: "#000",
+		textTitle: "#000",
+		textSubTitle: "#000300",
+		textBody: "#fff",
+	},
+	fontSizes: {
+		xs: 12,
+		sm: 14,
+		md: 16,
+		lg: 18,
+		xl: 20,
+	},
+};

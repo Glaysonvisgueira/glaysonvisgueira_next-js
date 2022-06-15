@@ -45,8 +45,8 @@ export default function ThemeButtons() {
 			<ButtonTheme id="blue" style={{ background: "#171E26" }} onClick={selectTheme} />
 			<ButtonTheme id="white" style={{ background: "#fff" }} onClick={selectTheme} />
 			<ButtonTheme id="yellow" style={{ background: "#FCD434" }} onClick={selectTheme} />
-			<ButtonTheme style={{ background: "#4C18DF" }} />
-			<ButtonTheme style={{ background: "#17A536" }} />
+			<ButtonTheme id="purple" style={{ background: "#72195A" }} onClick={selectTheme} />
+			<ButtonTheme id="green" style={{ background: "#45b69c" }} onClick={selectTheme} />
 		</ThemeButtonsContainer>
 	);
 }

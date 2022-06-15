@@ -14,8 +14,8 @@ const defaultOptions = {
 };
 
 const ContainerLottie = styled.div`
-	width: 600px;
-	height: 600px;
+	width: 500px;
+	height: 500px;
 	z-index: 1;
 	position: relative;
 

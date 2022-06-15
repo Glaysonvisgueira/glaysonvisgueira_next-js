@@ -4,6 +4,8 @@ import styled from "styled-components";
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
 
+import Container from "@mui/material/Container";
+
 const Main = styled.main`
 	display: flex;
 	align-items: center;
@@ -217,51 +219,53 @@ export default function LayoutTemplate({ children }) {
 
 	return (
 		<Main>
-			<HeaderContainer>
-				<Link href="/" passHref>
-					<LogoContainer>
-						<LogoText>
-							<CaracteresLogo>&lt;</CaracteresLogo>GV <CaracteresLogo>/&gt;</CaracteresLogo>
-						</LogoText>
-					</LogoContainer>
-				</Link>
-
-				<NavbarOptionContainer>
+			<Container fixed sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+				<HeaderContainer>
 					<Link href="/" passHref>
-						<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
-							HOME
-						</NavbarOptionHome>
+						<LogoContainer>
+							<LogoText>
+								<CaracteresLogo>&lt;</CaracteresLogo>GV <CaracteresLogo>/&gt;</CaracteresLogo>
+							</LogoText>
+						</LogoContainer>
 					</Link>
-					<Link href="/sobre-mim" passHref>
-						<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)}>
-							SOBRE MIM
-						</NavbarOptionSobre>
-					</Link>
-					<Link href="/portifolio" passHref>
-						<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
-							PORTIFÓLIO
-						</NavbarOptionPortifolio>
-					</Link>
-					<Link href="/experiencia" passHref>
-						<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
-							EXPERIÊNCIA
-						</NavbarOptionExperiencia>
-					</Link>
-					<Link href="/contatos" passHref>
-						<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
-							CONTATOS
-						</NavbarOptionContatos>
-					</Link>
-				</NavbarOptionContainer>
 
-				<BurgerMenuContainer>
-					<BurgerMenu />
-				</BurgerMenuContainer>
-			</HeaderContainer>
-			<SideBarTheme>
-				<ThemeButtons />
-			</SideBarTheme>
-			<ContainerContent>{children}</ContainerContent>
+					<NavbarOptionContainer>
+						<Link href="/" passHref>
+							<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
+								HOME
+							</NavbarOptionHome>
+						</Link>
+						<Link href="/sobre-mim" passHref>
+							<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)}>
+								SOBRE MIM
+							</NavbarOptionSobre>
+						</Link>
+						<Link href="/portifolio" passHref>
+							<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
+								PORTIFÓLIO
+							</NavbarOptionPortifolio>
+						</Link>
+						<Link href="/experiencia" passHref>
+							<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
+								EXPERIÊNCIA
+							</NavbarOptionExperiencia>
+						</Link>
+						<Link href="/contatos" passHref>
+							<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
+								CONTATOS
+							</NavbarOptionContatos>
+						</Link>
+					</NavbarOptionContainer>
+
+					<BurgerMenuContainer>
+						<BurgerMenu />
+					</BurgerMenuContainer>
+				</HeaderContainer>
+				<SideBarTheme>
+					<ThemeButtons />
+				</SideBarTheme>
+				{children}
+			</Container>
 		</Main>
 	);
 }

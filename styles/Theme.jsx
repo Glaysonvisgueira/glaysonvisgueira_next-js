@@ -99,3 +99,38 @@ export const purpleTheme = {
 		xl: 20,
 	},
 };
+
+//Cores para paletas de cores:
+/*
+#F1D302
+#161925
+#4C4637
+#B1AB99
+
+#539987
+#52ffb8
+#17b890
+#004466
+#14474E
+
+#7b8cde
+#565254
+
+#ff4d4d
+#B33636
+#FFA6A6
+
+
+
+PREDOMINANT COLOR
+TEXT TITLE
+TEXT SUBTITLE
+TEXT BODY
+NAVBAR
+BACKGROUND
+SECOND BACKGROUND
+CONSTRAST
+ICON
+BACKGROUND GRADIENT
+
+*/

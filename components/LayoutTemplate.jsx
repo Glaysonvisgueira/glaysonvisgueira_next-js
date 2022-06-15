@@ -106,21 +106,18 @@ const BurgerMenuContainer = styled.div`
 const NavbarOption = styled.span`
 	color: ${(props) => props.theme.colors.textBody};
 	font-family: "Quicksand", sans-serif;
-	font-weight: 700;
+	font-weight: 400;
 	margin-left: 5px;
 	margin-right: 5px;
 	text-decoration: none;
 	border-bottom: 4px solid transparent;
-	transition: border-color 0.5s ease;
+	//transition: border-color 0.5s ease;
+	transition: all 0.3s ease;
 
 	&:hover {
 		cursor: pointer;
 		color: ${(props) => props.theme.colors.textTitle};
 		border-bottom: 4px solid ${(props) => props.theme.colors.textColorTitle};
-	}
-
-	&:active {
-		//color: op;
 	}
 
 	@media (max-width: 1400px) {

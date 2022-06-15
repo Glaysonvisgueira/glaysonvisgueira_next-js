@@ -11,15 +11,19 @@ const ThemeButtonsContainer = styled.div`
 
 const ButtonTheme = styled.div`
 	margin: 5px;
-	width: 24px;
-	height: 24px;
+	width: 28px;
+	height: 28px;
 	border: 1px solid #fff;
 	//background-color: #fff;
 	border-radius: 50%;
+	transition: all 0.3s ease;
 
 	&:hover {
 		cursor: pointer;
-		opacity: 0.8;
+		//opacity: 0.8;
+		//width: 34px;
+		margin-left: 20px;
+		//height: 34px;
 	}
 
 	@media (max-width: 1200px) {

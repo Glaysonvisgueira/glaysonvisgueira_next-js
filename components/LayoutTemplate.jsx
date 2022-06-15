@@ -117,6 +117,10 @@ const NavbarOption = styled.span`
 		border-bottom: 4px solid ${(props) => props.theme.colors.textColorTitle};
 	}
 
+	&:active {
+		//color: op;
+	}
+
 	@media (max-width: 1400px) {
 		font-size: ${(props) => props.theme.fontSizes.lg}px;
 	}

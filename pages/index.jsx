@@ -13,7 +13,7 @@ const LandingPageContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 70%;
+	width: 100%;
 
 	@media (max-width: 800px) {
 		flex-direction: column;
@@ -25,8 +25,8 @@ const TitleLandingContainer = styled.div`
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	flex: 0.4;
 	padding: 10px;
+	//background: #ccc;
 
 	@media (max-width: 600px) {
 		flex: 0.5;
@@ -100,6 +100,21 @@ const SectionOne = styled.section`
 	min-height: 100vh;
 `;
 
+const ButtonSaibaMais = styled.button`
+	width: 200px;
+	height: 44px;
+	background-color: ${(props) => props.theme.colors.textColorTitle};
+	color: ${(props) => props.theme.colors.background};
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: none;
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+`;
+
 export default function HomePage(props) {
 	const [checked, setChecked] = React.useState(true);
 
@@ -113,18 +128,12 @@ export default function HomePage(props) {
 				<Head title="Homepage" metaDescription="" keywords="" />
 
 				<TitleLandingContainer>
-					<TitleLanding>
-						&lt;Glayson Visgueira
-						<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
-						/&gt;
-					</TitleLanding>
+					<TitleLanding>&lt;Glayson Visgueira /&gt;</TitleLanding>
+					<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
 
-					<HrBorder />
-
+					<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
 					<SocialNetworkRowStack />
 				</TitleLandingContainer>
-
-				<ImageLandingContainer></ImageLandingContainer>
 			</LandingPageContainer>
 		</Grow>
 	);

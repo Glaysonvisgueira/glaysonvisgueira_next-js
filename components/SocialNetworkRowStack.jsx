@@ -27,8 +27,8 @@ const ButtonSocialMediaIcon = styled.div`
 	align-items: center;
 	justify-content: center;
 	margin-right: 5px;
-	width: 36px;
-	height: 36px;
+	width: 32px;
+	height: 32px;
 	//background-color: #29313c;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 

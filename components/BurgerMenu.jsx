@@ -24,7 +24,7 @@ const StyledBurger = styled.div`
 	div {
 		width: 2rem;
 		height: 0.25rem;
-		background-color: ${(props) => props.theme.colors.textTitle};
+		background-color: ${(props) => props.theme.colors.textColorTitle};
 		border-radius: 10px;
 		transform-origin: 1px;
 		transition: all 0.3s linear;

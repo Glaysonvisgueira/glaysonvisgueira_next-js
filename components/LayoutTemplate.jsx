@@ -216,7 +216,7 @@ export default function LayoutTemplate({ children }) {
 
 	return (
 		<Main>
-			<Container fixed sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+			<Container sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
 				<HeaderContainer>
 					<Link href="/" passHref>
 						<LogoContainer>

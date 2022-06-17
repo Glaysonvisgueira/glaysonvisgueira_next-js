@@ -12,7 +12,6 @@ const Main = styled.main`
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	min-height: 100vh;
 	background: ${(props) => props.theme.colors.backgroundGradient};
 	//background: ${(props) => props.theme.colors.backgroundRadial};
 `;
@@ -83,7 +82,7 @@ const BurgerMenuContainer = styled.div`
 	}
 `;
 
-const NavbarOption = styled.span`
+const NavbarOption = styled.a`
 	color: ${(props) => props.theme.colors.body};
 	font-family: "Quicksand", sans-serif;
 	font-weight: 400;
@@ -195,54 +194,59 @@ export default function LayoutTemplate({ children }) {
 	}
 
 	return (
-		<Main>
-			<Container sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-				<HeaderContainer>
+		<>
+			<HeaderContainer>
+				<Link href="/" passHref>
+					<LogoContainer>
+						<LogoText>
+							<CaracteresLogo>&lt;</CaracteresLogo>GV <CaracteresLogo>/&gt;</CaracteresLogo>
+						</LogoText>
+					</LogoContainer>
+				</Link>
+
+				<NavbarOptionContainer>
 					<Link href="/" passHref>
-						<LogoContainer>
-							<LogoText>
-								<CaracteresLogo>&lt;</CaracteresLogo>GV <CaracteresLogo>/&gt;</CaracteresLogo>
-							</LogoText>
-						</LogoContainer>
+						<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
+							HOME
+						</NavbarOptionHome>
 					</Link>
 
-					<NavbarOptionContainer>
-						<Link href="/" passHref>
-							<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
-								HOME
-							</NavbarOptionHome>
-						</Link>
-						<Link href="/sobre-mim" passHref>
-							<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)}>
-								SOBRE MIM
-							</NavbarOptionSobre>
-						</Link>
-						<Link href="/portifolio" passHref>
-							<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
-								PORTIFÓLIO
-							</NavbarOptionPortifolio>
-						</Link>
-						<Link href="/experiencia" passHref>
-							<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
-								EXPERIÊNCIA
-							</NavbarOptionExperiencia>
-						</Link>
-						<Link href="/contatos" passHref>
-							<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
-								CONTATOS
-							</NavbarOptionContatos>
-						</Link>
-					</NavbarOptionContainer>
+					<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)} href="#sobre-mim">
+						SOBRE MIM
+					</NavbarOptionSobre>
 
-					<BurgerMenuContainer>
-						<BurgerMenu />
-					</BurgerMenuContainer>
-				</HeaderContainer>
-				<SideBarTheme>
-					<ThemeButtons />
-				</SideBarTheme>
-				{children}
-			</Container>
-		</Main>
+					<Link href="/portifolio" passHref>
+						<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
+							PORTIFÓLIO
+						</NavbarOptionPortifolio>
+					</Link>
+					<Link href="/experiencia" passHref>
+						<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
+							EXPERIÊNCIA
+						</NavbarOptionExperiencia>
+					</Link>
+					<Link href="/contatos" passHref>
+						<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
+							CONTATOS
+						</NavbarOptionContatos>
+					</Link>
+				</NavbarOptionContainer>
+
+				<BurgerMenuContainer>
+					<BurgerMenu />
+				</BurgerMenuContainer>
+			</HeaderContainer>
+			<SideBarTheme>
+				<ThemeButtons />
+			</SideBarTheme>
+			<Main>
+				<Container fixed>{children}</Container>
+			</Main>
+		</>
 	);
 }
+
+/*
+<Container sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+</Container>	
+*/

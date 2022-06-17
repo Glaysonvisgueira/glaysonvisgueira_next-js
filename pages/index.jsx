@@ -101,6 +101,14 @@ const SectionOne = styled.section`
 	min-height: 100vh;
 `;
 
+const SectionTwo = styled.section`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100vh;
+`;
+
 const ButtonSaibaMais = styled.button`
 	width: 200px;
 	height: 34px;
@@ -131,7 +139,7 @@ export default function HomePage(props) {
 
 	return (
 		<>
-			<Grow in={checked}>
+			<SectionOne>
 				<LandingPageContainer>
 					<Head title="Homepage" metaDescription="" keywords="" />
 
@@ -143,7 +151,15 @@ export default function HomePage(props) {
 						<SocialNetworkRowStack />
 					</TitleLandingContainer>
 				</LandingPageContainer>
-			</Grow>
+			</SectionOne>
+
+			<SectionTwo id="sobre-mim">
+				<SobreMimPage />
+			</SectionTwo>
 		</>
 	);
 }
+
+/*
+<Grow in={checked}></Grow>
+*/

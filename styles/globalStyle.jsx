@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Quicksand", sans-serif;
     font-weight: 400;
     min-height: 100%;    
-    
+    scroll-behavior: smooth;
   }  
 
   ::selection {

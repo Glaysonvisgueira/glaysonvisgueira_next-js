@@ -16,8 +16,7 @@ const defaultOptions = {
 const ContainerLottie = styled.div`
 	width: 500px;
 	height: 500px;
-	z-index: 1;
-	position: relative;
+	//z-index: 1;
 
 	@media (max-width: 900px) {
 		width: 400px;

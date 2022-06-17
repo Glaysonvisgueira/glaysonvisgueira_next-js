@@ -6,6 +6,6 @@ const Text = styled.h2`
 	font-size: 16px;
 `;
 
-export default function H2TextTitle(props) {
-	return <Text>{props.text}</Text>;
+export default function H2TextTitle({ children }) {
+	return <Text>{children}</Text>;
 }

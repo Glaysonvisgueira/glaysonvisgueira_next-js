@@ -13,6 +13,7 @@ import Grow from "@mui/material/Grow";
 //Custom components
 import Head from "@/components/Head";
 import H2TextTitle from "@/components/ui/H2TextTitle";
+import TextBody from "@/components/ui/TextBody";
 
 const Container = styled.div`
 	display: flex;
@@ -44,14 +45,13 @@ const ContainerGrid = styled.div`
 `;
 
 const CardAboutMe = styled.div`
-	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: column;
 	position: "relative";
 	width: 220px;
-	height: 220px;
+	height: 300px;
 	padding: 20px;
 	border-radius: 8px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
@@ -59,25 +59,36 @@ const CardAboutMe = styled.div`
 	margin: 10px auto;
 	border: 4px solid transparent;
 	transition: all 0.3s ease;
-	//box-shadow: 120px 80px 40px 20px ${(props) => props.theme.colors.branding};
 	color: ${(props) => props.theme.colors.branding}5E;
-	p {
-		color: ${(props) => props.theme.colors.body};
+
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		h2 {
+			margin-top: 20px;
+		}
+	}
+
+	.text-explanation {
+		margin-top: 20px;
 	}
 
 	svg {
 		color: ${(props) => props.theme.colors.branding};
 		width: 48px;
 		height: 48px;
-		position: absolute;
-		top: 10px;
-		left: 10px;
+		//position: absolute;
+		//top: 10px;
+		//left: 10px;
 	}
 
 	&:hover {
 		border: 4px solid ${(props) => props.theme.colors.branding};
 		color: ${(props) => props.theme.colors.branding};
-		box-shadow: 0px 0px 93px 0px ${(props) => props.theme.colors.branding}5E;
+		box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
 	}
 
 	@media (max-width: 1200px) {
@@ -106,24 +117,40 @@ export default function SobreMim() {
 			<Grow in={checked}>
 				<ContainerGrid>
 					<CardAboutMe>
-						<Robot />
-						<H2TextTitle text="SEO" />
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<div>
+							<Robot />
+							<H2TextTitle>SEO</H2TextTitle>
+						</div>
+						<div className="text-explanation">
+							<TextBody>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextBody>
+						</div>
 					</CardAboutMe>
 					<CardAboutMe>
-						<DesignServices />
-						<H2TextTitle text="UX/UI" />
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<div>
+							<DesignServices />
+							<H2TextTitle>UX/UI</H2TextTitle>
+						</div>
+						<div className="text-explanation">
+							<TextBody>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextBody>
+						</div>
 					</CardAboutMe>
 					<CardAboutMe>
-						<DesignIdeas />
-						<H2TextTitle text="BRANDING" />
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<div>
+							<DesignIdeas />
+							<H2TextTitle>BRANDING</H2TextTitle>
+						</div>
+						<div className="text-explanation">
+							<TextBody>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextBody>
+						</div>
 					</CardAboutMe>
 					<CardAboutMe>
-						<CodeBlock />
-						<H2TextTitle text="DESENVOLVIMENTO" />
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<div>
+							<CodeBlock />
+							<H2TextTitle>DESENVOLVIMENTO</H2TextTitle>
+						</div>
+						<div className="text-explanation">
+							<TextBody>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextBody>
+						</div>
 					</CardAboutMe>
 				</ContainerGrid>
 			</Grow>

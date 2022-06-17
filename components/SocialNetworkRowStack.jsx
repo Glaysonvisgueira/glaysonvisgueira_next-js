@@ -39,8 +39,12 @@ const ButtonSocialMediaIcon = styled.div`
 		opacity: 0.8;
 	}
 
+	&:active {
+		opacity: 0.5;
+	}
+
 	svg {
-		color: ${(props) => props.theme.colors.textColorTitle};
+		color: ${(props) => props.theme.colors.branding};
 		width: 24px;
 		height: 24px;
 	}

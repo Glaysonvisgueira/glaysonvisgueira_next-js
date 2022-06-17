@@ -24,7 +24,7 @@ const StyledBurger = styled.div`
 	div {
 		width: 2rem;
 		height: 0.25rem;
-		background-color: ${(props) => props.theme.colors.textColorTitle};
+		background-color: ${(props) => props.theme.colors.branding};
 		border-radius: 10px;
 		transform-origin: 1px;
 		transition: all 0.3s linear;
@@ -55,12 +55,12 @@ const Ul = styled.ul`
 		padding: 18px 10px;
 		text-align: left;
 		//color: ${(props) => props.theme.colors.textColorTitle};
-		border-bottom: 1px solid ${(props) => props.theme.colors.textSubTitle};
+		border-bottom: 1px solid ${(props) => props.theme.colors.subtitle};
 		border-left: 4px solid transparent;
 
 		&:hover {
 			cursor: pointer;
-			border-left: 4px solid ${(props) => props.theme.colors.textColorTitle};
+			border-left: 4px solid ${(props) => props.theme.colors.branding};
 		}
 	}
 
@@ -79,7 +79,7 @@ const Ul = styled.ul`
 		transition: transform 0.3s ease-in-out;
 
 		li {
-			color: ${(props) => props.theme.colors.textTitle};
+			color: ${(props) => props.theme.colors.title};
 		}
 	}
 `;

@@ -10,31 +10,11 @@ const Main = styled.main`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: row;
+	flex-direction: column;
 	width: 100%;
 	min-height: 100vh;
-	//background-color: ${(props) => props.theme.colors.background};
-	background-image: ${(props) => props.theme.colors.backgroundGradient};
-`;
-
-const ContainerContent = styled.main`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 70%;
-	min-height: 100vh;
-
-	@media (max-width: 1600px) {
-		width: 80%;
-	}
-
-	@media (max-width: 1200px) {
-		width: 90%;
-	}
-
-	@media (max-width: 1000px) {
-		width: 100%;
-	}
+	background: ${(props) => props.theme.colors.backgroundGradient};
+	//background: ${(props) => props.theme.colors.backgroundRadial};
 `;
 
 const HeaderContainer = styled.header`
@@ -67,18 +47,18 @@ const LogoContainer = styled.div`
 `;
 
 const LogoText = styled.h3`
-	color: ${(props) => props.theme.colors.textTitle};
+	color: ${(props) => props.theme.colors.title};
 	font-family: "Quicksand", sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 
 	@media (max-width: 900px) {
-		font-size: ${(props) => props.theme.fontSizes.xl}px;
+		font-size: ${(props) => props.theme.fontSizes.xl};
 	}
 `;
 
 const CaracteresLogo = styled.span`
-	color: ${(props) => props.theme.colors.textColorTitle};
+	color: ${(props) => props.theme.colors.branding};
 	font-family: "Quicksand", sans-serif;
 	font-weight: 700;
 `;
@@ -104,7 +84,7 @@ const BurgerMenuContainer = styled.div`
 `;
 
 const NavbarOption = styled.span`
-	color: ${(props) => props.theme.colors.textBody};
+	color: ${(props) => props.theme.colors.body};
 	font-family: "Quicksand", sans-serif;
 	font-weight: 400;
 	margin-left: 5px;
@@ -117,45 +97,45 @@ const NavbarOption = styled.span`
 	&:hover {
 		cursor: pointer;
 		color: ${(props) => props.theme.colors.textTitle};
-		border-bottom: 4px solid ${(props) => props.theme.colors.textColorTitle};
+		border-bottom: 4px solid ${(props) => props.theme.colors.branding};
 	}
 
 	@media (max-width: 1400px) {
-		font-size: ${(props) => props.theme.fontSizes.lg}px;
+		font-size: ${(props) => props.theme.fontSizes.lg};
 	}
 
 	@media (max-width: 1200px) {
-		font-size: ${(props) => props.theme.fontSizes.md}px;
+		font-size: ${(props) => props.theme.fontSizes.md};
 	}
 
 	@media (max-width: 900px) {
-		font-size: ${(props) => props.theme.fontSizes.xs}px;
+		font-size: ${(props) => props.theme.fontSizes.xs};
 	}
 `;
 
 const NavbarOptionHome = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
 `;
 
 const NavbarOptionSobre = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
 `;
 
 const NavbarOptionPortifolio = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
 `;
 
 const NavbarOptionExperiencia = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
 `;
 
 const NavbarOptionContatos = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.textTitle : props.theme.colors.textBody)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.textColorTitle : "transparent")};
+	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
+	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
 `;
 
 const SideBarTheme = styled.aside`
@@ -174,7 +154,7 @@ const SideBarTheme = styled.aside`
 `;
 
 export default function LayoutTemplate({ children }) {
-	const [selectedHome, setSelectedHome] = useState(false);
+	const [selectedHome, setSelectedHome] = useState(true);
 	const [selectedSobre, setSelectedSobre] = useState(false);
 	const [selectedPortifolio, setSelectedPortifolio] = useState(false);
 	const [selectedExperiencia, setSelectedExperiencia] = useState(false);

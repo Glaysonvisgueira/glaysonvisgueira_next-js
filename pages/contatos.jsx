@@ -8,7 +8,7 @@ import Grow from "@mui/material/Grow";
 import Head from "@/components/Head";
 
 const TitlePage = styled.h1`
-	color: ${(props) => props.theme.colors.textColorTitle};
+	color: ${(props) => props.theme.colors.branding};
 	font-size: 50px;
 	font-weight: 700;
 `;

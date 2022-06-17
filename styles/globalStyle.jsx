@@ -17,20 +17,20 @@ const GlobalStyle = createGlobalStyle`
   }  
 
   ::selection {
-    background: ${(props) => props.theme.colors.textColorTitle};
+    background: ${(props) => props.theme.colors.branding};
     color: ${(props) => props.theme.colors.background};
   }
        
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
   }
   
   ::-webkit-scrollbar-track {
-    background: #cfcfcf;
+    background: #a8a8a8;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: ${(props) => props.theme.colors.backgroundSecondary}; 
+    background: ${(props) => props.theme.colors.branding}; 
     border: 1px solid #ffffff;
   }
 

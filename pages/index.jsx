@@ -8,6 +8,7 @@ import Grow from "@mui/material/Grow";
 import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LandingAnimation from "@/components/LandingPageAnimation";
+import SobreMimPage from "../pages/sobre-mim";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -36,7 +37,7 @@ const TitleLandingContainer = styled.div`
 const TitleLanding = styled.div`
 	font-size: 50px;
 	font-weight: 700;
-	color: ${(props) => props.theme.colors.textColorTitle};
+	color: ${(props) => props.theme.colors.branding};
 
 	@media (max-width: 1400px) {
 		font-size: 40px;
@@ -53,21 +54,21 @@ const TitleLanding = styled.div`
 
 const SubTitleLanding = styled.div`
 	font-weight: 400;
-	color: ${(props) => props.theme.colors.textBody};
+	color: ${(props) => props.theme.colors.body};
 	text-align: left;
 	margin-top: 20px;
 	margin-bottom: 20px;
 
 	@media (max-width: 1980px) {
-		font-size: ${(props) => props.theme.fontSizes.lg}px;
+		font-size: ${(props) => props.theme.fontSizes.lg};
 	}
 
 	@media (max-width: 1200px) {
-		font-size: ${(props) => props.theme.fontSizes.md}px;
+		font-size: ${(props) => props.theme.fontSizes.md};
 	}
 
 	@media (max-width: 900px) {
-		font-size: ${(props) => props.theme.fontSizes.md}px;
+		font-size: ${(props) => props.theme.fontSizes.md};
 	}
 `;
 
@@ -87,7 +88,7 @@ const ImageLandingContainer = styled.div`
 
 const HrBorder = styled.div`
 	width: 100%;
-	border-top: 2px solid ${(props) => props.theme.colors.textSubTitle};
+	border-top: 2px solid ${(props) => props.theme.colors.subtitle};
 	margin-top: 15px;
 	margin-bottom: 15px;
 `;
@@ -102,16 +103,22 @@ const SectionOne = styled.section`
 
 const ButtonSaibaMais = styled.button`
 	width: 200px;
-	height: 44px;
-	background-color: ${(props) => props.theme.colors.textColorTitle};
-	color: ${(props) => props.theme.colors.background};
+	height: 34px;
+	background-color: ${(props) => props.theme.colors.branding};
+	color: ${(props) => props.theme.colors.backgroundSecondary};
 	border-radius: 4px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	border: none;
+	font-size: ${(props) => props.theme.fontSizes.lg};
+
 	&:hover {
 		cursor: pointer;
 		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.5;
 	}
 `;
 
@@ -123,18 +130,20 @@ export default function HomePage(props) {
 	};
 
 	return (
-		<Grow in={checked}>
-			<LandingPageContainer>
-				<Head title="Homepage" metaDescription="" keywords="" />
+		<>
+			<Grow in={checked}>
+				<LandingPageContainer>
+					<Head title="Homepage" metaDescription="" keywords="" />
 
-				<TitleLandingContainer>
-					<TitleLanding>&lt;Glayson Visgueira /&gt;</TitleLanding>
-					<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
+					<TitleLandingContainer>
+						<TitleLanding>&lt;Glayson Visgueira /&gt;</TitleLanding>
+						<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
 
-					<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
-					<SocialNetworkRowStack />
-				</TitleLandingContainer>
-			</LandingPageContainer>
-		</Grow>
+						<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
+						<SocialNetworkRowStack />
+					</TitleLandingContainer>
+				</LandingPageContainer>
+			</Grow>
+		</>
 	);
 }

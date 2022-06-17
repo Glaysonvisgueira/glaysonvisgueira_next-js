@@ -113,7 +113,7 @@ export default function SlideTechs() {
 	return (
 		<ContainerTechsSlide>
 			<Slider>
-				<div class="slide-track">
+				<div className="slide-track">
 					<div className="slide">
 						<Adobephotoshop />
 					</div>

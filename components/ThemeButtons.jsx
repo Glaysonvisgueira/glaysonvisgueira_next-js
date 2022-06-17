@@ -17,11 +17,8 @@ const ButtonTheme = styled.div`
 	transition: all 0.3s ease;
 
 	&:hover {
+		transform: scale(1.3);
 		cursor: pointer;
-		//opacity: 0.8;
-		//width: 34px;
-		margin-left: 20px;
-		//height: 34px;
 	}
 
 	@media (max-width: 1200px) {
@@ -63,6 +60,10 @@ const ButtonLightBlue = styled(ButtonTheme)`
 	border: 3px solid ${(props) => (props.selected ? "#fff" : "transparent")};
 `;
 
+const ButtonDarkYellow = styled(ButtonTheme)`
+	border: 3px solid ${(props) => (props.selected ? "#fff" : "transparent")};
+`;
+
 export default function ThemeButtons() {
 	const { changeTheme } = useContext(SettingsContext);
 	const [selectedBlue, setSelectedBlue] = useState(false);
@@ -72,6 +73,7 @@ export default function ThemeButtons() {
 	const [selectedGreen, setSelectedGreen] = useState(false);
 	const [selectedDark, setSelectedDark] = useState(false);
 	const [selectedLightBlue, setSelectedLightBlue] = useState(false);
+	const [selectedDarkYellow, setSelectedDarkYellow] = useState(false);
 
 	function handleSelectTheme(option) {
 		if (option == "blue") {
@@ -82,6 +84,7 @@ export default function ThemeButtons() {
 			setSelectedGreen(false);
 			setSelectedDark(false);
 			setSelectedLightBlue(false);
+			setSelectedDarkYellow(false);
 		} else if (option == "red") {
 			setSelectedBlue(false);
 			setSelectedYellow(false);
@@ -90,6 +93,7 @@ export default function ThemeButtons() {
 			setSelectedGreen(false);
 			setSelectedDark(false);
 			setSelectedLightBlue(false);
+			setSelectedDarkYellow(false);
 		} else if (option == "yellow") {
 			setSelectedBlue(false);
 			setSelectedYellow(true);
@@ -98,6 +102,7 @@ export default function ThemeButtons() {
 			setSelectedGreen(false);
 			setSelectedDark(false);
 			setSelectedLightBlue(false);
+			setSelectedDarkYellow(false);
 		} else if (option == "purple") {
 			setSelectedBlue(false);
 			setSelectedYellow(false);
@@ -106,6 +111,7 @@ export default function ThemeButtons() {
 			setSelectedGreen(false);
 			setSelectedDark(false);
 			setSelectedLightBlue(false);
+			setSelectedDarkYellow(false);
 		} else if (option == "green") {
 			setSelectedBlue(false);
 			setSelectedYellow(false);
@@ -114,6 +120,7 @@ export default function ThemeButtons() {
 			setSelectedGreen(true);
 			setSelectedDark(false);
 			setSelectedLightBlue(false);
+			setSelectedDarkYellow(false);
 		} else if (option == "dark") {
 			setSelectedBlue(false);
 			setSelectedYellow(false);
@@ -122,6 +129,7 @@ export default function ThemeButtons() {
 			setSelectedGreen(false);
 			setSelectedDark(true);
 			setSelectedLightBlue(false);
+			setSelectedDarkYellow(false);
 		} else if (option == "lightBlue") {
 			setSelectedBlue(false);
 			setSelectedYellow(false);
@@ -130,6 +138,16 @@ export default function ThemeButtons() {
 			setSelectedGreen(false);
 			setSelectedDark(false);
 			setSelectedLightBlue(true);
+			setSelectedDarkYellow(false);
+		} else if (option == "darkYellow") {
+			setSelectedBlue(false);
+			setSelectedYellow(false);
+			setSelectedRed(false);
+			setSelectedPurple(false);
+			setSelectedGreen(false);
+			setSelectedDark(false);
+			setSelectedLightBlue(false);
+			setSelectedDarkYellow(true);
 		}
 
 		changeTheme(option);
@@ -149,8 +167,9 @@ export default function ThemeButtons() {
 			<ButtonRed id="red" selected={selectedRed} style={{ background: "#B33636" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 			<ButtonPurple id="purple" selected={selectedPurple} style={{ background: "#72195A" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 			<ButtonGreen id="green" selected={selectedGreen} style={{ background: "#45b69c" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-			<ButtonDark id="dark" selected={selectedDark} style={{ background: "#000" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonDark id="dark" selected={selectedDark} style={{ background: "#272727" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 			<ButtonLightBlue id="lightBlue" selected={selectedLightBlue} style={{ background: "#0D5C82" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonLightBlue id="darkYellow" selected={selectedDarkYellow} style={{ background: "#000" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 		</ThemeButtonsContainer>
 	);
 }

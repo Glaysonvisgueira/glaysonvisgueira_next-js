@@ -180,6 +180,32 @@ export const darkTheme = {
 	},
 };
 
+export const darkYellowTheme = {
+	colors: {
+		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
+		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
+		background: "#000",
+		backgroundSecondary: "#272727",
+		branding: "#FCD434",
+		title: "#fff",
+		inactiveTitle: "#8b8b8b",
+		subtitle: "#ccc",
+		body: "#ccc",
+		caption: "#ccc",
+		icon: "#fff",
+		iconHover: "#ccc",
+		button: "",
+		shadow: "",
+	},
+	fontSizes: {
+		xs: "12px",
+		sm: "14px",
+		md: "16px",
+		lg: "18px",
+		xl: "20px",
+	},
+};
+
 //Cores para paletas de cores:
 /*
 #F1D302

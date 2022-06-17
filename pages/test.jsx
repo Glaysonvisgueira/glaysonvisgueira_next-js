@@ -6,7 +6,6 @@ import Grow from "@mui/material/Grow";
 
 //Custom components
 import Head from "@/components/Head";
-import SlideTechs from "@/components/SlideTechs";
 
 const ContainerSkillBox = styled.div`
 	display: flex;

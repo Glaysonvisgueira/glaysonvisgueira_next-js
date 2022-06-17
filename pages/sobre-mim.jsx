@@ -59,7 +59,8 @@ const CardAboutMe = styled.div`
 	margin: 10px auto;
 	border: 4px solid transparent;
 	transition: all 0.3s ease;
-
+	//box-shadow: 120px 80px 40px 20px ${(props) => props.theme.colors.branding};
+	color: ${(props) => props.theme.colors.branding}5E;
 	p {
 		color: ${(props) => props.theme.colors.body};
 	}
@@ -76,6 +77,7 @@ const CardAboutMe = styled.div`
 	&:hover {
 		border: 4px solid ${(props) => props.theme.colors.branding};
 		color: ${(props) => props.theme.colors.branding};
+		box-shadow: 0px 0px 93px 0px ${(props) => props.theme.colors.branding}5E;
 	}
 
 	@media (max-width: 1200px) {

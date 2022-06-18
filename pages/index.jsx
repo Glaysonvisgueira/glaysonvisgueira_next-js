@@ -8,7 +8,12 @@ import Grow from "@mui/material/Grow";
 import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LandingAnimation from "@/components/LandingPageAnimation";
+
+//Pages
 import SobreMimPage from "../pages/sobre-mim";
+import PortifolioPage from "../pages/portifolio";
+import ExperienciaPage from "../pages/experiencia";
+import ContatosPage from "../pages/contatos";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -101,10 +106,42 @@ const SectionOne = styled.section`
 	min-height: 100vh;
 `;
 
-const SectionTwo = styled.section`
+const SectionSobreMim = styled.section`
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding-top: 120px;
+	width: 100%;
+	min-height: 100vh;
+`;
+
+const SectionPortifolio = styled.section`
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding-top: 120px;
+	width: 100%;
+	min-height: 100vh;
+`;
+
+const SectionExperiencia = styled.section`
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding-top: 120px;
+	width: 100%;
+	min-height: 100vh;
+`;
+
+const SectionContatos = styled.section`
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding-top: 120px;
 	width: 100%;
 	min-height: 100vh;
 `;
@@ -139,7 +176,7 @@ export default function HomePage(props) {
 
 	return (
 		<>
-			<SectionOne>
+			<SectionOne id="section-home">
 				<LandingPageContainer>
 					<Head title="Homepage" metaDescription="" keywords="" />
 
@@ -153,9 +190,21 @@ export default function HomePage(props) {
 				</LandingPageContainer>
 			</SectionOne>
 
-			<SectionTwo id="sobre-mim">
+			<SectionSobreMim id="section-sobre-mim">
 				<SobreMimPage />
-			</SectionTwo>
+			</SectionSobreMim>
+
+			<SectionPortifolio id="section-portifolio">
+				<PortifolioPage />
+			</SectionPortifolio>
+
+			<SectionExperiencia id="section-experiencia">
+				<ExperienciaPage />
+			</SectionExperiencia>
+
+			<SectionContatos id="section-contatos">
+				<ContatosPage />
+			</SectionContatos>
 		</>
 	);
 }

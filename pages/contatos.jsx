@@ -4,14 +4,8 @@ import styled from "styled-components";
 //Mui components
 import Grow from "@mui/material/Grow";
 
-//Custom components
-import Head from "@/components/Head";
-
-const TitlePage = styled.h1`
-	color: ${(props) => props.theme.colors.branding};
-	font-size: 50px;
-	font-weight: 700;
-`;
+//Styled-components
+import { TitleSection } from "@/styles/ui";
 
 export default function Contatos() {
 	const [checked, setChecked] = React.useState(true);
@@ -22,10 +16,7 @@ export default function Contatos() {
 
 	return (
 		<>
-			<Head title="Contatos" metaDescription="" keywords="" />
-			<Grow in={checked}>
-				<TitlePage>CONTATOS</TitlePage>
-			</Grow>
+			<TitleSection>Contatos</TitleSection>
 		</>
 	);
 }

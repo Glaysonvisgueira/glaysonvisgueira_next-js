@@ -7,6 +7,9 @@ import Grow from "@mui/material/Grow";
 //Custom components
 import Head from "@/components/Head";
 
+//Styled-components
+import { TitleSection } from "@/styles/ui";
+
 const TitlePage = styled.h1`
 	color: ${(props) => props.theme.colors.branding};
 	font-size: 50px;
@@ -22,10 +25,7 @@ export default function Portifolio() {
 
 	return (
 		<>
-			<Head title="Portifólio" metaDescription="" keywords="" />
-			<Grow in={checked}>
-				<TitlePage>PORTIFÓLIO</TitlePage>
-			</Grow>
+			<TitleSection>Portifólio</TitleSection>
 		</>
 	);
 }

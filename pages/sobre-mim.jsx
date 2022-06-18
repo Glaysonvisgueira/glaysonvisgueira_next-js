@@ -12,22 +12,14 @@ import Grow from "@mui/material/Grow";
 
 //Custom components
 import Head from "@/components/Head";
-import H2TextTitle from "@/components/ui/H2TextTitle";
-import TextBody from "@/components/ui/TextBody";
 
-const Container = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 70%;
-	height: 100vh;
-	//background-color: #000;
-`;
+//Styled-components
+import { TitleH3, BodyText, TitleSection } from "@/styles/ui";
 
 const ContainerGrid = styled.div`
+	margin-top: 40px;
 	display: grid;
 	width: 100%;
-
 	grid-template-columns: repeat(4, 1fr);
 
 	@media (max-width: 1400px) {
@@ -67,8 +59,12 @@ const CardAboutMe = styled.div`
 		justify-content: center;
 		flex-direction: column;
 
-		h2 {
+		h3 {
 			margin-top: 20px;
+		}
+
+		p {
+			text-align: center;
 		}
 	}
 
@@ -113,47 +109,45 @@ export default function SobreMim() {
 
 	return (
 		<>
-			<Head title="Experiência" metaDescription="" keywords="" />
-			<Grow in={checked}>
-				<ContainerGrid>
-					<CardAboutMe>
-						<div>
-							<Robot />
-							<H2TextTitle>SEO</H2TextTitle>
-						</div>
-						<div className="text-explanation">
-							<TextBody>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextBody>
-						</div>
-					</CardAboutMe>
-					<CardAboutMe>
-						<div>
-							<DesignServices />
-							<H2TextTitle>UX/UI</H2TextTitle>
-						</div>
-						<div className="text-explanation">
-							<TextBody>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextBody>
-						</div>
-					</CardAboutMe>
-					<CardAboutMe>
-						<div>
-							<DesignIdeas />
-							<H2TextTitle>BRANDING</H2TextTitle>
-						</div>
-						<div className="text-explanation">
-							<TextBody>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextBody>
-						</div>
-					</CardAboutMe>
-					<CardAboutMe>
-						<div>
-							<CodeBlock />
-							<H2TextTitle>DESENVOLVIMENTO</H2TextTitle>
-						</div>
-						<div className="text-explanation">
-							<TextBody>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextBody>
-						</div>
-					</CardAboutMe>
-				</ContainerGrid>
-			</Grow>
+			<TitleSection>Serviços oferecidos</TitleSection>
+			<ContainerGrid>
+				<CardAboutMe>
+					<div>
+						<Robot />
+						<TitleH3>SEO</TitleH3>
+					</div>
+					<div className="text-explanation">
+						<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</BodyText>
+					</div>
+				</CardAboutMe>
+				<CardAboutMe>
+					<div>
+						<DesignServices />
+						<TitleH3>UX/UI</TitleH3>
+					</div>
+					<div className="text-explanation">
+						<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</BodyText>
+					</div>
+				</CardAboutMe>
+				<CardAboutMe>
+					<div>
+						<DesignIdeas />
+						<TitleH3>BRANDING</TitleH3>
+					</div>
+					<div className="text-explanation">
+						<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</BodyText>
+					</div>
+				</CardAboutMe>
+				<CardAboutMe>
+					<div>
+						<CodeBlock />
+						<TitleH3>DESENVOLVIMENTO</TitleH3>
+					</div>
+					<div className="text-explanation">
+						<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</BodyText>
+					</div>
+				</CardAboutMe>
+			</ContainerGrid>
 		</>
 	);
 }

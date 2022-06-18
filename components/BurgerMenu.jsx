@@ -54,9 +54,13 @@ const Ul = styled.ul`
 		font-weight: 700;
 		padding: 18px 10px;
 		text-align: left;
-		//color: ${(props) => props.theme.colors.textColorTitle};
 		border-bottom: 1px solid ${(props) => props.theme.colors.subtitle};
 		border-left: 4px solid transparent;
+
+		a {
+			color: ${(props) => props.theme.colors.title};
+			text-decoration: none;
+		}
 
 		&:hover {
 			cursor: pointer;
@@ -96,12 +100,12 @@ const Burger = () => {
 			</StyledBurger>
 			<Ul open={open}>
 				<div>
-					<Link href="/" passHref>
-						<li onClick={() => setOpen(!open)}>HOME</li>
-					</Link>
-					<Link href="/sobre-mim" passHref>
-						<li onClick={() => setOpen(!open)}>SOBRE MIM</li>
-					</Link>
+					<li onClick={() => setOpen(!open)}>
+						<a href="/">HOME</a>
+					</li>
+					<li onClick={() => setOpen(!open)}>
+						<a href="#sobre-mim">SOBRE MIM</a>
+					</li>
 					<Link href="/portifolio" passHref>
 						<li onClick={() => setOpen(!open)}>PORTIFÓLIO</li>
 					</Link>

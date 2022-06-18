@@ -205,31 +205,21 @@ export default function LayoutTemplate({ children }) {
 				</Link>
 
 				<NavbarOptionContainer>
-					<Link href="/" passHref>
-						<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
-							HOME
-						</NavbarOptionHome>
-					</Link>
-
-					<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)} href="#sobre-mim">
+					<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)} href="#section-home">
+						HOME
+					</NavbarOptionHome>
+					<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)} href="#section-sobre-mim">
 						SOBRE MIM
 					</NavbarOptionSobre>
-
-					<Link href="/portifolio" passHref>
-						<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
-							PORTIFÓLIO
-						</NavbarOptionPortifolio>
-					</Link>
-					<Link href="/experiencia" passHref>
-						<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
-							EXPERIÊNCIA
-						</NavbarOptionExperiencia>
-					</Link>
-					<Link href="/contatos" passHref>
-						<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
-							CONTATOS
-						</NavbarOptionContatos>
-					</Link>
+					<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)} href="#section-portifolio">
+						PORTIFÓLIO
+					</NavbarOptionPortifolio>
+					<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)} href="#section-experiencia">
+						EXPERIÊNCIA
+					</NavbarOptionExperiencia>
+					<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)} href="#section-contatos">
+						CONTATOS
+					</NavbarOptionContatos>
 				</NavbarOptionContainer>
 
 				<BurgerMenuContainer>

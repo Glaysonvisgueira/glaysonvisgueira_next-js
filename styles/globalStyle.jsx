@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   }
        
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
   }
   
   ::-webkit-scrollbar-track {
@@ -30,8 +30,9 @@ const GlobalStyle = createGlobalStyle`
   }
   
   ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
     background: ${(props) => props.theme.colors.branding}; 
-    border: 1px solid #ffffff;
+    //border: 1px solid #ffffff;
   }
 
   ::-webkit-scrollbar-thumb:hover {

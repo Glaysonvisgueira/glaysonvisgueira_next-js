@@ -4,8 +4,6 @@ import styled from "styled-components";
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
 
-import Container from "@mui/material/Container";
-
 const Main = styled.main`
 	display: flex;
 	align-items: center;
@@ -16,10 +14,14 @@ const Main = styled.main`
 	//background: ${(props) => props.theme.colors.backgroundRadial};
 `;
 
+const ContainerPage = styled.div`
+	width: 90%;
+`;
+
 const HeaderContainer = styled.header`
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	width: 100%;
 	height: 64px;
 	position: fixed;
@@ -85,12 +87,11 @@ const BurgerMenuContainer = styled.div`
 const NavbarOption = styled.a`
 	color: ${(props) => props.theme.colors.body};
 	font-family: "Quicksand", sans-serif;
-	font-weight: 400;
+	font-weight: 700;
 	margin-left: 5px;
 	margin-right: 5px;
 	text-decoration: none;
 	border-bottom: 4px solid transparent;
-	//transition: border-color 0.5s ease;
 	transition: all 0.3s ease;
 
 	&:hover {
@@ -230,7 +231,7 @@ export default function LayoutTemplate({ children }) {
 				<ThemeButtons />
 			</SideBarTheme>
 			<Main>
-				<Container fixed>{children}</Container>
+				<ContainerPage>{children}</ContainerPage>
 			</Main>
 		</>
 	);

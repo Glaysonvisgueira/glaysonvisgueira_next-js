@@ -5,13 +5,6 @@ import { Robot } from "@styled-icons/fa-solid/Robot";
 import { DesignServices } from "@styled-icons/material-rounded/DesignServices";
 import { DesignIdeas } from "@styled-icons/fluentui-system-filled/DesignIdeas";
 import { CodeBlock } from "@styled-icons/boxicons-regular/CodeBlock";
-//
-
-//Mui components
-import Grow from "@mui/material/Grow";
-
-//Custom components
-import Head from "@/components/Head";
 
 //Styled-components
 import { TitleH3, BodyText, TitleSection } from "@/styles/ui";
@@ -19,8 +12,9 @@ import { TitleH3, BodyText, TitleSection } from "@/styles/ui";
 const ContainerGrid = styled.div`
 	margin-top: 40px;
 	display: grid;
-	width: 100%;
+	width: auto;
 	grid-template-columns: repeat(4, 1fr);
+	//background: #ccc;
 
 	@media (max-width: 1400px) {
 		grid-template-columns: repeat(4, 1fr);
@@ -48,7 +42,7 @@ const CardAboutMe = styled.div`
 	border-radius: 8px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	column-gap: 20px;
-	margin: 10px auto;
+	margin: 20px;
 	border: 4px solid transparent;
 	transition: all 0.3s ease;
 	color: ${(props) => props.theme.colors.branding}5E;

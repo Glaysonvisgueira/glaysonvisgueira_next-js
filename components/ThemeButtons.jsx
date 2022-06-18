@@ -11,8 +11,8 @@ const ThemeButtonsContainer = styled.div`
 
 const ButtonTheme = styled.div`
 	margin: 5px;
-	width: 28px;
-	height: 28px;
+	width: 22px;
+	height: 22px;
 	border-radius: 50%;
 	transition: all 0.3s ease;
 

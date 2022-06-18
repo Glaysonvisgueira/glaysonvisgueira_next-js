@@ -108,17 +108,17 @@ const SectionOne = styled.section`
 
 const SectionSobreMim = styled.section`
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
 	padding-top: 120px;
 	width: 100%;
-	min-height: 100vh;
+	//min-height: 100vh;
 `;
 
 const SectionPortifolio = styled.section`
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
 	padding-top: 120px;
@@ -128,17 +128,18 @@ const SectionPortifolio = styled.section`
 
 const SectionExperiencia = styled.section`
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
 	padding-top: 120px;
 	width: 100%;
 	min-height: 100vh;
+	padding: 100px;
 `;
 
 const SectionContatos = styled.section`
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
 	padding-top: 120px;

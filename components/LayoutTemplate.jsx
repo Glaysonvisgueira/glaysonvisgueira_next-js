@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
+
+//Custom components
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
+
+//Ícones
+import { KeyboardArrowUp } from "@styled-icons/material-outlined/KeyboardArrowUp";
 
 const Main = styled.main`
 	display: flex;
@@ -24,7 +29,7 @@ const HeaderContainer = styled.header`
 	justify-content: space-around;
 	width: 100%;
 	height: 64px;
-	position: fixed;
+	position: absolute;
 	top: 0;
 
 	@media (max-width: 600px) {
@@ -84,10 +89,10 @@ const BurgerMenuContainer = styled.div`
 	}
 `;
 
-const NavbarOption = styled.h3`
+const NavbarOption = styled.h4`
 	color: ${(props) => props.theme.colors.body};
 	font-family: "Quicksand", sans-serif;
-	font-weight: 700;
+	font-weight: 400;
 	margin-left: 5px;
 	margin-right: 5px;
 	text-decoration: none;
@@ -153,12 +158,61 @@ const SideBarTheme = styled.aside`
 	}
 `;
 
+const ButtonUpToTop = styled.div`
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+	bottom: 20px;
+	right: 20px;
+	background-color: ${(props) => props.theme.colors.branding};
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+
+	svg {
+		color: ${(props) => props.theme.colors.background};
+		width: 30px;
+		height: 30px;
+	}
+`;
+
 export default function LayoutTemplate({ children }) {
 	const [selectedHome, setSelectedHome] = useState(true);
 	const [selectedSobre, setSelectedSobre] = useState(false);
 	const [selectedPortifolio, setSelectedPortifolio] = useState(false);
 	const [selectedExperiencia, setSelectedExperiencia] = useState(false);
 	const [selectedContatos, setSelectedContatos] = useState(false);
+
+	const [showTopBtn, setShowTopBtn] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 200) {
+				setShowTopBtn(true);
+			} else {
+				setShowTopBtn(false);
+			}
+		});
+	}, []);
+
+	//Função para subir ao topo da página.
+	const goToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+		setSelectedHome(true);
+		setSelectedSobre(false);
+		setSelectedPortifolio(false);
+		setSelectedExperiencia(false);
+		setSelectedContatos(false);
+	};
 
 	function handleActiveOption(option) {
 		if (option == "home") {
@@ -196,8 +250,13 @@ export default function LayoutTemplate({ children }) {
 
 	return (
 		<>
+			{showTopBtn && (
+				<ButtonUpToTop onClick={goToTop}>
+					<KeyboardArrowUp />
+				</ButtonUpToTop>
+			)}
 			<HeaderContainer>
-				<Link href="/" passHref>
+				<Link href="#section-home" passHref>
 					<LogoContainer>
 						<LogoText>
 							<CaracteresLogo>&lt;</CaracteresLogo>GV <CaracteresLogo>/&gt;</CaracteresLogo>

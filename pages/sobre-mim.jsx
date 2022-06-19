@@ -40,12 +40,12 @@ const CardAboutMe = styled.div`
 	height: 300px;
 	padding: 20px;
 	border-radius: 8px;
+	color: ${(props) => props.theme.colors.branding}5E;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	column-gap: 20px;
 	margin: 20px;
 	border: 4px solid transparent;
 	transition: all 0.3s ease;
-	color: ${(props) => props.theme.colors.branding}5E;
 
 	div {
 		display: flex;

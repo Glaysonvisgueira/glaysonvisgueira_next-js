@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-//MUI components
-import Grow from "@mui/material/Grow";
-
 //Custom components
 import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
@@ -168,6 +165,57 @@ const ButtonSaibaMais = styled.button`
 	}
 `;
 
+const ButtonSaibaMaisSlide = styled.button`
+	width: 200px;
+	border-radius: 4px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+	width: 200px;
+	height: 34px;
+	background-color: ${(props) => props.theme.colors.branding};
+	color: ${(props) => props.theme.colors.backgroundSecondary};
+	border-radius: 4px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: none;
+	font-size: ${(props) => props.theme.fontSizes.lg};
+
+	z-index: 1;
+	position: relative;
+	//font-size: inherit;
+	//font-family: inherit;
+	//color: white;
+	padding: 0.5em 1em;
+	outline: none;
+	border: none;
+	//background-color: hsl(236, 32%, 26%);
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&::before {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border: 4px solid hsl(236, 32%, 26%);
+		transform-origin: center;
+		transform: scale(1);
+	}
+
+	&:hover::before {
+		transition: all 0.75s ease-in-out;
+		transform-origin: center;
+		transform: scale(1.75);
+		opacity: 0;
+	}
+`;
+
 export default function HomePage(props) {
 	const [checked, setChecked] = React.useState(true);
 
@@ -182,7 +230,7 @@ export default function HomePage(props) {
 					<Head title="Homepage" metaDescription="" keywords="" />
 
 					<TitleLandingContainer>
-						<TitleLanding>&lt;Glayson Visgueira /&gt;</TitleLanding>
+						<TitleLanding>Glayson Visgueira</TitleLanding>
 						<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
 
 						<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
@@ -190,19 +238,15 @@ export default function HomePage(props) {
 					</TitleLandingContainer>
 				</LandingPageContainer>
 			</SectionOne>
-
 			<SectionSobreMim id="section-sobre-mim">
 				<SobreMimPage />
 			</SectionSobreMim>
-
 			<SectionPortifolio id="section-portifolio">
 				<PortifolioPage />
 			</SectionPortifolio>
-
 			<SectionExperiencia id="section-experiencia">
 				<ExperienciaPage />
 			</SectionExperiencia>
-
 			<SectionContatos id="section-contatos">
 				<ContatosPage />
 			</SectionContatos>
@@ -211,5 +255,5 @@ export default function HomePage(props) {
 }
 
 /*
-<Grow in={checked}></Grow>
+<TitleLanding>&lt;Glayson Visgueira /&gt;</TitleLanding>
 */

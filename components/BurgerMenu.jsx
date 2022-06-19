@@ -100,19 +100,19 @@ const Burger = () => {
 			</StyledBurger>
 			<Ul open={open}>
 				<div>
-					<li onClick={() => setOpen(!open)}>
-						<a href="/">HOME</a>
-					</li>
-					<li onClick={() => setOpen(!open)}>
-						<a href="#sobre-mim">SOBRE MIM</a>
-					</li>
-					<Link href="/portifolio" passHref>
+					<Link href="#" passHref>
+						<li onClick={() => setOpen(!open)}>HOME</li>
+					</Link>
+					<Link href="#section-sobre-mim" passHref>
+						<li onClick={() => setOpen(!open)}>SOBRE MIM</li>
+					</Link>
+					<Link href="#section-portifolio" passHref>
 						<li onClick={() => setOpen(!open)}>PORTIFÓLIO</li>
 					</Link>
-					<Link href="/experiencia" passHref>
+					<Link href="#section-experiencia" passHref>
 						<li onClick={() => setOpen(!open)}>EXPERIÊNCIA</li>
 					</Link>
-					<Link href="/contatos" passHref>
+					<Link href="#section-contatos" passHref>
 						<li onClick={() => setOpen(!open)}>CONTATOS</li>
 					</Link>
 				</div>

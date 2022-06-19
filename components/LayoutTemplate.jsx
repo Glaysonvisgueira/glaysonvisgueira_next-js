@@ -84,7 +84,7 @@ const BurgerMenuContainer = styled.div`
 	}
 `;
 
-const NavbarOption = styled.a`
+const NavbarOption = styled.h3`
 	color: ${(props) => props.theme.colors.body};
 	font-family: "Quicksand", sans-serif;
 	font-weight: 700;
@@ -206,21 +206,31 @@ export default function LayoutTemplate({ children }) {
 				</Link>
 
 				<NavbarOptionContainer>
-					<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)} href="#section-home">
-						HOME
-					</NavbarOptionHome>
-					<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)} href="#section-sobre-mim">
-						SOBRE MIM
-					</NavbarOptionSobre>
-					<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)} href="#section-portifolio">
-						PORTIFÓLIO
-					</NavbarOptionPortifolio>
-					<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)} href="#section-experiencia">
-						EXPERIÊNCIA
-					</NavbarOptionExperiencia>
-					<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)} href="#section-contatos">
-						CONTATOS
-					</NavbarOptionContatos>
+					<Link href="#section-home" passHref>
+						<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
+							HOME
+						</NavbarOptionHome>
+					</Link>
+					<Link href="#section-sobre-mim" passHref>
+						<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)}>
+							SOBRE MIM
+						</NavbarOptionSobre>
+					</Link>
+					<Link href="#section-portifolio" passHref>
+						<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
+							PORTIFÓLIO
+						</NavbarOptionPortifolio>
+					</Link>
+					<Link href="#section-experiencia" passHref>
+						<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
+							EXPERIÊNCIA
+						</NavbarOptionExperiencia>
+					</Link>
+					<Link href="#section-contatos" passHref>
+						<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
+							CONTATOS
+						</NavbarOptionContatos>
+					</Link>
 				</NavbarOptionContainer>
 
 				<BurgerMenuContainer>

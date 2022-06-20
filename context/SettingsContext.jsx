@@ -16,7 +16,7 @@ const listaTemas = {
 };
 
 export default function SettingsProvider({ children }) {
-	const [theme, setTheme] = useState(darkTheme);
+	const [theme, setTheme] = useState(blueTheme);
 
 	//Carregar o tema no inicio da aplicação
 	useEffect(() => {
@@ -25,7 +25,7 @@ export default function SettingsProvider({ children }) {
 
 	//Função para coletar o tema no localStorage do navegador
 	const getThemeLocalStorage = async () => {
-		const theme = localStorage.getItem("@glaysonvisgueira:theme");
+		const theme = await localStorage.getItem("@glaysonvisgueira:theme");
 		if (theme) {
 			setTheme(JSON.parse(theme));
 		} else {

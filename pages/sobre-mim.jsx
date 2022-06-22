@@ -10,7 +10,7 @@ import { CodeBlock } from "@styled-icons/boxicons-regular/CodeBlock";
 import { TitleH3, BodyText, TitleSection } from "@/styles/ui";
 
 const ContainerGrid = styled.div`
-	margin-top: 40px;
+	//margin-top: 40px;
 	display: grid;
 	width: auto;
 	grid-template-columns: repeat(4, 1fr);
@@ -37,7 +37,7 @@ const CardAboutMe = styled.div`
 	flex-direction: column;
 	position: "relative";
 	width: 220px;
-	height: 300px;
+	height: 340px;
 	padding: 20px;
 	border-radius: 8px;
 	color: ${(props) => props.theme.colors.branding}5E;
@@ -83,14 +83,6 @@ const CardAboutMe = styled.div`
 
 	@media (max-width: 1200px) {
 		width: 90%;
-	}
-
-	@media (max-width: 1000px) {
-		width: 70%;
-	}
-
-	@media (max-width: 600px) {
-		width: 80%;
 	}
 `;
 

@@ -99,7 +99,7 @@ export default function SobreMim() {
 		<>
 			<TitleSection>Serviços oferecidos</TitleSection>
 			<ContainerGrid>
-				<ScrollAnimation animateIn="fadeIn" delay="400" animateOnce={true}>
+				<ScrollAnimation animateIn="fadeIn" delay={400} animateOnce={true}>
 					<CardAboutMe>
 						<div>
 							<Robot />
@@ -110,7 +110,7 @@ export default function SobreMim() {
 						</div>
 					</CardAboutMe>
 				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeIn" delay="600" animateOnce={true}>
+				<ScrollAnimation animateIn="fadeIn" delay={600} animateOnce={true}>
 					<CardAboutMe>
 						<div>
 							<DesignServices />
@@ -121,7 +121,7 @@ export default function SobreMim() {
 						</div>
 					</CardAboutMe>
 				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeIn" delay="800" animateOnce={true}>
+				<ScrollAnimation animateIn="fadeIn" delay={800} animateOnce={true}>
 					<CardAboutMe>
 						<div>
 							<DesignIdeas />
@@ -132,7 +132,7 @@ export default function SobreMim() {
 						</div>
 					</CardAboutMe>
 				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeIn" delay="1000" animateOnce={true}>
+				<ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
 					<CardAboutMe>
 						<div>
 							<CodeBlock />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";

@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-//Mui components
-import Grow from "@mui/material/Grow";
-
-//Custom components
-import Head from "@/components/Head";
-
+import TimelinePortifolio from "@/components/TimelinePortifolio";
 //Styled-components
 import { TitleSection } from "@/styles/ui";
 
@@ -26,6 +21,7 @@ export default function Portifolio() {
 	return (
 		<>
 			<TitleSection>Portifólio</TitleSection>
+			<TimelinePortifolio />
 		</>
 	);
 }

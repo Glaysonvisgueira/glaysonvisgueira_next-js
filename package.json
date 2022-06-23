@@ -19,6 +19,7 @@
     "react-dom": "18.1.0",
     "react-lottie": "^1.2.3",
     "react-scroll-motion": "^0.3.0",
+    "react-vertical-timeline-component": "^3.5.2",
     "styled-components": "^5.3.5",
     "styled-icons": "^10.45.0"
   },

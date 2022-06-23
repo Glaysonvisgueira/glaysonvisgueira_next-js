@@ -99,6 +99,19 @@ export default function SobreMim() {
 		<>
 			<TitleSection>Serviços oferecidos</TitleSection>
 			<ContainerGrid>
+				<ScrollAnimation animateIn="slideInDown">
+					<CardAboutMe>
+						<div>
+							<Robot />
+							<TitleH3>SEO</TitleH3>
+						</div>
+						<div className="text-explanation">
+							<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum{"\n"}has been the industry's standard dummy text ever since the 1500s.</BodyText>
+						</div>
+					</CardAboutMe>
+				</ScrollAnimation>
+
+				{/*
 				<ScrollAnimation animateIn="fadeIn" delay={400} animateOnce={true}>
 					<CardAboutMe>
 						<div>
@@ -110,6 +123,8 @@ export default function SobreMim() {
 						</div>
 					</CardAboutMe>
 				</ScrollAnimation>
+				*/}
+
 				<ScrollAnimation animateIn="fadeIn" delay={600} animateOnce={true}>
 					<CardAboutMe>
 						<div>

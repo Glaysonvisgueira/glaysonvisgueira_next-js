@@ -2301,6 +2301,11 @@ react-lottie@^1.2.3:
     babel-runtime "^6.26.0"
     lottie-web "^5.1.3"
 
+react-scroll-motion@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-scroll-motion/-/react-scroll-motion-0.3.0.tgz#50b473da71521e12fcc39a4a1c7eb1e4dfed2a44"
+  integrity sha512-/7VUbyu0nONmlyQsnivcAOPCdc6GnS6LFL7R3QygtBjVAmA7dD29B/jje3jNa0fLlrwycriXq/Nm9sWgX7A1Bw==
+
 react-transition-group@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"

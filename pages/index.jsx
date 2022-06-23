@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import ScrollAnimation from "react-animate-on-scroll";
 //Custom components
 import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";

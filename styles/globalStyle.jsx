@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   html, body, :root {
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Roboto', sans-serif;
     min-height: 100%;    
     scroll-behavior: smooth;
   }  

@@ -5,6 +5,8 @@ import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LandingAnimation from "@/components/LandingPageAnimation";
 import Slide from "react-reveal/Slide";
+import ProgressBar from "react-progressbar-on-scroll";
+import { useTheme } from "styled-components";
 
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
@@ -218,14 +220,11 @@ const ButtonSaibaMaisSlide = styled.button`
 `;
 
 export default function HomePage(props) {
-	const [checked, setChecked] = React.useState(true);
-
-	const handleChange = () => {
-		setChecked((prev) => !prev);
-	};
+	const theme = useTheme();
 
 	return (
 		<>
+			<ProgressBar color={theme.colors.branding} height={5} />
 			<SectionOne id="section-home">
 				<Slide bottom cascade>
 					<LandingPageContainer>

@@ -16,11 +16,11 @@ const listaTemas = {
 };
 
 export default function SettingsProvider({ children }) {
-	const [theme, setTheme] = useState(blueTheme);
+	const [theme, setTheme] = useState(darkYellowTheme);
 
 	//Carregar o tema no inicio da aplicação
 	useEffect(() => {
-		getThemeLocalStorage();
+		//getThemeLocalStorage();
 	}, []);
 
 	//Função para coletar o tema no localStorage do navegador

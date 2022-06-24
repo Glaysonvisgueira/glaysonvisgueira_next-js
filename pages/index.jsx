@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LandingAnimation from "@/components/LandingPageAnimation";
+import Slide from "react-reveal/Slide";
 
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
@@ -225,17 +226,19 @@ export default function HomePage(props) {
 	return (
 		<>
 			<SectionOne id="section-home">
-				<LandingPageContainer>
-					<Head title="Homepage" metaDescription="" keywords="" />
+				<Slide bottom cascade>
+					<LandingPageContainer>
+						<Head title="Homepage" metaDescription="" keywords="" />
 
-					<TitleLandingContainer>
-						<TitleLanding>Glayson Visgueira</TitleLanding>
-						<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
+						<TitleLandingContainer>
+							<TitleLanding>Glayson Visgueira</TitleLanding>
+							<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
 
-						<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
-						<SocialNetworkRowStack />
-					</TitleLandingContainer>
-				</LandingPageContainer>
+							<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
+							<SocialNetworkRowStack />
+						</TitleLandingContainer>
+					</LandingPageContainer>
+				</Slide>
 			</SectionOne>
 
 			<SectionSobreMim id="section-sobre-mim">

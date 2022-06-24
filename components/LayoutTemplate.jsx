@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import ScrollAnimation from "react-animate-on-scroll";
+import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";
@@ -258,40 +259,53 @@ export default function LayoutTemplate({ children }) {
 				</ButtonUpToTop>
 			)}
 			<HeaderContainer>
-				<Link href="#section-home" passHref>
-					<LogoContainer>
-						<LogoText>
-							<CaracteresLogo>&lt;</CaracteresLogo>GV <CaracteresLogo>/&gt;</CaracteresLogo>
-						</LogoText>
-					</LogoContainer>
-				</Link>
+				<Fade top delay={100} duration={200}>
+					<Link href="#section-home" passHref>
+						<LogoContainer>
+							<LogoText>
+								<CaracteresLogo>&lt;</CaracteresLogo>GV <CaracteresLogo>/&gt;</CaracteresLogo>
+							</LogoText>
+						</LogoContainer>
+					</Link>
+				</Fade>
 
 				<NavbarOptionContainer>
-					<Link href="#section-home" passHref>
-						<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
-							HOME
-						</NavbarOptionHome>
-					</Link>
-					<Link href="#section-sobre-mim" passHref>
-						<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)}>
-							SOBRE MIM
-						</NavbarOptionSobre>
-					</Link>
-					<Link href="#section-portifolio" passHref>
-						<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
-							PORTIFÓLIO
-						</NavbarOptionPortifolio>
-					</Link>
-					<Link href="#section-experiencia" passHref>
-						<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
-							EXPERIÊNCIA
-						</NavbarOptionExperiencia>
-					</Link>
-					<Link href="#section-contatos" passHref>
-						<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
-							CONTATOS
-						</NavbarOptionContatos>
-					</Link>
+					<Fade top duration={200}>
+						<Link href="#section-home" passHref>
+							<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
+								HOME
+							</NavbarOptionHome>
+						</Link>
+					</Fade>
+
+					<Fade top duration={200}>
+						<Link href="#section-sobre-mim" passHref>
+							<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)}>
+								SOBRE MIM
+							</NavbarOptionSobre>
+						</Link>
+					</Fade>
+					<Fade top delay={200} duration={200}>
+						<Link href="#section-portifolio" passHref>
+							<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
+								PORTIFÓLIO
+							</NavbarOptionPortifolio>
+						</Link>
+					</Fade>
+					<Fade top delay={300} duration={200}>
+						<Link href="#section-experiencia" passHref>
+							<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
+								EXPERIÊNCIA
+							</NavbarOptionExperiencia>
+						</Link>
+					</Fade>
+					<Fade top delay={400} duration={200}>
+						<Link href="#section-contatos" passHref>
+							<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
+								CONTATOS
+							</NavbarOptionContatos>
+						</Link>
+					</Fade>
 				</NavbarOptionContainer>
 
 				<BurgerMenuContainer>

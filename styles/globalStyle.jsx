@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     min-height: 100%;    
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }  
 
   ::selection {

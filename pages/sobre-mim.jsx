@@ -98,8 +98,8 @@ export default function SobreMim() {
 	return (
 		<>
 			<TitleSection>Serviços oferecidos</TitleSection>
-			<ContainerGrid>
-				<ScrollAnimation animateIn="slideInDown">
+			<ScrollAnimation animateIn="slideInUp" animateOnce>
+				<ContainerGrid>
 					<CardAboutMe>
 						<div>
 							<Robot />
@@ -109,9 +109,8 @@ export default function SobreMim() {
 							<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum{"\n"}has been the industry's standard dummy text ever since the 1500s.</BodyText>
 						</div>
 					</CardAboutMe>
-				</ScrollAnimation>
 
-				{/*
+					{/*
 				<ScrollAnimation animateIn="fadeIn" delay={400} animateOnce={true}>
 					<CardAboutMe>
 						<div>
@@ -125,7 +124,6 @@ export default function SobreMim() {
 				</ScrollAnimation>
 				*/}
 
-				<ScrollAnimation animateIn="fadeIn" delay={600} animateOnce={true}>
 					<CardAboutMe>
 						<div>
 							<DesignServices />
@@ -135,8 +133,7 @@ export default function SobreMim() {
 							<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</BodyText>
 						</div>
 					</CardAboutMe>
-				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeIn" delay={800} animateOnce={true}>
+
 					<CardAboutMe>
 						<div>
 							<DesignIdeas />
@@ -146,8 +143,7 @@ export default function SobreMim() {
 							<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</BodyText>
 						</div>
 					</CardAboutMe>
-				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce={true}>
+
 					<CardAboutMe>
 						<div>
 							<CodeBlock />
@@ -157,8 +153,8 @@ export default function SobreMim() {
 							<BodyText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</BodyText>
 						</div>
 					</CardAboutMe>
-				</ScrollAnimation>
-			</ContainerGrid>
+				</ContainerGrid>
+			</ScrollAnimation>
 		</>
 	);
 }

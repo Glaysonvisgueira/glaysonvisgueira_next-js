@@ -26,6 +26,7 @@ export default function SettingsProvider({ children }) {
 	//Função para coletar o tema no localStorage do navegador
 	const getThemeLocalStorage = async () => {
 		const theme = await localStorage.getItem("@glaysonvisgueira:theme");
+
 		if (theme) {
 			setTheme(JSON.parse(theme));
 		} else {

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+//Third part librarys
 import Link from "next/link";
 import styled from "styled-components";
 import Slide from "react-reveal/Slide";
@@ -22,7 +24,7 @@ const Main = styled.main`
 `;
 
 const ContainerPage = styled.div`
-	width: 90%;
+	width: 100%;
 `;
 
 const HeaderContainer = styled.header`

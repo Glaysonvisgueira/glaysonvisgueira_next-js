@@ -131,7 +131,8 @@ const SectionExperiencia = styled.section`
 	padding-top: 120px;
 	width: 100%;
 	min-height: 100vh;
-	padding: 100px;
+	//padding: 100px;
+	//background-color: #ccc;
 `;
 
 const SectionContatos = styled.section`

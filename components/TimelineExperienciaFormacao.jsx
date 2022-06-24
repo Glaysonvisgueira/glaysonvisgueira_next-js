@@ -7,8 +7,8 @@ import { Github } from "@styled-icons/bootstrap/Github";
 
 const GithubIcon = styled(Github)`
 	color: #000;
-	width: 34px;
-	height: 34px;
+	width: 40px;
+	height: 40px;
 `;
 
 export default function TimelinePortifolio(props) {
@@ -19,7 +19,6 @@ export default function TimelinePortifolio(props) {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				contentStyle={{ color: "#000", borderBottom: `5px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				dateClassName={{ color: "#fff" }}
 				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
 				icon={<Github />}>
 				<h3 className="vertical-timeline-element-title">TÍTULO</h3>
@@ -30,7 +29,6 @@ export default function TimelinePortifolio(props) {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				contentStyle={{ color: "#000", borderBottom: `5px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				dateClassName={{ color: "#fff" }}
 				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
 				icon={<Github />}>
 				<h3 className="vertical-timeline-element-title">TÍTULO</h3>
@@ -41,7 +39,6 @@ export default function TimelinePortifolio(props) {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				contentStyle={{ color: "#000", borderBottom: `5px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				dateClassName={{ color: "#fff" }}
 				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
 				icon={<Github />}>
 				<h3 className="vertical-timeline-element-title">TÍTULO</h3>
@@ -52,7 +49,6 @@ export default function TimelinePortifolio(props) {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				contentStyle={{ color: "#000", borderBottom: `5px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				dateClassName={{ color: "#fff" }}
 				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
 				icon={<Github />}>
 				<h3 className="vertical-timeline-element-title">TÍTULO</h3>
@@ -63,7 +59,6 @@ export default function TimelinePortifolio(props) {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				contentStyle={{ color: "#000", borderBottom: `5px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				dateClassName={{ color: "#fff" }}
 				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
 				icon={<Github />}>
 				<h3 className="vertical-timeline-element-title">TÍTULO</h3>
@@ -74,7 +69,6 @@ export default function TimelinePortifolio(props) {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				contentStyle={{ color: "#000", borderBottom: `5px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				dateClassName={{ color: "#fff" }}
 				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
 				icon={<Github />}>
 				<h3 className="vertical-timeline-element-title">TÍTULO</h3>
@@ -85,7 +79,6 @@ export default function TimelinePortifolio(props) {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				contentStyle={{ color: "#000", borderBottom: `5px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				dateClassName={{ color: "#fff" }}
 				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
 				icon={<Github />}>
 				<h3 className="vertical-timeline-element-title">TÍTULO</h3>
@@ -96,7 +89,6 @@ export default function TimelinePortifolio(props) {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				contentStyle={{ color: "#000", borderBottom: `5px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				dateClassName={{ color: "#fff" }}
 				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
 				icon={<Github />}>
 				<h3 className="vertical-timeline-element-title">TÍTULO</h3>

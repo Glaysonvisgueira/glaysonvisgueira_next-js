@@ -38,7 +38,7 @@ const TitleLandingContainer = styled.div`
 
 const TitleLanding = styled.div`
 	font-size: 50px;
-	font-weight: 700;
+	font-weight: 800;
 	color: ${(props) => props.theme.colors.branding};
 
 	@media (max-width: 1400px) {

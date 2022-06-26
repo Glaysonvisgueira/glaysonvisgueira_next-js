@@ -8,7 +8,7 @@ import { TitleSection } from "@/styles/ui";
 export default function Experiencia() {
 	return (
 		<>
-			<TitleSection>Experiência</TitleSection>
+			<TitleSection>Formação e cursos</TitleSection>
 			<div style={{ marginTop: "60px" }}></div>
 			<TimelineExperienciaFormacao />
 		</>

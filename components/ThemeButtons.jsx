@@ -8,6 +8,7 @@ const ThemeButtonsContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	z-index: 2;
 `;
 
 const ButtonTheme = styled.div`

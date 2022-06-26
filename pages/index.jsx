@@ -76,20 +76,6 @@ const SubTitleLanding = styled.div`
 	}
 `;
 
-const ImageLandingContainer = styled.div`
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	padding: 10px;
-	flex: 0.6;
-	//border: 2px solid ${(props) => props.theme.colors.textColorTitle};
-	border-radius: 8px;
-
-	@media (max-width: 800px) {
-		order: -1;
-	}
-`;
-
 const HrBorder = styled.div`
 	width: 100%;
 	border-top: 2px solid ${(props) => props.theme.colors.subtitle};
@@ -121,6 +107,18 @@ const SectionPortifolio = styled.section`
 	justify-content: flex-start;
 	flex-direction: column;
 	padding-top: 120px;
+	width: 100%;
+	min-height: 100vh;
+	//background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 0.65) 100%);
+`;
+
+const ImageOverlay = styled.div`
+	background-image: url("img/bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	filter: blur(2px) opacity(0.4);
+	-webkit-filter: blur(3px) opacity(0.2);
 	width: 100%;
 	min-height: 100vh;
 `;

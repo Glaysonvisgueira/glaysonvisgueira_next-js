@@ -17,7 +17,6 @@ export default function Portifolio() {
 	return (
 		<>
 			<TitleSection>Portifólio</TitleSection>
-			<RadialCircleBackground />
 		</>
 	);
 }

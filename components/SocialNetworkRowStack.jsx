@@ -16,8 +16,8 @@ const SocialMediaContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
-
 	@media (max-width: 600px) {
+		width: 100%;
 		justify-content: space-between;
 	}
 `;

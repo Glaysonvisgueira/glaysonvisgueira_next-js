@@ -24,6 +24,10 @@ const Main = styled.main`
 `;
 
 const ContainerPage = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	width: 100%;
 `;
 
@@ -35,6 +39,14 @@ const HeaderContainer = styled.header`
 	height: 64px;
 	position: absolute;
 	top: 0;
+	z-index: 3;
+	//background-color: ${(props) => props.theme.colors.background};
+
+	//Deixar header com efeito de Glassmorphin
+	//transition: min-height 1s ease !important;
+	//background-color: rgba(0, 0, 0, 0.1) !important;
+	//backdrop-filter: saturate(180%) blur(30px);
+	//-webkit-backdrop-filter: saturate(180%) blur(30px);
 
 	@media (max-width: 600px) {
 		justify-content: space-between;
@@ -88,7 +100,7 @@ const BurgerMenuContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 
-	@media (min-width: 600px) {
+	@media (min-width: 601px) {
 		display: none;
 	}
 `;
@@ -314,9 +326,11 @@ export default function LayoutTemplate({ children }) {
 					<BurgerMenu />
 				</BurgerMenuContainer>
 			</HeaderContainer>
-			<SideBarTheme>
-				<ThemeButtons />
-			</SideBarTheme>
+			<Fade left>
+				<SideBarTheme>
+					<ThemeButtons />
+				</SideBarTheme>
+			</Fade>
 			<Main>
 				<ContainerPage>{children}</ContainerPage>
 			</Main>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
+import ThemeButtons from "@/components/ThemeButtons";
+
 const StyledBurger = styled.div`
 	width: 2rem;
 	height: 2rem;
@@ -48,8 +50,6 @@ const Ul = styled.ul`
 	justify-content: space-between;
 	z-index: 10;
 
-	//flex-flow: row nowrap;
-
 	li {
 		font-weight: 700;
 		padding: 18px 10px;
@@ -71,7 +71,6 @@ const Ul = styled.ul`
 	@media (max-width: 768px) {
 		//flex-flow: column nowrap;
 		background-color: ${(props) => props.theme.colors.backgroundSecondary};
-
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		z-index: 3;
@@ -88,6 +87,12 @@ const Ul = styled.ul`
 	}
 `;
 
+const ContainerThemeButtonsInBurger = styled.div`
+	position: absolute;
+	top: 20px;
+	left: 10px;
+`;
+
 const Burger = () => {
 	const [open, setOpen] = useState(false);
 
@@ -99,6 +104,9 @@ const Burger = () => {
 				<div />
 			</StyledBurger>
 			<Ul open={open}>
+				<ContainerThemeButtonsInBurger>
+					<ThemeButtons />
+				</ContainerThemeButtonsInBurger>
 				<div>
 					<Link href="#" passHref>
 						<li onClick={() => setOpen(!open)}>HOME</li>

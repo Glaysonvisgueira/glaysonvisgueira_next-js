@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { SettingsContext } from "@/context/SettingsContext";
-import Fade from "react-reveal/Fade";
 
 const ThemeButtonsContainer = styled.div`
 	display: flex;
@@ -9,6 +8,10 @@ const ThemeButtonsContainer = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	z-index: 2;
+
+	@media (max-width: 601px) {
+		flex-direction: row;
+	}
 `;
 
 const ButtonTheme = styled.div`
@@ -156,24 +159,22 @@ export default function ThemeButtons() {
 	}
 
 	return (
-		<Fade left>
-			<ThemeButtonsContainer>
-				<ButtonBlue
-					id="blue"
-					selected={selectedBlue}
-					style={{ background: "#29313c" }}
-					onClick={(e) => {
-						handleSelectTheme(e.target.id);
-					}}
-				/>
-				<ButtonYellow id="yellow" selected={selectedYellow} style={{ background: "#FCD434" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-				<ButtonRed id="red" selected={selectedRed} style={{ background: "#B33636" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-				<ButtonPurple id="purple" selected={selectedPurple} style={{ background: "#72195A" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-				<ButtonGreen id="green" selected={selectedGreen} style={{ background: "#45b69c" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-				<ButtonDark id="dark" selected={selectedDark} style={{ background: "#272727" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-				<ButtonLightBlue id="lightBlue" selected={selectedLightBlue} style={{ background: "#0D5C82" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-				<ButtonLightBlue id="darkYellow" selected={selectedDarkYellow} style={{ background: "#000" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-			</ThemeButtonsContainer>
-		</Fade>
+		<ThemeButtonsContainer>
+			<ButtonBlue
+				id="blue"
+				selected={selectedBlue}
+				style={{ background: "#29313c" }}
+				onClick={(e) => {
+					handleSelectTheme(e.target.id);
+				}}
+			/>
+			<ButtonYellow id="yellow" selected={selectedYellow} style={{ background: "#FCD434" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonRed id="red" selected={selectedRed} style={{ background: "#B33636" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonPurple id="purple" selected={selectedPurple} style={{ background: "#72195A" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonGreen id="green" selected={selectedGreen} style={{ background: "#45b69c" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonDark id="dark" selected={selectedDark} style={{ background: "#272727" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonLightBlue id="lightBlue" selected={selectedLightBlue} style={{ background: "#0D5C82" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonLightBlue id="darkYellow" selected={selectedDarkYellow} style={{ background: "#000" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+		</ThemeButtonsContainer>
 	);
 }

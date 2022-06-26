@@ -31,11 +31,6 @@ const TitleLandingContainer = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	padding: 10px;
-	//background: #ccc;
-
-	@media (max-width: 600px) {
-		flex: 0.5;
-	}
 `;
 
 const TitleLanding = styled.div`
@@ -53,6 +48,8 @@ const TitleLanding = styled.div`
 
 	@media (max-width: 600px) {
 		font-size: 26px;
+		text-align: center;
+		width: 100%;
 	}
 `;
 
@@ -60,8 +57,14 @@ const SubTitleLanding = styled.div`
 	font-weight: 400;
 	color: ${(props) => props.theme.colors.body};
 	text-align: left;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+
+	span {
+		font-weight: 800;
+		color: ${(props) => props.theme.colors.branding};
+	}
 
 	@media (max-width: 1980px) {
 		font-size: ${(props) => props.theme.fontSizes.lg};
@@ -74,20 +77,29 @@ const SubTitleLanding = styled.div`
 	@media (max-width: 900px) {
 		font-size: ${(props) => props.theme.fontSizes.md};
 	}
+
+	@media (max-width: 600px) {
+		text-align: center;
+	}
 `;
 
-const HrBorder = styled.div`
+const ContainerAnimation = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
-	border-top: 2px solid ${(props) => props.theme.colors.subtitle};
-	margin-top: 15px;
-	margin-bottom: 15px;
+	height: 100%;
+
+	@media (max-width: 801px) {
+		order: -1;
+	}
 `;
 
 const SectionOne = styled.section`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
+	width: 80%;
 	min-height: 100vh;
 `;
 
@@ -109,18 +121,7 @@ const SectionPortifolio = styled.section`
 	padding-top: 120px;
 	width: 100%;
 	min-height: 100vh;
-	//background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 0.65) 100%);
-`;
-
-const ImageOverlay = styled.div`
-	background-image: url("img/bg.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	filter: blur(2px) opacity(0.4);
-	-webkit-filter: blur(3px) opacity(0.2);
-	width: 100%;
-	min-height: 100vh;
+	//background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, ${(props) => props.theme.colors.branding} 100%);
 `;
 
 const SectionExperiencia = styled.section`
@@ -149,7 +150,7 @@ const ButtonSaibaMais = styled.button`
 	width: 200px;
 	height: 34px;
 	background-color: ${(props) => props.theme.colors.branding};
-	color: ${(props) => props.theme.colors.backgroundSecondary};
+	color: ${(props) => props.theme.colors.backgroundTitle};
 	border-radius: 4px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -164,56 +165,9 @@ const ButtonSaibaMais = styled.button`
 	&:active {
 		opacity: 0.5;
 	}
-`;
 
-const ButtonSaibaMaisSlide = styled.button`
-	width: 200px;
-	border-radius: 4px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-
-	width: 200px;
-	height: 34px;
-	background-color: ${(props) => props.theme.colors.branding};
-	color: ${(props) => props.theme.colors.backgroundSecondary};
-	border-radius: 4px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	border: none;
-	font-size: ${(props) => props.theme.fontSizes.lg};
-
-	z-index: 1;
-	position: relative;
-	//font-size: inherit;
-	//font-family: inherit;
-	//color: white;
-	padding: 0.5em 1em;
-	outline: none;
-	border: none;
-	//background-color: hsl(236, 32%, 26%);
-
-	&:hover {
-		cursor: pointer;
-	}
-
-	&::before {
-		content: "";
-		z-index: -1;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		border: 4px solid hsl(236, 32%, 26%);
-		transform-origin: center;
-		transform: scale(1);
-	}
-
-	&:hover::before {
-		transition: all 0.75s ease-in-out;
-		transform-origin: center;
-		transform: scale(1.75);
-		opacity: 0;
+	@media (max-width: 600px) {
+		width: 100%;
 	}
 `;
 
@@ -223,18 +177,22 @@ export default function HomePage(props) {
 	return (
 		<>
 			<ProgressBar color={theme.colors.branding} height={5} />
+			<Head title="Homepage" metaDescription="" keywords="" />
 			<SectionOne id="section-home">
-				<Slide bottom cascade>
+				<Slide bottom>
 					<LandingPageContainer>
-						<Head title="Homepage" metaDescription="" keywords="" />
-
 						<TitleLandingContainer>
+							<SubTitleLanding>Olá, eu sou</SubTitleLanding>
 							<TitleLanding>Glayson Visgueira</TitleLanding>
-							<SubTitleLanding> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</SubTitleLanding>
-
+							<SubTitleLanding>
+								Desenvolvedor <span>Front-End</span>, desenvolvo interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO.
+							</SubTitleLanding>
 							<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
 							<SocialNetworkRowStack />
 						</TitleLandingContainer>
+						<ContainerAnimation>
+							<LandingAnimation />
+						</ContainerAnimation>
 					</LandingPageContainer>
 				</Slide>
 			</SectionOne>

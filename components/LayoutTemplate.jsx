@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactFlagsSelect from "react-flags-select";
 
 //Third part librarys
 import Link from "next/link";
@@ -196,6 +197,19 @@ const ButtonUpToTop = styled.div`
 	}
 `;
 
+const ButtonLanguage = styled.select`
+	width: 200px;
+	height: 44px;
+	//background: ${(props) => props.theme.colors.backgroundGradient};
+
+	option {
+		img {
+			width: 24px;
+			height: 80px;
+		}
+	}
+`;
+
 export default function LayoutTemplate({ children }) {
 	const [selectedHome, setSelectedHome] = useState(true);
 	const [selectedSobre, setSelectedSobre] = useState(false);
@@ -317,6 +331,7 @@ export default function LayoutTemplate({ children }) {
 							</NavbarOptionContatos>
 						</Link>
 					</Fade>
+					<ButtonChangeLanguage />
 				</NavbarOptionContainer>
 
 				<BurgerMenuContainer>
@@ -333,6 +348,12 @@ export default function LayoutTemplate({ children }) {
 			</Main>
 		</>
 	);
+}
+
+function ButtonChangeLanguage() {
+	const [selected, setSelected] = useState("");
+
+	return <ReactFlagsSelect selected={selected} onSelect={(code) => setSelected(code)} countries={["US", "BR"]} customLabels={{ US: "Inglês", BR: "Português" }} placeholder="Selecione o idioma" />;
 }
 
 /*

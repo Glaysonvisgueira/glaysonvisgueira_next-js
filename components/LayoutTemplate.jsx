@@ -114,7 +114,7 @@ const NavbarOption = styled.h4`
 
 	&:hover {
 		cursor: pointer;
-		color: ${(props) => props.theme.colors.textTitle};
+		color: ${(props) => props.theme.colors.title};
 		border-bottom: 4px solid ${(props) => props.theme.colors.branding};
 	}
 

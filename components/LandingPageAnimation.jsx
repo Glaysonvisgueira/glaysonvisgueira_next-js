@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Lottie from "react-lottie";
 
-import ReactLottieJson from "@/public/lotties/landing-page.json";
+import ReactLottieJson from "@/public/lotties/landing_page-dark-yellow.json";
 
 const defaultOptions = {
 	loop: true,

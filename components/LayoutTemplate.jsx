@@ -70,7 +70,6 @@ const LogoContainer = styled.div`
 
 const LogoText = styled.h3`
 	color: ${(props) => props.theme.colors.title};
-	font-family: "Quicksand", sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 
@@ -81,7 +80,6 @@ const LogoText = styled.h3`
 
 const CaracteresLogo = styled.span`
 	color: ${(props) => props.theme.colors.branding};
-	font-family: "Quicksand", sans-serif;
 	font-weight: 700;
 `;
 
@@ -107,8 +105,7 @@ const BurgerMenuContainer = styled.div`
 
 const NavbarOption = styled.h4`
 	color: ${(props) => props.theme.colors.body};
-	font-family: "Quicksand", sans-serif;
-	font-weight: 400;
+	font-weight: 800;
 	margin-left: 5px;
 	margin-right: 5px;
 	text-decoration: none;

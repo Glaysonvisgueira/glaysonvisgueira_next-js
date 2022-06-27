@@ -185,7 +185,8 @@ export default function HomePage(props) {
 							<SubTitleLanding>Olá, eu sou</SubTitleLanding>
 							<TitleLanding>Glayson Visgueira</TitleLanding>
 							<SubTitleLanding>
-								Desenvolvedor <span>Front-End</span>, desenvolvo interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO.
+								Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com
+								otimização em <span>SEO</span>.
 							</SubTitleLanding>
 							<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
 							<SocialNetworkRowStack />

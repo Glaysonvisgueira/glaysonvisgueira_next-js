@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 //Custom components
 import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
@@ -7,6 +8,7 @@ import LandingAnimation from "@/components/LandingPageAnimation";
 import Slide from "react-reveal/Slide";
 import ProgressBar from "react-progressbar-on-scroll";
 import { useTheme } from "styled-components";
+import RadialCircleBackground from "@/components/RadialCircleBackground";
 
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
@@ -149,17 +151,19 @@ const SectionContatos = styled.section`
 const ButtonSaibaMais = styled.button`
 	width: 200px;
 	height: 34px;
-	background-color: ${(props) => props.theme.colors.branding};
-	color: ${(props) => props.theme.colors.backgroundTitle};
-	border-radius: 4px;
+	color: ${(props) => props.theme.colors.title};
+	//border-radius: 4px;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	border: none;
 	font-size: ${(props) => props.theme.fontSizes.lg};
+	border: 2px solid ${(props) => props.theme.colors.branding};
+	transition: all 0.3s ease;
+	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 
 	&:hover {
+		background-color: ${(props) => props.theme.colors.branding};
+		color: ${(props) => props.theme.colors.background};
 		cursor: pointer;
-		opacity: 0.8;
 	}
 
 	&:active {

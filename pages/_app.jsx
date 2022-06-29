@@ -1,3 +1,4 @@
+import "../styles/font.css";
 import GlobalStyle from "../styles/globalStyle";
 import LayoutTemplate from "../components/LayoutTemplate";
 

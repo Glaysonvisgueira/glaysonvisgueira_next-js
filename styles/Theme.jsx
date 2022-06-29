@@ -1,83 +1,6 @@
-export const blueTheme = {
-	colors: {
-		backgroundGradient: "linear-gradient(to right top, #171e26, #1b232b, #202731, #242c36, #29313c)",
-		backgroundRadial: "radial-gradient(ellipse at center, #29313C, #171E26)",
-		background: "#171e26",
-		backgroundSecondary: "#29313c",
-		branding: "#FCD434",
-		title: "#fff",
-		inactiveTitle: "#979797",
-		subtitle: "#585E68",
-		body: "#a1a1a1",
-		caption: "#cccccc",
-		icon: "#FCD434",
-		iconHover: "#9b883c",
-		button: "",
-		shadow: "",
-	},
-	fontSizes: {
-		xs: "12px",
-		sm: "14px",
-		md: "16px",
-		lg: "18px",
-		xl: "20px",
-	},
-};
-
-export const yellowTheme = {
-	colors: {
-		backgroundGradient: "linear-gradient(to right top, #fcd434, #f9d546, #f6d656, #f3d664, #f0d771)",
-		backgroundRadial: "radial-gradient(ellipse at center, #D3C58C, #FCD434)",
-		background: "#f0d771",
-		backgroundSecondary: "#D3C58C",
-		branding: "#1b0e02",
-		title: "#1b0e02",
-		inactiveTitle: "#1b0e02",
-		subtitle: "#1b0e02",
-		body: "#4C4637",
-		caption: "#4C4637",
-		icon: "#161925",
-		iconHover: "#0f121f",
-		button: "",
-		shadow: "",
-	},
-	fontSizes: {
-		xs: "12px",
-		sm: "14px",
-		md: "16px",
-		lg: "18px",
-		xl: "20px",
-	},
-};
-
-export const greenTheme = {
-	colors: {
-		backgroundGradient: "linear-gradient(to bottom left, #52FFB9, #71AD32)",
-		backgroundRadial: "radial-gradient(ellipse at center, #52FFB9, #539987)",
-		background: "#17b890",
-		backgroundSecondary: "#539987",
-		branding: "#14474E",
-		title: "#004466",
-		inactiveTitle: "#6b6b6b",
-		subtitle: "#6b6b6b",
-		body: "#004466",
-		caption: "#2e2e2e",
-		icon: "#14474E",
-		iconHover: "#093338",
-		button: "",
-		shadow: "",
-	},
-	fontSizes: {
-		xs: "12px",
-		sm: "14px",
-		md: "16px",
-		lg: "18px",
-		xl: "20px",
-	},
-};
-
 export const purpleTheme = {
 	colors: {
+		name: "purple",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
 		background: "#000",
@@ -105,6 +28,7 @@ export const purpleTheme = {
 //FFA6A6
 export const redTheme = {
 	colors: {
+		name: "red",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
 		background: "#000",
@@ -132,6 +56,7 @@ export const redTheme = {
 //14e0d3
 export const lightBlueTheme = {
 	colors: {
+		name: "lightBlue",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
 		background: "#000",
@@ -156,13 +81,14 @@ export const lightBlueTheme = {
 	},
 };
 
-export const darkTheme = {
+export const greenTheme = {
 	colors: {
+		name: "green",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",
-		branding: "#00ff84", //#00ff84
+		branding: "#00ff84",
 		title: "#fff",
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#ccc",
@@ -182,8 +108,36 @@ export const darkTheme = {
 	},
 };
 
+export const orangeTheme = {
+	colors: {
+		name: "orange",
+		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
+		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
+		background: "#000",
+		backgroundSecondary: "#272727",
+		branding: "#fa8c05",
+		title: "#fff",
+		inactiveTitle: "#8b8b8b",
+		subtitle: "#ccc",
+		body: "#ccc",
+		caption: "#ccc",
+		icon: "#fff",
+		iconHover: "#9b883c",
+		button: "",
+		shadow: "",
+	},
+	fontSizes: {
+		xs: "12px",
+		sm: "14px",
+		md: "16px",
+		lg: "18px",
+		xl: "20px",
+	},
+};
+
 export const darkYellowTheme = {
 	colors: {
+		name: "yellow",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
 		background: "#000",
@@ -229,29 +183,29 @@ export const darkYellowTheme = {
 #FFA6A6
 
 
-export const exampleThemeStructyre = {
+export const blueTheme = {
 	colors: {
-		backgroundGradient: "",
-		backgroundRadial: "",
-		background: "",
-		backgroundSecondary: "",
-		branding: "",
-		title: "",
-		inactiveTitle: "",
-		subtitle: "",
-		body: "",
-		caption: "",
-		icon: "",
-		iconHover: "",
-		button: '',
+		backgroundGradient: "linear-gradient(to right top, #171e26, #1b232b, #202731, #242c36, #29313c)",
+		backgroundRadial: "radial-gradient(ellipse at center, #29313C, #171E26)",
+		background: "#171e26",
+		backgroundSecondary: "#29313c",
+		branding: "#fa8c05",
+		title: "#fff",
+		inactiveTitle: "#979797",
+		subtitle: "#585E68",
+		body: "#a1a1a1",
+		caption: "#cccccc",
+		icon: "#fa8c05",
+		iconHover: "#9b883c",
+		button: "",
 		shadow: "",
 	},
 	fontSizes: {
-		xs: '12px',
-		sm: '14px',
-		md: '16px',
-		lg: '18px',
-		xl: '20px',
+		xs: "12px",
+		sm: "14px",
+		md: "16px",
+		lg: "18px",
+		xl: "20px",
 	},
 };
 

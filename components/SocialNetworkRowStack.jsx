@@ -31,12 +31,13 @@ const ButtonSocialMediaIcon = styled.div`
 	height: 32px;
 	//background-color: #29313c;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	transition: all 0.3s ease;
 
 	border-radius: 4px;
 
 	&:hover {
 		cursor: pointer;
-		opacity: 0.8;
+		margin-top: -10px;
 	}
 
 	&:active {
@@ -92,27 +93,27 @@ export default function SocialNetworkRowStack() {
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToGithub}>
-				<Github sx={{ color: "#FCD434" }} />
+				<Github />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToEmail}>
-				<MailSend sx={{ color: "#FCD434" }} />
+				<MailSend />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToWhatsapp}>
-				<LogoWhatsapp sx={{ color: "#FCD434" }} />
+				<LogoWhatsapp />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToTelegram}>
-				<Telegram sx={{ color: "#FCD434" }} />
+				<Telegram />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToInstagram}>
-				<Instagram sx={{ color: "#FCD434" }} />
+				<Instagram />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToLinkedin}>
-				<LinkedinSquare sx={{ color: "#FCD434" }} />
+				<LinkedinSquare />
 			</ButtonSocialMediaIcon>
 		</SocialMediaContainer>
 	);

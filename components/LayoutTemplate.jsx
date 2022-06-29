@@ -9,6 +9,7 @@ import Fade from "react-reveal/Fade";
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
+import FooterPage from "@/components/FooterPage";
 
 //Ícones
 import { KeyboardArrowUp } from "@styled-icons/material-outlined/KeyboardArrowUp";
@@ -103,7 +104,7 @@ const BurgerMenuContainer = styled.div`
 	}
 `;
 
-const NavbarOption = styled.h4`
+const NavbarOptionAAA = styled.h4`
 	color: ${(props) => props.theme.colors.body};
 	font-weight: 800;
 	margin-left: 5px;
@@ -131,29 +132,51 @@ const NavbarOption = styled.h4`
 	}
 `;
 
-const NavbarOptionHome = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
-`;
+const NavbarOption = styled.h4`
+	color: ${(props) => props.theme.colors.title};
+	font-weight: 800;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-decoration: none;
+	border-bottom: 4px solid transparent;
+	transition: all 0.3s ease;
+	position: relative;
 
-const NavbarOptionSobre = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
-`;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: ${(props) => props.theme.colors.branding};
+		transform-origin: bottom right;
+		transform: scaleX(0);
+		transition: transform 0.5s ease;
+	}
 
-const NavbarOptionPortifolio = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
-`;
+	&:hover::before {
+		transform-origin: bottom left;
+		transform: scaleX(1);
+	}
 
-const NavbarOptionExperiencia = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
-`;
+	&:hover {
+		cursor: pointer;
+		color: ${(props) => props.theme.colors.branding};
+		//border-bottom: 4px solid ${(props) => props.theme.colors.branding};
+	}
 
-const NavbarOptionContatos = styled(NavbarOption)`
-	color: ${(props) => (props.selected ? props.theme.colors.title : props.theme.colors.inactiveTitle)};
-	border-bottom: 4px solid ${(props) => (props.selected ? props.theme.colors.branding : "transparent")};
+	@media (max-width: 1400px) {
+		font-size: ${(props) => props.theme.fontSizes.lg};
+	}
+
+	@media (max-width: 1200px) {
+		font-size: ${(props) => props.theme.fontSizes.md};
+	}
+
+	@media (max-width: 900px) {
+		font-size: ${(props) => props.theme.fontSizes.xs};
+	}
 `;
 
 const SideBarTheme = styled.aside`
@@ -197,12 +220,6 @@ const ButtonUpToTop = styled.div`
 `;
 
 export default function LayoutTemplate({ children }) {
-	const [selectedHome, setSelectedHome] = useState(true);
-	const [selectedSobre, setSelectedSobre] = useState(false);
-	const [selectedPortifolio, setSelectedPortifolio] = useState(false);
-	const [selectedExperiencia, setSelectedExperiencia] = useState(false);
-	const [selectedContatos, setSelectedContatos] = useState(false);
-
 	const [showTopBtn, setShowTopBtn] = useState(false);
 
 	useEffect(() => {
@@ -221,46 +238,7 @@ export default function LayoutTemplate({ children }) {
 			top: 0,
 			behavior: "smooth",
 		});
-		setSelectedHome(true);
-		setSelectedSobre(false);
-		setSelectedPortifolio(false);
-		setSelectedExperiencia(false);
-		setSelectedContatos(false);
 	};
-
-	function handleActiveOption(option) {
-		if (option == "home") {
-			setSelectedHome(true);
-			setSelectedSobre(false);
-			setSelectedPortifolio(false);
-			setSelectedExperiencia(false);
-			setSelectedContatos(false);
-		} else if (option == "sobre") {
-			setSelectedHome(false);
-			setSelectedSobre(true);
-			setSelectedPortifolio(false);
-			setSelectedExperiencia(false);
-			setSelectedContatos(false);
-		} else if (option == "portifolio") {
-			setSelectedHome(false);
-			setSelectedSobre(false);
-			setSelectedPortifolio(true);
-			setSelectedExperiencia(false);
-			setSelectedContatos(false);
-		} else if (option == "experiencia") {
-			setSelectedHome(false);
-			setSelectedSobre(false);
-			setSelectedPortifolio(false);
-			setSelectedExperiencia(true);
-			setSelectedContatos(false);
-		} else if (option == "contatos") {
-			setSelectedHome(false);
-			setSelectedSobre(false);
-			setSelectedPortifolio(false);
-			setSelectedExperiencia(false);
-			setSelectedContatos(true);
-		}
-	}
 
 	return (
 		<>
@@ -281,40 +259,30 @@ export default function LayoutTemplate({ children }) {
 				</Fade>
 
 				<NavbarOptionContainer>
-					<Fade top duration={200}>
+					<Fade top delay={100} duration={200}>
 						<Link href="#section-home" passHref>
-							<NavbarOptionHome id="home" selected={selectedHome} onClick={(e) => handleActiveOption(e.target.id)}>
-								HOME
-							</NavbarOptionHome>
+							<NavbarOption>HOME</NavbarOption>
 						</Link>
 					</Fade>
 
-					<Fade top duration={200}>
-						<Link href="#section-sobre-mim" passHref>
-							<NavbarOptionSobre id="sobre" selected={selectedSobre} onClick={(e) => handleActiveOption(e.target.id)}>
-								SOBRE MIM
-							</NavbarOptionSobre>
-						</Link>
-					</Fade>
 					<Fade top delay={200} duration={200}>
-						<Link href="#section-portifolio" passHref>
-							<NavbarOptionPortifolio id="portifolio" selected={selectedPortifolio} onClick={(e) => handleActiveOption(e.target.id)}>
-								PORTIFÓLIO
-							</NavbarOptionPortifolio>
+						<Link href="#section-sobre-mim" passHref>
+							<NavbarOption>SOBRE MIM</NavbarOption>
 						</Link>
 					</Fade>
 					<Fade top delay={300} duration={200}>
-						<Link href="#section-experiencia" passHref>
-							<NavbarOptionExperiencia id="experiencia" selected={selectedExperiencia} onClick={(e) => handleActiveOption(e.target.id)}>
-								EXPERIÊNCIA
-							</NavbarOptionExperiencia>
+						<Link href="#section-portifolio" passHref>
+							<NavbarOption>PORTIFÓLIO</NavbarOption>
 						</Link>
 					</Fade>
 					<Fade top delay={400} duration={200}>
+						<Link href="#section-experiencia" passHref>
+							<NavbarOption>EXPERIÊNCIA</NavbarOption>
+						</Link>
+					</Fade>
+					<Fade top delay={500} duration={200}>
 						<Link href="#section-contatos" passHref>
-							<NavbarOptionContatos id="contatos" selected={selectedContatos} onClick={(e) => handleActiveOption(e.target.id)}>
-								CONTATOS
-							</NavbarOptionContatos>
+							<NavbarOption>CONTATOS</NavbarOption>
 						</Link>
 					</Fade>
 				</NavbarOptionContainer>
@@ -331,6 +299,7 @@ export default function LayoutTemplate({ children }) {
 			<Main>
 				<ContainerPage>{children}</ContainerPage>
 			</Main>
+			<FooterPage />
 		</>
 	);
 }

@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Lottie from "react-lottie";
+import { useTheme } from "styled-components";
 
-import ReactLottieJson from "@/public/lotties/landing_page-dark-yellow.json";
+import AnimationYellowBackground from "@/public/lotties/landing-page-yellow.json";
+import AnimationGreenBackground from "@/public/lotties/landing-page-green.json";
+import AnimationOrangeBackground from "@/public/lotties/landing-page-orange.json";
+import AnimationPurpleBackground from "@/public/lotties/landing-page-purple.json";
+import AnimationRedBackground from "@/public/lotties/landing-page-red.json";
+import AnimationLightBlueBackground from "@/public/lotties/landing-page-lightblue.json";
 
-const defaultOptions = {
+var defaultOptions = {
 	loop: true,
 	autoplay: true,
-	animationData: ReactLottieJson,
+	animationData: AnimationYellowBackground,
 	rendererSettings: {
 		preserveAspectRatio: "xMidYMid slice",
 	},
@@ -41,6 +47,7 @@ const ContainerLottie = styled.div`
 `;
 
 export default function LogoReact() {
+	const theme = useTheme();
 	const [isStopped] = useState(false);
 	const [isPaused] = useState(false);
 

@@ -72,9 +72,6 @@ const CardAboutMe = styled.div`
 		color: ${(props) => props.theme.colors.branding};
 		width: 48px;
 		height: 48px;
-		//position: absolute;
-		//top: 10px;
-		//left: 10px;
 	}
 
 	&:hover {

@@ -1,17 +1,16 @@
 import React, { useState, useEffect, createContext } from "react";
 import { ThemeProvider } from "styled-components";
-import { blueTheme, redTheme, yellowTheme, greenTheme, purpleTheme, darkTheme, lightBlueTheme, darkYellowTheme } from "@/styles/Theme";
+import { orangeTheme, redTheme, yellowTheme, purpleTheme, greenTheme, lightBlueTheme, darkYellowTheme } from "@/styles/Theme";
 
 export const SettingsContext = createContext({});
 
 const listaTemas = {
-	blue: blueTheme,
+	orange: orangeTheme,
 	yellow: yellowTheme,
 	red: redTheme,
-	green: greenTheme,
 	purple: purpleTheme,
 	lightBlue: lightBlueTheme,
-	dark: darkTheme,
+	green: greenTheme,
 	darkYellow: darkYellowTheme,
 };
 

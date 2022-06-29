@@ -148,11 +148,12 @@ const SectionContatos = styled.section`
 	min-height: 100vh;
 `;
 
-const ButtonSaibaMais = styled.button`
+const ButtonSlideSaibaMais = styled.button`
+	z-index: 1;
+	position: relative;
 	width: 200px;
 	height: 34px;
 	color: ${(props) => props.theme.colors.title};
-	//border-radius: 4px;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	font-size: ${(props) => props.theme.fontSizes.lg};
@@ -160,17 +161,31 @@ const ButtonSaibaMais = styled.button`
 	transition: all 0.3s ease;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 
-	&:hover {
+	&::before {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
 		background-color: ${(props) => props.theme.colors.branding};
-		color: ${(props) => props.theme.colors.background};
+		transform-origin: center right;
+		transform: scaleX(0);
+		transition: transform 0.25s ease-in-out;
+	}
+
+	&:hover {
 		cursor: pointer;
+		color: ${(props) => props.theme.colors.background};
 	}
 
-	&:active {
-		opacity: 0.5;
+	&:hover::before {
+		transform-origin: center left;
+		transform: scaleX(1);
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 601px) {
 		width: 100%;
 	}
 `;
@@ -192,12 +207,9 @@ export default function HomePage(props) {
 								Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com
 								otimização em <span>SEO</span>.
 							</SubTitleLanding>
-							<ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
+							<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
 							<SocialNetworkRowStack />
 						</TitleLandingContainer>
-						<ContainerAnimation>
-							<LandingAnimation />
-						</ContainerAnimation>
 					</LandingPageContainer>
 				</Slide>
 			</SectionOne>

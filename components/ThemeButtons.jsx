@@ -41,10 +41,6 @@ const ButtonOrange = styled(ButtonTheme)`
 	border: 3px solid ${(props) => (props.selected ? "#fff" : "transparent")};
 `;
 
-const ButtonYellow = styled(ButtonTheme)`
-	border: 3px solid ${(props) => (props.selected ? "#fff" : "transparent")};
-`;
-
 const ButtonRed = styled(ButtonTheme)`
 	border: 3px solid ${(props) => (props.selected ? "#fff" : "transparent")};
 `;
@@ -68,7 +64,6 @@ const ButtonDarkYellow = styled(ButtonTheme)`
 export default function ThemeButtons() {
 	const { changeTheme } = useContext(SettingsContext);
 	const [selectedOrange, setSelectedOrange] = useState(false);
-	const [selectedYellow, setSelectedYellow] = useState(false);
 	const [selectedRed, setSelectedRed] = useState(false);
 	const [selectedPurple, setSelectedPurple] = useState(false);
 	const [selectedGreen, setSelectedGreen] = useState(false);
@@ -78,59 +73,34 @@ export default function ThemeButtons() {
 	function handleSelectTheme(option) {
 		if (option == "orange") {
 			setSelectedOrange(true);
-			setSelectedYellow(false);
 			setSelectedRed(false);
 			setSelectedPurple(false);
 			setSelectedGreen(false);
-
 			setSelectedLightBlue(false);
 			setSelectedDarkYellow(false);
 		} else if (option == "red") {
 			setSelectedOrange(false);
-			setSelectedYellow(false);
 			setSelectedRed(true);
 			setSelectedPurple(false);
 			setSelectedGreen(false);
-
-			setSelectedLightBlue(false);
-			setSelectedDarkYellow(false);
-		} else if (option == "yellow") {
-			setSelectedOrange(false);
-			setSelectedYellow(true);
-			setSelectedRed(false);
-			setSelectedPurple(false);
-			setSelectedGreen(false);
-
 			setSelectedLightBlue(false);
 			setSelectedDarkYellow(false);
 		} else if (option == "purple") {
 			setSelectedOrange(false);
-			setSelectedYellow(false);
 			setSelectedRed(false);
 			setSelectedPurple(true);
 			setSelectedGreen(false);
-
 			setSelectedLightBlue(false);
 			setSelectedDarkYellow(false);
 		} else if (option == "green") {
 			setSelectedOrange(false);
-			setSelectedYellow(false);
 			setSelectedRed(false);
 			setSelectedPurple(false);
 			setSelectedGreen(true);
 			setSelectedLightBlue(false);
 			setSelectedDarkYellow(false);
-		} else if (option == "dark") {
-			setSelectedOrange(false);
-			setSelectedYellow(false);
-			setSelectedRed(false);
-			setSelectedPurple(false);
-			setSelectedGreen(false);
-			setSelectedLightBlue(false);
-			setSelectedDarkYellow(false);
 		} else if (option == "lightBlue") {
 			setSelectedOrange(false);
-			setSelectedYellow(false);
 			setSelectedRed(false);
 			setSelectedPurple(false);
 			setSelectedGreen(false);
@@ -138,7 +108,6 @@ export default function ThemeButtons() {
 			setSelectedDarkYellow(false);
 		} else if (option == "darkYellow") {
 			setSelectedOrange(false);
-			setSelectedYellow(false);
 			setSelectedRed(false);
 			setSelectedPurple(false);
 			setSelectedGreen(false);

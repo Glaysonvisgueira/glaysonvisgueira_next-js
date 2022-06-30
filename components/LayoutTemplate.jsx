@@ -20,8 +20,8 @@ const Main = styled.main`
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	background: ${(props) => props.theme.colors.backgroundGradient};
-	//background: ${(props) => props.theme.colors.backgroundRadial};
+	//background: ${(props) => props.theme.colors.backgroundGradient};
+	background: ${(props) => props.theme.colors.backgroundRadial};
 `;
 
 const ContainerPage = styled.div`

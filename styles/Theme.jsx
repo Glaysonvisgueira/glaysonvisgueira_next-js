@@ -2,7 +2,7 @@ export const purpleTheme = {
 	colors: {
 		name: "purple",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
-		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
+		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",
 		branding: "#fa2ac1",
@@ -30,7 +30,7 @@ export const redTheme = {
 	colors: {
 		name: "red",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
-		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
+		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",
 		branding: "#c73232",
@@ -58,7 +58,7 @@ export const lightBlueTheme = {
 	colors: {
 		name: "lightBlue",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
-		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
+		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",
 		branding: "#14e0d3",
@@ -85,7 +85,7 @@ export const greenTheme = {
 	colors: {
 		name: "green",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
-		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
+		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",
 		branding: "#00ff84",
@@ -112,7 +112,7 @@ export const orangeTheme = {
 	colors: {
 		name: "orange",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
-		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
+		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",
 		branding: "#fa8c05",
@@ -139,7 +139,7 @@ export const darkYellowTheme = {
 	colors: {
 		name: "yellow",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
-		backgroundRadial: "radial-gradient(ellipse at center, #1B1B1B, #0C0C0C)",
+		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",
 		branding: "#FCD434",

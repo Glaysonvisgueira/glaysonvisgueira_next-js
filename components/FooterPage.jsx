@@ -31,6 +31,10 @@ const FooterContainer = styled.footer`
 	}
 `;
 
+const FooterTextTitle = styled.h4``;
+
+const FooterText = styled.span``;
+
 export default function FooterPage(props) {
 	return (
 		<FooterContainer>

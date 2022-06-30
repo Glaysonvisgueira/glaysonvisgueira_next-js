@@ -204,8 +204,9 @@ const ButtonUpToTop = styled.div`
 	height: 44px;
 	bottom: 20px;
 	right: 20px;
-	background-color: ${(props) => props.theme.colors.branding};
 	z-index: 1;
+	background-color: ${(props) => props.theme.colors.branding};
+	border: 2px solid ${(props) => props.theme.colors.background};
 
 	&:hover {
 		cursor: pointer;

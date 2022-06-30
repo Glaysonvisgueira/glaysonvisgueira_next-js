@@ -1,14 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle` 
- 
- 
+  
 * {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing:border-box;
-  ; /* <- this can be added to each @font-face definition */
 }
 
 html, body, :root {

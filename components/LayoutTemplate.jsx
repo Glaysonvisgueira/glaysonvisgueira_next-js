@@ -200,23 +200,34 @@ const ButtonUpToTop = styled.div`
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	width: 44px;
-	height: 44px;
+	width: 54px;
+	height: 54px;
 	bottom: 20px;
 	right: 20px;
 	z-index: 1;
 	background-color: ${(props) => props.theme.colors.branding};
 	border: 2px solid ${(props) => props.theme.colors.background};
+	transition: all 0.3s ease;
 
 	&:hover {
 		cursor: pointer;
-		opacity: 0.8;
+		transform: scale(1.2);
 	}
 
 	svg {
 		color: ${(props) => props.theme.colors.background};
 		width: 30px;
 		height: 30px;
+	}
+
+	@media (max-width: 1200px) {
+		width: 44px;
+		height: 44px;
+	}
+
+	@media (max-width: 600px) {
+		width: 34px;
+		height: 34px;
 	}
 `;
 

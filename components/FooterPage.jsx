@@ -8,7 +8,6 @@ const FooterContainer = styled.footer`
 	justify-content: space-between;
 	flex-direction: column;
 	width: 100%;
-	height: 180px;
 	background-color: ${(props) => props.theme.colors.branding};
 
 	#grid {
@@ -17,35 +16,31 @@ const FooterContainer = styled.footer`
 		grid-template-rows: 1fr;
 		grid-column-gap: 20px;
 		grid-row-gap: 0px;
+		transition: all 0.3s ease;
 		width: 60%;
 
-		.div1 {
-			display: flex;
-			align-content: center;
-			justify-content: flex-start;
-			flex-direction: column;
+		@media (max-width: 1200px) {
+			width: 80%;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media (max-width: 601px) {
+			text-align: center;
 			width: 100%;
-			height: 100%;
-			//border: 1px solid #000;
-			padding: 5px;
-		}
-		.div2 {
-			display: flex;
-			align-content: center;
-			justify-content: flex-start;
-			flex-direction: column;
-			width: 100%;
-			height: 100%;
-			//border: 1px solid #000;
-			padding: 5px;
-		}
-		.div3 {
-			grid-area: 1 / 2 / 2 / 3;
-		}
-		.div4 {
-			grid-area: 1 / 3 / 2 / 4;
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
+`;
+
+const SectionFooterMenu = styled.div`
+	display: flex;
+	align-content: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	//border: 1px solid #000;
+	padding: 5px;
 `;
 
 const FooterTextTitle = styled.h4`
@@ -57,9 +52,12 @@ const FooterText = styled.span`
 	font-weight: 400;
 	font-size: 14px;
 	color: ${(props) => props.theme.colors.background};
+	transition: all 0.3s ease;
 
 	&:hover {
 		cursor: pointer;
+		//margin-left: 10px;
+		font-weight: 800;
 	}
 `;
 
@@ -78,7 +76,21 @@ const ContainerBuildCopyright = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 10px;
+	transition: all 0.3s ease;
 	width: 60%;
+	margin-top: 30px;
+
+	@media (max-width: 1200px) {
+		width: 80%;
+	}
+
+	@media (max-width: 601px) {
+		flex-direction: column;
+	}
+
+	@media (max-width: 400px) {
+		width: 100%;
+	}
 `;
 
 export default function FooterPage(props) {
@@ -103,17 +115,31 @@ export default function FooterPage(props) {
 	return (
 		<FooterContainer>
 			<div id="grid">
-				<div className="div1">
+				<SectionFooterMenu className="div1">
 					<FooterTextTitle>NAVEGAÇÃO</FooterTextTitle>
 					<Link href="#section-home" passHref>
 						<FooterText>Home</FooterText>
 					</Link>
-					<FooterText>Sobre mim</FooterText>
-					<FooterText>Portifólio</FooterText>
-					<FooterText>Experiência</FooterText>
-					<FooterText>Contatos</FooterText>
-				</div>
-				<div className="div2"></div>
+					<Link href="#section-sobre-mim" passHref>
+						<FooterText>Sobre mim</FooterText>
+					</Link>
+					<Link href="#section-portifolio" passHref>
+						<FooterText>Portifólio</FooterText>
+					</Link>
+					<Link href="#section-experiencia" passHref>
+						<FooterText>Experiência</FooterText>
+					</Link>
+					<Link href="#section-contatos" passHref>
+						<FooterText>Contatos</FooterText>
+					</Link>
+				</SectionFooterMenu>
+
+				<SectionFooterMenu className="div1">
+					<FooterTextTitle>HOSPEDADO</FooterTextTitle>
+					<Link href="#section-home" passHref>
+						<FooterText>Vercel</FooterText>
+					</Link>
+				</SectionFooterMenu>
 			</div>
 
 			<ContainerBuildCopyright>
@@ -121,7 +147,7 @@ export default function FooterPage(props) {
 					<TextBuildProject>Copyright © 2022. Todos os direitos reservados.</TextBuildProject>
 				</div>
 				<div>
-					<TextBuildProject>Build: {commit}</TextBuildProject>
+					<TextBuildProject>Build: cod. build</TextBuildProject>
 				</div>
 			</ContainerBuildCopyright>
 		</FooterContainer>

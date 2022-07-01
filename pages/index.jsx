@@ -110,7 +110,7 @@ const SectionSobreMim = styled.section`
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	padding-top: 120px;
+	padding-top: 60px;
 	width: 100%;
 	//min-height: 100vh;
 `;
@@ -120,7 +120,7 @@ const SectionPortifolio = styled.section`
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	padding-top: 120px;
+	padding-top: 60px;
 	width: 100%;
 	min-height: 100vh;
 	//background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, ${(props) => props.theme.colors.branding} 100%);
@@ -131,11 +131,9 @@ const SectionExperiencia = styled.section`
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	padding-top: 120px;
+	padding-top: 60px;
 	width: 100%;
 	min-height: 100vh;
-	//padding: 100px;
-	//background-color: #ccc;
 `;
 
 const SectionContatos = styled.section`
@@ -143,7 +141,7 @@ const SectionContatos = styled.section`
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	padding-top: 120px;
+	padding-top: 60px;
 	width: 100%;
 	min-height: 100vh;
 `;

@@ -53,6 +53,8 @@ const FooterText = styled.span`
 	font-size: 14px;
 	color: ${(props) => props.theme.colors.background};
 	transition: all 0.3s ease;
+	margin-top: 3px;
+	margin-bottom: 3px;
 
 	&:hover {
 		cursor: pointer;
@@ -115,7 +117,7 @@ export default function FooterPage(props) {
 	return (
 		<FooterContainer>
 			<div id="grid">
-				<SectionFooterMenu className="div1">
+				<SectionFooterMenu>
 					<FooterTextTitle>NAVEGAÇÃO</FooterTextTitle>
 					<Link href="#section-home" passHref>
 						<FooterText>Home</FooterText>
@@ -134,17 +136,37 @@ export default function FooterPage(props) {
 					</Link>
 				</SectionFooterMenu>
 
-				<SectionFooterMenu className="div1">
-					<FooterTextTitle>HOSPEDADO</FooterTextTitle>
+				<SectionFooterMenu>
+					<FooterTextTitle>HOSPEDAGEM</FooterTextTitle>
 					<Link href="#section-home" passHref>
 						<FooterText>Vercel</FooterText>
+					</Link>
+				</SectionFooterMenu>
+
+				<SectionFooterMenu>
+					<FooterTextTitle>CÓDIGO FONTE</FooterTextTitle>
+					<Link href="#section-home" passHref>
+						<FooterText>Github</FooterText>
+					</Link>
+				</SectionFooterMenu>
+
+				<SectionFooterMenu>
+					<FooterTextTitle>TECNOLOGIAS</FooterTextTitle>
+					<Link href="#section-home" passHref>
+						<FooterText>React.Js</FooterText>
+					</Link>
+					<Link href="#section-home" passHref>
+						<FooterText>Next.js</FooterText>
+					</Link>
+					<Link href="#section-home" passHref>
+						<FooterText>Styled components</FooterText>
 					</Link>
 				</SectionFooterMenu>
 			</div>
 
 			<ContainerBuildCopyright>
 				<div>
-					<TextBuildProject>Copyright © 2022. Todos os direitos reservados.</TextBuildProject>
+					<TextBuildProject>Copyright © 2022.</TextBuildProject>
 				</div>
 				<div>
 					<TextBuildProject>Build: cod. build</TextBuildProject>

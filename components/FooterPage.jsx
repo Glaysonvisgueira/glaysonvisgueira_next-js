@@ -18,14 +18,17 @@ const FooterContainer = styled.footer`
 		grid-row-gap: 0px;
 		transition: all 0.3s ease;
 		width: 60%;
+		text-align: center;
 
 		@media (max-width: 1200px) {
 			width: 80%;
-			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media (max-width: 800px) {
+			grid-template-columns: repeat(2, 1fr);
 		}
 
 		@media (max-width: 601px) {
-			text-align: center;
 			width: 100%;
 			grid-template-columns: repeat(1, 1fr);
 		}
@@ -145,7 +148,7 @@ export default function FooterPage(props) {
 
 				<SectionFooterMenu>
 					<FooterTextTitle>CÓDIGO FONTE</FooterTextTitle>
-					<Link href="#section-home" passHref>
+					<Link href="https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js" passHref>
 						<FooterText>Github</FooterText>
 					</Link>
 				</SectionFooterMenu>

@@ -66,6 +66,22 @@ const FooterText = styled.span`
 	}
 `;
 
+const FooterTextExternalLink = styled.a`
+	font-weight: 400;
+	font-size: 14px;
+	color: ${(props) => props.theme.colors.background};
+	transition: all 0.3s ease;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	text-decoration: none;
+
+	&:hover {
+		cursor: pointer;
+		//margin-left: 10px;
+		font-weight: 800;
+	}
+`;
+
 const TextBuildProject = styled.h4`
 	font-weight: 500;
 	color: ${(props) => props.theme.colors.background};
@@ -141,29 +157,33 @@ export default function FooterPage(props) {
 
 				<SectionFooterMenu>
 					<FooterTextTitle>HOSPEDAGEM</FooterTextTitle>
-					<Link href="#section-home" passHref>
-						<FooterText>Vercel</FooterText>
-					</Link>
+
+					<FooterTextExternalLink href="https://vercel.com/" target="_blank">
+						Vercel
+					</FooterTextExternalLink>
 				</SectionFooterMenu>
 
 				<SectionFooterMenu>
 					<FooterTextTitle>CÓDIGO FONTE</FooterTextTitle>
-					<Link href="https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js" passHref>
-						<FooterText>Github</FooterText>
-					</Link>
+					<FooterTextExternalLink href="https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js" target="_blank">
+						Github
+					</FooterTextExternalLink>
 				</SectionFooterMenu>
 
 				<SectionFooterMenu>
 					<FooterTextTitle>TECNOLOGIAS</FooterTextTitle>
-					<Link href="#section-home" passHref>
-						<FooterText>React.Js</FooterText>
-					</Link>
-					<Link href="#section-home" passHref>
-						<FooterText>Next.js</FooterText>
-					</Link>
-					<Link href="#section-home" passHref>
-						<FooterText>Styled components</FooterText>
-					</Link>
+
+					<FooterTextExternalLink href="https://pt-br.reactjs.org/" target="_blank">
+						React.Js
+					</FooterTextExternalLink>
+
+					<FooterTextExternalLink href="https://styled-components.com/" target="_blank">
+						Next.js
+					</FooterTextExternalLink>
+
+					<FooterTextExternalLink href="https://nextjs.org/" target="_blank">
+						Styled components
+					</FooterTextExternalLink>
 				</SectionFooterMenu>
 			</div>
 

@@ -84,4 +84,32 @@ export const TitleSection = styled.h2`
 	font-weight: 700;
 	color: ${(props) => props.theme.colors.branding};
 	font-size: 30px;
+	@media (max-width: 900px) {
+		font-size: 18px;
+	}
+`;
+
+export const ContainerTitleSection = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//background-color: #fff;
+	//width: 80%;
+
+	svg {
+		color: ${(props) => props.theme.colors.branding};
+		width: 44px;
+		height: 44px;
+		margin-right: 10px;
+
+		@media (max-width: 1400px) {
+			width: 34px;
+			height: 34px;
+		}
+
+		@media (max-width: 900px) {
+			width: 28px;
+			height: 28px;
+		}
+	}
 `;

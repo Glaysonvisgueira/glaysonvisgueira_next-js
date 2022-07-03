@@ -2,12 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 //Styled-components
-import { TitleSection } from "@/styles/ui";
+import { TitleSection, ContainerTitleSection } from "@/styles/ui";
+
+//Ícones
+import { ContactCardLink } from "@styled-icons/fluentui-system-filled/ContactCardLink";
 
 export default function Contatos() {
 	return (
 		<>
-			<TitleSection>Contatos</TitleSection>
+			<ContainerTitleSection>
+				<ContactCardLink />
+				<TitleSection>Contatos</TitleSection>
+			</ContainerTitleSection>
 		</>
 	);
 }

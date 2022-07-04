@@ -35,6 +35,11 @@ const FooterContainer = styled.footer`
 	}
 `;
 
+const Divider = styled.div`
+	width: 100%;
+	border-top: 1px solid ${(props) => props.theme.colors.backgroundSecondary};
+`;
+
 const SectionFooterMenu = styled.div`
 	display: flex;
 	align-content: center;
@@ -62,7 +67,7 @@ const FooterText = styled.span`
 	&:hover {
 		cursor: pointer;
 		//margin-left: 10px;
-		font-weight: 800;
+		text-decoration: underline;
 	}
 `;
 
@@ -78,7 +83,7 @@ const FooterTextExternalLink = styled.a`
 	&:hover {
 		cursor: pointer;
 		//margin-left: 10px;
-		font-weight: 800;
+		text-decoration: underline;
 	}
 `;
 
@@ -99,7 +104,7 @@ const ContainerBuildCopyright = styled.div`
 	margin-bottom: 10px;
 	transition: all 0.3s ease;
 	width: 60%;
-	margin-top: 30px;
+	margin-top: 10px;
 
 	@media (max-width: 1200px) {
 		width: 80%;
@@ -186,7 +191,7 @@ export default function FooterPage(props) {
 					</FooterTextExternalLink>
 				</SectionFooterMenu>
 			</div>
-
+			<Divider />
 			<ContainerBuildCopyright>
 				<div>
 					<TextBuildProject>Copyright © 2022.</TextBuildProject>

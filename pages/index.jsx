@@ -207,10 +207,10 @@ export default function HomePage(props) {
 							<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
 							<SocialNetworkRowStack />
 						</TitleLandingContainer>
+						<ContainerAnimation>
+							<LandingAnimation />
+						</ContainerAnimation>
 					</LandingPageContainer>
-					<ContainerAnimation>
-						<LandingAnimation />
-					</ContainerAnimation>
 				</Slide>
 			</SectionOne>
 

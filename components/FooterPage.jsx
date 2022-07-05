@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
+import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+
 const FooterContainer = styled.footer`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: column;
 	width: 100%;
-	background-color: ${(props) => props.theme.colors.branding};
 
 	#grid {
 		display: grid;
@@ -53,43 +54,101 @@ const SectionFooterMenu = styled.div`
 
 const FooterTextTitle = styled.h4`
 	font-weight: 800;
-	color: ${(props) => props.theme.colors.background};
+	color: ${(props) => props.theme.colors.branding};
 `;
 
 const FooterText = styled.span`
+	position: relative;
 	font-weight: 400;
 	font-size: 14px;
-	color: ${(props) => props.theme.colors.background};
+	color: ${(props) => props.theme.colors.subtitle};
 	transition: all 0.3s ease;
 	margin-top: 3px;
 	margin-bottom: 3px;
 
 	&:hover {
 		cursor: pointer;
-		//margin-left: 10px;
-		text-decoration: underline;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: ${(props) => props.theme.colors.branding};
+		transform: scaleX(0);
+		transition: transform 0.5s ease;
+	}
+
+	&::before {
+		top: 0;
+		transform-origin: center right;
+	}
+
+	&:hover::before {
+		transform-origin: center left;
+		transform: scaleX(1);
+	}
+
+	&::after {
+		bottom: 0;
+		transform-origin: center left;
+	}
+
+	&:hover::after {
+		transform-origin: center right;
+		transform: scaleX(1);
 	}
 `;
 
 const FooterTextExternalLink = styled.a`
+	position: relative;
 	font-weight: 400;
 	font-size: 14px;
-	color: ${(props) => props.theme.colors.background};
+	color: ${(props) => props.theme.colors.subtitle};
 	transition: all 0.3s ease;
 	margin-top: 3px;
 	margin-bottom: 3px;
 	text-decoration: none;
 
-	&:hover {
-		cursor: pointer;
-		//margin-left: 10px;
-		text-decoration: underline;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: ${(props) => props.theme.colors.branding};
+		transform: scaleX(0);
+		transition: transform 0.5s ease;
+	}
+
+	&::before {
+		top: 0;
+		transform-origin: center right;
+	}
+
+	&:hover::before {
+		transform-origin: center left;
+		transform: scaleX(1);
+	}
+
+	&::after {
+		bottom: 0;
+		transform-origin: center left;
+	}
+
+	&:hover::after {
+		transform-origin: center right;
+		transform: scaleX(1);
 	}
 `;
 
 const TextBuildProject = styled.h4`
-	font-weight: 500;
-	color: ${(props) => props.theme.colors.background};
+	font-weight: 800;
+	color: ${(props) => props.theme.colors.branding};
 	font-size: 14px;
 
 	span {
@@ -103,7 +162,7 @@ const ContainerBuildCopyright = styled.div`
 	justify-content: space-between;
 	margin-bottom: 10px;
 	transition: all 0.3s ease;
-	width: 60%;
+	width: 85%;
 	margin-top: 10px;
 
 	@media (max-width: 1200px) {
@@ -193,9 +252,7 @@ export default function FooterPage(props) {
 			</div>
 			<Divider />
 			<ContainerBuildCopyright>
-				<div>
-					<TextBuildProject>Copyright © 2022.</TextBuildProject>
-				</div>
+				<SocialNetworkRowStack />
 				<div>
 					<TextBuildProject>Build: cod. build</TextBuildProject>
 				</div>
@@ -206,4 +263,7 @@ export default function FooterPage(props) {
 /*
 <BodyText>Build 37c01km</BodyText>
 <BodyText>Build</BodyText>
+<div>
+					<TextBuildProject>Build: cod. build</TextBuildProject>
+				</div>
  */

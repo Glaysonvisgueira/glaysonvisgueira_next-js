@@ -9,7 +9,6 @@ import Fade from "react-reveal/Fade";
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
-import FooterPage from "@/components/FooterPage";
 
 //Ícones
 import { KeyboardArrowUp } from "@styled-icons/material-outlined/KeyboardArrowUp";
@@ -311,7 +310,6 @@ export default function LayoutTemplate({ children }) {
 			<Main>
 				<ContainerPage>{children}</ContainerPage>
 			</Main>
-			<FooterPage />
 		</>
 	);
 }

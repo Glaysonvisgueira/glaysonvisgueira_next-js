@@ -8,8 +8,7 @@ import LandingAnimation from "@/components/LandingPageAnimation";
 import Slide from "react-reveal/Slide";
 import ProgressBar from "react-progressbar-on-scroll";
 import { useTheme } from "styled-components";
-import RadialCircleBackground from "@/components/RadialCircleBackground";
-
+import FooterPage from "@/components/FooterPage";
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
 import PortifolioPage from "../pages/portifolio";
@@ -224,6 +223,7 @@ export default function HomePage(props) {
 			<SectionContatos id="section-contatos">
 				<ContatosPage />
 			</SectionContatos>
+			<FooterPage />
 		</>
 	);
 }

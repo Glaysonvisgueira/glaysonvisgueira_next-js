@@ -17,17 +17,21 @@ const ContainerVideoBackground = styled.div`
 	width: 100%;
 	opacity: 0.2;
 	object-fit: cover;
+	position: absolute;
 `;
 
 export default function Portifolio() {
 	return (
 		<>
 			<TitleSection>Portifólio</TitleSection>
-			<ContainerVideoBackground>
+		</>
+	);
+}
+
+/*
+<ContainerVideoBackground>
 				<video autoPlay loop muted>
 					<source src="videos/circuit.mp4" type="video/mp4" />
 				</video>
 			</ContainerVideoBackground>
-		</>
-	);
-}
+*/

@@ -68,7 +68,7 @@ export default function ThemeButtons() {
 	const [selectedPurple, setSelectedPurple] = useState(false);
 	const [selectedGreen, setSelectedGreen] = useState(false);
 	const [selectedLightBlue, setSelectedLightBlue] = useState(false);
-	const [selectedDarkYellow, setSelectedDarkYellow] = useState(false);
+	const [selectedDarkYellow, setSelectedDarkYellow] = useState(true);
 
 	function handleSelectTheme(option) {
 		if (option == "orange") {

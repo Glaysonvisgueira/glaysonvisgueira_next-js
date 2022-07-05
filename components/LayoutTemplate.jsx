@@ -37,16 +37,16 @@ const HeaderContainer = styled.header`
 	justify-content: space-around;
 	width: 100%;
 	height: 64px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	z-index: 3;
 	//background-color: ${(props) => props.theme.colors.background};
 
 	//Deixar header com efeito de Glassmorphin
-	//transition: min-height 1s ease !important;
-	//background-color: rgba(0, 0, 0, 0.1) !important;
-	//backdrop-filter: saturate(180%) blur(30px);
-	//-webkit-backdrop-filter: saturate(180%) blur(30px);
+	transition: min-height 1s ease !important;
+	background-color: rgba(0, 0, 0, 0.1) !important;
+	backdrop-filter: saturate(180%) blur(30px);
+	-webkit-backdrop-filter: saturate(180%) blur(30px);
 
 	@media (max-width: 600px) {
 		justify-content: space-between;

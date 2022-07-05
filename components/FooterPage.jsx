@@ -39,6 +39,7 @@ const FooterContainer = styled.footer`
 const Divider = styled.div`
 	width: 100%;
 	border-top: 1px solid ${(props) => props.theme.colors.backgroundSecondary};
+	margin-top: 20px;
 `;
 
 const SectionFooterMenu = styled.div`

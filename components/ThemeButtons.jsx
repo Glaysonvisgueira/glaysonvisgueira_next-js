@@ -139,13 +139,13 @@ export default function ThemeButtons() {
 
 /*
 <ButtonBlue
-				id="blue"
-				selected={selectedBlue}
-				style={{ background: "#29313c" }}
-				onClick={(e) => {
-					handleSelectTheme(e.target.id);
-				}}
-			/>
+	id="blue"
+	selected={selectedBlue}
+	style={{ background: "#29313c" }}
+	onClick={(e) => {
+	handleSelectTheme(e.target.id);
+	}}
+/>
 <ButtonYellow id="yellow" selected={selectedYellow} style={{ background: "#FCD434" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 <ButtonGreen id="green" selected={selectedGreen} style={{ background: "#45b69c" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 */

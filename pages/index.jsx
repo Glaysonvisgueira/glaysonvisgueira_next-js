@@ -208,6 +208,9 @@ export default function HomePage(props) {
 							<SocialNetworkRowStack />
 						</TitleLandingContainer>
 					</LandingPageContainer>
+					<ContainerAnimation>
+						<LandingAnimation />
+					</ContainerAnimation>
 				</Slide>
 			</SectionOne>
 

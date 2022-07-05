@@ -51,6 +51,19 @@ export default function LogoReact() {
 	const [isStopped] = useState(false);
 	const [isPaused] = useState(false);
 
+	useEffect(() => {}, [theme]);
+
+	//handleChangeAnimation(theme.name);
+
+	async function handleChangeAnimation(id) {
+		console.log("handle id..:", id);
+		if (id == "green") {
+			defaultOptions.animationData = AnimationGreenBackground;
+		} else if (id == "red") {
+			defaultOptions.animationData = AnimationRedBackground;
+		}
+	}
+
 	return (
 		<ContainerLottie>
 			<Lottie options={defaultOptions} height={"100%"} width={"100%"} isStopped={isStopped} isPaused={isPaused} isClickToPauseDisabled={true} />

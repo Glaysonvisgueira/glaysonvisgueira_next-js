@@ -1,4 +1,5 @@
 export const purpleTheme = {
+	name: "purple",
 	colors: {
 		name: "purple",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
@@ -27,6 +28,7 @@ export const purpleTheme = {
 
 //FFA6A6
 export const redTheme = {
+	name: "red",
 	colors: {
 		name: "red",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
@@ -55,6 +57,7 @@ export const redTheme = {
 
 //14e0d3
 export const lightBlueTheme = {
+	name: "lightBlue",
 	colors: {
 		name: "lightBlue",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
@@ -82,6 +85,7 @@ export const lightBlueTheme = {
 };
 
 export const greenTheme = {
+	name: "green",
 	colors: {
 		name: "green",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
@@ -109,6 +113,7 @@ export const greenTheme = {
 };
 
 export const orangeTheme = {
+	name: "orange",
 	colors: {
 		name: "orange",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
@@ -136,6 +141,7 @@ export const orangeTheme = {
 };
 
 export const darkYellowTheme = {
+	name: "darkYellow",
 	colors: {
 		name: "yellow",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",

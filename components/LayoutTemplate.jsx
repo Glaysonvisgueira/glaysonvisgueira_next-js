@@ -277,21 +277,27 @@ export default function LayoutTemplate({ children }) {
 					</Fade>
 
 					<Fade top delay={200} duration={200}>
+						<Link href="#section-services" passHref>
+							<NavbarOption>SERVIÇOS</NavbarOption>
+						</Link>
+					</Fade>
+
+					<Fade top delay={300} duration={200}>
 						<Link href="#section-sobre-mim" passHref>
 							<NavbarOption>SOBRE MIM</NavbarOption>
 						</Link>
 					</Fade>
-					<Fade top delay={300} duration={200}>
+					<Fade top delay={400} duration={200}>
 						<Link href="#section-portifolio" passHref>
 							<NavbarOption>PORTIFÓLIO</NavbarOption>
 						</Link>
 					</Fade>
-					<Fade top delay={400} duration={200}>
+					<Fade top delay={500} duration={200}>
 						<Link href="#section-experiencia" passHref>
 							<NavbarOption>EXPERIÊNCIA</NavbarOption>
 						</Link>
 					</Fade>
-					<Fade top delay={500} duration={200}>
+					<Fade top delay={600} duration={200}>
 						<Link href="#section-contatos" passHref>
 							<NavbarOption>CONTATOS</NavbarOption>
 						</Link>

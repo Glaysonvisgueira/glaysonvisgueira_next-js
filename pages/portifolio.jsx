@@ -2,9 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 //Styled-components
-import { TitleSection } from "@/styles/ui";
+import { TitleSection, ContainerTitleSection } from "@/styles/ui";
 //Custom components
 import RadialCircleBackground from "@/components/RadialCircleBackground";
+
+//Ícones
+import { FolderBriefcase } from "@styled-icons/fluentui-system-filled/FolderBriefcase";
 
 const TitlePage = styled.h1`
 	color: ${(props) => props.theme.colors.branding};
@@ -23,7 +26,10 @@ const ContainerVideoBackground = styled.div`
 export default function Portifolio() {
 	return (
 		<>
-			<TitleSection>Portifólio</TitleSection>
+			<ContainerTitleSection>
+				<FolderBriefcase />
+				<TitleSection>Portifólio</TitleSection>
+			</ContainerTitleSection>
 		</>
 	);
 }

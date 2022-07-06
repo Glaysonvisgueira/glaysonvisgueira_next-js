@@ -206,6 +206,9 @@ export default function FooterPage(props) {
 					<Link href="#section-home" passHref>
 						<FooterText>Home</FooterText>
 					</Link>
+					<Link href="#section-services" passHref>
+						<FooterText>Serviços</FooterText>
+					</Link>
 					<Link href="#section-sobre-mim" passHref>
 						<FooterText>Sobre mim</FooterText>
 					</Link>

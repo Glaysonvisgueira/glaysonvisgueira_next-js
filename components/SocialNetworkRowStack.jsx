@@ -19,7 +19,7 @@ const SocialMediaContainer = styled.div`
 
 	@media (max-width: 600px) {
 		width: 100%;
-		justify-content: space-between;
+		//justify-content: space-between;
 		margin-bottom: 20px;
 	}
 `;
@@ -53,7 +53,8 @@ const ButtonSocialMediaIcon = styled.div`
 	}
 
 	@media (max-width: 600px) {
-		margin: 5px;
+		margin-left: 3px;
+		margin-right: 3px;
 	}
 `;
 

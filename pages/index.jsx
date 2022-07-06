@@ -9,11 +9,13 @@ import Slide from "react-reveal/Slide";
 import ProgressBar from "react-progressbar-on-scroll";
 import { useTheme } from "styled-components";
 import FooterPage from "@/components/FooterPage";
+
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
 import PortifolioPage from "../pages/portifolio";
 import ExperienciaPage from "../pages/experiencia";
 import ContatosPage from "../pages/contatos";
+import ServicesOffer from "@/components/ServicesOffer";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -102,6 +104,16 @@ const SectionOne = styled.section`
 	justify-content: center;
 	width: 80%;
 	min-height: 100vh;
+`;
+
+const SectionServices = styled.section`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	padding-top: 60px;
+	//min-height: 100vh;
 `;
 
 const SectionSobreMim = styled.section`
@@ -214,18 +226,26 @@ export default function HomePage(props) {
 				</Slide>
 			</SectionOne>
 
+			<SectionServices id="section-services">
+				<ServicesOffer />
+			</SectionServices>
+
 			<SectionSobreMim id="section-sobre-mim">
 				<SobreMimPage />
 			</SectionSobreMim>
+
 			<SectionPortifolio id="section-portifolio">
 				<PortifolioPage />
 			</SectionPortifolio>
+
 			<SectionExperiencia id="section-experiencia">
 				<ExperienciaPage />
 			</SectionExperiencia>
+
 			<SectionContatos id="section-contatos">
 				<ContatosPage />
 			</SectionContatos>
+
 			<FooterPage />
 		</>
 	);

@@ -83,7 +83,7 @@ export const BodyText = styled.p`
 export const TitleSection = styled.h2`
 	font-weight: 700;
 	color: ${(props) => props.theme.colors.branding};
-	font-size: 30px;
+	font-size: 24px;
 	@media (max-width: 900px) {
 		font-size: 18px;
 	}
@@ -93,8 +93,8 @@ export const ContainerTitleSection = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	//background-color: #fff;
-	//width: 80%;
+	margin-top: 40px;
+	margin-bottom: 30px;
 
 	svg {
 		color: ${(props) => props.theme.colors.branding};

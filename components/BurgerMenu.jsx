@@ -70,7 +70,7 @@ const Ul = styled.ul`
 
 	@media (max-width: 768px) {
 		//flex-flow: column nowrap;
-		background-color: ${(props) => props.theme.colors.backgroundSecondary};
+		background-color: ${(props) => props.theme.colors.background};
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		z-index: 3;
@@ -110,6 +110,9 @@ const Burger = () => {
 				<div>
 					<Link href="#" passHref>
 						<li onClick={() => setOpen(!open)}>HOME</li>
+					</Link>
+					<Link href="#section-services" passHref>
+						<li onClick={() => setOpen(!open)}>SERVIÇOS</li>
 					</Link>
 					<Link href="#section-sobre-mim" passHref>
 						<li onClick={() => setOpen(!open)}>SOBRE MIM</li>

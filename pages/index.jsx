@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Atropos from "atropos/react";
 
 //Custom components
 import Head from "@/components/Head";
@@ -10,7 +9,6 @@ import Slide from "react-reveal/Slide";
 import ProgressBar from "react-progressbar-on-scroll";
 import { useTheme } from "styled-components";
 import FooterPage from "@/components/FooterPage";
-import "atropos/css";
 
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
@@ -224,10 +222,7 @@ export default function HomePage(props) {
 							<SocialNetworkRowStack />
 						</TitleLandingContainer>
 						<ContainerAnimation>
-							{/* Atropos */}
-							<Atropos>
-								<LandingAnimation />
-							</Atropos>
+							<LandingAnimation />
 						</ContainerAnimation>
 					</LandingPageContainer>
 				</Slide>

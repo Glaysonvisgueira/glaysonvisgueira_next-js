@@ -13,7 +13,6 @@
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.8.3",
     "@mui/material": "^5.8.3",
-    "atropos": "^1.0.2",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-animate-on-scroll": "^2.1.5",

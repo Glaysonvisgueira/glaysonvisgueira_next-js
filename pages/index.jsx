@@ -17,7 +17,7 @@ import ExperienciaPage from "../pages/experiencia";
 import ContatosPage from "../pages/contatos";
 import ServicesOffer from "@/components/ServicesOffer";
 import DivGradient from "@/components/DivGradient";
-import ParalaxTransitionDiv from "@/components/ParalaxTransitionDiv";
+import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -228,13 +228,13 @@ export default function HomePage(props) {
 				</Slide>
 			</SectionOne>
 
-			<ParalaxTransitionDiv />
+			<ParallaxTransitionDiv />
 
 			<SectionServices id="section-services">
 				<ServicesOffer />
 			</SectionServices>
 
-			<DivGradient />
+			{/*<DivGradient />*/}
 
 			<SectionSobreMim id="section-sobre-mim">
 				<SobreMimPage />

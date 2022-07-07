@@ -4,7 +4,8 @@ import styled from "styled-components";
 //Styled-components
 import { TitleSection, ContainerTitleSection } from "@/styles/ui";
 //Custom components
-import RadialCircleBackground from "@/components/RadialCircleBackground";
+import DivGradient from "@/components/DivGradient";
+import StackTechs from "@/components/StackTechs";
 
 //Ícones
 import { FolderBriefcase } from "@styled-icons/fluentui-system-filled/FolderBriefcase";
@@ -15,14 +16,6 @@ const TitlePage = styled.h1`
 	font-weight: 700;
 `;
 
-const ContainerVideoBackground = styled.div`
-	height: 100%;
-	width: 100%;
-	opacity: 0.2;
-	object-fit: cover;
-	position: absolute;
-`;
-
 export default function Portifolio() {
 	return (
 		<>
@@ -30,6 +23,8 @@ export default function Portifolio() {
 				<FolderBriefcase />
 				<TitleSection>Portifólio</TitleSection>
 			</ContainerTitleSection>
+
+			<StackTechs />
 		</>
 	);
 }

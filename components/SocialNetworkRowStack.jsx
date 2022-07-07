@@ -31,10 +31,8 @@ const ButtonSocialMediaIcon = styled.div`
 	margin-right: 5px;
 	width: 32px;
 	height: 32px;
-	//background-color: #29313c;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	transition: all 0.3s ease;
-
 	border-radius: 4px;
 
 	&:hover {

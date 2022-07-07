@@ -18,6 +18,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "18.1.0",
     "react-lottie": "^1.2.3",
+    "react-parallax": "^3.5.1",
     "react-progressbar-on-scroll": "^2.0.0",
     "react-reveal": "^1.2.2",
     "react-scroll-motion": "^0.3.0",

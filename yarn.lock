@@ -2311,6 +2311,11 @@ react-lottie@^1.2.3:
     babel-runtime "^6.26.0"
     lottie-web "^5.1.3"
 
+react-parallax@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-3.5.1.tgz#73071679371b7738e21ffac8daa0bc3cb7e5174d"
+  integrity sha512-p5zPsPsqELlIOGaPS01O0IRx8R2bxcBAtrdF/RHf9nIxxk5hijbM2y89tk4rJQBcNH6ESSLe7J2NV4/ms7FLFw==
+
 react-progressbar-on-scroll@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-progressbar-on-scroll/-/react-progressbar-on-scroll-2.0.0.tgz#5f1b6adfc62a4bc5b13a6e07211177d6395bed0b"

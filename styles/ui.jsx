@@ -95,10 +95,8 @@ export const ContainerTitleSection = styled.div`
 	justify-content: center;
 	margin-top: 40px;
 	margin-bottom: 30px;
-
-	@media (max-width: 601px) {
-		margin-bottom: 0px;
-	}
+	//background-color: #fff;
+	width: 100%;
 
 	svg {
 		color: ${(props) => props.theme.colors.branding};

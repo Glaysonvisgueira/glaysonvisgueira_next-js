@@ -39,9 +39,12 @@ const TitleLandingContainer = styled.div`
 `;
 
 const TitleLanding = styled.div`
-	font-size: 50px;
+	font-size: 60px;
 	font-weight: 800;
 	color: ${(props) => props.theme.colors.branding};
+	//-webkit-text-stroke-width: 2px; /* largura da borda */
+	//-webkit-text-stroke-color: ${(props) => props.theme.colors.branding}; /* cor da borda */
+	//-webkit-text-fill-color: transparent;
 
 	@media (max-width: 1400px) {
 		font-size: 40px;
@@ -228,13 +231,9 @@ export default function HomePage(props) {
 				</Slide>
 			</SectionOne>
 
-			<ParallaxTransitionDiv />
-
 			<SectionServices id="section-services">
 				<ServicesOffer />
 			</SectionServices>
-
-			{/*<DivGradient />*/}
 
 			<SectionSobreMim id="section-sobre-mim">
 				<SobreMimPage />

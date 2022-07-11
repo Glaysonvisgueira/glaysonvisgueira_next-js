@@ -42,18 +42,7 @@ export const TitleH2 = styled.h2`
 
 export const TitleH3 = styled.h3`
 	color: ${(props) => props.theme.colors.title};
-
-	@media (max-width: 1600px) {
-		font-size: ${(props) => props.theme.fontSizes.md};
-	}
-
-	@media (max-width: 1400px) {
-		font-size: ${(props) => props.theme.fontSizes.md};
-	}
-
-	@media (max-width: 1200px) {
-		font-size: ${(props) => props.theme.fontSizes.md};
-	}
+	font-size: ${(props) => props.theme.fontSizes.md};
 
 	@media (max-width: 900px) {
 		font-size: ${(props) => props.theme.fontSizes.sm};
@@ -62,22 +51,7 @@ export const TitleH3 = styled.h3`
 
 export const BodyText = styled.p`
 	color: ${(props) => props.theme.colors.body};
-
-	@media (max-width: 1600px) {
-		font-size: ${(props) => props.theme.fontSizes.md};
-	}
-
-	@media (max-width: 1400px) {
-		font-size: ${(props) => props.theme.fontSizes.md};
-	}
-
-	@media (max-width: 1200px) {
-		font-size: ${(props) => props.theme.fontSizes.md};
-	}
-
-	@media (max-width: 900px) {
-		font-size: ${(props) => props.theme.fontSizes.sm};
-	}
+	font-size: ${(props) => props.theme.fontSizes.xs};
 `;
 
 export const TitleSection = styled.h2`

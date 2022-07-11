@@ -32,6 +32,8 @@ import { Typescript } from "@styled-icons/simple-icons/Typescript";
 import { Sass } from "@styled-icons/fa-brands/Sass";
 import { Expo } from "@styled-icons/simple-icons/Expo";
 import { Jest } from "@styled-icons/simple-icons/Jest";
+import { Leaflet } from "@styled-icons/simple-icons/Leaflet";
+import { Express } from "@styled-icons/simple-icons/Express";
 
 const ContainerGrid = styled.div`
 	display: grid;
@@ -87,6 +89,15 @@ const WrapperTechStack = styled.div`
 		margin-right: 3px;
 		color: #727272;
 	}
+
+	a {
+		svg {
+			&:hover {
+				cursor: pointer;
+				color: ${(props) => props.theme.colors.branding};
+			}
+		}
+	}
 `;
 
 const WrapperTextChip = styled.span`
@@ -132,7 +143,7 @@ const projects = [
 	{
 		title: "INTEGRA API WRAPPER",
 		description: "Servidor Node.js para utilização da API Inthegra fornecida pela STRANS de Teresina - PI.",
-		techs: ["NODE.JS", "JAVASCRIPT", "AXIOS"],
+		techs: [Nodejs, Javascript],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegra-nodejs",
 		typeProject: ["BACKEND"],
 	},
@@ -140,7 +151,7 @@ const projects = [
 		title: "LETMEASK",
 		description:
 			"Aplicativo resultante da Next Level Week #06 da Rocketseat. A aplicação fornece um ambiente onde o usuário pode logar utilizando sua conta Google, e criar salas sobre assuntos de seu interesse para que outros usuários criem perguntas.",
-		techs: ["REACT NATIVE", "JAVASCRIPT", "SASS", "FIREBASE", "GOOGLE CLOUD"],
+		techs: [ReactLogo, Javascript, GoogleCloud, Sass, Firebase],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/letmeask-NLW06",
 		typeProject: ["WEB", "MOBILE"],
 	},
@@ -148,21 +159,21 @@ const projects = [
 		title: "PLANTMANAGER",
 		description:
 			"Aplicativo resultante da Next Level Week #05 da Rocketseat. A aplicação fornece um agendador de irrigação para suas plantas, dando dicas sobre  cada espécie, assim como os melhores horários de irrigação. O aplicativo exibe uma notificação em push sempre que estiver no horário de irrigar sua planta.",
-		techs: ["REACT NATIVE", "TYPESCRIPT", "LOTTIE", "SQLITE"],
+		techs: [ReactLogo, Typescript, Sqlite],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/plantmanager",
 		typeProject: ["MOBILE"],
 	},
 	{
 		title: "SISTEMA DE PESQUISAS NPS",
 		description: "Aplicativo resultante da Next Level Week #04 da Rocketseat. A aplicação permite calcular o NPS (Net Promoter Score) da empresa, através de pesquisas de satisfação enviadas a usuários por e-mail.",
-		techs: ["NODE.JS", "TYPESCRIPT", "SQLITE", "JEST"],
+		techs: [Nodejs, Typescript, Sqlite, Jest],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/next-level-week-04-nodejs",
 		typeProject: ["BACKEND"],
 	},
 	{
 		title: "FASTTRACK API",
 		description: "Backend de um servidor em Node.js que fornece uma API REST que permite o compartilhamento de geolocalização do smartphone para um banco de dados em nuvem mantido pelo MongoDB.",
-		techs: ["NODE.JS", "JAVASCRIPT", "MONGODB", "AXIOS", "AWS"],
+		techs: [Nodejs, Javascript, Mongodb, Amazonaws],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/api-fasttrack",
 		typeProject: ["BACKEND"],
 	},
@@ -170,7 +181,7 @@ const projects = [
 		title: "INTHEGRE-SE APP",
 		description:
 			"Aplicativo que monitora a frota de ônibus público da cidade de Teresina - PI, e exibe em um mapa a localização atual de cada ônibus em atividade no momento, com intervalos de 30 segundos entre cada atualização de posição.",
-		techs: ["REACT NATIVE", "EXPO", "JAVASCRIPT"],
+		techs: [ReactLogo, Expo, Javascript],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
 		typeProject: ["MOBILE"],
 	},
@@ -178,28 +189,28 @@ const projects = [
 		title: "CRAWLER DAS POSIÇÃO DE RADARES",
 		description:
 			"Estudo da biblioteca BeautifulSoup que utilizada com a linguagem de programação Python, possibilita coletar dados de websites. Este algoritmo busca no site da prefeitura da cidade de Teresina - PI e fornece o link de download da posição atual dos radares de velocidade na cidade.",
-		techs: ["PYTHON", "WEB CRAWLER", "BEAUTIFULSOUP"],
+		techs: [Python],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/crawlerRadaresVelocidade",
 		typeProject: ["BACKEND"],
 	},
 	{
 		title: "PÁGINA PORTIFÓLIO",
 		description: "Página portifólio.",
-		techs: ["REACT.JS", "NEXT.JS", "STYLED COMPONENTS", "VERCEL"],
+		techs: [ReactLogo, Nextdotjs, Styledcomponents, LogoVercel],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js",
 		typeProject: ["WEB"],
 	},
 	{
 		title: "AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
 		description: "Sistema para agregar as informações lógisticas internas da empresa.",
-		techs: ["REACT.JS", "LOTTIE", "RECHARTS", "AXIOS", "LEAFLET"],
+		techs: [ReactLogo, Leaflet],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/dashboard-control-mobile-implantacao",
 		typeProject: ["WEB"],
 	},
 	{
 		title: "API AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
 		description: "API escrita em Node.js e hospedada em um servidor EC2 na AWS para prover as informações logísticas internas",
-		techs: ["NODE.JS", "AWS", "EXPRESS", "MONGODB"],
+		techs: [Nodejs, Amazonaws, Express, Mongodb],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
 		typeProject: ["BACKEND"],
 	},
@@ -229,10 +240,15 @@ export default function Portifolio() {
 						</div>
 						<WrapperTechStack>
 							<div>
+								{project.techs.map((icone, index) => (
+									<icone key={index} />
+								))}
 								<Java />
 								<Robot />
 							</div>
-							<GithubOutline />
+							<a href={project.sourceCodeLink} target="_blank">
+								<GithubOutline />
+							</a>
 						</WrapperTechStack>
 					</WrapperProjectCard>
 				))}

@@ -10,15 +10,28 @@ import StackTechs from "@/components/StackTechs";
 
 //Ícones
 import { FolderBriefcase } from "@styled-icons/fluentui-system-filled/FolderBriefcase";
-import { Java } from "@styled-icons/fa-brands/Java";
 import { Robot } from "@styled-icons/fa-solid/Robot";
 import { GithubOutline } from "@styled-icons/evaicons-outline/GithubOutline";
-
-const TitlePage = styled.h1`
-	color: ${(props) => props.theme.colors.branding};
-	font-size: 50px;
-	font-weight: 700;
-`;
+import { Java } from "@styled-icons/fa-brands/Java";
+import { Amazonaws } from "@styled-icons/simple-icons/Amazonaws";
+import { GoogleCloud } from "@styled-icons/boxicons-logos/GoogleCloud";
+import { Firebase } from "@styled-icons/boxicons-logos/Firebase";
+import { Mongodb } from "@styled-icons/simple-icons/Mongodb";
+import { Sqlite } from "@styled-icons/simple-icons/Sqlite";
+import { Javascript } from "@styled-icons/boxicons-logos/Javascript";
+import { ReactLogo } from "@styled-icons/boxicons-logos/ReactLogo";
+import { Nextdotjs } from "@styled-icons/simple-icons/Nextdotjs";
+import { Python } from "@styled-icons/boxicons-logos/Python";
+import { Nodejs } from "@styled-icons/boxicons-logos/Nodejs";
+import { LogoVercel } from "@styled-icons/ionicons-solid/LogoVercel";
+import { Styledcomponents } from "@styled-icons/simple-icons/Styledcomponents";
+import { Css3 } from "@styled-icons/boxicons-logos/Css3";
+import { Html5 } from "@styled-icons/boxicons-logos/Html5";
+import { Amazons3 } from "@styled-icons/simple-icons/Amazons3";
+import { Typescript } from "@styled-icons/simple-icons/Typescript";
+import { Sass } from "@styled-icons/fa-brands/Sass";
+import { Expo } from "@styled-icons/fa-brands/Expo";
+import { Jest } from "@styled-icons/fa-brands/Jest";
 
 const ContainerGrid = styled.div`
 	display: grid;
@@ -45,8 +58,8 @@ const WrapperProjectCard = styled.div`
 	width: 100%;
 	min-height: 240px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	border-bottom: 2px solid ${(props) => props.theme.colors.branding};
 	//border-radius: 8px;
-	//border-left: 4px solid ${(props) => props.theme.colors.branding};
 	//border-bottom: 4px solid ${(props) => props.theme.colors.branding};
 	padding: 20px;
 	//transition: all 0.3s ease;
@@ -95,11 +108,100 @@ const WrapperTextChip = styled.span`
 
 const projects = [
 	{
-		title: "",
-		description: "",
-		techs: [],
-		sourceCodeLink: "",
-		typeProject: [],
+		title: "SISTEMA DE IRRIGAÇÃO AUTOMÁTICO",
+		description:
+			"Implementação de um algoritmo de inteligência artificial, conhecido como algoritmo nebuloso (ou lógica difusa) que utiliza a biblioteca jFuzzyLogic. Nessa implementação, há uso da inteligência artificial para que dependendo da situação atual de três aspectos, que são: temperatura, luminosidade e umidade, haja ativação automática de um sistema de irrigação de culturas agrícolas.",
+		techs: [Java, Robot],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/jfuzzylogic_irrigador",
+		typeProject: ["BACKEND"],
+	},
+	{
+		title: "DEVRADAR",
+		description: "Aplicativo resultante da semana Omnistack #10 da Rocketseat. A aplicação visa conectar desenvolvedores próximos de sua localização atual e que trabalham com as mesmas tecnologias.",
+		techs: [ReactLogo, Expo, Javascript, Nodejs, Css3, Mongodb],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/DevRadar",
+		typeProject: ["BACKEND", "WEB", "MOBILE"],
+	},
+	{
+		title: "BE THE HERO",
+		description: "Aplicativo resultante da semana Omnistack #11 da Rocketseat. A aplicação é um meio de conectar pessoas à ONGS que necessitam de algum tipo de ajuda.",
+		techs: [ReactLogo, Expo, Javascript, Nodejs, Css3, Mongodb, Jest, Sqlite],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/be-the-hero",
+		typeProject: ["BACKEND", "WEB", "MOBILE"],
+	},
+	{
+		title: "INTEGRA API WRAPPER",
+		description: "Servidor Node.js para utilização da API Inthegra fornecida pela STRANS de Teresina - PI.",
+		techs: ["NODE.JS", "JAVASCRIPT", "AXIOS"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegra-nodejs",
+		typeProject: ["BACKEND"],
+	},
+	{
+		title: "LETMEASK",
+		description:
+			"Aplicativo resultante da Next Level Week #06 da Rocketseat. A aplicação fornece um ambiente onde o usuário pode logar utilizando sua conta Google, e criar salas sobre assuntos de seu interesse para que outros usuários criem perguntas.",
+		techs: ["REACT NATIVE", "JAVASCRIPT", "SASS", "FIREBASE", "GOOGLE CLOUD"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/letmeask-NLW06",
+		typeProject: ["WEB", "MOBILE"],
+	},
+	{
+		title: "PLANTMANAGER",
+		description:
+			"Aplicativo resultante da Next Level Week #05 da Rocketseat. A aplicação fornece um agendador de irrigação para suas plantas, dando dicas sobre  cada espécie, assim como os melhores horários de irrigação. O aplicativo exibe uma notificação em push sempre que estiver no horário de irrigar sua planta.",
+		techs: ["REACT NATIVE", "TYPESCRIPT", "LOTTIE", "SQLITE"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/plantmanager",
+		typeProject: ["MOBILE"],
+	},
+	{
+		title: "SISTEMA DE PESQUISAS NPS",
+		description: "Aplicativo resultante da Next Level Week #04 da Rocketseat. A aplicação permite calcular o NPS (Net Promoter Score) da empresa, através de pesquisas de satisfação enviadas a usuários por e-mail.",
+		techs: ["NODE.JS", "TYPESCRIPT", "SQLITE", "JEST"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/next-level-week-04-nodejs",
+		typeProject: ["BACKEND"],
+	},
+	{
+		title: "FASTTRACK API",
+		description: "Backend de um servidor em Node.js que fornece uma API REST que permite o compartilhamento de geolocalização do smartphone para um banco de dados em nuvem mantido pelo MongoDB.",
+		techs: ["NODE.JS", "JAVASCRIPT", "MONGODB", "AXIOS", "AWS"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/api-fasttrack",
+		typeProject: ["BACKEND"],
+	},
+	{
+		title: "INTHEGRE-SE APP",
+		description:
+			"Aplicativo que monitora a frota de ônibus público da cidade de Teresina - PI, e exibe em um mapa a localização atual de cada ônibus em atividade no momento, com intervalos de 30 segundos entre cada atualização de posição.",
+		techs: ["REACT NATIVE", "EXPO", "JAVASCRIPT"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
+		typeProject: ["MOBILE"],
+	},
+	{
+		title: "CRAWLER DAS POSIÇÃO DE RADARES",
+		description:
+			"Estudo da biblioteca BeautifulSoup que utilizada com a linguagem de programação Python, possibilita coletar dados de websites. Este algoritmo busca no site da prefeitura da cidade de Teresina - PI e fornece o link de download da posição atual dos radares de velocidade na cidade.",
+		techs: ["PYTHON", "WEB CRAWLER", "BEAUTIFULSOUP"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/crawlerRadaresVelocidade",
+		typeProject: ["BACKEND"],
+	},
+	{
+		title: "PÁGINA PORTIFÓLIO",
+		description: "Página portifólio.",
+		techs: ["REACT.JS", "NEXT.JS", "STYLED COMPONENTS", "VERCEL"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js",
+		typeProject: ["WEB"],
+	},
+	{
+		title: "AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
+		description: "Sistema para agregar as informações lógisticas internas da empresa.",
+		techs: ["REACT.JS", "LOTTIE", "RECHARTS", "AXIOS", "LEAFLET"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/dashboard-control-mobile-implantacao",
+		typeProject: ["WEB"],
+	},
+	{
+		title: "API AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
+		description: "API escrita em Node.js e hospedada em um servidor EC2 na AWS para prover as informações logísticas internas",
+		techs: ["NODE.JS", "AWS", "EXPRESS", "MONGODB"],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
+		typeProject: ["BACKEND"],
 	},
 ];
 
@@ -112,7 +214,36 @@ export default function Portifolio() {
 			</ContainerTitleSection>
 
 			<ContainerGrid>
-				<WrapperProjectCard>
+				{projects.map((project, index) => (
+					<WrapperProjectCard key={index}>
+						<WrapperTextChip>
+							{project.typeProject.map((chip, index) => (
+								<span key={index}>{chip}</span>
+							))}
+						</WrapperTextChip>
+
+						<div className="title-body">
+							<TitleH3>{project.title}</TitleH3>
+							<div className="divider" />
+							<BodyText>{project.description}</BodyText>
+						</div>
+						<WrapperTechStack>
+							<div>
+								<Java />
+								<Robot />
+							</div>
+							<GithubOutline />
+						</WrapperTechStack>
+					</WrapperProjectCard>
+				))}
+			</ContainerGrid>
+			{/*<StackTechs />*/}
+		</>
+	);
+}
+
+/*
+<WrapperProjectCard>
 					<WrapperTextChip>
 						<span>BACKEND</span>
 						<span>WEB</span>
@@ -141,16 +272,4 @@ export default function Portifolio() {
 				<WrapperProjectCard />
 				<WrapperProjectCard />
 				<WrapperProjectCard />
-			</ContainerGrid>
-			{/*<StackTechs />*/}
-		</>
-	);
-}
-
-/*
-<ContainerVideoBackground>
-				<video autoPlay loop muted>
-					<source src="videos/circuit.mp4" type="video/mp4" />
-				</video>
-			</ContainerVideoBackground>
 */

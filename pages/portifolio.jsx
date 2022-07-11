@@ -30,8 +30,8 @@ import { Html5 } from "@styled-icons/boxicons-logos/Html5";
 import { Amazons3 } from "@styled-icons/simple-icons/Amazons3";
 import { Typescript } from "@styled-icons/simple-icons/Typescript";
 import { Sass } from "@styled-icons/fa-brands/Sass";
-import { Expo } from "@styled-icons/fa-brands/Expo";
-import { Jest } from "@styled-icons/fa-brands/Jest";
+import { Expo } from "@styled-icons/simple-icons/Expo";
+import { Jest } from "@styled-icons/simple-icons/Jest";
 
 const ContainerGrid = styled.div`
 	display: grid;

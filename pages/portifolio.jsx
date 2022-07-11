@@ -246,7 +246,7 @@ export default function Portifolio() {
 								<Java />
 								<Robot />
 							</div>
-							<a href={project.sourceCodeLink} target="_blank">
+							<a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
 								<GithubOutline />
 							</a>
 						</WrapperTechStack>

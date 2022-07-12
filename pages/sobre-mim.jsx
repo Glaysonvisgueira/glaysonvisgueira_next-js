@@ -51,6 +51,17 @@ const ContainerBox = styled.div`
 	}
 `;
 
+const ButtonDownloadCV = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 38px;
+	width: 100%;
+	border-radius: 4px;
+	background-color: ${(props) => props.theme.colors.branding};
+	color: ${(props) => props.theme.colors.background};
+`;
+
 export default function SobreMim() {
 	return (
 		<>
@@ -61,7 +72,7 @@ export default function SobreMim() {
 			<ContainerBox>
 				<div className="left-card">
 					<div className="photo"></div>
-					<span>Download CV</span>
+					<ButtonDownloadCV>Download CV</ButtonDownloadCV>
 				</div>
 				<div className="right-card"></div>
 			</ContainerBox>

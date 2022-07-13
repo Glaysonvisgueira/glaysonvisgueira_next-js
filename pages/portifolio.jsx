@@ -240,13 +240,14 @@ export default function Portifolio() {
 			<ContainerGrid>
 				{projects.map((project, index) => (
 					<WrapperProjectCard key={index}>
+						{/*
 						<WrapperTextChip>
 							{project.typeProject.map((chip, idx) => (
 								<div key={idx}>
 									<span>{chip}</span>
 								</div>
 							))}
-						</WrapperTextChip>
+						</WrapperTextChip>*/}
 
 						<div className="title-body">
 							<TitleH3>{project.title}</TitleH3>

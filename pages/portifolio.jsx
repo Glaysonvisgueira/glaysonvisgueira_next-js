@@ -270,23 +270,3 @@ export default function Portifolio() {
 		</>
 	);
 }
-
-/*
-
-						<WrapperTextChip>
-							{project.typeProject.map((chip, idx) => (
-								<div key={idx}>
-									<span>{chip}</span>
-								</div>
-							))}
-						</WrapperTextChip>
-
-						<div>
-								{project.techs.map((icone, i) => (
-									<div key={i}>{icone}</div>
-								))}
-							</div>
-
-
-
-*/

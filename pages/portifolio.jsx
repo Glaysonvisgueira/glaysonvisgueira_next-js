@@ -254,11 +254,12 @@ export default function Portifolio() {
 							<BodyText>{project.description}</BodyText>
 						</div>
 						<WrapperTechStack>
+							{/*
 							<div>
 								{project.techs.map((icone, i) => (
 									<div key={i}>{icone}</div>
 								))}
-							</div>
+							</div>*/}
 							<a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
 								<GithubOutline />
 							</a>

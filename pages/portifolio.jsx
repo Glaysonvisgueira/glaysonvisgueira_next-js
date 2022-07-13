@@ -132,6 +132,7 @@ const WrapperTextChip = styled.div`
 
 const projects = [
 	{
+		id: 1,
 		title: "SISTEMA DE IRRIGAÇÃO AUTOMÁTICO",
 		description:
 			"Implementação de um algoritmo de inteligência artificial, conhecido como algoritmo nebuloso (ou lógica difusa) que utiliza a biblioteca jFuzzyLogic. Nessa implementação, há uso da inteligência artificial para que dependendo da situação atual de três aspectos, que são: temperatura, luminosidade e umidade, haja ativação automática de um sistema de irrigação de culturas agrícolas.",
@@ -140,6 +141,7 @@ const projects = [
 		typeProject: ["BACKEND"],
 	},
 	{
+		id: 2,
 		title: "DEVRADAR",
 		description: "Aplicativo resultante da semana Omnistack #10 da Rocketseat. A aplicação visa conectar desenvolvedores próximos de sua localização atual e que trabalham com as mesmas tecnologias.",
 		techs: [<ReactLogo />, <Expo />, <Javascript />, <Nodejs />, <Css3 />, <Mongodb />],
@@ -147,6 +149,7 @@ const projects = [
 		typeProject: ["BACKEND", "WEB", "MOBILE"],
 	},
 	{
+		id: 3,
 		title: "BE THE HERO",
 		description: "Aplicativo resultante da semana Omnistack #11 da Rocketseat. A aplicação é um meio de conectar pessoas à ONGS que necessitam de algum tipo de ajuda.",
 		techs: [<ReactLogo />, <Expo />, <Javascript />, <Nodejs />, <ss3 />, <Mongodb />, <Jest />, <Sqlite />],
@@ -154,6 +157,7 @@ const projects = [
 		typeProject: ["BACKEND", "WEB", "MOBILE"],
 	},
 	{
+		id: 4,
 		title: "INTEGRA API WRAPPER",
 		description: "Servidor Node.js para utilização da API Inthegra fornecida pela STRANS de Teresina - PI.",
 		techs: [<Nodejs />, <Javascript />],
@@ -161,6 +165,7 @@ const projects = [
 		typeProject: ["BACKEND"],
 	},
 	{
+		id: 5,
 		title: "LETMEASK",
 		description:
 			"Aplicativo resultante da Next Level Week #06 da Rocketseat. A aplicação fornece um ambiente onde o usuário pode logar utilizando sua conta Google, e criar salas sobre assuntos de seu interesse para que outros usuários criem perguntas.",
@@ -169,6 +174,7 @@ const projects = [
 		typeProject: ["WEB", "MOBILE"],
 	},
 	{
+		id: 6,
 		title: "PLANTMANAGER",
 		description:
 			"Aplicativo resultante da Next Level Week #05 da Rocketseat. A aplicação fornece um agendador de irrigação para suas plantas, dando dicas sobre  cada espécie, assim como os melhores horários de irrigação. O aplicativo exibe uma notificação em push sempre que estiver no horário de irrigar sua planta.",
@@ -177,6 +183,7 @@ const projects = [
 		typeProject: ["MOBILE"],
 	},
 	{
+		id: 7,
 		title: "SISTEMA DE PESQUISAS NPS",
 		description: "Aplicativo resultante da Next Level Week #04 da Rocketseat. A aplicação permite calcular o NPS (Net Promoter Score) da empresa, através de pesquisas de satisfação enviadas a usuários por e-mail.",
 		techs: [<Nodejs />, <Typescript />, <Sqlite />, <Jest />],
@@ -184,6 +191,7 @@ const projects = [
 		typeProject: ["BACKEND"],
 	},
 	{
+		id: 8,
 		title: "FASTTRACK API",
 		description: "Backend de um servidor em Node.js que fornece uma API REST que permite o compartilhamento de geolocalização do smartphone para um banco de dados em nuvem mantido pelo MongoDB.",
 		techs: [<Nodejs />, <Javascript />, <Mongodb />, <Amazonaws />],
@@ -191,6 +199,7 @@ const projects = [
 		typeProject: ["BACKEND"],
 	},
 	{
+		id: 9,
 		title: "INTHEGRE-SE APP",
 		description:
 			"Aplicativo que monitora a frota de ônibus público da cidade de Teresina - PI, e exibe em um mapa a localização atual de cada ônibus em atividade no momento, com intervalos de 30 segundos entre cada atualização de posição.",
@@ -199,6 +208,7 @@ const projects = [
 		typeProject: ["MOBILE"],
 	},
 	{
+		id: 10,
 		title: "CRAWLER DAS POSIÇÃO DE RADARES",
 		description:
 			"Estudo da biblioteca BeautifulSoup que utilizada com a linguagem de programação Python, possibilita coletar dados de websites. Este algoritmo busca no site da prefeitura da cidade de Teresina - PI e fornece o link de download da posição atual dos radares de velocidade na cidade.",
@@ -207,6 +217,7 @@ const projects = [
 		typeProject: ["BACKEND"],
 	},
 	{
+		id: 11,
 		title: "PÁGINA PORTIFÓLIO",
 		description: "Página portifólio.",
 		techs: [<ReactLogo />, <Nextdotjs />, <Styledcomponents />, <LogoVercel />],
@@ -214,6 +225,7 @@ const projects = [
 		typeProject: ["WEB"],
 	},
 	{
+		id: 12,
 		title: "AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
 		description: "Sistema para agregar as informações lógisticas internas da empresa.",
 		techs: [<ReactLogo />, <Leaflet />],
@@ -221,6 +233,7 @@ const projects = [
 		typeProject: ["WEB"],
 	},
 	{
+		id: 13,
 		title: "API AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
 		description: "API escrita em Node.js e hospedada em um servidor EC2 na AWS para prover as informações logísticas internas",
 		techs: [<Nodejs />, <Amazonaws />, <Express />, <Mongodb />],
@@ -238,8 +251,8 @@ export default function Portifolio() {
 			</ContainerTitleSection>
 
 			<ContainerGrid>
-				{projects.map((project, index) => (
-					<WrapperProjectCard key={index}>
+				{projects.map((project) => (
+					<WrapperProjectCard key={project.id}>
 						<div className="title-body">
 							<TitleH3>{project.title}</TitleH3>
 							<div className="divider" />

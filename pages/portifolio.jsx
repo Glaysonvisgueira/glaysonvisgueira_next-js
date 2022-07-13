@@ -240,27 +240,12 @@ export default function Portifolio() {
 			<ContainerGrid>
 				{projects.map((project, index) => (
 					<WrapperProjectCard key={index}>
-						{/*
-						<WrapperTextChip>
-							{project.typeProject.map((chip, idx) => (
-								<div key={idx}>
-									<span>{chip}</span>
-								</div>
-							))}
-						</WrapperTextChip>*/}
-
 						<div className="title-body">
 							<TitleH3>{project.title}</TitleH3>
 							<div className="divider" />
 							<BodyText>{project.description}</BodyText>
 						</div>
 						<WrapperTechStack>
-							{/*
-							<div>
-								{project.techs.map((icone, i) => (
-									<div key={i}>{icone}</div>
-								))}
-							</div>*/}
 							<a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
 								<GithubOutline />
 							</a>
@@ -274,33 +259,21 @@ export default function Portifolio() {
 }
 
 /*
-<WrapperProjectCard>
-					<WrapperTextChip>
-						<span>BACKEND</span>
-						<span>WEB</span>
-						<span>MOBILE</span>
-					</WrapperTextChip>
-					<div className="title-body">
-						<TitleH3>SISTEMA DE IRRIGAÇÃO AUTOMÁTICO</TitleH3>
-						<div className="divider" />
-						<BodyText>
-							Implementação de um algoritmo de inteligência artificial, conhecido como algoritmo nebuloso (ou lógica difusa) que utiliza a biblioteca jFuzzyLogic. Nessa implementação, há uso da inteligência artificial para que
-							dependendo da situação atual de três aspectos, que são: temperatura, luminosidade e umidade, haja ativação automática de um sistema de irrigação de culturas agrícolas.
-						</BodyText>
-					</div>
-					<WrapperTechStack>
+
+						<WrapperTextChip>
+							{project.typeProject.map((chip, idx) => (
+								<div key={idx}>
+									<span>{chip}</span>
+								</div>
+							))}
+						</WrapperTextChip>
+
 						<div>
-							<Java />
-							<Robot />
-						</div>
-						<GithubOutline />
-					</WrapperTechStack>
-				</WrapperProjectCard>
-				<WrapperProjectCard />
-				<WrapperProjectCard />
-				<WrapperProjectCard />
-				<WrapperProjectCard />
-				<WrapperProjectCard />
-				<WrapperProjectCard />
-				<WrapperProjectCard />
+								{project.techs.map((icone, i) => (
+									<div key={i}>{icone}</div>
+								))}
+							</div>
+
+
+
 */

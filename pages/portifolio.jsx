@@ -241,8 +241,8 @@ export default function Portifolio() {
 				{projects.map((project, index) => (
 					<WrapperProjectCard key={index}>
 						<WrapperTextChip>
-							{project.typeProject.map((chip, index) => (
-								<div key={index}>
+							{project.typeProject.map((chip, idx) => (
+								<div key={idx}>
 									<span>{chip}</span>
 								</div>
 							))}
@@ -255,8 +255,8 @@ export default function Portifolio() {
 						</div>
 						<WrapperTechStack>
 							<div>
-								{project.techs.map((icone, index) => (
-									<div key={index}>{icone}</div>
+								{project.techs.map((icone, i) => (
+									<div key={i}>{icone}</div>
 								))}
 							</div>
 							<a href={project.sourceCodeLink} target="_blank" rel="noreferrer">

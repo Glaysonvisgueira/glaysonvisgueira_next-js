@@ -107,20 +107,26 @@ const WrapperTechStack = styled.div`
 	}
 `;
 
-const WrapperTextChip = styled.span`
+const WrapperTextChip = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
 	position: absolute;
 	top: 10px;
 	right: 10px;
 
-	span {
-		background-color: ${(props) => props.theme.colors.branding};
-		color: ${(props) => props.theme.colors.background};
-		font-size: 12px;
-		font-weight: 800;
-		padding: 0 4px 0 4px;
-		border-radius: 8px;
-		margin-right: 3px;
-		margin-left: 3px;
+	div {
+		span {
+			background-color: ${(props) => props.theme.colors.branding};
+			color: ${(props) => props.theme.colors.background};
+			font-size: 12px;
+			font-weight: 800;
+			padding: 0 4px 0 4px;
+			border-radius: 8px;
+			margin-right: 3px;
+			margin-left: 3px;
+		}
 	}
 `;
 
@@ -236,7 +242,9 @@ export default function Portifolio() {
 					<WrapperProjectCard key={index}>
 						<WrapperTextChip>
 							{project.typeProject.map((chip, index) => (
-								<span key={index}>{chip}</span>
+								<div key={index}>
+									<span>{chip}</span>
+								</div>
 							))}
 						</WrapperTextChip>
 

@@ -1,33 +1,33 @@
 {
-  "name": "glaysonvisgueira",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.8.3",
-    "@mui/material": "^5.8.3",
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-dom": "18.1.0",
-    "react-lottie": "^1.2.3",
-    "react-parallax": "^3.5.1",
-    "react-progressbar-on-scroll": "^2.0.0",
-    "react-reveal": "^1.2.2",
-    "react-scroll-motion": "^0.3.0",
-    "react-vertical-timeline-component": "^3.5.2",
-    "styled-components": "^5.3.5",
-    "styled-icons": "^10.45.0"
-  },
-  "devDependencies": {
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
-  }
+	"name": "glaysonvisgueira",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.9.0",
+		"@emotion/styled": "^11.8.1",
+		"@mui/icons-material": "^5.8.3",
+		"@mui/material": "^5.8.3",
+		"next": "12.1.6",
+		"react": "18.1.0",
+		"react-animate-on-scroll": "^2.1.5",
+		"react-dom": "18.1.0",
+		"react-lottie": "^1.2.3",
+		"react-parallax": "^3.5.1",
+		"react-progressbar-on-scroll": "^2.0.0",
+		"react-reveal": "^1.2.2",
+		"react-scroll-motion": "^0.3.0",
+		"react-vertical-timeline-component": "^3.5.2",
+		"styled-components": "^5.3.5",
+		"styled-icons": "^10.45.0"
+	},
+	"devDependencies": {
+		"eslint": "7.28.0",
+		"eslint-config-next": "12.1.6"
+	}
 }

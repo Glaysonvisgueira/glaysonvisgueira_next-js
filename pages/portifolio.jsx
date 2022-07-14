@@ -152,7 +152,7 @@ const projects = [
 		id: 3,
 		title: "BE THE HERO",
 		description: "Aplicativo resultante da semana Omnistack #11 da Rocketseat. A aplicação é um meio de conectar pessoas à ONGS que necessitam de algum tipo de ajuda.",
-		techs: [<ReactLogo />, <Expo />, <Javascript />, <Nodejs />, <ss3 />, <Mongodb />, <Jest />, <Sqlite />],
+		techs: [<ReactLogo />, <Expo />, <Javascript />, <Nodejs />, <Css3 />, <Mongodb />, <Jest />, <Sqlite />],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/be-the-hero",
 		typeProject: ["BACKEND", "WEB", "MOBILE"],
 	},
@@ -250,13 +250,7 @@ export default function Portifolio() {
 				<TitleSection>Portifólio</TitleSection>
 			</ContainerTitleSection>
 
-			{/*<StackTechs />*/}
-		</>
-	);
-}
-
-/*
-<ContainerGrid>
+			<ContainerGrid>
 				{projects.map((project) => (
 					<WrapperProjectCard key={project.id}>
 						<div className="title-body">
@@ -272,5 +266,7 @@ export default function Portifolio() {
 					</WrapperProjectCard>
 				))}
 			</ContainerGrid>
-
-*/
+			{/*<StackTechs />*/}
+		</>
+	);
+}

@@ -250,7 +250,13 @@ export default function Portifolio() {
 				<TitleSection>Portifólio</TitleSection>
 			</ContainerTitleSection>
 
-			<ContainerGrid>
+			{/*<StackTechs />*/}
+		</>
+	);
+}
+
+/*
+<ContainerGrid>
 				{projects.map((project) => (
 					<WrapperProjectCard key={project.id}>
 						<div className="title-body">
@@ -266,7 +272,5 @@ export default function Portifolio() {
 					</WrapperProjectCard>
 				))}
 			</ContainerGrid>
-			{/*<StackTechs />*/}
-		</>
-	);
-}
+
+*/

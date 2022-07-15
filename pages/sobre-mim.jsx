@@ -11,16 +11,36 @@ import { TitleSection, ContainerTitleSection } from "@/styles/ui";
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 
-const ContainerBoxMd = styled.div`
+const ContainerBoxSm = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
-	width: 60%;
-	height: 700px;
+	justify-content: center;
+	flex-direction: column;
+	width: 95%;
+	padding: 10px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	border-radius: 8px;
 	transition: all 0.3s ease;
-	//border: 4px solid ${(props) => props.theme.colors.branding};
+
+	.about-me-text {
+	}
+
+	.photo {
+	}
+
+	.image-text {
+	}
+`;
+
+const ContainerBoxMd = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 60%;
+	padding: 20px;
+	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	border-radius: 8px;
+	transition: all 0.3s ease;
 	flex-direction: column;
 
 	.about-me-text {

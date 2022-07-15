@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ScrollAnimation from "react-animate-on-scroll";
+//import ScrollAnimation from "react-animate-on-scroll";
 
 //Styled icons
 import { NotepadPerson } from "@styled-icons/fluentui-system-filled/NotepadPerson";
@@ -14,7 +14,7 @@ import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 const ContainerBoxMd = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 	width: 60%;
 	height: 700px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
@@ -54,6 +54,7 @@ const ButtonDownloadCV = styled.div`
 	align-items: center;
 	justify-content: center;
 	height: 38px;
+	width: 200px;
 	width: 100%;
 	border-radius: 4px;
 	background-color: ${(props) => props.theme.colors.branding};
@@ -75,14 +76,13 @@ export default function SobreMim() {
 
 			<ContainerBoxMd>
 				<div className="image-text">
-					<div className="photo">asd</div>
+					<div className="photo"></div>
 					<span className="about-me-text">
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
 						to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
 						sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 					</span>
 				</div>
-
 				<ButtonDownloadCV>Download CV</ButtonDownloadCV>
 				<SocialNetworkRowStack />
 			</ContainerBoxMd>

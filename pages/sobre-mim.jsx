@@ -8,7 +8,10 @@ import { NotepadPerson } from "@styled-icons/fluentui-system-filled/NotepadPerso
 //Styled-components
 import { TitleSection, ContainerTitleSection } from "@/styles/ui";
 
-const ContainerBox = styled.div`
+//Custom components
+import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+
+const ContainerBoxMd = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -18,36 +21,31 @@ const ContainerBox = styled.div`
 	border-radius: 8px;
 	transition: all 0.3s ease;
 	//border: 4px solid ${(props) => props.theme.colors.branding};
+	flex-direction: column;
+
+	.about-me-text {
+		font-size: 16px;
+		color: ${(props) => props.theme.colors.body};
+		text-align: center;
+		flex: 1;
+		margin-left: 20px;
+	}
+
+	.image-text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.photo {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border: 4px solid ${(props) => props.theme.colors.branding};
+	}
 
 	@media (max-width: 1600px) {
 		width: 80%;
-	}
-
-	@media (max-width: 1600px) {
-		width: 85%;
-	}
-
-	.left-card {
-		flex: 0.3;
-		height: 100%;
-		//border: 2px solid #ccc;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 20px;
-		flex-direction: column;
-
-		.photo {
-			width: 200px;
-			height: 200px;
-			border-radius: 50%;
-			border: 4px solid ${(props) => props.theme.colors.branding};
-		}
-	}
-
-	.right-card {
-		flex: 0.7;
-		height: 100%;
 	}
 `;
 
@@ -60,6 +58,11 @@ const ButtonDownloadCV = styled.div`
 	border-radius: 4px;
 	background-color: ${(props) => props.theme.colors.branding};
 	color: ${(props) => props.theme.colors.background};
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
 `;
 
 export default function SobreMim() {
@@ -69,13 +72,20 @@ export default function SobreMim() {
 				<NotepadPerson />
 				<TitleSection>Sobre mim</TitleSection>
 			</ContainerTitleSection>
-			<ContainerBox>
-				<div className="left-card">
-					<div className="photo"></div>
-					<ButtonDownloadCV>Download CV</ButtonDownloadCV>
+
+			<ContainerBoxMd>
+				<div className="image-text">
+					<div className="photo">asd</div>
+					<span className="about-me-text">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+						to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+						sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</span>
 				</div>
-				<div className="right-card"></div>
-			</ContainerBox>
+
+				<ButtonDownloadCV>Download CV</ButtonDownloadCV>
+				<SocialNetworkRowStack />
+			</ContainerBoxMd>
 		</>
 	);
 }

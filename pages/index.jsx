@@ -210,7 +210,12 @@ export default function HomePage(props) {
 	return (
 		<>
 			<ProgressBar color={theme.colors.branding} height={5} />
-			<Head title="Homepage" metaDescription="" keywords="" />
+			<Head
+				title="Portólio online"
+				metaDescription="Web portifólio de projetos de programação do Dev Glayson Visgueira."
+				keywords="Glayson Visgueira, Glayson, Visgueira, Programação, Portifólio, Dev, Programador, Developer, Desenvolvedor"
+			/>
+
 			<SectionOne id="section-home">
 				<Slide bottom>
 					<LandingPageContainer>

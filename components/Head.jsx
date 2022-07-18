@@ -5,7 +5,7 @@ export default function HeadTag(props) {
 	const theme = useTheme();
 	return (
 		<Head>
-			<title>{props.title}</title>
+			<title>GV | {props.title}</title>
 			<meta name="theme-color" content={theme.colors.branding} /> {/* <!-- Chrome, Firefox OS and Opera -->*/}
 			<meta name="msapplication-navbutton-color" content={theme.colors.branding} /> {/* <!-- Windows Phone -->*/}
 			<meta name="apple-mobile-web-app-status-bar-style" content={theme.colors.branding} /> {/*<!-- iOS Safari -->*/}

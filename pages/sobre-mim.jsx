@@ -35,19 +35,20 @@ const ContainerBoxSm = styled.div`
 const ContainerBoxMd = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: space-between;
 	width: 60%;
 	padding: 20px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	border-radius: 8px;
 	transition: all 0.3s ease;
 	flex-direction: column;
+	//background-color: #ccc;
 
 	.about-me-text {
 		font-size: 16px;
 		color: ${(props) => props.theme.colors.body};
 		text-align: center;
-		flex: 1;
+		flex: 0.5;
 		margin-left: 20px;
 	}
 
@@ -58,8 +59,8 @@ const ContainerBoxMd = styled.div`
 	}
 
 	.photo {
-		width: 200px;
-		height: 200px;
+		width: 300px;
+		height: 300px;
 		border-radius: 50%;
 		border: 4px solid ${(props) => props.theme.colors.branding};
 	}

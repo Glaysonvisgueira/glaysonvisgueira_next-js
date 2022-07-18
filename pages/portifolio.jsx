@@ -168,7 +168,7 @@ const projects = [
 		id: 5,
 		title: "LETMEASK",
 		description:
-			"Aplicativo resultante da Next Level Week #06 da Rocketseat. A aplicação fornece um ambiente onde o usuário pode logar utilizando sua conta Google, e criar salas sobre assuntos de seu interesse para que outros usuários criem perguntas.",
+			"Aplicativo resultante da Next Level Week #06 da Rocketseat. A aplicação fornece um ambiente onde o usuário pode logar utilizando sua conta Google e criar salas sobre assuntos de seu interesse para que outros usuários criem perguntas.",
 		techs: [<ReactLogo />, <Javascript />, <GoogleCloud />, <Sass />, <Firebase />],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/letmeask-NLW06",
 		typeProject: ["WEB", "MOBILE"],
@@ -219,7 +219,7 @@ const projects = [
 	{
 		id: 11,
 		title: "PÁGINA PORTIFÓLIO",
-		description: "Página portifólio.",
+		description: "Página portifólio pessoal, contruída utilizando React.js, Next.js, Styled Components e hospedado na plataforma da Vercel.",
 		techs: [<ReactLogo />, <Nextdotjs />, <Styledcomponents />, <LogoVercel />],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js",
 		typeProject: ["WEB"],
@@ -235,7 +235,7 @@ const projects = [
 	{
 		id: 13,
 		title: "API AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
-		description: "API escrita em Node.js e hospedada em um servidor EC2 na AWS para prover as informações logísticas internas",
+		description: "API escrita em Javascript/Node.js e hospedada em um servidor EC2 na AWS para prover as informações logísticas internas da empresa.",
 		techs: [<Nodejs />, <Amazonaws />, <Express />, <Mongodb />],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
 		typeProject: ["BACKEND"],

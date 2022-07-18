@@ -51,6 +51,7 @@ const CardFlip = styled.div`
 		height: 400px;
 		perspective: 1000px; /* Remove this if you don't want the 3D effect */
 		transition: all 0.3s ease;
+		padding: 20px;
 
 		@media (max-width: 1200px) {
 			width: 30vw;
@@ -92,6 +93,7 @@ const CardFlip = styled.div`
 		height: 100%;
 		-webkit-backface-visibility: hidden; /* Safari */
 		backface-visibility: hidden;
+		padding: 20px;
 	}
 
 	/* Style the front side (fallback if image is missing) */

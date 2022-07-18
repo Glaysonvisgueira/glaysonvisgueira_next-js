@@ -4,11 +4,18 @@ import Link from "next/link";
 
 import ThemeButtons from "@/components/ThemeButtons";
 
+//Ícones
+import { Home } from "@styled-icons/heroicons-solid/Home";
+import { WindowDevTools } from "@styled-icons/fluentui-system-regular/WindowDevTools"; //Serviços
+import { ContactCardLink } from "@styled-icons/fluentui-system-filled/ContactCardLink";
+import { Timeline } from "@styled-icons/fluentui-system-regular/Timeline";
+import { FolderBriefcase } from "@styled-icons/fluentui-system-filled/FolderBriefcase";
+import { NotepadPerson } from "@styled-icons/fluentui-system-filled/NotepadPerson";
+
 const StyledBurger = styled.div`
 	width: 2rem;
 	height: 2rem;
 	position: fixed;
-	//top: 2px;
 	right: 30px;
 	z-index: 20;
 	display: none;
@@ -70,7 +77,8 @@ const Ul = styled.ul`
 
 	@media (max-width: 768px) {
 		//flex-flow: column nowrap;
-		background-color: ${(props) => props.theme.colors.background};
+		//background-color: ${(props) => props.theme.colors.backgroundSecondary};
+		background: ${(props) => props.theme.colors.backgroundRadial};
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		z-index: 3;
@@ -83,6 +91,14 @@ const Ul = styled.ul`
 
 		li {
 			color: ${(props) => props.theme.colors.title};
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			svg {
+				width: 28px;
+				height: 28px;
+			}
 		}
 	}
 `;
@@ -95,6 +111,10 @@ const ContainerThemeButtonsInBurger = styled.div`
 
 const Burger = () => {
 	const [open, setOpen] = useState(false);
+
+	function handleOpenOnClickMenu() {
+		setOpen(!open);
+	}
 
 	return (
 		<>
@@ -109,22 +129,40 @@ const Burger = () => {
 				</ContainerThemeButtonsInBurger>
 				<div>
 					<Link href="#" passHref>
-						<li onClick={() => setOpen(!open)}>HOME</li>
+						<li onClick={handleOpenOnClickMenu}>
+							<Home />
+							&nbsp;&nbsp;HOME
+						</li>
 					</Link>
 					<Link href="#section-services" passHref>
-						<li onClick={() => setOpen(!open)}>SERVIÇOS</li>
+						<li onClick={handleOpenOnClickMenu}>
+							<WindowDevTools />
+							&nbsp;&nbsp;SERVIÇOS
+						</li>
 					</Link>
 					<Link href="#section-sobre-mim" passHref>
-						<li onClick={() => setOpen(!open)}>SOBRE MIM</li>
+						<li onClick={handleOpenOnClickMenu}>
+							<NotepadPerson />
+							&nbsp;&nbsp;SOBRE MIM
+						</li>
 					</Link>
 					<Link href="#section-portifolio" passHref>
-						<li onClick={() => setOpen(!open)}>PORTIFÓLIO</li>
+						<li onClick={handleOpenOnClickMenu}>
+							<FolderBriefcase />
+							&nbsp;&nbsp;PORTIFÓLIO
+						</li>
 					</Link>
 					<Link href="#section-experiencia" passHref>
-						<li onClick={() => setOpen(!open)}>EXPERIÊNCIA</li>
+						<li onClick={handleOpenOnClickMenu}>
+							<Timeline />
+							&nbsp;&nbsp;EXPERIÊNCIA
+						</li>
 					</Link>
 					<Link href="#section-contatos" passHref>
-						<li onClick={() => setOpen(!open)}>CONTATOS</li>
+						<li onClick={handleOpenOnClickMenu}>
+							<ContactCardLink />
+							&nbsp;&nbsp;CONTATOS
+						</li>
 					</Link>
 				</div>
 			</Ul>

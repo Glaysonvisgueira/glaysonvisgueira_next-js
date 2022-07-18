@@ -4,10 +4,6 @@ import styled from "styled-components";
 //Styled-components
 import { TitleSection, ContainerTitleSection, TitleH3, BodyText } from "@/styles/ui";
 
-//Custom components
-import DivGradient from "@/components/DivGradient";
-import StackTechs from "@/components/StackTechs";
-
 //Ícones
 import { FolderBriefcase } from "@styled-icons/fluentui-system-filled/FolderBriefcase";
 import { Robot } from "@styled-icons/fa-solid/Robot";

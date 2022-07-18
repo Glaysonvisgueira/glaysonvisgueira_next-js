@@ -43,8 +43,7 @@ const HeaderContainer = styled.header`
 	//background-color: ${(props) => props.theme.colors.background};
 
 	//Deixar header com efeito de Glassmorphin
-	transition: min-height 1s ease !important;
-	background-color: rgba(0, 0, 0, 0.1) !important;
+	//background-color: rgba(0, 0, 0, 0.1) !important;
 	backdrop-filter: saturate(180%) blur(30px);
 	-webkit-backdrop-filter: saturate(180%) blur(30px);
 
@@ -100,34 +99,6 @@ const BurgerMenuContainer = styled.div`
 
 	@media (min-width: 601px) {
 		display: none;
-	}
-`;
-
-const NavbarOptionAAA = styled.h4`
-	color: ${(props) => props.theme.colors.body};
-	font-weight: 800;
-	margin-left: 5px;
-	margin-right: 5px;
-	text-decoration: none;
-	border-bottom: 4px solid transparent;
-	transition: all 0.3s ease;
-
-	&:hover {
-		cursor: pointer;
-		color: ${(props) => props.theme.colors.title};
-		border-bottom: 4px solid ${(props) => props.theme.colors.branding};
-	}
-
-	@media (max-width: 1400px) {
-		font-size: ${(props) => props.theme.fontSizes.lg};
-	}
-
-	@media (max-width: 1200px) {
-		font-size: ${(props) => props.theme.fontSizes.md};
-	}
-
-	@media (max-width: 900px) {
-		font-size: ${(props) => props.theme.fontSizes.xs};
 	}
 `;
 

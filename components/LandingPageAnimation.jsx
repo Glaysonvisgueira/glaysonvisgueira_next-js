@@ -10,15 +10,6 @@ import AnimationPurpleBackground from "@/public/lotties/landing-page-purple.json
 import AnimationRedBackground from "@/public/lotties/landing-page-red.json";
 import AnimationLightBlueBackground from "@/public/lotties/landing-page-lightblue.json";
 
-var defaultOptions = {
-	loop: true,
-	autoplay: true,
-	animationData: AnimationYellowBackground,
-	rendererSettings: {
-		preserveAspectRatio: "xMidYMid slice",
-	},
-};
-
 const ContainerLottie = styled.div`
 	width: 800px;
 	height: 800px;
@@ -46,23 +37,28 @@ const ContainerLottie = styled.div`
 	}
 `;
 
+const AnimationsToShow = {
+	darkYellow: AnimationYellowBackground,
+	green: AnimationGreenBackground,
+	orange: AnimationOrangeBackground,
+	lightBlue: AnimationLightBlueBackground,
+	red: AnimationRedBackground,
+	purple: AnimationPurpleBackground,
+};
+
 export default function LogoReact() {
 	const theme = useTheme();
 	const [isStopped] = useState(false);
 	const [isPaused] = useState(false);
 
-	useEffect(() => {}, [theme]);
-
-	//handleChangeAnimation(theme.name);
-
-	async function handleChangeAnimation(id) {
-		console.log("handle id..:", id);
-		if (id == "green") {
-			defaultOptions.animationData = AnimationGreenBackground;
-		} else if (id == "red") {
-			defaultOptions.animationData = AnimationRedBackground;
-		}
-	}
+	var defaultOptions = {
+		loop: true,
+		autoplay: true,
+		animationData: AnimationsToShow[theme.name],
+		rendererSettings: {
+			preserveAspectRatio: "xMidYMid slice",
+		},
+	};
 
 	return (
 		<ContainerLottie>

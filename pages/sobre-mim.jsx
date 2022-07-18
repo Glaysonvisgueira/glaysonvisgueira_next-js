@@ -74,6 +74,7 @@ export default function SobreMim() {
 				<TitleSection>Sobre mim</TitleSection>
 			</ContainerTitleSection>
 
+			{/*<ScrollAnimation animateIn="slideInLeft" animateOnce>*/}
 			<ContainerBoxMd>
 				<div className="image-text">
 					<div className="photo"></div>
@@ -86,6 +87,7 @@ export default function SobreMim() {
 				<ButtonDownloadCV>Download CV</ButtonDownloadCV>
 				<SocialNetworkRowStack />
 			</ContainerBoxMd>
+			{/*</ScrollAnimation>*/}
 		</>
 	);
 }

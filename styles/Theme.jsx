@@ -1,7 +1,6 @@
 export const purpleTheme = {
 	name: "purple",
 	colors: {
-		name: "purple",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
@@ -30,7 +29,6 @@ export const purpleTheme = {
 export const redTheme = {
 	name: "red",
 	colors: {
-		name: "red",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
@@ -59,7 +57,6 @@ export const redTheme = {
 export const lightBlueTheme = {
 	name: "lightBlue",
 	colors: {
-		name: "lightBlue",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
@@ -115,7 +112,6 @@ export const greenTheme = {
 export const orangeTheme = {
 	name: "orange",
 	colors: {
-		name: "orange",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
@@ -143,7 +139,6 @@ export const orangeTheme = {
 export const darkYellowTheme = {
 	name: "darkYellow",
 	colors: {
-		name: "yellow",
 		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
@@ -189,7 +184,8 @@ export const darkYellowTheme = {
 #FFA6A6
 
 
-export const blueTheme = {
+export const NOMEDOTEMA = {
+	name: "",
 	colors: {
 		backgroundGradient: "linear-gradient(to right top, #171e26, #1b232b, #202731, #242c36, #29313c)",
 		backgroundRadial: "radial-gradient(ellipse at center, #29313C, #171E26)",
@@ -214,6 +210,5 @@ export const blueTheme = {
 		xl: "20px",
 	},
 };
-
 
 */

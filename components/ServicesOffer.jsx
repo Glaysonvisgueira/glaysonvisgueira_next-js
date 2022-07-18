@@ -15,9 +15,10 @@ import { TitleH3, TitleSection, ContainerTitleSection } from "@/styles/ui";
 
 const ContainerGrid = styled.div`
 	display: grid;
-	width: auto;
+	width: 100%;
 	grid-template-columns: repeat(4, 1fr);
 	transition: all 0.3s ease;
+	gap: 20px;
 
 	@media (max-width: 1400px) {
 		grid-template-columns: repeat(4, 1fr);
@@ -41,7 +42,6 @@ const CardFlip = styled.div`
 	}
 
 	.flip-card {
-		margin: 20px;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
@@ -108,7 +108,6 @@ const CardFlip = styled.div`
 		justify-content: center;
 		flex-direction: column;
 		background-color: ${(props) => props.theme.colors.branding};
-
 		transform: rotateY(180deg);
 		box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
 		border-radius: 8px;
@@ -163,7 +162,7 @@ export default function ServicesOffer() {
 				<TitleSection>Serviços oferecidos</TitleSection>
 			</ContainerTitleSection>
 
-			<ScrollAnimation animateIn="slideInUp" animateOnce>
+			<ScrollAnimation animateIn="slideInRight" animateOnce>
 				<ContainerGrid>
 					<CardFlip>
 						<div className="flip-card">
@@ -177,7 +176,9 @@ export default function ServicesOffer() {
 									</DetalhesContainer>
 								</div>
 								<div className="flip-card-back">
-									<CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</CardText>
+									<CardText>
+										Através de técnicas de SEO, iremos elevar a taxa de conversão do seu produto e aumentar sua visibilidade online de forma orgânica, ou seja, sem depender de anúncios para serem bem sucedidas.
+									</CardText>
 								</div>
 							</div>
 						</div>
@@ -213,7 +214,7 @@ export default function ServicesOffer() {
 									</DetalhesContainer>
 								</div>
 								<div className="flip-card-back">
-									<CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</CardText>
+									<CardText>Ajudaremos você a posicionar sua marca da forma correta, potencializando resultados positivos através das boas práticas do marketing digital.</CardText>
 								</div>
 							</div>
 						</div>

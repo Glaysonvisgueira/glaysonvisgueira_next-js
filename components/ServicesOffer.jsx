@@ -47,11 +47,10 @@ const CardFlip = styled.div`
 		justify-content: flex-start;
 		flex-direction: column;
 		position: "relative";
-		width: 240px;
+		//width: 240px;
 		height: 400px;
 		perspective: 1000px; /* Remove this if you don't want the 3D effect */
 		transition: all 0.3s ease;
-		padding: 20px;
 
 		@media (max-width: 1200px) {
 			width: 30vw;
@@ -69,7 +68,7 @@ const CardFlip = styled.div`
 	/* This container is needed to position the front and back side */
 	.flip-card-inner {
 		position: relative;
-		width: 100%;
+		width: 240px;
 		height: 100%;
 		text-align: center;
 		transition: transform 0.8s;

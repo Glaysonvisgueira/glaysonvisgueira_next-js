@@ -37,7 +37,6 @@ const ButtonSocialMediaIcon = styled.div`
 
 	&:hover {
 		cursor: pointer;
-		margin-top: -10px;
 	}
 
 	&:active {

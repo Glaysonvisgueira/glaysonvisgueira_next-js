@@ -11,27 +11,6 @@ import { TitleSection, ContainerTitleSection } from "@/styles/ui";
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 
-const ContainerBoxSm = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 95%;
-	padding: 10px;
-	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	border-radius: 8px;
-	transition: all 0.3s ease;
-
-	.about-me-text {
-	}
-
-	.photo {
-	}
-
-	.image-text {
-	}
-`;
-
 const ContainerBoxMd = styled.div`
 	display: flex;
 	align-items: center;

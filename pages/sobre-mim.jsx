@@ -73,6 +73,7 @@ const ButtonDownloadCV = styled.div`
 	//margin-top: 20px;
 	height: 38px;
 	//width: 200px;
+	margin-top: 20px;
 	width: 100%;
 	border-radius: 4px;
 	background-color: ${(props) => props.theme.colors.branding};

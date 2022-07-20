@@ -24,6 +24,29 @@ const LandingPageContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 
 	@media (max-width: 800px) {
 		flex-direction: column;
@@ -217,23 +240,21 @@ export default function HomePage(props) {
 			/>
 
 			<SectionOne id="section-home">
-				<Slide bottom>
-					<LandingPageContainer>
-						<TitleLandingContainer>
-							<SubTitleLanding>Olá, eu sou</SubTitleLanding>
-							<TitleLanding>Glayson Visgueira</TitleLanding>
-							<SubTitleLanding>
-								Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com
-								otimização em <span>SEO</span>.
-							</SubTitleLanding>
-							<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
-							<SocialNetworkRowStack />
-						</TitleLandingContainer>
-						<ContainerAnimation>
-							<LandingAnimation />
-						</ContainerAnimation>
-					</LandingPageContainer>
-				</Slide>
+				<LandingPageContainer>
+					<TitleLandingContainer>
+						<SubTitleLanding>Olá, eu sou</SubTitleLanding>
+						<TitleLanding>Glayson Visgueira</TitleLanding>
+						<SubTitleLanding>
+							Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com otimização em{" "}
+							<span>SEO</span>.
+						</SubTitleLanding>
+						<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
+						<SocialNetworkRowStack />
+					</TitleLandingContainer>
+					<ContainerAnimation>
+						<LandingAnimation />
+					</ContainerAnimation>
+				</LandingPageContainer>
 			</SectionOne>
 
 			<SectionServices id="section-services">

@@ -31,6 +31,9 @@ import { Jest } from "@styled-icons/simple-icons/Jest";
 import { Leaflet } from "@styled-icons/simple-icons/Leaflet";
 import { Express } from "@styled-icons/simple-icons/Express";
 
+//Custom components
+import Tooltip from "@/components/Tooltip";
+
 const ContainerGrid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -132,7 +135,14 @@ const projects = [
 		title: "SISTEMA DE IRRIGAÇÃO AUTOMÁTICO",
 		description:
 			"Implementação de um algoritmo de inteligência artificial, conhecido como algoritmo nebuloso (ou lógica difusa) que utiliza a biblioteca jFuzzyLogic. Nessa implementação, há uso da inteligência artificial para que dependendo da situação atual de três aspectos, que são: temperatura, luminosidade e umidade, haja ativação automática de um sistema de irrigação de culturas agrícolas.",
-		techs: [<Java />, <Robot />],
+		techs: [
+			<Tooltip toolTipText="Java">
+				<Java />
+			</Tooltip>,
+			<Tooltip toolTipText="SEO">
+				<Robot />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/jfuzzylogic_irrigador",
 		typeProject: ["BACKEND"],
 	},
@@ -140,7 +150,26 @@ const projects = [
 		id: 2,
 		title: "DEVRADAR",
 		description: "Aplicativo resultante da semana Omnistack #10 da Rocketseat. A aplicação visa conectar desenvolvedores próximos de sua localização atual e que trabalham com as mesmas tecnologias.",
-		techs: [<ReactLogo />, <Expo />, <Javascript />, <Nodejs />, <Css3 />, <Mongodb />],
+		techs: [
+			<Tooltip toolTipText="ReactJS">
+				<ReactLogo />
+			</Tooltip>,
+			<Tooltip toolTipText="Expo">
+				<Expo />
+			</Tooltip>,
+			<Tooltip toolTipText="Javascript">
+				<Javascript />
+			</Tooltip>,
+			<Tooltip toolTipText="NodeJS">
+				<Nodejs />
+			</Tooltip>,
+			<Tooltip toolTipText="CSS">
+				<Css3 />
+			</Tooltip>,
+			<Tooltip toolTipText="MongoDB">
+				<Mongodb />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/DevRadar",
 		typeProject: ["BACKEND", "WEB", "MOBILE"],
 	},
@@ -148,7 +177,32 @@ const projects = [
 		id: 3,
 		title: "BE THE HERO",
 		description: "Aplicativo resultante da semana Omnistack #11 da Rocketseat. A aplicação é um meio de conectar pessoas à ONGS que necessitam de algum tipo de ajuda.",
-		techs: [<ReactLogo />, <Expo />, <Javascript />, <Nodejs />, <Css3 />, <Mongodb />, <Jest />, <Sqlite />],
+		techs: [
+			<Tooltip toolTipText="ReactJS">
+				<ReactLogo />
+			</Tooltip>,
+			<Tooltip toolTipText="Expo">
+				<Expo />
+			</Tooltip>,
+			<Tooltip toolTipText="Javascript">
+				<Javascript />
+			</Tooltip>,
+			<Tooltip toolTipText="NodeJS">
+				<Nodejs />
+			</Tooltip>,
+			<Tooltip toolTipText="CSS">
+				<Css3 />
+			</Tooltip>,
+			<Tooltip toolTipText="MongoDB">
+				<Mongodb />
+			</Tooltip>,
+			<Tooltip toolTipText="Jest">
+				<Jest />
+			</Tooltip>,
+			<Tooltip toolTipText="SqLite">
+				<Sqlite />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/be-the-hero",
 		typeProject: ["BACKEND", "WEB", "MOBILE"],
 	},
@@ -156,7 +210,14 @@ const projects = [
 		id: 4,
 		title: "INTEGRA API WRAPPER",
 		description: "Servidor Node.js para utilização da API Inthegra fornecida pela STRANS de Teresina - PI.",
-		techs: [<Nodejs />, <Javascript />],
+		techs: [
+			<Tooltip toolTipText="Jest">
+				<Nodejs />
+			</Tooltip>,
+			<Tooltip toolTipText="Javascript">
+				<Javascript />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegra-nodejs",
 		typeProject: ["BACKEND"],
 	},
@@ -165,7 +226,23 @@ const projects = [
 		title: "LETMEASK",
 		description:
 			"Aplicativo resultante da Next Level Week #06 da Rocketseat. A aplicação fornece um ambiente onde o usuário pode logar utilizando sua conta Google e criar salas sobre assuntos de seu interesse para que outros usuários criem perguntas.",
-		techs: [<ReactLogo />, <Javascript />, <GoogleCloud />, <Sass />, <Firebase />],
+		techs: [
+			<Tooltip toolTipText="ReactJs">
+				<ReactLogo />
+			</Tooltip>,
+			<Tooltip toolTipText="Javascript">
+				<Javascript />
+			</Tooltip>,
+			<Tooltip toolTipText="Google Cloud">
+				<GoogleCloud />
+			</Tooltip>,
+			<Tooltip toolTipText="Sass">
+				<Sass />
+			</Tooltip>,
+			<Tooltip toolTipText="Firebase">
+				<Firebase />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/letmeask-NLW06",
 		typeProject: ["WEB", "MOBILE"],
 	},
@@ -174,7 +251,17 @@ const projects = [
 		title: "PLANTMANAGER",
 		description:
 			"Aplicativo resultante da Next Level Week #05 da Rocketseat. A aplicação fornece um agendador de irrigação para suas plantas, dando dicas sobre  cada espécie, assim como os melhores horários de irrigação. O aplicativo exibe uma notificação em push sempre que estiver no horário de irrigar sua planta.",
-		techs: [<ReactLogo />, <Typescript />, <Sqlite />],
+		techs: [
+			<Tooltip toolTipText="ReactJS">
+				<ReactLogo />
+			</Tooltip>,
+			<Tooltip toolTipText="Typescript">
+				<Typescript />
+			</Tooltip>,
+			<Tooltip toolTipText="SqLite">
+				<Sqlite />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/plantmanager",
 		typeProject: ["MOBILE"],
 	},
@@ -182,7 +269,20 @@ const projects = [
 		id: 7,
 		title: "SISTEMA DE PESQUISAS NPS",
 		description: "Aplicativo resultante da Next Level Week #04 da Rocketseat. A aplicação permite calcular o NPS (Net Promoter Score) da empresa, através de pesquisas de satisfação enviadas a usuários por e-mail.",
-		techs: [<Nodejs />, <Typescript />, <Sqlite />, <Jest />],
+		techs: [
+			<Tooltip toolTipText="NodeJS">
+				<Nodejs />
+			</Tooltip>,
+			<Tooltip toolTipText="Typescript">
+				<Typescript />
+			</Tooltip>,
+			<Tooltip toolTipText="SqLite">
+				<Sqlite />
+			</Tooltip>,
+			<Tooltip toolTipText="Jest">
+				<Jest />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/next-level-week-04-nodejs",
 		typeProject: ["BACKEND"],
 	},
@@ -190,7 +290,20 @@ const projects = [
 		id: 8,
 		title: "FASTTRACK API",
 		description: "Backend de um servidor em Node.js que fornece uma API REST que permite o compartilhamento de geolocalização do smartphone para um banco de dados em nuvem mantido pelo MongoDB.",
-		techs: [<Nodejs />, <Javascript />, <Mongodb />, <Amazonaws />],
+		techs: [
+			<Tooltip toolTipText="NodeJS">
+				<Nodejs />
+			</Tooltip>,
+			<Tooltip toolTipText="Javascript">
+				<Javascript />
+			</Tooltip>,
+			<Tooltip toolTipText="MongoDB">
+				<Mongodb />
+			</Tooltip>,
+			<Tooltip toolTipText="AWS">
+				<Amazonaws />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/api-fasttrack",
 		typeProject: ["BACKEND"],
 	},
@@ -199,7 +312,17 @@ const projects = [
 		title: "INTHEGRE-SE APP",
 		description:
 			"Aplicativo que monitora a frota de ônibus público da cidade de Teresina - PI, e exibe em um mapa a localização atual de cada ônibus em atividade no momento, com intervalos de 30 segundos entre cada atualização de posição.",
-		techs: [<ReactLogo />, <Expo />, <Javascript />],
+		techs: [
+			<Tooltip toolTipText="ReactJS">
+				<ReactLogo />
+			</Tooltip>,
+			<Tooltip toolTipText="Expo">
+				<Expo />
+			</Tooltip>,
+			<Tooltip toolTipText="Javascript">
+				<Javascript />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
 		typeProject: ["MOBILE"],
 	},
@@ -208,7 +331,11 @@ const projects = [
 		title: "CRAWLER DAS POSIÇÃO DE RADARES",
 		description:
 			"Estudo da biblioteca BeautifulSoup que utilizada com a linguagem de programação Python, possibilita coletar dados de websites. Este algoritmo busca no site da prefeitura da cidade de Teresina - PI e fornece o link de download da posição atual dos radares de velocidade na cidade.",
-		techs: [<Python />],
+		techs: [
+			<Tooltip toolTipText="Python">
+				<Python />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/crawlerRadaresVelocidade",
 		typeProject: ["BACKEND"],
 	},
@@ -216,7 +343,20 @@ const projects = [
 		id: 11,
 		title: "PÁGINA PORTIFÓLIO",
 		description: "Página portifólio pessoal, contruída utilizando React.js, Next.js, Styled Components e hospedado na plataforma da Vercel.",
-		techs: [<ReactLogo />, <Nextdotjs />, <Styledcomponents />, <LogoVercel />],
+		techs: [
+			<Tooltip toolTipText="ReactJS">
+				<ReactLogo />
+			</Tooltip>,
+			<Tooltip toolTipText="NextJS">
+				<Nextdotjs />
+			</Tooltip>,
+			<Tooltip toolTipText="Styled Components">
+				<Styledcomponents />
+			</Tooltip>,
+			<Tooltip toolTipText="Vercel">
+				<LogoVercel />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js",
 		typeProject: ["WEB"],
 	},
@@ -224,7 +364,14 @@ const projects = [
 		id: 12,
 		title: "AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
 		description: "Sistema para agregar as informações lógisticas internas da empresa.",
-		techs: [<ReactLogo />, <Leaflet />],
+		techs: [
+			<Tooltip toolTipText="ReactJS">
+				<ReactLogo />
+			</Tooltip>,
+			<Tooltip toolTipText="Leaflet">
+				<Leaflet />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/dashboard-control-mobile-implantacao",
 		typeProject: ["WEB"],
 	},
@@ -232,7 +379,20 @@ const projects = [
 		id: 13,
 		title: "API AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
 		description: "API escrita em Javascript/Node.js e hospedada em um servidor EC2 na AWS para prover as informações logísticas internas da empresa.",
-		techs: [<Nodejs />, <Amazonaws />, <Express />, <Mongodb />],
+		techs: [
+			<Tooltip toolTipText="NodeJS">
+				<Nodejs />
+			</Tooltip>,
+			<Tooltip toolTipText="AWS">
+				<Amazonaws />
+			</Tooltip>,
+			<Tooltip toolTipText="Express">
+				<Express />
+			</Tooltip>,
+			<Tooltip toolTipText="MongoDB">
+				<Mongodb />
+			</Tooltip>,
+		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
 		typeProject: ["BACKEND"],
 	},

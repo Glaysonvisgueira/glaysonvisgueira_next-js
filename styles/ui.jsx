@@ -57,7 +57,7 @@ export const BodyText = styled.p`
 export const TitleSection = styled.h2`
 	font-weight: 700;
 	color: ${(props) => props.theme.colors.branding};
-	font-size: 24px;
+	font-size: 26px;
 	@media (max-width: 900px) {
 		font-size: 18px;
 	}

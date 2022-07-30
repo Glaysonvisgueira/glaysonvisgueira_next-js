@@ -13,57 +13,19 @@ import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 
 const ContainerBoxMd = styled.div`
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 60%;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 100%;
 	min-height: 400px;
-	padding: 20px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	border-radius: 8px;
 	transition: all 0.3s ease;
-	flex-direction: row;
-	//background-color: #ccc;
+`;
 
-	.about-me-text-container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-direction: column;
-		font-size: 16px;
-		color: ${(props) => props.theme.colors.body};
-		text-align: center;
-		flex: 0.8;
-		margin-left: 20px;
-		//background-color: #ccc;
-		height: 100%;
-	}
-
-	.image-text {
-		display: flex;
-		align-items: center;
-		justify-content: space-evenly;
-		height: 100%;
-	}
-
-	.photo-container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-direction: column;
-		width: 300px;
-		height: 100%;
-
-		.photo {
-			width: 280px;
-			height: 280px;
-			border: 4px solid ${(props) => props.theme.colors.branding};
-			border-radius: 50%;
-		}
-	}
-
-	@media (max-width: 1600px) {
-		width: 80%;
-	}
+const ContentContainer = styled.div`
+	width: 100%;
+	height: 100%;
+	background-color: #ccc;
 `;
 
 const ButtonDownloadCV = styled.div`
@@ -87,29 +49,15 @@ const ButtonDownloadCV = styled.div`
 
 export default function SobreMim() {
 	return (
-		<>
+		<ContainerBoxMd>
 			<ContainerTitleSection>
 				<NotepadPerson />
 				<TitleSection>Sobre mim</TitleSection>
 			</ContainerTitleSection>
-
 			{/*<ScrollAnimation animateIn="slideInLeft" animateOnce>*/}
-			<ContainerBoxMd>
-				<div className="photo-container">
-					<div className="photo"></div>
-
-					<ButtonDownloadCV>Download CV</ButtonDownloadCV>
-				</div>
-
-				<div className="about-me-text-container">
-					<TitleSection>Glayson Visgueira</TitleSection>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-					make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-					containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-					<SocialNetworkRowStack />
-				</div>
-			</ContainerBoxMd>
 			{/*</ScrollAnimation> */}
-		</>
+
+			<ContentContainer></ContentContainer>
+		</ContainerBoxMd>
 	);
 }

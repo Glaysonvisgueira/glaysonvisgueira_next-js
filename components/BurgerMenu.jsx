@@ -61,7 +61,7 @@ const Ul = styled.ul`
 		font-weight: 700;
 		padding: 18px 10px;
 		text-align: left;
-		border-bottom: 1px solid ${(props) => props.theme.colors.subtitle};
+		border-bottom: 1px solid #525252;
 		border-left: 4px solid transparent;
 
 		a {
@@ -93,7 +93,7 @@ const Ul = styled.ul`
 			color: ${(props) => props.theme.colors.title};
 			display: flex;
 			align-items: center;
-			justify-content: flex-start;
+			justify-content: center;
 
 			svg {
 				width: 28px;

@@ -15,22 +15,21 @@ import { TitleH3, TitleSection, ContainerTitleSection } from "@/styles/ui";
 
 const ContainerGrid = styled.div`
 	display: grid;
-	width: 100%;
+	width: 60%;
+	//background-color: #ccc;
 	grid-template-columns: repeat(4, 1fr);
 	transition: all 0.3s ease;
 	gap: 20px;
 
-	@media (max-width: 1400px) {
-		grid-template-columns: repeat(4, 1fr);
-	}
-
 	@media (max-width: 1200px) {
 		grid-template-columns: repeat(2, 1fr);
+		width: 85%;
 	}
 
 	@media (max-width: 600px) {
 		grid-template-columns: repeat(1, 1fr);
 		margin-top: 60px;
+		width: 90%;
 	}
 `;
 
@@ -163,83 +162,82 @@ export default function ServicesOffer() {
 				<TitleSection>Serviços oferecidos</TitleSection>
 			</ContainerTitleSection>
 
-			<ScrollAnimation animateIn="slideInRight" animateOnce>
-				<ContainerGrid>
-					<CardFlip>
-						<div className="flip-card">
-							<div className="flip-card-inner">
-								<div className="flip-card-front">
-									<Robot />
-									<TitleH3>SEO</TitleH3>
-									<DetalhesContainer>
-										<span>Detalhes</span>
-										<ArrowRightShort />
-									</DetalhesContainer>
-								</div>
-								<div className="flip-card-back">
-									<CardText>
-										Através de técnicas de SEO, iremos elevar a taxa de conversão do seu produto e aumentar sua visibilidade online de forma orgânica, ou seja, sem depender de anúncios para serem bem sucedidas.
-									</CardText>
-								</div>
+			{/*<ScrollAnimation animateIn="slideInRight" animateOnce></ScrollAnimation>*/}
+			<ContainerGrid>
+				<CardFlip>
+					<div className="flip-card">
+						<div className="flip-card-inner">
+							<div className="flip-card-front">
+								<Robot />
+								<TitleH3>SEO</TitleH3>
+								<DetalhesContainer>
+									<span>Detalhes</span>
+									<ArrowRightShort />
+								</DetalhesContainer>
+							</div>
+							<div className="flip-card-back">
+								<CardText>
+									Através de técnicas de SEO, iremos elevar a taxa de conversão do seu produto e aumentar sua visibilidade online de forma orgânica, ou seja, sem depender de anúncios para serem bem sucedidas.
+								</CardText>
 							</div>
 						</div>
-					</CardFlip>
+					</div>
+				</CardFlip>
 
-					<CardFlip>
-						<div className="flip-card">
-							<div className="flip-card-inner">
-								<div className="flip-card-front">
-									<DesignServices />
-									<TitleH3>UX/UI</TitleH3>
-									<DetalhesContainer>
-										<span>Detalhes</span>
-										<ArrowRightShort />
-									</DetalhesContainer>
-								</div>
-								<div className="flip-card-back">
-									<CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</CardText>
-								</div>
+				<CardFlip>
+					<div className="flip-card">
+						<div className="flip-card-inner">
+							<div className="flip-card-front">
+								<DesignServices />
+								<TitleH3>UX/UI</TitleH3>
+								<DetalhesContainer>
+									<span>Detalhes</span>
+									<ArrowRightShort />
+								</DetalhesContainer>
+							</div>
+							<div className="flip-card-back">
+								<CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</CardText>
 							</div>
 						</div>
-					</CardFlip>
+					</div>
+				</CardFlip>
 
-					<CardFlip>
-						<div className="flip-card">
-							<div className="flip-card-inner">
-								<div className="flip-card-front">
-									<DesignIdeas />
-									<TitleH3>BRANDING</TitleH3>
-									<DetalhesContainer>
-										<span>Detalhes</span>
-										<ArrowRightShort />
-									</DetalhesContainer>
-								</div>
-								<div className="flip-card-back">
-									<CardText>Ajudaremos você a posicionar sua marca da forma correta, potencializando resultados positivos através das boas práticas do marketing digital.</CardText>
-								</div>
+				<CardFlip>
+					<div className="flip-card">
+						<div className="flip-card-inner">
+							<div className="flip-card-front">
+								<DesignIdeas />
+								<TitleH3>BRANDING</TitleH3>
+								<DetalhesContainer>
+									<span>Detalhes</span>
+									<ArrowRightShort />
+								</DetalhesContainer>
+							</div>
+							<div className="flip-card-back">
+								<CardText>Ajudaremos você a posicionar sua marca da forma correta, potencializando resultados positivos através das boas práticas do marketing digital.</CardText>
 							</div>
 						</div>
-					</CardFlip>
+					</div>
+				</CardFlip>
 
-					<CardFlip>
-						<div className="flip-card">
-							<div className="flip-card-inner">
-								<div className="flip-card-front">
-									<CodeBlock />
-									<TitleH3>DESENVOLVIMENTO</TitleH3>
-									<DetalhesContainer>
-										<span>Detalhes</span>
-										<ArrowRightShort />
-									</DetalhesContainer>
-								</div>
-								<div className="flip-card-back">
-									<CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</CardText>
-								</div>
+				<CardFlip>
+					<div className="flip-card">
+						<div className="flip-card-inner">
+							<div className="flip-card-front">
+								<CodeBlock />
+								<TitleH3>DESENVOLVIMENTO</TitleH3>
+								<DetalhesContainer>
+									<span>Detalhes</span>
+									<ArrowRightShort />
+								</DetalhesContainer>
+							</div>
+							<div className="flip-card-back">
+								<CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</CardText>
 							</div>
 						</div>
-					</CardFlip>
-				</ContainerGrid>
-			</ScrollAnimation>
+					</div>
+				</CardFlip>
+			</ContainerGrid>
 		</>
 	);
 }

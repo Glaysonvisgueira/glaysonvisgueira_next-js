@@ -56,7 +56,7 @@ const Tooltip = ({ children, toolTipText }) => (
 	<ToolTip>
 		<div class="tooltip">
 			{children}
-			<span class="tooltiptext">{toolTipText}</span>
+			<span className="tooltiptext">{toolTipText}</span>
 		</div>
 	</ToolTip>
 );

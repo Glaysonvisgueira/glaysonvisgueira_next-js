@@ -163,7 +163,7 @@ const ContainerBuildCopyright = styled.div`
 	justify-content: space-between;
 	margin-bottom: 10px;
 	transition: all 0.3s ease;
-	width: 85%;
+	width: 60%;
 	margin-top: 10px;
 
 	@media (max-width: 1200px) {
@@ -258,7 +258,7 @@ export default function FooterPage(props) {
 			<ContainerBuildCopyright>
 				<SocialNetworkRowStack />
 				<div>
-					<TextBuildProject>Build: cod. build</TextBuildProject>
+					<TextBuildProject>Build: 38c332</TextBuildProject>
 				</div>
 			</ContainerBuildCopyright>
 		</FooterContainer>

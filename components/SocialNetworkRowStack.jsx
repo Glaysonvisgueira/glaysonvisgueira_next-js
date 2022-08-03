@@ -47,6 +47,10 @@ const ButtonSocialMediaIcon = styled.div`
 		color: ${(props) => props.theme.colors.branding};
 		width: 24px;
 		height: 24px;
+
+		&:hover .facebook {
+			color: #fff;
+		}
 	}
 
 	@media (max-width: 600px) {
@@ -89,7 +93,7 @@ export default function SocialNetworkRowStack() {
 	return (
 		<SocialMediaContainer>
 			<ButtonSocialMediaIcon onClick={redirectToFacebook}>
-				<Facebook />
+				<Facebook className="facebook" />
 			</ButtonSocialMediaIcon>
 
 			<ButtonSocialMediaIcon onClick={redirectToGithub}>
@@ -118,3 +122,38 @@ export default function SocialNetworkRowStack() {
 		</SocialMediaContainer>
 	);
 }
+
+/*
+
+Container com as cores das techs
+
+<SocialMediaContainer>
+			<ButtonSocialMediaIcon onClick={redirectToFacebook}>
+				<Facebook style={{ color: "#3C5A99" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToGithub}>
+				<Github style={{ color: "#818181" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToEmail}>
+				<MailSend style={{ color: "#DB4437" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToWhatsapp}>
+				<LogoWhatsapp style={{ color: "#25d366" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToTelegram}>
+				<Telegram style={{ color: "#0088cc" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToInstagram}>
+				<Instagram style={{ color: "#c13584" }} />
+			</ButtonSocialMediaIcon>
+
+			<ButtonSocialMediaIcon onClick={redirectToLinkedin}>
+				<LinkedinSquare style={{ color: "#0077b5" }} />
+			</ButtonSocialMediaIcon>
+		</SocialMediaContainer>
+*/

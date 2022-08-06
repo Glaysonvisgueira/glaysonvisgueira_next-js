@@ -5,9 +5,9 @@ import { Facebook } from "@styled-icons/entypo-social/Facebook";
 import { Instagram } from "@styled-icons/icomoon/Instagram";
 import { Telegram } from "@styled-icons/boxicons-logos/Telegram";
 import { MailSend } from "@styled-icons/boxicons-regular/MailSend";
+import { LogoWhatsapp } from "@styled-icons/ionicons-solid/LogoWhatsapp";
 import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare";
 import { Github } from "@styled-icons/bootstrap/Github";
-import { LogoWhatsapp } from "@styled-icons/ionicons-solid/LogoWhatsapp";
 
 //Material icons
 

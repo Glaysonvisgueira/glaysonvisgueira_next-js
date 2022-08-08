@@ -9,7 +9,7 @@ import { LocationOn } from "@styled-icons/material-sharp/LocationOn";
 import { Phone } from "@styled-icons/evaicons-solid/Phone";
 
 //Styled-components
-import { TitleSection, ContainerTitleSection, BodyText } from "@/styles/ui";
+import { ContainerTitleSection, BodyText } from "@/styles/ui";
 
 //Custom components
 import ProgressBarTech from "@/components/ProgressBarTech";
@@ -30,7 +30,25 @@ const ContainerSection = styled.div`
 		justify-content: center;
 		flex-direction: column;
 		width: 40%;
-		margin-top: 60px;
+		margin-top: 30px;
+
+		.divider-margin {
+			margin-top: 20px;
+		}
+
+		.stack-icon-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+
+			svg {
+				width: 28px;
+				height: 28px;
+				color: ${(props) => props.theme.colors.branding};
+				margin-right: 10px;
+			}
+		}
 	}
 `;
 
@@ -40,7 +58,8 @@ const ContainerSobreMimHeader = styled.div`
 	justify-content: center;
 	flex-direction: row;
 	width: 100%;
-	height: 200px;
+	margin-top: 40px;
+	margin-bottom: 30px;
 
 	.photo {
 		width: 240px;
@@ -80,6 +99,7 @@ const Title = styled.h3`
 	font-weight: 900;
 	color: ${(props) => props.theme.colors.branding};
 	font-size: 26px;
+
 	@media (max-width: 900px) {
 		font-size: 18px;
 	}
@@ -89,8 +109,31 @@ const SubTitle = styled.h3`
 	font-weight: 700;
 	color: ${(props) => props.theme.colors.branding};
 	font-size: 18px;
+	margin-bottom: 20px;
 	@media (max-width: 900px) {
 		font-size: 16px;
+	}
+`;
+
+const WrapperTechs = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	.grid {
+		display: grid;
+		width: 100%;
+		margin: auto;
+		//background-color: #ccc;
+		grid-template-columns: repeat(2, 1fr);
+		transition: all 0.3s ease;
+		gap: 15px;
+
+		@media (max-width: 900px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 `;
 
@@ -113,22 +156,10 @@ const ButtonDownloadCV = styled.div`
 	}
 `;
 
-const WrapperTechs = styled.div`
-	display: grid;
-	width: 60%;
-	background-color: #ccc;
-	grid-template-columns: repeat(2, 1fr);
-	transition: all 0.3s ease;
-	gap: 20px;
-`;
-
 export default function SobreMim(props) {
 	return (
 		<ContainerSection>
-			<ContainerTitleSection>
-				<NotepadPerson />
-				<TitleSection>Sobre mim</TitleSection>
-			</ContainerTitleSection>
+			<ContainerTitleSection></ContainerTitleSection>
 
 			<ContainerSobreMimHeader>
 				<div className="photo"></div>
@@ -151,7 +182,11 @@ export default function SobreMim(props) {
 			</ContainerSobreMimHeader>
 
 			<div className="sobre">
-				<Title>Sobre mim</Title>
+				<div className="stack-icon-text">
+					<NotepadPerson />
+					<Title>Sobre mim</Title>
+				</div>
+				<div className="divider-margin" />
 				<BodyText>
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
 					make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
@@ -160,14 +195,18 @@ export default function SobreMim(props) {
 			</div>
 
 			<WrapperTechs>
-				<ProgressBarTech techName="Javascript" percent={40} />
-				<ProgressBarTech techName="Python" percent={10} />
-				<ProgressBarTech techName="Node.JS" percent={88} />
-				<ProgressBarTech techName="React.JS" percent={88} />
-				<ProgressBarTech techName="Next.JS" percent={88} />
-				<ProgressBarTech techName="MongoDB" percent={88} />
-				<ProgressBarTech techName="PostgreeSQL" percent={88} />
-				<ProgressBarTech techName="REST API" percent={88} />
+				<div className="grid">
+					<ProgressBarTech techName="Javascript" percent={10} />
+					<ProgressBarTech techName="Python" percent={60} />
+					<ProgressBarTech techName="Node.JS" percent={70} />
+					<ProgressBarTech techName="React.JS" percent={90} />
+					<ProgressBarTech techName="Next.JS" percent={90} />
+					<ProgressBarTech techName="MongoDB" percent={80} />
+					<ProgressBarTech techName="PostgreeSQL" percent={80} />
+					<ProgressBarTech techName="REST API" percent={90} />
+					<ProgressBarTech techName="React Native" percent={88} />
+					<ProgressBarTech techName="REST API" percent={88} />
+				</div>
 			</WrapperTechs>
 		</ContainerSection>
 	);

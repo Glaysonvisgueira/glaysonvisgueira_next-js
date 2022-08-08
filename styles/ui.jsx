@@ -51,7 +51,11 @@ export const TitleH3 = styled.h3`
 
 export const BodyText = styled.p`
 	color: ${(props) => props.theme.colors.body};
-	font-size: ${(props) => props.theme.fontSizes.xs};
+	font-size: ${(props) => props.theme.fontSizes.md};
+
+	@media (max-width: 600px) {
+		font-size: ${(props) => props.theme.fontSizes.sm};
+	}
 `;
 
 export const TitleSection = styled.h2`

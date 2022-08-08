@@ -10,6 +10,7 @@ const FooterContainer = styled.footer`
 	justify-content: space-between;
 	flex-direction: column;
 	width: 100%;
+	margin-top: 60px;
 
 	#grid {
 		display: grid;
@@ -246,7 +247,7 @@ export default function FooterPage(props) {
 					</FooterTextExternalLink>
 
 					<FooterTextExternalLink href="https://styled-components.com/" target="_blank">
-						Next.js
+						Next.Js
 					</FooterTextExternalLink>
 
 					<FooterTextExternalLink href="https://nextjs.org/" target="_blank">
@@ -258,7 +259,7 @@ export default function FooterPage(props) {
 			<ContainerBuildCopyright>
 				<SocialNetworkRowStack />
 				<div>
-					<TextBuildProject>Build: 38c332</TextBuildProject>
+					<TextBuildProject>Build: f88df4</TextBuildProject>
 				</div>
 			</ContainerBuildCopyright>
 		</FooterContainer>

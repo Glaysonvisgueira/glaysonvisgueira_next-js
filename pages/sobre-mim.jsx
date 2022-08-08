@@ -8,9 +8,6 @@ import { MailSend } from "@styled-icons/boxicons-regular/MailSend";
 import { LocationOn } from "@styled-icons/material-sharp/LocationOn";
 import { Phone } from "@styled-icons/evaicons-solid/Phone";
 
-//Styled-components
-import { ContainerTitleSection, BodyText } from "@/styles/ui";
-
 //Custom components
 import ProgressBarTech from "@/components/ProgressBarTech";
 
@@ -21,7 +18,7 @@ const ContainerSection = styled.div`
 	flex-direction: column;
 	width: 100%;
 	min-height: 400px;
-	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	//background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	transition: all 0.3s ease;
 
 	.sobre {
@@ -49,6 +46,19 @@ const ContainerSection = styled.div`
 				margin-right: 10px;
 			}
 		}
+
+		@media (max-width: 1200px) {
+			width: 60%;
+		}
+
+		@media (max-width: 900px) {
+			width: 80%;
+			align-items: center;
+		}
+
+		@media (max-width: 425px) {
+			width: 85%;
+		}
 	}
 `;
 
@@ -61,11 +71,21 @@ const ContainerSobreMimHeader = styled.div`
 	margin-top: 40px;
 	margin-bottom: 30px;
 
+	@media (max-width: 900px) {
+		flex-direction: column;
+	}
+
 	.photo {
-		width: 240px;
-		height: 240px;
-		border: 3px solid ${(props) => props.theme.colors.branding};
+		width: 220px;
+		height: 220px;
+		border: 6px solid ${(props) => props.theme.colors.branding};
 		border-radius: 50%;
+
+		@media (max-width: 900px) {
+			margin-bottom: 20px;
+			width: 170px;
+			height: 170px;
+		}
 	}
 
 	.header {
@@ -92,6 +112,12 @@ const ContainerSobreMimHeader = styled.div`
 				color: ${(props) => props.theme.colors.branding};
 			}
 		}
+
+		@media (max-width: 900px) {
+			margin-left: 0px;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 `;
 
@@ -115,12 +141,22 @@ const SubTitle = styled.h3`
 	}
 `;
 
+export const BodyText = styled.p`
+	color: ${(props) => props.theme.colors.body};
+	font-size: ${(props) => props.theme.fontSizes.md};
+	text-align: justify;
+
+	@media (max-width: 600px) {
+		font-size: ${(props) => props.theme.fontSizes.sm};
+	}
+`;
+
 const WrapperTechs = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 40px;
-	margin-bottom: 40px;
+	//margin-bottom: 40px;
 
 	.grid {
 		display: grid;
@@ -131,7 +167,7 @@ const WrapperTechs = styled.div`
 		transition: all 0.3s ease;
 		gap: 15px;
 
-		@media (max-width: 900px) {
+		@media (max-width: 650px) {
 			grid-template-columns: repeat(1, 1fr);
 		}
 	}
@@ -159,8 +195,6 @@ const ButtonDownloadCV = styled.div`
 export default function SobreMim(props) {
 	return (
 		<ContainerSection>
-			<ContainerTitleSection></ContainerTitleSection>
-
 			<ContainerSobreMimHeader>
 				<div className="photo"></div>
 				<div className="header">

@@ -71,9 +71,7 @@ export const ContainerTitleSection = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 40px;
 	margin-bottom: 30px;
-	//background-color: #fff;
 	width: 100%;
 
 	svg {

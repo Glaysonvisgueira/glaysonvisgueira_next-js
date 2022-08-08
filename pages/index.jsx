@@ -14,7 +14,6 @@ import FooterPage from "@/components/FooterPage";
 import SobreMimPage from "../pages/sobre-mim";
 import PortifolioPage from "../pages/portifolio";
 import ExperienciaPage from "../pages/experiencia";
-import ContatosPage from "../pages/contatos";
 import ServicesOffer from "@/components/ServicesOffer";
 import DivGradient from "@/components/DivGradient";
 import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
@@ -272,10 +271,6 @@ export default function HomePage(props) {
 			<SectionExperiencia id="section-experiencia">
 				<ExperienciaPage />
 			</SectionExperiencia>
-
-			<SectionContatos id="section-contatos">
-				<ContatosPage />
-			</SectionContatos>
 
 			<FooterPage />
 		</>

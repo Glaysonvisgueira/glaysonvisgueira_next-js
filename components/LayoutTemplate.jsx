@@ -268,11 +268,6 @@ export default function LayoutTemplate({ children }) {
 							<NavbarOption>EXPERIÊNCIA</NavbarOption>
 						</Link>
 					</Fade>
-					<Fade top delay={600} duration={200}>
-						<Link href="#section-contatos" passHref>
-							<NavbarOption>CONTATOS</NavbarOption>
-						</Link>
-					</Fade>
 				</NavbarOptionContainer>
 
 				<BurgerMenuContainer>

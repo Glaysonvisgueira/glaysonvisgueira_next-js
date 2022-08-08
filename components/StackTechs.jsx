@@ -122,3 +122,37 @@ export default function SlideTechs() {
 		</ContainerTechs>
 	);
 }
+
+/*
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 5s linear infinite;
+}
+
+.marquee2 span {
+  animation-delay: 2.5s;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+<p class="marquee">
+  <span>This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text -&nbsp;</span>
+</p>
+<p class="marquee marquee2">
+  <span>This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text -&nbsp;</span>
+</p>
+*/

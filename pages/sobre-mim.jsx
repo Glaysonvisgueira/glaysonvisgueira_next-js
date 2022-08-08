@@ -113,6 +113,15 @@ const ButtonDownloadCV = styled.div`
 	}
 `;
 
+const WrapperTechs = styled.div`
+	display: grid;
+	width: 60%;
+	background-color: #ccc;
+	grid-template-columns: repeat(2, 1fr);
+	transition: all 0.3s ease;
+	gap: 20px;
+`;
+
 export default function SobreMim(props) {
 	return (
 		<ContainerSection>
@@ -150,9 +159,16 @@ export default function SobreMim(props) {
 				</BodyText>
 			</div>
 
-			<ProgressBarTech techName="Javascript" percent={40} />
-			<ProgressBarTech techName="Python" percent={10} />
-			<ProgressBarTech techName="Node.JS" percent={88} />
+			<WrapperTechs>
+				<ProgressBarTech techName="Javascript" percent={40} />
+				<ProgressBarTech techName="Python" percent={10} />
+				<ProgressBarTech techName="Node.JS" percent={88} />
+				<ProgressBarTech techName="React.JS" percent={88} />
+				<ProgressBarTech techName="Next.JS" percent={88} />
+				<ProgressBarTech techName="MongoDB" percent={88} />
+				<ProgressBarTech techName="PostgreeSQL" percent={88} />
+				<ProgressBarTech techName="REST API" percent={88} />
+			</WrapperTechs>
 		</ContainerSection>
 	);
 }

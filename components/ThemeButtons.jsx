@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
+
+//Contexto
 import { SettingsContext } from "@/context/SettingsContext";
 
 const ThemeButtonsContainer = styled.div`
@@ -61,6 +63,10 @@ const ButtonDarkYellow = styled(ButtonTheme)`
 	border: 3px solid ${(props) => (props.selected ? "#fff" : "transparent")};
 `;
 
+const ButtonLight = styled(ButtonTheme)`
+	border: 3px solid ${(props) => (props.selected ? "#fff" : "transparent")};
+`;
+
 export default function ThemeButtons() {
 	const { changeTheme } = useContext(SettingsContext);
 	const [selectedOrange, setSelectedOrange] = useState(false);
@@ -69,6 +75,7 @@ export default function ThemeButtons() {
 	const [selectedGreen, setSelectedGreen] = useState(false);
 	const [selectedLightBlue, setSelectedLightBlue] = useState(false);
 	const [selectedDarkYellow, setSelectedDarkYellow] = useState(true);
+	const [selectedLight, setSelectedLight] = useState(true);
 
 	function handleSelectTheme(option) {
 		if (option == "orange") {
@@ -78,41 +85,55 @@ export default function ThemeButtons() {
 			setSelectedGreen(false);
 			setSelectedLightBlue(false);
 			setSelectedDarkYellow(false);
+			setSelectedLight(false);
 		} else if (option == "red") {
-			setSelectedOrange(false);
 			setSelectedRed(true);
+			setSelectedOrange(false);
 			setSelectedPurple(false);
 			setSelectedGreen(false);
 			setSelectedLightBlue(false);
 			setSelectedDarkYellow(false);
+			setSelectedLight(false);
 		} else if (option == "purple") {
-			setSelectedOrange(false);
-			setSelectedRed(false);
 			setSelectedPurple(true);
+			setSelectedOrange(false);
+			setSelectedRed(false);
 			setSelectedGreen(false);
 			setSelectedLightBlue(false);
 			setSelectedDarkYellow(false);
+			setSelectedLight(false);
 		} else if (option == "green") {
-			setSelectedOrange(false);
-			setSelectedRed(false);
-			setSelectedPurple(false);
 			setSelectedGreen(true);
+			setSelectedOrange(false);
+			setSelectedRed(false);
+			setSelectedPurple(false);
 			setSelectedLightBlue(false);
 			setSelectedDarkYellow(false);
+			setSelectedLight(false);
 		} else if (option == "lightBlue") {
+			setSelectedLightBlue(true);
 			setSelectedOrange(false);
 			setSelectedRed(false);
 			setSelectedPurple(false);
 			setSelectedGreen(false);
-			setSelectedLightBlue(true);
 			setSelectedDarkYellow(false);
+			setSelectedLight(false);
 		} else if (option == "darkYellow") {
+			setSelectedDarkYellow(true);
 			setSelectedOrange(false);
 			setSelectedRed(false);
 			setSelectedPurple(false);
 			setSelectedGreen(false);
 			setSelectedLightBlue(false);
-			setSelectedDarkYellow(true);
+			setSelectedLight(false);
+		} else if (option == "light") {
+			setSelectedLight(true);
+			setSelectedOrange(false);
+			setSelectedRed(false);
+			setSelectedPurple(false);
+			setSelectedGreen(false);
+			setSelectedLightBlue(false);
+			setSelectedDarkYellow(false);
 		}
 
 		changeTheme(option);
@@ -133,19 +154,7 @@ export default function ThemeButtons() {
 			<ButtonGreen id="green" selected={selectedGreen} style={{ background: "#00ff84" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 			<ButtonLightBlue id="lightBlue" selected={selectedLightBlue} style={{ background: "#14e0d3" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 			<ButtonDarkYellow id="darkYellow" selected={selectedDarkYellow} style={{ background: "#FCD434" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			<ButtonDarkYellow id="light" selected={selectedLight} style={{ background: "#eeeeee" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 		</ThemeButtonsContainer>
 	);
 }
-
-/*
-<ButtonBlue
-	id="blue"
-	selected={selectedBlue}
-	style={{ background: "#29313c" }}
-	onClick={(e) => {
-	handleSelectTheme(e.target.id);
-	}}
-/>
-<ButtonYellow id="yellow" selected={selectedYellow} style={{ background: "#FCD434" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-<ButtonGreen id="green" selected={selectedGreen} style={{ background: "#45b69c" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-*/

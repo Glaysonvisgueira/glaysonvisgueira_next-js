@@ -9,6 +9,7 @@ import AnimationOrangeBackground from "@/public/lotties/landing-page-orange.json
 import AnimationPurpleBackground from "@/public/lotties/landing-page-purple.json";
 import AnimationRedBackground from "@/public/lotties/landing-page-red.json";
 import AnimationLightBlueBackground from "@/public/lotties/landing-page-lightblue.json";
+import AnimationLightBackground from "@/public/lotties/landing-page-light.json";
 
 const ContainerLottie = styled.div`
 	width: 800px;
@@ -44,6 +45,7 @@ const AnimationsToShow = {
 	lightBlue: AnimationLightBlueBackground,
 	red: AnimationRedBackground,
 	purple: AnimationPurpleBackground,
+	light: AnimationLightBackground,
 };
 
 export default function LogoReact() {

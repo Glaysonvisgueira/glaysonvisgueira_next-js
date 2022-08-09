@@ -9,7 +9,19 @@ import { LearningApp } from "@styled-icons/fluentui-system-filled/LearningApp";
 import { Work } from "@styled-icons/material-rounded/Work";
 
 const LearningAppIcon = styled(LearningApp)`
-	color: #000;
+	color: ${(props) => props.theme.colors.background};
+	width: 40px;
+	height: 40px;
+`;
+
+const SchoolIcon = styled(School)`
+	color: ${(props) => props.theme.colors.background};
+	width: 40px;
+	height: 40px;
+`;
+
+const WorkIcon = styled(Work)`
+	color: ${(props) => props.theme.colors.background};
 	width: 40px;
 	height: 40px;
 `;
@@ -43,7 +55,7 @@ export const TitleContentTimeline = styled.h3`
 `;
 
 const BoldText = styled.h4`
-	color: ${(props) => props.theme.colors.background};
+	color: ${(props) => props.theme.colors.contrastText};
 	font-weight: 800;
 	margin-top: 2px;
 	margin-bottom: 2px;
@@ -59,11 +71,11 @@ export default function TimelinePortifolio(props) {
 		<VerticalTimeline lineColor={theme.colors.branding}>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2011</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2011</h3>
 					<BoldText>
 						Instituição: <span>S.O.S. Educação Profissional</span>
 					</BoldText>
@@ -78,11 +90,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<Work />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<WorkIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2013</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2013</h3>
 					<BoldText>
 						Empresa: <span>Armazém Paraíba</span>
 					</BoldText>
@@ -94,11 +106,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2014</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2014</h3>
 					<BoldText>
 						Instituição: <span>SENAC - Serviço Nacional de Aprendizagem Comercial</span>
 					</BoldText>
@@ -113,11 +125,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<School />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<SchoolIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2014</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2014</h3>
 					<BoldText>
 						Instituição: <span>Centro Universitário Maurício de Nassau</span>
 					</BoldText>
@@ -132,11 +144,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2018</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2018</h3>
 					<BoldText>
 						Instituição: <span>Centro Universitário Maurício de Nassau</span>
 					</BoldText>
@@ -150,11 +162,11 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, boxShadow: `0 0 0 0 ` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2018</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2018</h3>
 					<BoldText>
 						Instituição: <span>Fábrica de Gênios</span>
 					</BoldText>
@@ -168,11 +180,11 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
 					<BoldText>
 						Instituição: <span>Udemy</span>
 					</BoldText>
@@ -186,11 +198,11 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
 					<BoldText>
 						Instituição: <span>Udemy</span>
 					</BoldText>
@@ -204,11 +216,11 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
 					<BoldText>
 						Instituição: <span>Udemy</span>
 					</BoldText>
@@ -222,11 +234,11 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
 					<BoldText>
 						Instituição: <span>Udemy</span>
 					</BoldText>
@@ -241,11 +253,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
 					<BoldText>
 						Instituição: <span>SENAC - Serviço Nacional de Aprendizagem Comercial</span>
 					</BoldText>
@@ -260,11 +272,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
 					<BoldText>
 						Instituição: <span>The Forense</span>
 					</BoldText>
@@ -279,11 +291,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2020</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2020</h3>
 					<BoldText>
 						Instituição: <span>Udemy</span>
 					</BoldText>
@@ -298,11 +310,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2020</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2020</h3>
 					<BoldText>
 						Instituição: <span>Udemy</span>
 					</BoldText>
@@ -317,11 +329,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<LearningApp />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<LearningAppIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2020</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2020</h3>
 					<BoldText>
 						Instituição: <span>Alura</span>
 					</BoldText>
@@ -336,11 +348,11 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0 0 0px 0 #ddd" }}
-				iconStyle={{ background: theme.colors.backgroundSecondary, color: "#fff", boxShadow: `0 0 0 4px ${theme.colors.branding}, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%)` }}
-				icon={<Work />}>
+				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}` }}
+				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
+				icon={<WorkIcon />}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 4px 0 4px", borderRadius: "4px" }}>2021</h3>
+					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2021</h3>
 					<BoldText>
 						Empresa: <span>Armazém Paraíba</span>
 					</BoldText>

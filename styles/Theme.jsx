@@ -10,6 +10,7 @@ export const purpleTheme = {
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#ccc",
 		body: "#ccc",
+		contrastText: "#2b2b2b",
 		caption: "#ccc",
 		icon: "#fff",
 		iconHover: "#ccc",
@@ -38,6 +39,7 @@ export const redTheme = {
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#ccc",
 		body: "#ccc",
+		contrastText: "#2b2b2b",
 		caption: "#ccc",
 		icon: "#fff",
 		iconHover: "#ccc",
@@ -66,6 +68,7 @@ export const lightBlueTheme = {
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#ccc",
 		body: "#ccc",
+		contrastText: "#2b2b2b",
 		caption: "#ccc",
 		icon: "#fff",
 		iconHover: "#ccc",
@@ -94,6 +97,7 @@ export const greenTheme = {
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#ccc",
 		body: "#ccc",
+		contrastText: "#2b2b2b",
 		caption: "#ccc",
 		icon: "#fff",
 		iconHover: "#ccc",
@@ -121,6 +125,7 @@ export const orangeTheme = {
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#ccc",
 		body: "#ccc",
+		contrastText: "#2b2b2b",
 		caption: "#ccc",
 		icon: "#fff",
 		iconHover: "#9b883c",
@@ -148,6 +153,7 @@ export const darkYellowTheme = {
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#ccc",
 		body: "#ccc",
+		contrastText: "#2b2b2b",
 		caption: "#ccc",
 		icon: "#fff",
 		iconHover: "#9b883c",
@@ -163,42 +169,22 @@ export const darkYellowTheme = {
 	},
 };
 
-//Cores para paletas de cores:
-/*
-#F1D302
-#161925
-#4C4637
-#B1AB99
-
-#539987
-#52ffb8
-#17b890
-#004466
-#14474E
-
-#7b8cde
-#565254
-
-#ff4d4d
-#B33636
-#FFA6A6
-
-
-export const NOMEDOTEMA = {
-	name: "",
+export const lightTheme = {
+	name: "light",
 	colors: {
-		backgroundGradient: "linear-gradient(to right top, #171e26, #1b232b, #202731, #242c36, #29313c)",
-		backgroundRadial: "radial-gradient(ellipse at center, #29313C, #171E26)",
-		background: "#171e26",
-		backgroundSecondary: "#29313c",
-		branding: "#fa8c05",
-		title: "#fff",
-		inactiveTitle: "#979797",
-		subtitle: "#585E68",
-		body: "#a1a1a1",
-		caption: "#cccccc",
-		icon: "#fa8c05",
-		iconHover: "#9b883c",
+		backgroundGradient: "linear-gradient(202deg, #ffffff 0%, #e6e6e6 100%)",
+		backgroundRadial: "radial-gradient(circle, #ffffff 0%, #e6e6e6 100%)",
+		background: "#ffffff",
+		backgroundSecondary: "#ddf0fa",
+		branding: "#015077",
+		title: "#015077",
+		inactiveTitle: "#8b8b8b",
+		subtitle: "#383838",
+		body: "#474747",
+		contrastText: "#2b2b2b",
+		caption: "#ccc",
+		icon: "#fff",
+		iconHover: "#000000",
 		button: "",
 		shadow: "",
 	},
@@ -210,5 +196,3 @@ export const NOMEDOTEMA = {
 		xl: "20px",
 	},
 };
-
-*/

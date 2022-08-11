@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 //Styled-components
 import { TitleSection, ContainerTitleSection, TitleH3, BodyText } from "@/styles/ui";
@@ -408,34 +409,35 @@ export default function Portifolio() {
 
 			<ContainerGrid>
 				{projects.map((project, index) => (
-					<WrapperProjectCard key={index}>
-						<WrapperTextChip>
-							{project.typeProject.map((chip, idx) => (
-								<div key={idx}>
-									<span>{chip}</span>
-								</div>
-							))}
-						</WrapperTextChip>
-
-						<div className="title-body">
-							<TitleH3>{project.title}</TitleH3>
-							<div className="divider" />
-							<BodyText>{project.description}</BodyText>
-						</div>
-						<WrapperTechStack>
-							<div>
-								{project.techs.map((icone, i) => (
-									<div key={i}>{icone}</div>
+					<ScrollAnimation animateIn="fadeIn" animateOnce key={index}>
+						<WrapperProjectCard>
+							<WrapperTextChip>
+								{project.typeProject.map((chip, idx) => (
+									<div key={idx}>
+										<span>{chip}</span>
+									</div>
 								))}
+							</WrapperTextChip>
+
+							<div className="title-body">
+								<TitleH3>{project.title}</TitleH3>
+								<div className="divider" />
+								<BodyText>{project.description}</BodyText>
 							</div>
-							<a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
-								<GithubOutline />
-							</a>
-						</WrapperTechStack>
-					</WrapperProjectCard>
+							<WrapperTechStack>
+								<div>
+									{project.techs.map((icone, i) => (
+										<div key={i}>{icone}</div>
+									))}
+								</div>
+								<a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
+									<GithubOutline />
+								</a>
+							</WrapperTechStack>
+						</WrapperProjectCard>
+					</ScrollAnimation>
 				))}
 			</ContainerGrid>
-			{/*<StackTechs />*/}
 		</>
 	);
 }

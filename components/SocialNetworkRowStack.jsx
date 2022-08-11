@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import styled from "styled-components";
 
 import { Facebook } from "@styled-icons/entypo-social/Facebook";
@@ -24,7 +23,7 @@ const SocialMediaContainer = styled.div`
 	}
 `;
 
-const ButtonSocialMediaIcon = styled.div`
+const ButtonSocialMediaIcon = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -47,10 +46,6 @@ const ButtonSocialMediaIcon = styled.div`
 		color: ${(props) => props.theme.colors.branding};
 		width: 24px;
 		height: 24px;
-
-		&:hover .facebook {
-			color: #fff;
-		}
 	}
 
 	@media (max-width: 600px) {
@@ -60,63 +55,33 @@ const ButtonSocialMediaIcon = styled.div`
 `;
 
 export default function SocialNetworkRowStack() {
-	const router = useRouter();
-
-	function redirectToFacebook() {
-		window.open("https://www.facebook.com/glayson.visgueira", "_ blank");
-	}
-
-	function redirectToGithub() {
-		window.open("https://github.com/Glaysonvisgueira", "_ blank");
-	}
-
-	function redirectToEmail() {
-		window.open("mailto:glaysonwow@gmail.com", "_ blank");
-	}
-
-	function redirectToWhatsapp() {
-		window.open("https://wa.me/5586999277101/?text=Olá%20Glayson,%20tudo%20bem?%20Vim através de sua página pessoal!", "_ blank");
-	}
-
-	function redirectToTelegram() {
-		window.open("https://t.me/glayson_visgueira", "_ blank");
-	}
-
-	function redirectToInstagram() {
-		window.open("https://www.instagram.com/glayson_visgueira", "_ blank");
-	}
-
-	function redirectToLinkedin() {
-		window.open("https://www.linkedin.com/in/glayson-visgueira-7433a61b3/", "_ blank");
-	}
-
 	return (
 		<SocialMediaContainer>
-			<ButtonSocialMediaIcon onClick={redirectToFacebook}>
-				<Facebook className="facebook" />
+			<ButtonSocialMediaIcon href="https://www.facebook.com/glayson.visgueira" target="_blank">
+				<Facebook />
 			</ButtonSocialMediaIcon>
 
-			<ButtonSocialMediaIcon onClick={redirectToGithub}>
+			<ButtonSocialMediaIcon href="https://github.com/Glaysonvisgueira" target="_blank">
 				<Github />
 			</ButtonSocialMediaIcon>
 
-			<ButtonSocialMediaIcon onClick={redirectToEmail}>
+			<ButtonSocialMediaIcon href="mailto:glaysonwow@gmail.com" target="_blank">
 				<MailSend />
 			</ButtonSocialMediaIcon>
 
-			<ButtonSocialMediaIcon onClick={redirectToWhatsapp}>
+			<ButtonSocialMediaIcon href="https://wa.me/5586999277101/?text=Olá%20Glayson,%20tudo%20bem?%20Vim através de sua página pessoal!" target="_blank">
 				<LogoWhatsapp />
 			</ButtonSocialMediaIcon>
 
-			<ButtonSocialMediaIcon onClick={redirectToTelegram}>
+			<ButtonSocialMediaIcon href="https://t.me/glayson_visgueira" target="_blank">
 				<Telegram />
 			</ButtonSocialMediaIcon>
 
-			<ButtonSocialMediaIcon onClick={redirectToInstagram}>
+			<ButtonSocialMediaIcon href="https://www.instagram.com/glayson_visgueira" target="_blank">
 				<Instagram />
 			</ButtonSocialMediaIcon>
 
-			<ButtonSocialMediaIcon onClick={redirectToLinkedin}>
+			<ButtonSocialMediaIcon href="https://www.linkedin.com/in/glayson-visgueira-7433a61b3/" target="_blank">
 				<LinkedinSquare />
 			</ButtonSocialMediaIcon>
 		</SocialMediaContainer>

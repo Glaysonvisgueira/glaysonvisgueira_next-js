@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 //Custom components
 import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LandingAnimation from "@/components/LandingPageAnimation";
-import Slide from "react-reveal/Slide";
 import ProgressBar from "react-progressbar-on-scroll";
 import { useTheme } from "styled-components";
 import FooterPage from "@/components/FooterPage";
@@ -15,7 +15,6 @@ import SobreMimPage from "../pages/sobre-mim";
 import PortifolioPage from "../pages/portifolio";
 import ExperienciaPage from "../pages/experiencia";
 import ServicesOffer from "@/components/ServicesOffer";
-import DivGradient from "@/components/DivGradient";
 import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 
 const LandingPageContainer = styled.div`
@@ -174,16 +173,6 @@ const SectionExperiencia = styled.section`
 	min-height: 100vh;
 `;
 
-const SectionContatos = styled.section`
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	flex-direction: column;
-	padding-top: 60px;
-	width: 100%;
-	min-height: 100vh;
-`;
-
 const ButtonSlideSaibaMais = styled.button`
 	z-index: 1;
 	position: relative;
@@ -247,7 +236,9 @@ export default function HomePage(props) {
 							Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com otimização em{" "}
 							<span>SEO</span>.
 						</SubTitleLanding>
-						<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
+						<Link href="#section-sobre-mim" passHref>
+							<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
+						</Link>
 						<SocialNetworkRowStack />
 					</TitleLandingContainer>
 					<ContainerAnimation>
@@ -255,6 +246,8 @@ export default function HomePage(props) {
 					</ContainerAnimation>
 				</LandingPageContainer>
 			</SectionOne>
+
+			<ParallaxTransitionDiv />
 
 			<SectionServices id="section-services">
 				<ServicesOffer />

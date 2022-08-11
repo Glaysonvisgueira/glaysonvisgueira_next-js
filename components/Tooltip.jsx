@@ -54,7 +54,7 @@ const ToolTip = styled.div`
 
 const Tooltip = ({ children, toolTipText }) => (
 	<ToolTip>
-		<div class="tooltip">
+		<div className="tooltip">
 			{children}
 			<span className="tooltiptext">{toolTipText}</span>
 		</div>

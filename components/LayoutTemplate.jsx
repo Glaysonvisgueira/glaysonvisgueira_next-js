@@ -137,11 +137,11 @@ const NavbarOption = styled.h4`
 	}
 
 	@media (max-width: 1400px) {
-		font-size: ${(props) => props.theme.fontSizes.lg};
+		font-size: ${(props) => props.theme.fontSizes.md};
 	}
 
 	@media (max-width: 1200px) {
-		font-size: ${(props) => props.theme.fontSizes.md};
+		font-size: ${(props) => props.theme.fontSizes.sm};
 	}
 
 	@media (max-width: 900px) {
@@ -176,7 +176,6 @@ const ButtonUpToTop = styled.div`
 	right: 20px;
 	z-index: 1;
 	background-color: ${(props) => props.theme.colors.branding};
-	border: 2px solid ${(props) => props.theme.colors.background};
 	transition: all 0.3s ease;
 
 	&:hover {

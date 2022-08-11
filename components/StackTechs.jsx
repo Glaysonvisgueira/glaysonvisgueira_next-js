@@ -149,10 +149,10 @@ export default function SlideTechs() {
     transform: translate(-100%, 0);
   }
 }
-<p class="marquee">
+<p className="marquee">
   <span>This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text -&nbsp;</span>
 </p>
-<p class="marquee marquee2">
+<p className="marquee marquee2">
   <span>This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text -&nbsp;</span>
 </p>
 */

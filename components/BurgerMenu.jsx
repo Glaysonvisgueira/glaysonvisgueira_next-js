@@ -158,12 +158,6 @@ const Burger = () => {
 							&nbsp;&nbsp;EXPERIÊNCIA
 						</li>
 					</Link>
-					<Link href="#section-contatos" passHref>
-						<li onClick={handleOpenOnClickMenu}>
-							<ContactCardLink />
-							&nbsp;&nbsp;CONTATOS
-						</li>
-					</Link>
 				</div>
 			</Ul>
 		</>

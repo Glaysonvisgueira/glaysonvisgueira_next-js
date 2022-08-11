@@ -9,19 +9,19 @@ import { LearningApp } from "@styled-icons/fluentui-system-filled/LearningApp";
 import { Work } from "@styled-icons/material-rounded/Work";
 
 const LearningAppIcon = styled(LearningApp)`
-	color: ${(props) => props.theme.colors.background};
+	color: ${(props) => props.theme.colors.backgroundSecondary};
 	width: 40px;
 	height: 40px;
 `;
 
 const SchoolIcon = styled(School)`
-	color: ${(props) => props.theme.colors.background};
+	color: ${(props) => props.theme.colors.backgroundSecondary};
 	width: 40px;
 	height: 40px;
 `;
 
 const WorkIcon = styled(Work)`
-	color: ${(props) => props.theme.colors.background};
+	color: ${(props) => props.theme.colors.backgroundSecondary};
 	width: 40px;
 	height: 40px;
 `;

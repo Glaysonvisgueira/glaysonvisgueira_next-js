@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-//import ScrollAnimation from "react-animate-on-scroll";
+import ScrollAnimation from "react-animate-on-scroll";
 
 //Styled icons
 import { NotepadPerson } from "@styled-icons/fluentui-system-filled/NotepadPerson";
@@ -18,8 +18,8 @@ const ContainerSection = styled.div`
 	flex-direction: column;
 	width: 100%;
 	min-height: 400px;
-	//background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	transition: all 0.3s ease;
+	//background-color: ${(props) => props.theme.colors.backgroundSecondary};
 
 	.sobre {
 		display: flex;
@@ -52,6 +52,7 @@ const ContainerSection = styled.div`
 		}
 
 		@media (max-width: 900px) {
+			margin-top: 0px;
 			width: 80%;
 			align-items: center;
 		}
@@ -75,16 +76,23 @@ const ContainerSobreMimHeader = styled.div`
 		flex-direction: column;
 	}
 
-	.photo {
-		width: 220px;
-		height: 220px;
-		border: 6px solid ${(props) => props.theme.colors.branding};
-		border-radius: 50%;
+	.photo-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 
-		@media (max-width: 900px) {
-			margin-bottom: 20px;
-			width: 170px;
-			height: 170px;
+		.photo {
+			width: 220px;
+			height: 220px;
+			border: 6px solid ${(props) => props.theme.colors.branding};
+			border-radius: 50%;
+
+			@media (max-width: 900px) {
+				margin-bottom: 20px;
+				width: 170px;
+				height: 170px;
+			}
 		}
 	}
 
@@ -93,7 +101,6 @@ const ContainerSobreMimHeader = styled.div`
 		align-items: flex-start;
 		justify-content: flex-start;
 		flex-direction: column;
-		//background-color: #ccc;
 		height: 100%;
 		margin-left: 60px;
 
@@ -146,6 +153,11 @@ export const BodyText = styled.p`
 	font-size: ${(props) => props.theme.fontSizes.md};
 	text-align: justify;
 
+	strong {
+		font-weight: 700;
+		color: ${(props) => props.theme.colors.branding};
+	}
+
 	@media (max-width: 600px) {
 		font-size: ${(props) => props.theme.fontSizes.sm};
 	}
@@ -185,64 +197,91 @@ const ButtonDownloadCV = styled.div`
 	border-radius: 4px;
 	background-color: ${(props) => props.theme.colors.branding};
 	color: ${(props) => props.theme.colors.background};
+	font-weight: 900;
 
 	&:hover {
 		cursor: pointer;
 		opacity: 0.8;
 	}
+
+	@media (max-width: 900px) {
+		margin-top: 0px;
+		margin-bottom: 20px;
+	}
 `;
 
 export default function SobreMim(props) {
 	return (
-		<ContainerSection>
-			<ContainerSobreMimHeader>
-				<div className="photo"></div>
-				<div className="header">
-					<Title>Glayson Visgueira</Title>
-					<SubTitle>Front-end developer</SubTitle>
-					<div>
-						<MailSend />
-						<BodyText>glaysonwow@gmail.com</BodyText>
+		<ScrollAnimation animateIn="fadeIn" animateOnce>
+			<ContainerSection>
+				<ContainerSobreMimHeader>
+					<div className="photo-wrapper">
+						<div className="photo"></div>
+						<ButtonDownloadCV>Download CV</ButtonDownloadCV>
 					</div>
-					<div>
-						<LocationOn />
-						<BodyText>Teresina - PI</BodyText>
+					<div className="header">
+						<Title>Glayson Visgueira</Title>
+						<SubTitle>Front-end developer</SubTitle>
+						<div>
+							<MailSend />
+							<BodyText>glaysonwow@gmail.com</BodyText>
+						</div>
+						<div>
+							<LocationOn />
+							<BodyText>Teresina - PI</BodyText>
+						</div>
+						<div>
+							<Phone />
+							<BodyText>86 99927-7101</BodyText>
+						</div>
 					</div>
-					<div>
-						<Phone />
-						<BodyText>86 99927-7101</BodyText>
+				</ContainerSobreMimHeader>
+				<div className="sobre">
+					<div className="stack-icon-text">
+						<NotepadPerson />
+						<Title>Sobre mim</Title>
 					</div>
+					<div className="divider-margin" />
+					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
+						Bacharel em <strong>Sistemas de informações</strong> pelo <strong>Centro Universitário Maurício de Nassau</strong>, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino
+						S/A, nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de
+						novas funcionalidades que utilizam as tecnologias: <strong>Python</strong>, <strong>Django</strong>, <strong>Django REST Framework</strong>, <strong>React.js</strong>, <strong>Next.Js</strong> e
+						<strong>PostgreSQL</strong>.
+						<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
+							Possuo maior aptidão para área de <strong>Front-end</strong> e conhecimentos sólidos na stack: <strong>React.Js</strong>, <strong>Next.Js</strong>, <strong>HTML</strong>, <strong>Css</strong> e
+							<strong>Styled components</strong>.
+						</BodyText>
+						<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
+							Atualmente adquirindo conhecimentos em <strong>Dart</strong> e <strong>Flutter</strong> para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo
+							conhecimentos de <strong>design patterns</strong> de <strong>Clean Code/Architecture</strong>. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
+						</BodyText>
+					</BodyText>
 				</div>
-			</ContainerSobreMimHeader>
 
-			<div className="sobre">
-				<div className="stack-icon-text">
-					<NotepadPerson />
-					<Title>Sobre mim</Title>
-				</div>
-				<div className="divider-margin" />
-				<BodyText>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-					make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-					containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</BodyText>
-			</div>
+				<Title style={{ marginTop: 30, marginBottom: 10 }}>Skills</Title>
 
-			<WrapperTechs>
-				<div className="grid">
-					<ProgressBarTech techName="Javascript" percent={10} />
-					<ProgressBarTech techName="Python" percent={60} />
-					<ProgressBarTech techName="Node.JS" percent={70} />
-					<ProgressBarTech techName="React.JS" percent={90} />
-					<ProgressBarTech techName="Next.JS" percent={90} />
-					<ProgressBarTech techName="MongoDB" percent={80} />
-					<ProgressBarTech techName="PostgreeSQL" percent={80} />
-					<ProgressBarTech techName="REST API" percent={90} />
-					<ProgressBarTech techName="React Native" percent={88} />
-					<ProgressBarTech techName="REST API" percent={88} />
-				</div>
-			</WrapperTechs>
-		</ContainerSection>
+				<WrapperTechs>
+					<div className="grid">
+						<ProgressBarTech techName="Next.JS" percent={90} />
+						<ProgressBarTech techName="Javascript" percent={90} />
+						<ProgressBarTech techName="React.JS" percent={90} />
+						<ProgressBarTech techName="REST API" percent={90} />
+						<ProgressBarTech techName="React Native" percent={90} />
+						<ProgressBarTech techName="CSS" percent={80} />
+						<ProgressBarTech techName="Styled Components" percent={80} />
+						<ProgressBarTech techName="Typescript" percent={80} />
+						<ProgressBarTech techName="SEO" percent={80} />
+						<ProgressBarTech techName="MongoDB" percent={70} />
+						<ProgressBarTech techName="Node.JS" percent={70} />
+						<ProgressBarTech techName="PostgreeSQL" percent={70} />
+						<ProgressBarTech techName="Python" percent={60} />
+						<ProgressBarTech techName="Django" percent={60} />
+						<ProgressBarTech techName="Expo" percent={60} />
+						<ProgressBarTech techName="Flutter" percent={30} />
+					</div>
+				</WrapperTechs>
+			</ContainerSection>
+		</ScrollAnimation>
 	);
 }
 

@@ -6,7 +6,8 @@ const ContainerParallaxDiv = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 450px;
+	height: 400px;
+	position: relative;
 
 	@media (max-width: 601px) {
 		height: 300px;
@@ -20,7 +21,7 @@ const ContainerParallaxDiv = styled.div`
 export default function ParallaxTransitionDiv() {
 	return (
 		<ContainerParallaxDiv>
-			<Parallax bgImage="img/man-tech.jpg" bgImageAlt="Homem com óculos de realidade visual" strength={100} style={{ width: "100%", height: "100%" }}></Parallax>
+			<Parallax bgImage="img/pc-code.jpg" bgImageAlt="Homem com óculos de realidade visual" strength={1000} style={{ width: "100%", height: "100%" }}></Parallax>
 		</ContainerParallaxDiv>
 	);
 }

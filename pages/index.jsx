@@ -185,6 +185,7 @@ const ButtonSlideSaibaMais = styled.button`
 	border: 2px solid ${(props) => props.theme.colors.branding};
 	color: ${(props) => props.theme.colors.title};
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	font-weight: 700;
 
 	&::before {
 		content: "";

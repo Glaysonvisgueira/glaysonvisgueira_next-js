@@ -209,6 +209,7 @@ const ButtonUpToTop = styled.div`
 
 	&:hover {
 		cursor: pointer;
+		transform: translateY(-7px);
 	}
 
 	svg {

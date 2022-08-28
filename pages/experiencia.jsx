@@ -15,7 +15,6 @@ export default function Experiencia() {
 				<Timeline />
 				<TitleSection>Formação, cursos e trabalhos</TitleSection>
 			</ContainerTitleSection>
-			<div style={{ marginTop: "60px" }}></div>
 			<TimelineExperienciaFormacao />
 		</>
 	);

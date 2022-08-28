@@ -86,9 +86,13 @@ const ContainerSobreMimHeader = styled.div`
 		.photo {
 			width: 220px;
 			height: 220px;
+			position: relative;
 			border: 6px solid ${(props) => props.theme.colors.branding};
 			border-radius: 50%;
-			overflow: "hidden";
+
+			.image {
+				border-radius: 50%;
+			}
 
 			@media (max-width: 900px) {
 				margin-bottom: 20px;
@@ -187,7 +191,7 @@ const WrapperTechs = styled.div`
 	}
 `;
 
-const ButtonDownloadCV = styled.div`
+const ButtonDownloadCV = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -200,6 +204,7 @@ const ButtonDownloadCV = styled.div`
 	background-color: ${(props) => props.theme.colors.branding};
 	color: ${(props) => props.theme.colors.background};
 	font-weight: 900;
+	text-decoration: none;
 
 	&:hover {
 		cursor: pointer;
@@ -209,6 +214,7 @@ const ButtonDownloadCV = styled.div`
 	@media (max-width: 900px) {
 		margin-top: 0px;
 		margin-bottom: 20px;
+		width: 250px;
 	}
 `;
 
@@ -218,8 +224,13 @@ export default function SobreMim(props) {
 			<ContainerSection>
 				<ContainerSobreMimHeader>
 					<div className="photo-wrapper">
-						<div className="photo">{/* <Image src="/img/user-photo.jpg" alt="Imagem de Glayson Visgueira" width={"100%"} height={"100%"} objectFit="objectFit" /> */}</div>
-						<ButtonDownloadCV>Download CV</ButtonDownloadCV>
+						<div className="photo">
+							<Image src="/img/user-photo.jpg" alt="Desenvolvedor Glayson Visgueira" layout="fill" objectFit="cover" className="image" />
+						</div>
+
+						<ButtonDownloadCV href="https://drive.google.com/file/d/14PwMV_kf28P6cUuHaLI8KX77rHYlMDny/view?usp=sharing" target="_blank">
+							Download CV
+						</ButtonDownloadCV>
 					</div>
 					<div className="header">
 						<Title>Glayson Visgueira</Title>
@@ -234,7 +245,7 @@ export default function SobreMim(props) {
 						</div>
 						<div>
 							<Phone />
-							<BodyText>86 99927-7101</BodyText>
+							<BodyText>86 9 9927-7101</BodyText>
 						</div>
 					</div>
 				</ContainerSobreMimHeader>
@@ -255,7 +266,7 @@ export default function SobreMim(props) {
 
 					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
 						Possuo maior aptidão para área de <strong>Front-end</strong> e conhecimentos sólidos na stack: <strong>React.Js</strong>, <strong>Next.Js</strong>, <strong>HTML</strong>, <strong>Css</strong> e
-						<strong>Styled components</strong>.
+						<strong> Styled components</strong>.
 					</BodyText>
 
 					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>

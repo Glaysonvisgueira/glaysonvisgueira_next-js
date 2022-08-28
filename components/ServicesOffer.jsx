@@ -34,6 +34,10 @@ const CardService = styled.div`
 		height: 70px;
 		margin-bottom: 10px;
 	}
+
+	@media (max-width: 600px) {
+		width: 90%;
+	}
 `;
 
 const CardText = styled.p`
@@ -53,6 +57,7 @@ const ContainerGrid = styled.div`
 	grid-template-columns: repeat(4, 1fr);
 	transition: all 0.3s ease;
 	gap: 20px;
+	justify-items: center;
 
 	@media (max-width: 1200px) {
 		grid-template-columns: repeat(2, 1fr);
@@ -61,8 +66,8 @@ const ContainerGrid = styled.div`
 
 	@media (max-width: 600px) {
 		grid-template-columns: repeat(1, 1fr);
-		margin-top: 60px;
-		width: 90%;
+		//margin-top: 60px;
+		width: 100%;
 	}
 `;
 

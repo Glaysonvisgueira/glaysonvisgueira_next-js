@@ -223,7 +223,7 @@ export default function HomePage(props) {
 		<>
 			<ProgressBar color={theme.colors.branding} height={5} />
 			<Head
-				title="Portólio online"
+				title="Portifólio de projetos de programação"
 				metaDescription="Web portifólio de projetos de programação do Dev Glayson Visgueira."
 				keywords="Glayson Visgueira, Glayson, Visgueira, Programação, Portifólio, Dev, Programador, Developer, Desenvolvedor"
 			/>

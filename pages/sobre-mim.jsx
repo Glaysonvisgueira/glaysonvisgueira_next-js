@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Styled icons
@@ -26,7 +27,7 @@ const ContainerSection = styled.div`
 		align-items: flex-start;
 		justify-content: center;
 		flex-direction: column;
-		width: 40%;
+		width: 60%;
 		margin-top: 30px;
 
 		.divider-margin {
@@ -47,8 +48,8 @@ const ContainerSection = styled.div`
 			}
 		}
 
-		@media (max-width: 1200px) {
-			width: 60%;
+		@media (max-width: 1400px) {
+			width: 80%;
 		}
 
 		@media (max-width: 900px) {
@@ -87,6 +88,7 @@ const ContainerSobreMimHeader = styled.div`
 			height: 220px;
 			border: 6px solid ${(props) => props.theme.colors.branding};
 			border-radius: 50%;
+			overflow: "hidden";
 
 			@media (max-width: 900px) {
 				margin-bottom: 20px;
@@ -216,7 +218,7 @@ export default function SobreMim(props) {
 			<ContainerSection>
 				<ContainerSobreMimHeader>
 					<div className="photo-wrapper">
-						<div className="photo"></div>
+						<div className="photo">{/* <Image src="/img/user-photo.jpg" alt="Imagem de Glayson Visgueira" width={"100%"} height={"100%"} objectFit="objectFit" /> */}</div>
 						<ButtonDownloadCV>Download CV</ButtonDownloadCV>
 					</div>
 					<div className="header">
@@ -236,25 +238,29 @@ export default function SobreMim(props) {
 						</div>
 					</div>
 				</ContainerSobreMimHeader>
+
 				<div className="sobre">
 					<div className="stack-icon-text">
 						<NotepadPerson />
 						<Title>Sobre mim</Title>
 					</div>
 					<div className="divider-margin" />
+
 					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
 						Bacharel em <strong>Sistemas de informações</strong> pelo <strong>Centro Universitário Maurício de Nassau</strong>, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino
 						S/A, nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de
 						novas funcionalidades que utilizam as tecnologias: <strong>Python</strong>, <strong>Django</strong>, <strong>Django REST Framework</strong>, <strong>React.js</strong>, <strong>Next.Js</strong> e
 						<strong>PostgreSQL</strong>.
-						<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
-							Possuo maior aptidão para área de <strong>Front-end</strong> e conhecimentos sólidos na stack: <strong>React.Js</strong>, <strong>Next.Js</strong>, <strong>HTML</strong>, <strong>Css</strong> e
-							<strong>Styled components</strong>.
-						</BodyText>
-						<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
-							Atualmente adquirindo conhecimentos em <strong>Dart</strong> e <strong>Flutter</strong> para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo
-							conhecimentos de <strong>design patterns</strong> de <strong>Clean Code/Architecture</strong>. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
-						</BodyText>
+					</BodyText>
+
+					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
+						Possuo maior aptidão para área de <strong>Front-end</strong> e conhecimentos sólidos na stack: <strong>React.Js</strong>, <strong>Next.Js</strong>, <strong>HTML</strong>, <strong>Css</strong> e
+						<strong>Styled components</strong>.
+					</BodyText>
+
+					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
+						Atualmente adquirindo conhecimentos em <strong>Dart</strong> e <strong>Flutter</strong> para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo
+						conhecimentos de <strong>design patterns</strong> de <strong>Clean Code/Architecture</strong>. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
 					</BodyText>
 				</div>
 
@@ -287,3 +293,6 @@ export default function SobreMim(props) {
 
 /*<ScrollAnimation animateIn="slideInLeft" animateOnce>
 			</ScrollAnimation> */
+{
+	/*  */
+}

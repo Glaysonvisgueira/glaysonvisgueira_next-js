@@ -10,9 +10,6 @@ import Fade from "react-reveal/Fade";
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
 
-//Ícones
-import { KeyboardArrowUp } from "@styled-icons/material-outlined/KeyboardArrowUp";
-
 const Main = styled.main`
 	display: flex;
 	align-items: center;
@@ -164,70 +161,9 @@ const SideBarTheme = styled.aside`
 	}
 `;
 
-const ButtonUpToTop = styled.div`
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	width: 54px;
-	height: 54px;
-	bottom: 20px;
-	right: 20px;
-	z-index: 1;
-	background-color: ${(props) => props.theme.colors.branding};
-	transition: all 0.3s ease;
-
-	&:hover {
-		cursor: pointer;
-		transform: scale(1.2);
-	}
-
-	svg {
-		color: ${(props) => props.theme.colors.background};
-		width: 30px;
-		height: 30px;
-	}
-
-	@media (max-width: 1200px) {
-		width: 44px;
-		height: 44px;
-	}
-
-	@media (max-width: 600px) {
-		width: 34px;
-		height: 34px;
-	}
-`;
-
 export default function LayoutTemplate({ children }) {
-	const [showTopBtn, setShowTopBtn] = useState(false);
-
-	useEffect(() => {
-		window.addEventListener("scroll", () => {
-			if (window.scrollY > 200) {
-				setShowTopBtn(true);
-			} else {
-				setShowTopBtn(false);
-			}
-		});
-	}, []);
-
-	//Função para subir ao topo da página.
-	const goToTop = () => {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
-	};
-
 	return (
 		<>
-			{showTopBtn && (
-				<ButtonUpToTop onClick={goToTop}>
-					<KeyboardArrowUp />
-				</ButtonUpToTop>
-			)}
 			<HeaderContainer>
 				<Fade top delay={100} duration={200}>
 					<Link href="#section-home" passHref>

@@ -41,6 +41,7 @@ export const TitleH2 = styled.h2`
 `;
 
 export const TitleH3 = styled.h3`
+	z-index: 2;
 	color: ${(props) => props.theme.colors.title};
 	font-size: ${(props) => props.theme.fontSizes.md};
 

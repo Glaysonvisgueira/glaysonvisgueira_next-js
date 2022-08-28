@@ -3,7 +3,12 @@ import styled from "styled-components";
 import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
 
+//Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+import Tooltip from "@/components/Tooltip";
+
+//Ícones
+import { KeyboardArrowUp } from "@styled-icons/material-outlined/KeyboardArrowUp";
 
 const FooterContainer = styled.footer`
 	display: flex;
@@ -168,6 +173,12 @@ const ContainerBuildCopyright = styled.div`
 	width: 60%;
 	margin-top: 10px;
 
+	.build-and-button-top {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	@media (max-width: 1200px) {
 		width: 80%;
 	}
@@ -181,24 +192,54 @@ const ContainerBuildCopyright = styled.div`
 	}
 `;
 
+const ButtonUpToTop = styled.div`
+	/* position: fixed; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	width: 32px;
+	height: 32px;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1;
+	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	transition: all 0.3s ease;
+	margin-left: 15px;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	svg {
+		color: ${(props) => props.theme.colors.branding};
+		width: 24px;
+		height: 24px;
+	}
+`;
+
 export default function FooterPage(props) {
-	const [commit, setCommit] = useState([]);
+	const [commit, setCommit] = useState("");
 
 	useEffect(() => {
 		getLastCommit();
 	}, []);
 
-	console.log(commit);
 	async function getLastCommit() {
-		try {
-			const response = await fetch("https://api.github.com/repos/Glaysonvisgueira/glaysonvisgueira_next-js/commits").then((data) => {
-				const json = response.json();
-				setCommit(json);
-			});
-		} catch (err) {
-			console.log(err);
-		}
+		const response = await fetch("https://api.github.com/repos/glaysonvisgueira/glaysonvisgueira_next-js/commits");
+		const json = await response.json();
+
+		//Setar no state somente as 6 primeiras letras do SHA code do último commit
+		setCommit(json[0].sha.slice(0, 6));
 	}
+
+	//Função para subir ao topo da página.
+	const goToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
 
 	return (
 		<FooterContainer>
@@ -264,8 +305,11 @@ export default function FooterPage(props) {
 			<Divider />
 			<ContainerBuildCopyright>
 				<SocialNetworkRowStack />
-				<div>
-					<TextBuildProject>Build: f88df4</TextBuildProject>
+				<div className="build-and-button-top">
+					<TextBuildProject>Build: {commit || ""}</TextBuildProject>
+					<ButtonUpToTop onClick={goToTop}>
+						<KeyboardArrowUp />
+					</ButtonUpToTop>
 				</div>
 			</ContainerBuildCopyright>
 		</FooterContainer>

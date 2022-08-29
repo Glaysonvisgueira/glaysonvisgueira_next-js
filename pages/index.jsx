@@ -25,6 +25,10 @@ const LandingPageContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+
+	@media (max-width: 930px) {
+		flex-direction: column;
+	}
 `;
 
 const TitleLandingContainer = styled.div`
@@ -92,7 +96,7 @@ const ContainerAnimation = styled.div`
 	width: 100%;
 	height: 100%;
 
-	@media (max-width: 801px) {
+	@media (max-width: 930px) {
 		order: -1;
 	}
 `;

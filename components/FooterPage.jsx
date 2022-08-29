@@ -243,78 +243,76 @@ export default function FooterPage(props) {
 	};
 
 	return (
-		<ScrollAnimation animateIn="fadeIn" animateOnce>
-			<FooterContainer>
-				<div id="grid">
-					<ScrollAnimation animateIn="fadeIn" animateOnce>
-						<SectionFooterMenu>
-							<FooterTextTitle>NAVEGAÇÃO</FooterTextTitle>
-							<Link href="#section-home" passHref>
-								<FooterText>Home</FooterText>
-							</Link>
-							<Link href="#section-services" passHref>
-								<FooterText>Serviços</FooterText>
-							</Link>
-							<Link href="#section-sobre-mim" passHref>
-								<FooterText>Sobre mim</FooterText>
-							</Link>
-							<Link href="#section-portifolio" passHref>
-								<FooterText>Portifólio</FooterText>
-							</Link>
-							<Link href="#section-experiencia" passHref>
-								<FooterText>Experiência</FooterText>
-							</Link>
-						</SectionFooterMenu>
-					</ScrollAnimation>
+		<FooterContainer>
+			<div id="grid">
+				<ScrollAnimation animateIn="fadeIn" animateOnce>
+					<SectionFooterMenu>
+						<FooterTextTitle>NAVEGAÇÃO</FooterTextTitle>
+						<Link href="#section-home" passHref>
+							<FooterText>Home</FooterText>
+						</Link>
+						<Link href="#section-services" passHref>
+							<FooterText>Serviços</FooterText>
+						</Link>
+						<Link href="#section-sobre-mim" passHref>
+							<FooterText>Sobre mim</FooterText>
+						</Link>
+						<Link href="#section-portifolio" passHref>
+							<FooterText>Portifólio</FooterText>
+						</Link>
+						<Link href="#section-experiencia" passHref>
+							<FooterText>Experiência</FooterText>
+						</Link>
+					</SectionFooterMenu>
+				</ScrollAnimation>
 
-					<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-						<SectionFooterMenu>
-							<FooterTextTitle>HOSPEDAGEM</FooterTextTitle>
+				<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+					<SectionFooterMenu>
+						<FooterTextTitle>HOSPEDAGEM</FooterTextTitle>
 
-							<FooterTextExternalLink href="https://vercel.com/" target="_blank">
-								Vercel
-							</FooterTextExternalLink>
-						</SectionFooterMenu>
-					</ScrollAnimation>
+						<FooterTextExternalLink href="https://vercel.com/" target="_blank">
+							Vercel
+						</FooterTextExternalLink>
+					</SectionFooterMenu>
+				</ScrollAnimation>
 
-					<ScrollAnimation animateIn="fadeIn" animateOnce delay={400}>
-						<SectionFooterMenu>
-							<FooterTextTitle>CÓDIGO FONTE</FooterTextTitle>
-							<FooterTextExternalLink href="https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js" target="_blank">
-								Github
-							</FooterTextExternalLink>
-						</SectionFooterMenu>
-					</ScrollAnimation>
+				<ScrollAnimation animateIn="fadeIn" animateOnce delay={400}>
+					<SectionFooterMenu>
+						<FooterTextTitle>CÓDIGO FONTE</FooterTextTitle>
+						<FooterTextExternalLink href="https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js" target="_blank">
+							Github
+						</FooterTextExternalLink>
+					</SectionFooterMenu>
+				</ScrollAnimation>
 
-					<ScrollAnimation animateIn="fadeIn" animateOnce delay={600}>
-						<SectionFooterMenu>
-							<FooterTextTitle>TECNOLOGIAS</FooterTextTitle>
+				<ScrollAnimation animateIn="fadeIn" animateOnce delay={600}>
+					<SectionFooterMenu>
+						<FooterTextTitle>TECNOLOGIAS</FooterTextTitle>
 
-							<FooterTextExternalLink href="https://pt-br.reactjs.org/" target="_blank">
-								React.Js
-							</FooterTextExternalLink>
+						<FooterTextExternalLink href="https://pt-br.reactjs.org/" target="_blank">
+							React.Js
+						</FooterTextExternalLink>
 
-							<FooterTextExternalLink href="https://styled-components.com/" target="_blank">
-								Next.Js
-							</FooterTextExternalLink>
+						<FooterTextExternalLink href="https://styled-components.com/" target="_blank">
+							Next.Js
+						</FooterTextExternalLink>
 
-							<FooterTextExternalLink href="https://nextjs.org/" target="_blank">
-								Styled components
-							</FooterTextExternalLink>
-						</SectionFooterMenu>
-					</ScrollAnimation>
+						<FooterTextExternalLink href="https://nextjs.org/" target="_blank">
+							Styled components
+						</FooterTextExternalLink>
+					</SectionFooterMenu>
+				</ScrollAnimation>
+			</div>
+			<Divider />
+			<ContainerBuildCopyright>
+				<SocialNetworkRowStack />
+				<div className="build-and-button-top">
+					<TextBuildProject>Build: {commit || ""}</TextBuildProject>
+					<ButtonUpToTop onClick={goToTop}>
+						<KeyboardArrowUp />
+					</ButtonUpToTop>
 				</div>
-				<Divider />
-				<ContainerBuildCopyright>
-					<SocialNetworkRowStack />
-					<div className="build-and-button-top">
-						<TextBuildProject>Build: {commit || ""}</TextBuildProject>
-						<ButtonUpToTop onClick={goToTop}>
-							<KeyboardArrowUp />
-						</ButtonUpToTop>
-					</div>
-				</ContainerBuildCopyright>
-			</FooterContainer>
-		</ScrollAnimation>
+			</ContainerBuildCopyright>
+		</FooterContainer>
 	);
 }

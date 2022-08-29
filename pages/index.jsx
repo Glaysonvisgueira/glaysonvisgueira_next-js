@@ -25,33 +25,6 @@ const LandingPageContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	-webkit-animation-name: fadeIn;
-	animation-name: fadeIn;
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-
-	@-webkit-keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@media (max-width: 800px) {
-		flex-direction: column;
-	}
 `;
 
 const TitleLandingContainer = styled.div`
@@ -232,7 +205,7 @@ export default function HomePage(props) {
 				<LandingPageContainer>
 					<TitleLandingContainer>
 						<SubTitleLanding>Olá, eu sou</SubTitleLanding>
-						<Typed strings={["Glayson Visgueira"]} typeSpeed={40} className="type-string " />
+						<Typed strings={["Glayson Visgueira"]} typeSpeed={80} className="type-string " />
 						<SubTitleLanding>
 							Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com otimização em{" "}
 							<span>SEO</span>.

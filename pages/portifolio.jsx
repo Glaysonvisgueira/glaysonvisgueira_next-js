@@ -60,11 +60,18 @@ const WrapperProjectCard = styled.div`
 	width: 100%;
 	min-height: 240px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	border-bottom: 2px solid ${(props) => props.theme.colors.branding};
-	//border-radius: 8px;
-	//border-bottom: 4px solid ${(props) => props.theme.colors.branding};
+	border-top: 3px solid transparent;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid ${(props) => props.theme.colors.branding};
+	border-radius: 4px;
 	padding: 20px;
-	//transition: all 0.3s ease;
+	transition: all 0.3s ease;
+
+	:hover {
+		transform: translateY(-5px);
+		border: 3px solid ${(props) => props.theme.colors.branding};
+	}
 
 	.title-body {
 		margin-top: 20px;

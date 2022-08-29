@@ -22,6 +22,7 @@
 		"react-progressbar-on-scroll": "^2.0.0",
 		"react-reveal": "^1.2.2",
 		"react-scroll-motion": "^0.3.0",
+		"react-typed": "^1.2.0",
 		"react-vertical-timeline-component": "^3.5.2",
 		"styled-components": "^5.3.5",
 		"styled-icons": "^10.45.0"

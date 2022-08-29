@@ -1,6 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+
+//Third's librarys
 import Link from "next/link";
+import styled from "styled-components";
+import Typed from "react-typed";
 
 //Custom components
 import Head from "@/components/Head";
@@ -15,7 +18,7 @@ import SobreMimPage from "../pages/sobre-mim";
 import PortifolioPage from "../pages/portifolio";
 import ExperienciaPage from "../pages/experiencia";
 import ServicesOffer from "@/components/ServicesOffer";
-import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
+// import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -57,28 +60,25 @@ const TitleLandingContainer = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	padding: 10px;
-`;
 
-const TitleLanding = styled.div`
-	font-size: 60px;
-	font-weight: 800;
-	color: ${(props) => props.theme.colors.branding};
-	//-webkit-text-stroke-width: 2px; /* largura da borda */
-	//-webkit-text-stroke-color: ${(props) => props.theme.colors.branding}; /* cor da borda */
-	//-webkit-text-fill-color: transparent;
+	.type-string {
+		font-size: 60px;
+		font-weight: 800;
+		color: ${(props) => props.theme.colors.branding};
 
-	@media (max-width: 1400px) {
-		font-size: 40px;
-	}
+		@media (max-width: 1400px) {
+			font-size: 40px;
+		}
 
-	@media (max-width: 1200px) {
-		font-size: 36px;
-	}
+		@media (max-width: 1200px) {
+			font-size: 36px;
+		}
 
-	@media (max-width: 600px) {
-		font-size: 26px;
-		text-align: center;
-		width: 100%;
+		@media (max-width: 600px) {
+			font-size: 26px;
+			text-align: center;
+			width: 100%;
+		}
 	}
 `;
 
@@ -232,7 +232,7 @@ export default function HomePage(props) {
 				<LandingPageContainer>
 					<TitleLandingContainer>
 						<SubTitleLanding>Olá, eu sou</SubTitleLanding>
-						<TitleLanding>Glayson Visgueira</TitleLanding>
+						<Typed strings={["Glayson Visgueira"]} typeSpeed={40} className="type-string " />
 						<SubTitleLanding>
 							Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com otimização em{" "}
 							<span>SEO</span>.

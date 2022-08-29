@@ -23,9 +23,11 @@ const CardService = styled.div`
 	height: 340px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	transition: all 0.3s ease;
+	border: 3px solid transparent;
 
 	:hover {
 		transform: translateY(-12px);
+		border: 3px solid ${(props) => props.theme.colors.branding};
 	}
 
 	svg {

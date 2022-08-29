@@ -248,7 +248,7 @@ export default function HomePage(props) {
 				</LandingPageContainer>
 			</SectionOne>
 
-			<ParallaxTransitionDiv />
+			{/* <ParallaxTransitionDiv /> */}
 
 			<SectionServices id="section-services">
 				<ServicesOffer />

@@ -220,8 +220,8 @@ const ButtonDownloadCV = styled.a`
 
 export default function SobreMim(props) {
 	return (
-		<ScrollAnimation animateIn="fadeIn" animateOnce>
-			<ContainerSection>
+		<ContainerSection>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
 				<ContainerSobreMimHeader>
 					<div className="photo-wrapper">
 						<div className="photo">
@@ -249,56 +249,87 @@ export default function SobreMim(props) {
 						</div>
 					</div>
 				</ContainerSobreMimHeader>
+			</ScrollAnimation>
 
-				<div className="sobre">
-					<div className="stack-icon-text">
-						<NotepadPerson />
-						<Title>Sobre mim</Title>
-					</div>
-					<div className="divider-margin" />
-
-					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
-						Bacharel em <strong>Sistemas de informações</strong> pelo <strong>Centro Universitário Maurício de Nassau</strong>, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino
-						S/A, nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de
-						novas funcionalidades que utilizam as tecnologias: <strong>Python</strong>, <strong>Django</strong>, <strong>Django REST Framework</strong>, <strong>React.js</strong>, <strong>Next.Js</strong> e
-						<strong>PostgreSQL</strong>.
-					</BodyText>
-
-					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
-						Possuo maior aptidão para área de <strong>Front-end</strong> e conhecimentos sólidos na stack: <strong>React.Js</strong>, <strong>Next.Js</strong>, <strong>HTML</strong>, <strong>Css</strong> e
-						<strong> Styled components</strong>.
-					</BodyText>
-
-					<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
-						Atualmente adquirindo conhecimentos em <strong>Dart</strong> e <strong>Flutter</strong> para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo
-						conhecimentos de <strong>design patterns</strong> de <strong>Clean Code/Architecture</strong>. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
-					</BodyText>
+			<div className="sobre">
+				<div className="stack-icon-text">
+					<NotepadPerson />
+					<Title>Sobre mim</Title>
 				</div>
+				<div className="divider-margin" />
 
-				<Title style={{ marginTop: 30, marginBottom: 10 }}>Skills</Title>
+				<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
+					Bacharel em <strong>Sistemas de informações</strong> pelo <strong>Centro Universitário Maurício de Nassau</strong>, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A,
+					nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas
+					funcionalidades que utilizam as tecnologias: <strong>Python</strong>, <strong>Django</strong>, <strong>Django REST Framework</strong>, <strong>React.js</strong>, <strong>Next.Js</strong> e<strong> PostgreSQL</strong>.
+				</BodyText>
 
-				<WrapperTechs>
-					<div className="grid">
+				<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
+					Possuo maior aptidão para área de <strong>Front-end</strong> e conhecimentos sólidos na stack: <strong>React.Js</strong>, <strong>Next.Js</strong>, <strong>HTML</strong>, <strong>Css</strong> e
+					<strong> Styled components</strong>.
+				</BodyText>
+
+				<BodyText style={{ marginTop: "20px", marginBottom: "20px" }}>
+					Atualmente adquirindo conhecimentos em <strong>Dart</strong> e <strong>Flutter</strong> para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo
+					conhecimentos de <strong>design patterns</strong> de <strong>Clean Code/Architecture</strong>. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
+				</BodyText>
+			</div>
+
+			<Title style={{ marginTop: 30, marginBottom: 10 }}>Skills</Title>
+
+			<WrapperTechs>
+				<div className="grid">
+					<ScrollAnimation animateIn="slideInLeft" animateOnce>
 						<ProgressBarTech techName="Next.JS" percent={90} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInRight" animateOnce>
 						<ProgressBarTech techName="Javascript" percent={90} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInLeft" animateOnce>
 						<ProgressBarTech techName="React.JS" percent={90} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInRight" animateOnce>
 						<ProgressBarTech techName="REST API" percent={90} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInLeft" animateOnce>
 						<ProgressBarTech techName="React Native" percent={90} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInRight" animateOnce>
 						<ProgressBarTech techName="CSS" percent={80} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInLeft" animateOnce>
 						<ProgressBarTech techName="Styled Components" percent={80} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInRight" animateOnce>
 						<ProgressBarTech techName="Typescript" percent={80} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInLeft" animateOnce>
 						<ProgressBarTech techName="SEO" percent={80} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInRight" animateOnce>
 						<ProgressBarTech techName="MongoDB" percent={70} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInLeft" animateOnce>
 						<ProgressBarTech techName="Node.JS" percent={70} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInRight" animateOnce>
 						<ProgressBarTech techName="PostgreeSQL" percent={70} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInLeft" animateOnce>
 						<ProgressBarTech techName="Python" percent={60} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInRight" animateOnce>
 						<ProgressBarTech techName="Django" percent={60} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInLeft" animateOnce>
 						<ProgressBarTech techName="Expo" percent={60} />
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="slideInRight" animateOnce>
 						<ProgressBarTech techName="Flutter" percent={30} />
-					</div>
-				</WrapperTechs>
-			</ContainerSection>
-		</ScrollAnimation>
+					</ScrollAnimation>
+				</div>
+			</WrapperTechs>
+		</ContainerSection>
 	);
 }
 

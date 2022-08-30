@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 //Third part librarys
 import Link from "next/link";
 import styled from "styled-components";
-import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
+import SelectLanguageOption from "@/components/SelectLanguageOption";
 
 const Main = styled.main`
 	display: flex;
@@ -202,6 +202,9 @@ export default function LayoutTemplate({ children }) {
 						<Link href="#section-experiencia" passHref>
 							<NavbarOption>EXPERIÊNCIA</NavbarOption>
 						</Link>
+					</Fade>
+					<Fade top delay={600} duration={200}>
+						<SelectLanguageOption />
 					</Fade>
 				</NavbarOptionContainer>
 

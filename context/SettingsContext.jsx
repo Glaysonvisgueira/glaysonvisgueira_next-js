@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, createContext } from "react";
 import { ThemeProvider } from "styled-components";
 import { orangeTheme, redTheme, purpleTheme, greenTheme, lightBlueTheme, darkYellowTheme, lightTheme } from "@/styles/Theme";
 
@@ -16,9 +16,14 @@ const listaTemas = {
 
 export default function SettingsProvider({ children }) {
 	const [theme, setTheme] = useState(darkYellowTheme);
+	const [language, setLanguage] = useState("ptbr");
 
-	async function changeTheme(newTheme) {
+	function changeTheme(newTheme) {
 		setTheme(listaTemas[newTheme]);
+	}
+
+	function changeLanguage() {
+		console.log("Alterado idioma da página.");
 	}
 
 	return (

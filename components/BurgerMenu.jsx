@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
+//Custom components
 import ThemeButtons from "@/components/ThemeButtons";
+import SelectLanguageOption from "@/components/SelectLanguageOption";
 
 //Ícones
 import { Home } from "@styled-icons/heroicons-solid/Home";
@@ -57,6 +59,13 @@ const Ul = styled.ul`
 	justify-content: space-between;
 	z-index: 10;
 
+	.container-language-select {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
 	li {
 		font-weight: 700;
 		padding: 18px 10px;
@@ -85,7 +94,7 @@ const Ul = styled.ul`
 		top: 0;
 		right: 0;
 		height: 100vh;
-		width: 100%;
+		width: 80%;
 		padding-top: 3.5rem;
 		transition: transform 0.3s ease-in-out;
 
@@ -93,7 +102,7 @@ const Ul = styled.ul`
 			color: ${(props) => props.theme.colors.title};
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: left;
 
 			svg {
 				width: 28px;
@@ -127,37 +136,41 @@ const Burger = () => {
 				<ContainerThemeButtonsInBurger>
 					<ThemeButtons />
 				</ContainerThemeButtonsInBurger>
+
 				<div>
 					<Link href="#" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							<Home />
+							{/* <Home /> */}
 							&nbsp;&nbsp;HOME
 						</li>
 					</Link>
 					<Link href="#section-services" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							<WindowDevTools />
+							{/* <WindowDevTools /> */}
 							&nbsp;&nbsp;SERVIÇOS
 						</li>
 					</Link>
 					<Link href="#section-sobre-mim" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							<NotepadPerson />
+							{/* <NotepadPerson /> */}
 							&nbsp;&nbsp;SOBRE MIM
 						</li>
 					</Link>
 					<Link href="#section-portifolio" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							<FolderBriefcase />
+							{/* <FolderBriefcase /> */}
 							&nbsp;&nbsp;PORTIFÓLIO
 						</li>
 					</Link>
 					<Link href="#section-experiencia" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							<Timeline />
+							{/* <Timeline /> */}
 							&nbsp;&nbsp;EXPERIÊNCIA
 						</li>
 					</Link>
+				</div>
+				<div className="container-language-select">
+					<SelectLanguageOption />
 				</div>
 			</Ul>
 		</>

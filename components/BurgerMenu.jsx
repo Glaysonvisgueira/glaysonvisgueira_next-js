@@ -86,15 +86,14 @@ const Ul = styled.ul`
 
 	@media (max-width: 768px) {
 		//flex-flow: column nowrap;
-		//background-color: ${(props) => props.theme.colors.backgroundSecondary};
-		background: ${(props) => props.theme.colors.backgroundRadial};
+		background-color: ${(props) => props.theme.colors.backgroundSecondary};
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		z-index: 3;
 		top: 0;
 		right: 0;
 		height: 100vh;
-		width: 80%;
+		width: 100%;
 		padding-top: 3.5rem;
 		transition: transform 0.3s ease-in-out;
 

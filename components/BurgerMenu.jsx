@@ -63,7 +63,7 @@ const Ul = styled.ul`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 20px;
+		margin-top: 40px;
 	}
 
 	li {
@@ -86,7 +86,7 @@ const Ul = styled.ul`
 
 	@media (max-width: 768px) {
 		//flex-flow: column nowrap;
-		background-color: ${(props) => props.theme.colors.backgroundSecondary};
+		background-color: ${(props) => props.theme.colors.background};
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		z-index: 3;
@@ -167,9 +167,9 @@ const Burger = () => {
 							&nbsp;&nbsp;EXPERIÊNCIA
 						</li>
 					</Link>
-				</div>
-				<div className="container-language-select">
-					<SelectLanguageOption />
+					<div className="container-language-select">
+						<SelectLanguageOption />
+					</div>
 				</div>
 			</Ul>
 		</>

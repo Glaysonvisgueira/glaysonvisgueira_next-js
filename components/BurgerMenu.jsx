@@ -167,9 +167,9 @@ const Burger = () => {
 							&nbsp;&nbsp;EXPERIÊNCIA
 						</li>
 					</Link>
-					<div className="container-language-select">
+					{/* <div className="container-language-select">
 						<SelectLanguageOption />
-					</div>
+					</div> */}
 				</div>
 			</Ul>
 		</>

@@ -203,9 +203,9 @@ export default function LayoutTemplate({ children }) {
 							<NavbarOption>EXPERIÊNCIA</NavbarOption>
 						</Link>
 					</Fade>
-					<Fade top delay={600} duration={200}>
+					{/* <Fade top delay={600} duration={200}>
 						<SelectLanguageOption />
-					</Fade>
+					</Fade> */}
 				</NavbarOptionContainer>
 
 				<BurgerMenuContainer>

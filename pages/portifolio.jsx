@@ -71,6 +71,7 @@ const WrapperProjectCard = styled.div`
 	:hover {
 		transform: translateY(-5px);
 		border: 3px solid ${(props) => props.theme.colors.branding};
+		box-shadow: 0px 0px 20px 0px ${(props) => props.theme.colors.branding}5E;
 	}
 
 	.title-body {

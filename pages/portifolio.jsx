@@ -31,6 +31,7 @@ import { Expo } from "@styled-icons/simple-icons/Expo";
 import { Jest } from "@styled-icons/simple-icons/Jest";
 import { Leaflet } from "@styled-icons/simple-icons/Leaflet";
 import { Express } from "@styled-icons/simple-icons/Express";
+import { Flutter } from "@styled-icons/boxicons-logos/Flutter";
 
 //Custom components
 import Tooltip from "@/components/Tooltip";
@@ -58,12 +59,13 @@ const WrapperProjectCard = styled.div`
 	justify-content: space-between;
 	flex-direction: column;
 	width: 100%;
-	min-height: 240px;
+	min-height: 270px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	border-top: 3px solid transparent;
-	border-left: 3px solid transparent;
-	border-right: 3px solid transparent;
-	border-bottom: 3px solid ${(props) => props.theme.colors.branding};
+	//border-top: 3px solid transparent;
+	//border-left: 3px solid transparent;
+	//border-right: 3px solid transparent;
+	//border-bottom: 3px solid ${(props) => props.theme.colors.branding};
+	border: 3px solid ${(props) => props.theme.colors.branding}33;
 	border-radius: 4px;
 	padding: 20px;
 	transition: all 0.3s ease;
@@ -126,12 +128,12 @@ const WrapperTextChip = styled.div`
 
 	div {
 		span {
-			background-color: ${(props) => props.theme.colors.branding};
-			color: ${(props) => props.theme.colors.background};
+			border: 1px solid ${(props) => props.theme.colors.branding};
+			color: ${(props) => props.theme.colors.branding};
 			font-size: 12px;
 			font-weight: 800;
-			padding: 0 4px 0 4px;
-			border-radius: 8px;
+			padding: 2px 8px 2px 8px;
+			border-radius: 4px;
 			margin-right: 3px;
 			margin-left: 3px;
 		}
@@ -220,7 +222,7 @@ const projects = [
 		title: "INTEGRA API WRAPPER",
 		description: "Servidor Node.js para utilização da API Inthegra fornecida pela STRANS de Teresina - PI.",
 		techs: [
-			<Tooltip toolTipText="Jest">
+			<Tooltip toolTipText="NodeJS">
 				<Nodejs />
 			</Tooltip>,
 			<Tooltip toolTipText="Javascript">
@@ -400,6 +402,18 @@ const projects = [
 			</Tooltip>,
 			<Tooltip toolTipText="MongoDB">
 				<Mongodb />
+			</Tooltip>,
+		],
+		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
+		typeProject: ["BACKEND"],
+	},
+	{
+		id: 14,
+		title: "BYTEBANK",
+		description: "Aplicativo resultante da trilha Flutter da Alura.",
+		techs: [
+			<Tooltip toolTipText="Flutter">
+				<Flutter />
 			</Tooltip>,
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",

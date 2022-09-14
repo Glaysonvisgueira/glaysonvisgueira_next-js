@@ -3,10 +3,18 @@ import styled from "styled-components";
 
 const ToolTip = styled.div`
 	/* Tooltip container */
+	transition: all 0.3s ease;
+
 	.tooltip {
 		position: relative;
 		display: inline-block;
 		//border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
+		&:hover {
+			svg {
+				color: ${(props) => props.theme.colors.branding};
+			}
+		}
 	}
 
 	/* Tooltip text */

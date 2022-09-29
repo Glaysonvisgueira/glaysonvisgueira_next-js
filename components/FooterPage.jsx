@@ -293,11 +293,11 @@ export default function FooterPage(props) {
 							React.Js
 						</FooterTextExternalLink>
 
-						<FooterTextExternalLink href="https://styled-components.com/" target="_blank">
+						<FooterTextExternalLink href="https://nextjs.org/" target="_blank">
 							Next.Js
 						</FooterTextExternalLink>
 
-						<FooterTextExternalLink href="https://nextjs.org/" target="_blank">
+						<FooterTextExternalLink href="https://styled-components.com/" target="_blank">
 							Styled components
 						</FooterTextExternalLink>
 					</SectionFooterMenu>

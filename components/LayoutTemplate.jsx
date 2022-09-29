@@ -8,7 +8,7 @@ import Fade from "react-reveal/Fade";
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
-import SelectLanguageOption from "@/components/SelectLanguageOption";
+//import SelectLanguageOption from "@/components/SelectLanguageOption";
 
 const Main = styled.main`
 	display: flex;
@@ -19,6 +19,13 @@ const Main = styled.main`
 	//background: ${(props) => props.theme.colors.backgroundGradient};
 	background: ${(props) => props.theme.colors.backgroundRadial};
 `;
+
+//const Video = styled.video`
+//	position: fixed;
+//	right: 0;
+//	bottom: 0;
+//	z-index: -1;
+//`;
 
 const ContainerPage = styled.div`
 	display: flex;
@@ -223,3 +230,9 @@ export default function LayoutTemplate({ children }) {
 		</>
 	);
 }
+
+/**
+	<Video autoPlay loop muted playsInline>
+					<source src="videos/background.mp4" type="video/mp4"></source>
+				</Video> 
+				*/

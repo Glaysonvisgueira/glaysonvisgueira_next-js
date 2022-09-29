@@ -410,7 +410,8 @@ const projects = [
 	{
 		id: 14,
 		title: "BYTEBANK",
-		description: "Aplicativo resultante da trilha Flutter da Alura.",
+		description:
+			"Aplicativo resultante da trilha Flutter da Alura. Utilizando o Flutter para gerar o aplicativo multiplataforma, esta aplicação serve para cadastrar números de conta e seus respectivos valores para serem gravados em estados dinâmicos para exibição no app. ",
 		techs: [
 			<Tooltip toolTipText="Flutter">
 				<Flutter />

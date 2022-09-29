@@ -335,7 +335,7 @@ const projects = [
 			</Tooltip>,
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
-		typeProject: ["MOBILE"],
+		typeProject: ["MOBILE", "BACKEND"],
 	},
 	{
 		id: 10,
@@ -384,7 +384,7 @@ const projects = [
 			</Tooltip>,
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/dashboard-control-mobile-implantacao",
-		typeProject: ["WEB"],
+		typeProject: ["WEB", "BACKEND"],
 	},
 	{
 		id: 13,
@@ -418,7 +418,7 @@ const projects = [
 			</Tooltip>,
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
-		typeProject: ["BACKEND"],
+		typeProject: ["MOBILE"],
 	},
 ];
 

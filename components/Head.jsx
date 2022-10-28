@@ -6,6 +6,7 @@ export default function HeadTag(props) {
 	return (
 		<Head>
 			<title>GV | {props.title}</title>
+			<script async src="https://cdn.splitbee.io/sb.js"></script>
 			<meta name="theme-color" content={theme.colors.branding} /> {/* <!-- Chrome, Firefox OS and Opera -->*/}
 			<meta name="msapplication-navbutton-color" content={theme.colors.branding} /> {/* <!-- Windows Phone -->*/}
 			<meta name="apple-mobile-web-app-status-bar-style" content={theme.colors.branding} /> {/*<!-- iOS Safari -->*/}

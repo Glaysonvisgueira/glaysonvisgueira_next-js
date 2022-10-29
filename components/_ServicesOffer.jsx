@@ -1,12 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import ScrollAnimation from "react-animate-on-scroll";
 
 //Styled icons
 import { Robot } from "@styled-icons/fa-solid/Robot";
 import { DesignServices } from "@styled-icons/material-rounded/DesignServices";
 import { DesignIdeas } from "@styled-icons/fluentui-system-filled/DesignIdeas";
 import { CodeBlock } from "@styled-icons/boxicons-regular/CodeBlock";
+
+const ContainerCard = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
+	width: 100%;
+	padding: 30px;
+	//height: 300px;
+	//border-radius: 14px;
+	background-image: linear-gradient(to right, ${(props) => props.theme.colors.branding}, ${(props) => props.theme.colors.branding});
+	//background-color: ${(props) => props.theme.colors.branding};
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/* transition: all 0.3s ease; */
+	/* border: 3px solid transparent; */
+`;
 
 const CardService = styled.div`
 	display: flex;
@@ -23,14 +40,14 @@ const CardService = styled.div`
 	//z-index: 1;
 
 	svg {
-		color: ${(props) => props.theme.colors.branding};
+		color: ${(props) => props.theme.colors.backgroundSecondary};
 		width: 70px;
 		height: 70px;
 		margin-bottom: 10px;
 	}
 
 	h3 {
-		color: ${(props) => props.theme.colors.branding};
+		color: ${(props) => props.theme.colors.backgroundSecondary};
 		font-size: 20px;
 		font-weight: 900;
 		margin-top: 5px;
@@ -42,7 +59,7 @@ const CardService = styled.div`
 	}
 
 	p {
-		color: ${(props) => props.theme.colors.subtitle};
+		color: ${(props) => props.theme.colors.backgroundSecondary};
 		font-size: 16px;
 		font-weight: 400;
 		text-align: center;
@@ -76,9 +93,9 @@ const ContainerGrid = styled.div`
 	}
 `;
 
-export default function ServicesOffer() {
+export default function _ServicesOffer() {
 	return (
-		<ScrollAnimation animateIn="fadeIn" animateOnce>
+		<ContainerCard>
 			<ContainerGrid>
 				<CardService>
 					<Robot />
@@ -104,6 +121,6 @@ export default function ServicesOffer() {
 					<p>Desenvolvimento de sistemas 100% personalizados que vão automatizar a administração do seu negócio.</p>
 				</CardService>
 			</ContainerGrid>
-		</ScrollAnimation>
+		</ContainerCard>
 	);
 }

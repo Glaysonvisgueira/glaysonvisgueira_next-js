@@ -61,19 +61,22 @@ const WrapperProjectCard = styled.div`
 	width: 100%;
 	min-height: 270px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	//border-top: 3px solid transparent;
-	//border-left: 3px solid transparent;
-	//border-right: 3px solid transparent;
-	//border-bottom: 3px solid ${(props) => props.theme.colors.branding};
-	border: 3px solid ${(props) => props.theme.colors.branding}33;
-	border-radius: 4px;
+	border: 1px solid ${(props) => props.theme.colors.branding}33;
+	//border-radius: 4px;
 	padding: 20px;
 	transition: all 0.3s ease;
 
 	:hover {
-		transform: translateY(-5px);
-		border: 3px solid ${(props) => props.theme.colors.branding};
-		box-shadow: 0px 0px 20px 0px ${(props) => props.theme.colors.branding}5E;
+		/* 		
+		//transform: translateY(-5px);
+		//box-shadow: 0px 0px 20px 0px ${(props) => props.theme.colors.branding}5E;
+		 */
+		border-radius: 0px;
+		border: 1px solid ${(props) => props.theme.colors.branding};
+		box-shadow: 1px 1px ${(props) => props.theme.colors.branding}, 2px 2px ${(props) => props.theme.colors.branding}, 3px 3px ${(props) => props.theme.colors.branding}, 4px 4px ${(props) => props.theme.colors.branding},
+			5px 5px ${(props) => props.theme.colors.branding};
+		-webkit-transform: translateX(-5px);
+		transform: translateX(-5px);
 	}
 
 	.title-body {

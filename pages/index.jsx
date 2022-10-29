@@ -18,6 +18,8 @@ import SobreMimPage from "../pages/sobre-mim";
 import PortifolioPage from "../pages/portifolio";
 import ExperienciaPage from "../pages/experiencia";
 import ServicesOffer from "@/components/ServicesOffer";
+
+import _ServicesOffer from "@/components/_ServicesOffer";
 // import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 
 const LandingPageContainer = styled.div`
@@ -228,7 +230,8 @@ export default function HomePage(props) {
 			{/* <ParallaxTransitionDiv /> */}
 
 			<SectionServices id="section-services">
-				<ServicesOffer />
+				{/* <ServicesOffer /> */}
+				<_ServicesOffer />
 			</SectionServices>
 
 			<SectionSobreMim id="section-sobre-mim">
@@ -247,7 +250,3 @@ export default function HomePage(props) {
 		</>
 	);
 }
-
-/*
-<TitleLanding>&lt;Glayson Visgueira /&gt;</TitleLanding>
-*/

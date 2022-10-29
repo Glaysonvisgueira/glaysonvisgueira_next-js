@@ -430,7 +430,7 @@ export default function Portifolio() {
 		<>
 			<ContainerTitleSection>
 				<FolderBriefcase />
-				<TitleSection>Portifólio</TitleSection>
+				<TitleSection>Portfólio</TitleSection>
 			</ContainerTitleSection>
 
 			<ContainerGrid>

@@ -15,7 +15,7 @@ import FooterPage from "@/components/FooterPage";
 
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
-import PortifolioPage from "../pages/portifolio";
+import PortfolioPage from "../pages/portfolio";
 import ExperienciaPage from "../pages/experiencia";
 import ServicesOffer from "@/components/ServicesOffer";
 
@@ -239,7 +239,7 @@ export default function HomePage(props) {
 			</SectionSobreMim>
 
 			<SectionPortifolio id="section-portifolio">
-				<PortifolioPage />
+				<PortfolioPage />
 			</SectionPortifolio>
 
 			<SectionExperiencia id="section-experiencia">

@@ -12,6 +12,7 @@ import LandingAnimation from "@/components/LandingPageAnimation";
 import ProgressBar from "react-progressbar-on-scroll";
 import { useTheme } from "styled-components";
 import FooterPage from "@/components/FooterPage";
+import CounterDescription from "@/components/CounterDescription";
 
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
@@ -202,7 +203,7 @@ export default function HomePage(props) {
 		<>
 			<ProgressBar color={theme.colors.branding} height={5} />
 			<Head
-				title="Portifólio de projetos de programação"
+				title="Portfólio de projetos de programação"
 				metaDescription="Web portifólio de projetos de programação do Dev Glayson Visgueira."
 				keywords="Glayson Visgueira, Glayson, Visgueira, Programação, Portifólio, Dev, Programador, Developer, Desenvolvedor"
 			/>
@@ -245,7 +246,7 @@ export default function HomePage(props) {
 			<SectionExperiencia id="section-experiencia">
 				<ExperienciaPage />
 			</SectionExperiencia>
-
+			{/* <CounterDescription /> */}
 			<FooterPage />
 		</>
 	);

@@ -171,7 +171,8 @@ const ContainerBuildCopyright = styled.div`
 	margin-bottom: 10px;
 	transition: all 0.3s ease;
 	width: 60%;
-	margin-top: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 
 	.build-and-button-top {
 		display: flex;

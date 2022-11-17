@@ -246,7 +246,12 @@ export default function HomePage(props) {
 			<SectionExperiencia id="section-experiencia">
 				<ExperienciaPage />
 			</SectionExperiencia>
-			{/* <CounterDescription /> */}
+
+			{/* <CounterDescription numeroAnos="3" description="asd" />
+			<CounterDescription numeroAnos="3" description="asd" />
+			<CounterDescription numeroAnos="3" description="asd" />
+			<CounterDescription numeroAnos="3" description="asd" /> */}
+
 			<FooterPage />
 		</>
 	);

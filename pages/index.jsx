@@ -18,7 +18,7 @@ import CounterDescription from "@/components/CounterDescription";
 import SobreMimPage from "../pages/sobre-mim";
 import PortfolioPage from "../pages/portfolio";
 import ExperienciaPage from "../pages/experiencia";
-import ServicesOffer from "@/components/ServicesOffer";
+//import ServicesOffer from "@/components/ServicesOffer";
 
 import _ServicesOffer from "@/components/_ServicesOffer";
 // import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
@@ -40,6 +40,16 @@ const TitleLandingContainer = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	padding: 10px;
+
+	.grid-exp {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		transition: all 0.3s ease;
+		gap: 20px;
+		justify-items: center;
+		//background-color: #ccc;
+		width: 100%;
+	}
 
 	.type-string {
 		font-size: 60px;
@@ -221,6 +231,12 @@ export default function HomePage(props) {
 							<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
 						</Link>
 						<SocialNetworkRowStack />
+						{/* <div className="grid-exp">
+							<CounterDescription numeroAnos="3" description="asd" />
+							<CounterDescription numeroAnos="3" description="asd" />
+							<CounterDescription numeroAnos="3" description="asd" />
+							<CounterDescription numeroAnos="3" description="asd" />
+						</div> */}
 					</TitleLandingContainer>
 					<ContainerAnimation>
 						<LandingAnimation />
@@ -246,11 +262,6 @@ export default function HomePage(props) {
 			<SectionExperiencia id="section-experiencia">
 				<ExperienciaPage />
 			</SectionExperiencia>
-
-			{/* <CounterDescription numeroAnos="3" description="asd" />
-			<CounterDescription numeroAnos="3" description="asd" />
-			<CounterDescription numeroAnos="3" description="asd" />
-			<CounterDescription numeroAnos="3" description="asd" /> */}
 
 			<FooterPage />
 		</>

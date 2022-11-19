@@ -5,18 +5,32 @@ const WrapperDiv = styled.div`
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	//width: 300px;
-	//border: 2px solid ${(props) => props.theme.colors.branding};
-	/* border-radius: 8px;
-	padding: 8px; */
-	//background-color: #ccc;
+	//margin-right: 15px;
+	width: 100%;
+
 	h2 {
 		color: ${(props) => props.theme.colors.branding};
 		font-size: 58px;
 
+		@media (max-width: 1400px) {
+			font-size: 38px;
+		}
+
+		@media (max-width: 1200px) {
+			font-size: 24px;
+		}
+
 		span {
 			font-size: 38px;
 			color: #fff;
+
+			@media (max-width: 1400px) {
+				font-size: 18px;
+			}
+
+			@media (max-width: 1200px) {
+				font-size: 14px;
+			}
 		}
 	}
 

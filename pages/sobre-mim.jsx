@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -221,6 +221,18 @@ const ButtonDownloadCV = styled.a`
 `;
 
 export default function SobreMim(props) {
+
+	const [githubUserData, setGithubUserData] = useState({});
+
+	useEffect(() => {
+		async function fetchGithubStats() {
+			const response = await fetch("https://api.github.com/users/glaysonvisgueira");
+			const json = await response.json();
+			setGithubUserData(json);
+		}
+		fetchGithubStats();
+	}, []);
+
 	return (
 		<ContainerSection>
 			<ScrollAnimation animateIn="fadeIn" animateOnce>

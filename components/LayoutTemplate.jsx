@@ -173,6 +173,7 @@ const SideBarTheme = styled.aside`
 
 export default function LayoutTemplate({ children }) {
 	const { language } = useContext(SettingsContext);
+	console.log("Language pack: ", language);
 
 	return (
 		<>

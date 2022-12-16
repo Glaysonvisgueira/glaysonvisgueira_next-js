@@ -12,16 +12,14 @@ import LandingAnimation from "@/components/LandingPageAnimation";
 import ProgressBar from "react-progressbar-on-scroll";
 import { useTheme } from "styled-components";
 import FooterPage from "@/components/FooterPage";
-import CounterDescription from "@/components/CounterDescription";
+import ServicesOffer from "@/components/ServicesOffer";
+// import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
+//import CounterDescription from "@/components/CounterDescription";
 
 //Pages
 import SobreMimPage from "../pages/sobre-mim";
 import PortfolioPage from "../pages/portfolio";
 import ExperienciaPage from "../pages/experiencia";
-//import ServicesOffer from "@/components/ServicesOffer";
-
-import ServicesOffer from "@/components/ServicesOffer";
-// import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -129,7 +127,6 @@ const SectionServices = styled.section`
 	flex-direction: column;
 	width: 100%;
 	padding-top: 60px;
-	//min-height: 100vh;
 `;
 
 const SectionSobreMim = styled.section`
@@ -139,7 +136,6 @@ const SectionSobreMim = styled.section`
 	flex-direction: column;
 	padding-top: 60px;
 	width: 100%;
-	//min-height: 100vh;
 `;
 
 const SectionPortifolio = styled.section`
@@ -150,7 +146,6 @@ const SectionPortifolio = styled.section`
 	padding-top: 60px;
 	width: 100%;
 	min-height: 100vh;
-	//background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, ${(props) => props.theme.colors.branding} 100%);
 `;
 
 const SectionExperiencia = styled.section`
@@ -231,20 +226,12 @@ export default function HomePage(props) {
 							<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
 						</Link>
 						<SocialNetworkRowStack />
-						{/* <div className="grid-exp">
-							<CounterDescription numeroAnos="3" description="asd" />
-							<CounterDescription numeroAnos="3" description="asd" />
-							<CounterDescription numeroAnos="3" description="asd" />
-							<CounterDescription numeroAnos="3" description="asd" />
-						</div> */}
 					</TitleLandingContainer>
 					<ContainerAnimation>
 						<LandingAnimation />
 					</ContainerAnimation>
 				</LandingPageContainer>
 			</SectionOne>
-
-			{/* <ParallaxTransitionDiv /> */}
 
 			<SectionServices id="section-services">
 				<ServicesOffer />

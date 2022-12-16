@@ -4,7 +4,6 @@ import Link from "next/link";
 
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";
-import SelectLanguageOption from "@/components/SelectLanguageOption";
 
 //Ícones
 import { Home } from "@styled-icons/heroicons-solid/Home";

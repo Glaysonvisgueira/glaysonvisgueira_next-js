@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //Third part librarys
 import Link from "next/link";
@@ -8,7 +8,10 @@ import Fade from "react-reveal/Fade";
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";
 import BurgerMenu from "@/components/BurgerMenu";
-//import SelectLanguageOption from "@/components/SelectLanguageOption";
+import LanguageSwitchButton from "@/components/LanguageSwitchButton";
+
+//Contexto
+import { SettingsContext } from "@/context/SettingsContext";
 
 const Main = styled.main`
 	display: flex;
@@ -169,6 +172,8 @@ const SideBarTheme = styled.aside`
 `;
 
 export default function LayoutTemplate({ children }) {
+	const { language } = useContext(SettingsContext);
+
 	return (
 		<>
 			<HeaderContainer>
@@ -210,9 +215,9 @@ export default function LayoutTemplate({ children }) {
 							<NavbarOption>EXPERIÊNCIA</NavbarOption>
 						</Link>
 					</Fade>
-					{/* <Fade top delay={600} duration={200}>
-						<SelectLanguageOption />
-					</Fade> */}
+					<Fade top delay={600} duration={200}>
+						<LanguageSwitchButton />
+					</Fade>
 				</NavbarOptionContainer>
 
 				<BurgerMenuContainer>
@@ -224,6 +229,7 @@ export default function LayoutTemplate({ children }) {
 					<ThemeButtons />
 				</SideBarTheme>
 			</Fade>
+
 			<Main>
 				<ContainerPage>{children}</ContainerPage>
 			</Main>

@@ -1,6 +1,10 @@
 import React, { useState, createContext } from "react";
 import { ThemeProvider } from "styled-components";
+//Lista de temas
 import { orangeTheme, redTheme, purpleTheme, greenTheme, lightBlueTheme, darkYellowTheme, lightTheme } from "@/styles/Theme";
+//Pacotes com textos de linguagens
+import ptbrJson from "@/config/localization/ptbr.json";
+import enusJson from "@/config/localization/ptbr.json";
 
 export const SettingsContext = createContext({});
 
@@ -16,18 +20,20 @@ const listaTemas = {
 
 export default function SettingsProvider({ children }) {
 	const [theme, setTheme] = useState(darkYellowTheme);
-	const [language, setLanguage] = useState("ptbr");
+	const [changeLanguage, setLanguage] = useState(false);
 
 	function changeTheme(newTheme) {
 		setTheme(listaTemas[newTheme]);
 	}
 
-	function changeLanguage() {
-		console.log("Alterado idioma da página.");
+	function changeLanguageLocalization() {
+		setLanguage(!changeLanguage);
 	}
 
+	var language = changeLanguage == true ? enusJson : ptbrJson;
+
 	return (
-		<SettingsContext.Provider value={{ changeTheme }}>
+		<SettingsContext.Provider value={{ changeTheme, changeLanguageLocalization, language }}>
 			<ThemeProvider theme={theme}>{children}</ThemeProvider>
 		</SettingsContext.Provider>
 	);

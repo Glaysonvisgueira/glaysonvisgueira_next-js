@@ -20,7 +20,7 @@ import PortfolioPage from "../pages/portfolio";
 import ExperienciaPage from "../pages/experiencia";
 //import ServicesOffer from "@/components/ServicesOffer";
 
-import _ServicesOffer from "@/components/_ServicesOffer";
+import ServicesOffer from "@/components/ServicesOffer";
 // import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 
 const LandingPageContainer = styled.div`
@@ -247,8 +247,7 @@ export default function HomePage(props) {
 			{/* <ParallaxTransitionDiv /> */}
 
 			<SectionServices id="section-services">
-				{/* <ServicesOffer /> */}
-				<_ServicesOffer />
+				<ServicesOffer />
 			</SectionServices>
 
 			<SectionSobreMim id="section-sobre-mim">

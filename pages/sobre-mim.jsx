@@ -12,6 +12,8 @@ import { Phone } from "@styled-icons/evaicons-solid/Phone";
 //Custom components
 import ProgressBarTech from "@/components/ProgressBarTech";
 
+import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
+
 const ContainerSection = styled.div`
 	display: flex;
 	align-items: center;
@@ -228,7 +230,7 @@ export default function SobreMim(props) {
 							<Image src="/img/user-photo.jpg" alt="Desenvolvedor Glayson Visgueira" layout="fill" objectFit="cover" className="image" />
 						</div>
 
-						<ButtonDownloadCV href="https://drive.google.com/file/d/14PwMV_kf28P6cUuHaLI8KX77rHYlMDny/view?usp=sharing" target="_blank">
+						<ButtonDownloadCV href={curriculoPTBR} target="_blank">
 							Download CV
 						</ButtonDownloadCV>
 					</div>

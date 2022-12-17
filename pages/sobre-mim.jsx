@@ -221,13 +221,13 @@ const ButtonDownloadCV = styled.a`
 `;
 
 export default function SobreMim(props) {
-
 	const [githubUserData, setGithubUserData] = useState({});
 
 	useEffect(() => {
 		async function fetchGithubStats() {
 			const response = await fetch("https://api.github.com/users/glaysonvisgueira");
 			const json = await response.json();
+			console.log("RESPONSE: ", response);
 			setGithubUserData(json);
 		}
 		fetchGithubStats();

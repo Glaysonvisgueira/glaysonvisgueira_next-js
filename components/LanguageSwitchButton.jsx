@@ -71,7 +71,6 @@ const LanguageWrapper = styled.div`
 	align-items: center;
 	flex-direction: row;
 	margin-left: 15px;
-	//width: 200px;
 `;
 
 export default function LanguageSwitchButton() {
@@ -80,11 +79,7 @@ export default function LanguageSwitchButton() {
 
 	function handleCheckSwitch() {
 		setChecked(!checked);
-		if (checked) {
-			changeLanguageLocalization("enus");
-		} else {
-			changeLanguageLocalization("ptbr");
-		}
+		changeLanguageLocalization();
 	}
 
 	return (

@@ -1,7 +1,9 @@
 import React, { useEffect, useState, createContext } from "react";
 import { ThemeProvider } from "styled-components";
+
 //Lista de temas
 import { orangeTheme, redTheme, purpleTheme, greenTheme, lightBlueTheme, darkYellowTheme, lightTheme } from "@/styles/Theme";
+
 //Pacotes com textos de linguagens
 import ptbrJson from "@/config/localization/ptbr.json";
 import enusJson from "@/config/localization/enus.json";
@@ -22,17 +24,11 @@ export default function SettingsProvider({ children }) {
 	const [theme, setTheme] = useState(darkYellowTheme);
 	const [changeLanguage, setLanguage] = useState(false);
 
-	useEffect(() => {
-		const predefinedLanguage = localStorage.getItem("@glaysonvisgueira.languageOption");
-		predefinedLanguage && setLanguage(changeLanguage);
-	}, []);
-
 	function changeTheme(newTheme) {
 		setTheme(listaTemas[newTheme]);
 	}
 
 	function changeLanguageLocalization() {
-		localStorage.setItem("@glaysonvisgueira.languageOption", !changeLanguage);
 		setLanguage(!changeLanguage);
 	}
 

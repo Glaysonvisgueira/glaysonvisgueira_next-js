@@ -173,7 +173,6 @@ const SideBarTheme = styled.aside`
 
 export default function LayoutTemplate({ children }) {
 	const { language } = useContext(SettingsContext);
-	console.log("Language pack: ", language);
 
 	return (
 		<>
@@ -191,29 +190,29 @@ export default function LayoutTemplate({ children }) {
 				<NavbarOptionContainer>
 					<Fade top delay={100} duration={200}>
 						<Link href="#section-home" passHref>
-							<NavbarOption>HOME</NavbarOption>
+							<NavbarOption>{language.navbarMenu.labelHome}</NavbarOption>
 						</Link>
 					</Fade>
 
 					<Fade top delay={200} duration={200}>
 						<Link href="#section-services" passHref>
-							<NavbarOption>SERVIÇOS</NavbarOption>
+							<NavbarOption>{language.navbarMenu.labelServices}</NavbarOption>
 						</Link>
 					</Fade>
 
 					<Fade top delay={300} duration={200}>
 						<Link href="#section-sobre-mim" passHref>
-							<NavbarOption>SOBRE MIM</NavbarOption>
+							<NavbarOption>{language.navbarMenu.labelAboutMe}</NavbarOption>
 						</Link>
 					</Fade>
 					<Fade top delay={400} duration={200}>
 						<Link href="#section-portifolio" passHref>
-							<NavbarOption>PORTIFÓLIO</NavbarOption>
+							<NavbarOption>{language.navbarMenu.labelPortifolio}</NavbarOption>
 						</Link>
 					</Fade>
 					<Fade top delay={500} duration={200}>
 						<Link href="#section-experiencia" passHref>
-							<NavbarOption>EXPERIÊNCIA</NavbarOption>
+							<NavbarOption>{language.navbarMenu.labelExperience}</NavbarOption>
 						</Link>
 					</Fade>
 					<Fade top delay={600} duration={200}>

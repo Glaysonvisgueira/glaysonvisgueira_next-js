@@ -7,9 +7,10 @@
 		"labelExperience": "EXPERIENCE"
 	},
 	"landingPage": {
-		"apresentationText": "Olá, eu sou",
+		"apresentationText": "Hello, I'm",
 		"typeText": "Glayson Visgueira",
-		"resumeText": "Desenvolvedor Front-End e desenvolvo interfaces modernas e de alta qualidade, com foco em performance, animações, responsividade e construídas com otimização em SEO."
+		"resumeText": "Front-End Developer and I develop modern and high quality interfaces, focusing on performance, animations, responsiveness and built with SEO optimization.",
+		"buttonText": "Learn more"
 	},
 	"servicesOffer": {
 		"title": "Serviços oferecidos",

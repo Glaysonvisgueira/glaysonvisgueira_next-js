@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //Third's librarys
 import Link from "next/link";
@@ -20,6 +20,9 @@ import ServicesOffer from "@/components/ServicesOffer";
 import SobreMimPage from "../pages/sobre-mim";
 import PortfolioPage from "../pages/portfolio";
 import ExperienciaPage from "../pages/experiencia";
+
+//Contexto
+import { SettingsContext } from "@/context/SettingsContext";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -168,9 +171,9 @@ const ButtonSlideSaibaMais = styled.button`
 	transition: all 0.3s ease;
 	font-size: ${(props) => props.theme.fontSizes.lg};
 	border: 2px solid ${(props) => props.theme.colors.branding};
-	color: ${(props) => props.theme.colors.title};
+	color: ${(props) => props.theme.colors.body};
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	font-weight: 700;
+	font-weight: 400;
 
 	&::before {
 		content: "";
@@ -203,6 +206,7 @@ const ButtonSlideSaibaMais = styled.button`
 
 export default function HomePage(props) {
 	const theme = useTheme();
+	const { language } = useContext(SettingsContext);
 
 	return (
 		<>
@@ -216,14 +220,15 @@ export default function HomePage(props) {
 			<SectionOne id="section-home">
 				<LandingPageContainer>
 					<TitleLandingContainer>
-						<SubTitleLanding>Olá, eu sou</SubTitleLanding>
+						<SubTitleLanding>{language.landingPage.apresentationText}</SubTitleLanding>
 						<Typed strings={["Glayson Visgueira"]} typeSpeed={80} className="type-string " />
 						<SubTitleLanding>
-							Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com otimização em{" "}
-							<span>SEO</span>.
+							{language.landingPage.resumeText}
+							{/*Desenvolvedor <span>Front-End</span> e desenvolvo interfaces modernas e de alta qualidade, com foco em <span>performance</span>, <span>animações</span>, <span>responsividade</span> e construídas com otimização em{" "}
+							<span>SEO</span>.*/}
 						</SubTitleLanding>
 						<Link href="#section-sobre-mim" passHref>
-							<ButtonSlideSaibaMais>Saiba mais</ButtonSlideSaibaMais>
+							<ButtonSlideSaibaMais>{language.landingPage.buttonText}</ButtonSlideSaibaMais>
 						</Link>
 						<SocialNetworkRowStack />
 					</TitleLandingContainer>

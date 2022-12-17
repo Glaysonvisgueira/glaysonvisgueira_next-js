@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { orangeTheme, redTheme, purpleTheme, greenTheme, lightBlueTheme, darkYellowTheme, lightTheme } from "@/styles/Theme";
 //Pacotes com textos de linguagens
 import ptbrJson from "@/config/localization/ptbr.json";
-import enusJson from "@/config/localization/ptbr.json";
+import enusJson from "@/config/localization/enus.json";
 
 export const SettingsContext = createContext({});
 

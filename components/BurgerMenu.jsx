@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
 //Custom components
 import ThemeButtons from "@/components/ThemeButtons";
+import LanguageSwitchButton from "@/components/LanguageSwitchButton";
 
 //Ícones
 import { Home } from "@styled-icons/heroicons-solid/Home";
@@ -12,6 +13,9 @@ import { ContactCardLink } from "@styled-icons/fluentui-system-filled/ContactCar
 import { Timeline } from "@styled-icons/fluentui-system-regular/Timeline";
 import { FolderBriefcase } from "@styled-icons/fluentui-system-filled/FolderBriefcase";
 import { NotepadPerson } from "@styled-icons/fluentui-system-filled/NotepadPerson";
+
+//Contexto
+import { SettingsContext } from "@/context/SettingsContext";
 
 const StyledBurger = styled.div`
 	width: 2rem;
@@ -58,6 +62,10 @@ const Ul = styled.ul`
 	justify-content: space-between;
 	z-index: 10;
 
+	.language-switch {
+		margin-bottom: 40px;
+	}
+
 	.container-language-select {
 		display: flex;
 		justify-content: center;
@@ -85,7 +93,7 @@ const Ul = styled.ul`
 
 	@media (max-width: 768px) {
 		//flex-flow: column nowrap;
-		background-color: ${(props) => props.theme.colors.background};
+		background-color: #161616;
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		z-index: 3;
@@ -117,6 +125,7 @@ const ContainerThemeButtonsInBurger = styled.div`
 `;
 
 const Burger = () => {
+	const { language } = useContext(SettingsContext);
 	const [open, setOpen] = useState(false);
 
 	function handleOpenOnClickMenu() {
@@ -138,37 +147,37 @@ const Burger = () => {
 				<div>
 					<Link href="#" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							{/* <Home /> */}
-							&nbsp;&nbsp;HOME
+							<Home />
+							&nbsp;&nbsp;{language.navbarMenu.labelHome}
 						</li>
 					</Link>
 					<Link href="#section-services" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							{/* <WindowDevTools /> */}
-							&nbsp;&nbsp;SERVIÇOS
+							<WindowDevTools />
+							&nbsp;&nbsp;{language.navbarMenu.labelServices}
 						</li>
 					</Link>
 					<Link href="#section-sobre-mim" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							{/* <NotepadPerson /> */}
-							&nbsp;&nbsp;SOBRE MIM
+							<NotepadPerson />
+							&nbsp;&nbsp;{language.navbarMenu.labelAboutMe}
 						</li>
 					</Link>
 					<Link href="#section-portifolio" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							{/* <FolderBriefcase /> */}
-							&nbsp;&nbsp;PORTIFÓLIO
+							<FolderBriefcase />
+							&nbsp;&nbsp;{language.navbarMenu.labelPortifolio}
 						</li>
 					</Link>
 					<Link href="#section-experiencia" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							{/* <Timeline /> */}
-							&nbsp;&nbsp;EXPERIÊNCIA
+							<Timeline />
+							&nbsp;&nbsp;{language.navbarMenu.labelExperience}
 						</li>
 					</Link>
-					{/* <div className="container-language-select">
-						<SelectLanguageOption />
-					</div> */}
+				</div>
+				<div className="language-switch">
+					<LanguageSwitchButton />
 				</div>
 			</Ul>
 		</>

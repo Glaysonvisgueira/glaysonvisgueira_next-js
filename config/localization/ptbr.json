@@ -9,7 +9,8 @@
 	"landingPage": {
 		"apresentationText": "Olá, eu sou",
 		"typeText": "Glayson Visgueira",
-		"resumeText": "Desenvolvedor Front-End e desenvolvo interfaces modernas e de alta qualidade, com foco em performance, animações, responsividade e construídas com otimização em SEO."
+		"resumeText": "Desenvolvedor Front-End e desenvolvo interfaces modernas e de alta qualidade, com foco em performance, animações, responsividade e construídas com otimização em SEO.",
+		"buttonText": "Saiba mais"
 	},
 	"servicesOffer": {
 		"title": "Serviços oferecidos",

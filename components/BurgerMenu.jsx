@@ -8,11 +8,10 @@ import LanguageSwitchButton from "@/components/LanguageSwitchButton";
 
 //Ícones
 import { Home } from "@styled-icons/heroicons-solid/Home";
-import { WindowDevTools } from "@styled-icons/fluentui-system-regular/WindowDevTools"; //Serviços
-import { ContactCardLink } from "@styled-icons/fluentui-system-filled/ContactCardLink";
+import { Code } from "@styled-icons/fluentui-system-regular/Code";
 import { Timeline } from "@styled-icons/fluentui-system-regular/Timeline";
 import { FolderBriefcase } from "@styled-icons/fluentui-system-filled/FolderBriefcase";
-import { NotepadPerson } from "@styled-icons/fluentui-system-filled/NotepadPerson";
+import { Badge } from "@styled-icons/material-outlined/Badge";
 
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
@@ -153,13 +152,13 @@ const Burger = () => {
 					</Link>
 					<Link href="#section-services" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							<WindowDevTools />
+							<Code />
 							&nbsp;&nbsp;{language.navbarMenu.labelServices}
 						</li>
 					</Link>
 					<Link href="#section-sobre-mim" passHref>
 						<li onClick={handleOpenOnClickMenu}>
-							<NotepadPerson />
+							<Badge />
 							&nbsp;&nbsp;{language.navbarMenu.labelAboutMe}
 						</li>
 					</Link>

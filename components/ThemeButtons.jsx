@@ -154,7 +154,7 @@ export default function ThemeButtons() {
 			<ButtonGreen id="green" selected={selectedGreen} style={{ background: "#00ff84" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 			<ButtonLightBlue id="lightBlue" selected={selectedLightBlue} style={{ background: "#14e0d3" }} onClick={(e) => handleSelectTheme(e.target.id)} />
 			<ButtonDarkYellow id="darkYellow" selected={selectedDarkYellow} style={{ background: "#FCD434" }} onClick={(e) => handleSelectTheme(e.target.id)} />
-			<ButtonDarkYellow id="light" selected={selectedLight} style={{ background: "#eeeeee" }} onClick={(e) => handleSelectTheme(e.target.id)} />
+			{/*<ButtonDarkYellow id="light" selected={selectedLight} style={{ background: "#eeeeee" }} onClick={(e) => handleSelectTheme(e.target.id)} />*/}
 		</ThemeButtonsContainer>
 	);
 }

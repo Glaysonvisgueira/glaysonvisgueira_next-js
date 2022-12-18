@@ -14,13 +14,9 @@ const CardService = styled.div`
 	justify-content: flex-start;
 	flex-direction: column;
 	width: 275px;
-	//padding: 20px;
-	//border-radius: 4px;
-	//height: 340px;
-	//background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	padding: 20px;
 	transition: all 0.3s ease;
 	border: 3px solid transparent;
-	//z-index: 1;
 
 	svg {
 		color: ${(props) => props.theme.colors.branding};
@@ -46,6 +42,7 @@ const CardService = styled.div`
 		font-size: 16px;
 		font-weight: 400;
 		text-align: center;
+		word-wrap: break-word;
 
 		@media (max-width: 900px) {
 			font-size: 14px;
@@ -53,7 +50,7 @@ const CardService = styled.div`
 	}
 
 	@media (max-width: 425px) {
-		width: 90%;
+		width: 100%;
 	}
 `;
 

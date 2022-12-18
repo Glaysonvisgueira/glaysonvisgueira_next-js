@@ -13,6 +13,7 @@ import ProgressBar from "react-progressbar-on-scroll";
 import { useTheme } from "styled-components";
 import FooterPage from "@/components/FooterPage";
 import ServicesOffer from "@/components/ServicesOffer";
+import FloatNavigationBar from "@/components/FloatNavigationBar";
 // import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 //import CounterDescription from "@/components/CounterDescription";
 
@@ -210,6 +211,7 @@ export default function HomePage(props) {
 
 	return (
 		<>
+			{/*<FloatNavigationBar />*/}
 			<ProgressBar color={theme.colors.branding} height={5} />
 			<Head
 				title="Portfólio de projetos de programação"

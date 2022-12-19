@@ -227,9 +227,7 @@ export default function LayoutTemplate({ children }) {
 				</BurgerMenuContainer>
 			</HeaderContainer>
 			<Fade left>
-				<SideBarTheme>
-					<ThemeButtons />
-				</SideBarTheme>
+				<SideBarTheme>{/* <ThemeButtons /> */}</SideBarTheme>
 			</Fade>
 
 			<Main>

@@ -4,16 +4,17 @@ import React, { useContext } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import Typed from "react-typed";
+import { useTheme } from "styled-components";
+import ProgressBar from "react-progressbar-on-scroll";
 
 //Custom components
 import Head from "@/components/Head";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LandingAnimation from "@/components/LandingPageAnimation";
-import ProgressBar from "react-progressbar-on-scroll";
-import { useTheme } from "styled-components";
 import FooterPage from "@/components/FooterPage";
 import ServicesOffer from "@/components/ServicesOffer";
 import FloatNavigationBar from "@/components/FloatNavigationBar";
+import ScrollDownAnimation from "@/components/ScrollDownAnimation";
 // import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 //import CounterDescription from "@/components/CounterDescription";
 
@@ -33,6 +34,10 @@ const LandingPageContainer = styled.div`
 
 	@media (max-width: 930px) {
 		flex-direction: column;
+	}
+
+	@media (max-width: 850px) {
+		margin-bottom: 60px;
 	}
 `;
 
@@ -228,6 +233,7 @@ export default function HomePage(props) {
 						<LandingAnimation />
 					</ContainerAnimation>
 				</LandingPageContainer>
+				<ScrollDownAnimation />
 			</SectionOne>
 
 			<SectionServices id="section-services">

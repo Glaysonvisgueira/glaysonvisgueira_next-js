@@ -51,7 +51,7 @@ const NavOption = styled.div`
 	svg {
 		width: 26px;
 		height: 26px;
-		color: ${(props) => (props.isActive ? props.theme.colors.branding : props.theme.colors.backgroundSecondary)};
+		color: ${(props) => (props.isActive ? props.theme.colors.branding : "#ccc")};
 	}
 `;
 

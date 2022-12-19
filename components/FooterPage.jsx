@@ -186,9 +186,10 @@ const ContainerBuildCopyright = styled.div`
 
 	@media (max-width: 601px) {
 		flex-direction: column;
+		margin-bottom: 110px;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 425px) {
 		width: 100%;
 	}
 `;

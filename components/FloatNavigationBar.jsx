@@ -29,6 +29,14 @@ const NavigationBar = styled.div`
 		display: none;
 		width: 100%;
 	}
+
+	@media (max-width: 601px) {
+		width: 80%;
+	}
+
+	@media (max-width: 425px) {
+		width: 95%;
+	}
 `;
 
 const NavOption = styled.div`

@@ -211,7 +211,7 @@ export default function HomePage(props) {
 
 	return (
 		<>
-			{/*<FloatNavigationBar />*/}
+			<FloatNavigationBar />
 			<ProgressBar color={theme.colors.branding} height={5} />
 			<Head
 				title="Portfólio de projetos de programação"

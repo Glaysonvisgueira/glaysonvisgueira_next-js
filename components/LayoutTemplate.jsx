@@ -103,6 +103,7 @@ const BurgerMenuContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-right: 20px;
 
 	@media (min-width: 601px) {
 		display: none;
@@ -221,7 +222,8 @@ export default function LayoutTemplate({ children }) {
 				</NavbarOptionContainer>
 
 				<BurgerMenuContainer>
-					<BurgerMenu />
+					{/* <BurgerMenu /> */}
+					<LanguageSwitchButton />
 				</BurgerMenuContainer>
 			</HeaderContainer>
 			<Fade left>

@@ -21,7 +21,7 @@ const StyledBurger = styled.div`
 	height: 2rem;
 	position: fixed;
 	right: 30px;
-	z-index: 20;
+	z-index: 200;
 	display: none;
 
 	&:hover {
@@ -59,10 +59,10 @@ const Ul = styled.ul`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	z-index: 10;
+	z-index: 100;
 
 	.language-switch {
-		margin-bottom: 40px;
+		margin-top: 40px;
 	}
 
 	.container-language-select {
@@ -95,7 +95,7 @@ const Ul = styled.ul`
 		background-color: #161616;
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-		z-index: 3;
+		z-index: 100;
 		top: 0;
 		right: 0;
 		height: 100vh;
@@ -174,9 +174,10 @@ const Burger = () => {
 							&nbsp;&nbsp;{language.navbarMenu.labelExperience}
 						</li>
 					</Link>
-				</div>
-				<div className="language-switch">
-					<LanguageSwitchButton />
+
+					<div className="language-switch">
+						<LanguageSwitchButton />
+					</div>
 				</div>
 			</Ul>
 		</>

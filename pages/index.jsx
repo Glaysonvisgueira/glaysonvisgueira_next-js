@@ -66,11 +66,15 @@ const TitleLandingContainer = styled.div`
 			font-size: 36px;
 		}
 
-		@media (max-width: 600px) {
+		@media (max-width: 601px) {
 			font-size: 26px;
 			text-align: center;
 			width: 100%;
 		}
+	}
+
+	@media (max-width: 601px) {
+		align-items: center;
 	}
 `;
 
@@ -166,41 +170,27 @@ const ButtonSlideSaibaMais = styled.button`
 	z-index: 1;
 	position: relative;
 	width: 200px;
-	height: 34px;
+	height: 44px;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	transition: all 0.3s ease;
 	font-size: ${(props) => props.theme.fontSizes.lg};
-	border: 2px solid ${(props) => props.theme.colors.branding};
-	color: ${(props) => props.theme.colors.body};
-	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	font-weight: 400;
-
-	&::before {
-		content: "";
-		z-index: -1;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background-color: ${(props) => props.theme.colors.branding};
-		transform-origin: center right;
-		transform: scaleX(0);
-		transition: transform 0.25s ease-in-out;
-	}
+	border: none;
+	color: ${(props) => props.theme.colors.background};
+	border-radius: 4px;
+	background-color: ${(props) => props.theme.colors.branding};
+	font-weight: 700;
 
 	&:hover {
 		cursor: pointer;
-		color: ${(props) => props.theme.colors.background};
-	}
-
-	&:hover::before {
-		transform-origin: center left;
-		transform: scaleX(1);
+		opacity: 0.8;
 	}
 
 	@media (max-width: 601px) {
+		width: 70%;
+	}
+
+	@media (max-width: 425px) {
 		width: 100%;
 	}
 `;

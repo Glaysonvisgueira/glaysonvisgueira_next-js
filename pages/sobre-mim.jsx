@@ -11,6 +11,7 @@ import { Phone } from "@styled-icons/evaicons-solid/Phone";
 
 //Custom components
 import ProgressBarTech from "@/components/ProgressBarTech";
+import AboutMe from "@/components/AboutMe";
 
 import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
 
@@ -235,6 +236,7 @@ export default function SobreMim(props) {
 
 	return (
 		<ContainerSection>
+			{/*<AboutMe />*/}
 			<ScrollAnimation animateIn="fadeIn" animateOnce>
 				<ContainerSobreMimHeader>
 					<div className="photo-wrapper">

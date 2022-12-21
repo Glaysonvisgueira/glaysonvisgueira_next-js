@@ -236,7 +236,7 @@ export default function SobreMim(props) {
 
 	return (
 		<ContainerSection>
-			{/*<AboutMe />*/}
+			{/* <AboutMe /> */}
 			<ScrollAnimation animateIn="fadeIn" animateOnce>
 				<ContainerSobreMimHeader>
 					<div className="photo-wrapper">

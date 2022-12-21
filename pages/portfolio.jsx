@@ -425,6 +425,9 @@ const projects = [
 	},
 ];
 
+// Get all repos from user via API
+//https://api.github.com/users/glaysonvisgueira/repos
+
 export default function Portifolio() {
 	return (
 		<>

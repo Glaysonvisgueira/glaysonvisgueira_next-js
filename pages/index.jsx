@@ -171,7 +171,7 @@ const SectionExperiencia = styled.section`
 	min-height: 100vh;
 `;
 
-const ButtonSlideSaibaMais = styled.button`
+const ButtonSaibaMais = styled.button`
 	z-index: 1;
 	position: relative;
 	width: 200px;
@@ -225,7 +225,7 @@ export default function HomePage(props) {
 							<span>SEO</span>.*/}
 						</SubTitleLanding>
 						<Link href="#section-sobre-mim" passHref>
-							<ButtonSlideSaibaMais>{language.landingPage.buttonText}</ButtonSlideSaibaMais>
+							<ButtonSaibaMais>{language.landingPage.buttonText}</ButtonSaibaMais>
 						</Link>
 						<SocialNetworkRowStack />
 					</TitleLandingContainer>

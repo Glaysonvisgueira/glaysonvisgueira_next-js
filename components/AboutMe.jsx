@@ -1,8 +1,15 @@
+import React, { useEffect, useState } from "react";
+
+//Third's librarys
 import styled from "styled-components";
+import Link from "next/link";
 import Image from "next/image";
 
+//PDFs
+import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
+
 //Ícones
-import { Github } from "@styled-icons/bootstrap/Github";
+import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare";
 
 const WrapperAboutMe = styled.div`
 	display: flex;
@@ -11,31 +18,86 @@ const WrapperAboutMe = styled.div`
 	flex-direction: column;
 	width: 60%;
 	height: 100%;
-	//background-color: red;
+
+	@media (max-width: 1400px) {
+		width: 80%;
+	}
 
 	.container {
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		align-items: flex-start;
+		justify-content: flex-start;
 		flex-direction: row;
 		width: 100%;
-		height: 100%;
+		height: 600px;
+
+		@media (max-width: 900px) {
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			width: 100%;
+			height: auto;
+		}
 
 		.left-view {
 			display: flex;
-			align-items: flex-start;
+			align-items: flex-end;
 			justify-content: flex-start;
 			flex-direction: column;
-			width: 100%;
+			width: 50%;
+			//min-width: 300px;
 			height: 100%;
+			//background-color: #d8f0b2;
+
+			@media (max-width: 900px) {
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+				margin-top: 20px;
+			}
 		}
+
 		.right-view {
 			display: flex;
 			align-items: flex-start;
 			justify-content: flex-start;
 			flex-direction: column;
-			width: 100%;
+			width: 50%;
 			height: 100%;
+			//background-color: #b1d5ec;
+
+			@media (max-width: 900px) {
+				width: 100%;
+				align-items: flex-start;
+				justify-content: flex-start;
+				margin-top: 20px;
+			}
+
+			h3 {
+				color: ${(props) => props.theme.colors.branding};
+				font-size: 32px;
+
+				@media (max-width: 600px) {
+					font-size: 22px;
+				}
+			}
+
+			p {
+				color: ${(props) => props.theme.colors.body};
+				font-size: ${(props) => props.theme.fontSizes.md};
+				text-align: justify;
+				margin-top: 15px;
+				margin-bottom: 15px;
+
+				strong {
+					font-weight: 700;
+					color: ${(props) => props.theme.colors.branding};
+				}
+
+				@media (max-width: 600px) {
+					font-size: ${(props) => props.theme.fontSizes.sm};
+				}
+			}
 		}
 	}
 
@@ -54,6 +116,10 @@ const GithubStatsCard = styled.div`
 	flex-direction: column;
 	overflow: hidden;
 	position: relative;
+
+	@media (max-width: 601px) {
+		width: 100%;
+	}
 
 	svg {
 		color: ${(props) => props.theme.colors.backgroundSecondary};
@@ -150,28 +216,58 @@ const GithubStatsCard = styled.div`
 	}
 `;
 
-export const BodyText = styled.p`
-	color: ${(props) => props.theme.colors.body};
-	font-size: ${(props) => props.theme.fontSizes.md};
-	text-align: justify;
+const ButtonCV = styled.a`
+	z-index: 1;
+	position: relative;
+	width: 200px;
+	height: 44px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: ${(props) => props.theme.fontSizes.lg};
+	transition: all 0.3s ease;
+	border: none;
+	text-decoration: none;
+	color: ${(props) => props.theme.colors.background};
+	border-radius: 4px;
+	background-color: ${(props) => props.theme.colors.branding};
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-	strong {
-		font-weight: 700;
-		color: ${(props) => props.theme.colors.branding};
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
 	}
 
-	@media (max-width: 600px) {
-		font-size: ${(props) => props.theme.fontSizes.sm};
+	@media (max-width: 601px) {
+		width: 100%;
+	}
+
+	@media (max-width: 425px) {
+		width: 100%;
 	}
 `;
 
 export default function AboutMe(props) {
+	const [githubUserData, setGithubUserData] = useState({});
+
+	useEffect(() => {
+		async function fetchGithubStats() {
+			const response = await fetch("https://api.github.com/users/glaysonvisgueira");
+			const json = await response.json();
+			console.log("RESPONSE: ", response);
+			setGithubUserData(json);
+		}
+		fetchGithubStats();
+	}, []);
+
 	return (
 		<WrapperAboutMe>
 			<div className="container">
 				<div className="left-view">
 					<GithubStatsCard>
-						<Github />
+						<GithubSquare />
 						<div className="background" />
 						<div className="img">
 							<Image src="/img/user-photo.jpg" alt="Desenvolvedor Glayson Visgueira" layout="fill" objectFit="cover" className="image-rounded" />
@@ -193,6 +289,11 @@ export default function AboutMe(props) {
 									<p>35</p>
 									<span>Repositórios</span>
 								</div>
+
+								<div className="stats">
+									<p>2</p>
+									<span>Estrelas</span>
+								</div>
 							</div>
 						</div>
 					</GithubStatsCard>
@@ -200,23 +301,21 @@ export default function AboutMe(props) {
 
 				<div className="right-view">
 					<h3>Sobre mim</h3>
-					<BodyText>
-						Bacharel em <strong>Sistemas de informações</strong> pelo <strong>Centro Universitário Maurício de Nassau</strong>, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino
-						S/A, nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de
-						novas funcionalidades que utilizam as tecnologias: <strong>Python</strong>, <strong>Django</strong>, <strong>Django REST Framework</strong>, <strong>React.js</strong>, <strong>Next.Js</strong> e
-						<strong> PostgreSQL</strong>.
-					</BodyText>
+					<p>
+						Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na
+						área administrativa e a 1 ano no setor de tecnologia, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que
+						utilizam as tecnologias: Python, Django, Django REST Framework, React.js, Next.Js e PostgreSQL.
+					</p>
 
-					<BodyText>
-						Possuo maior aptidão para área de <strong>Front-end</strong> e conhecimentos sólidos na stack: <strong>React.Js</strong>, <strong>Next.Js</strong>, <strong>HTML</strong>, <strong>Css</strong> e
-						<strong> Styled components</strong>.
-					</BodyText>
+					<p>Possuo maior aptidão para área de Front-end, com conhecimentos sólidos na stack: React.Js, Next.Js, HTML, Css e Styled components.</p>
 
-					<BodyText>
-						Atualmente adquirindo conhecimentos em <strong>Dart</strong> e <strong>Flutter</strong> para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo
-						conhecimentos de <strong>design patterns</strong> de <strong>Clean Code/Architecture</strong>. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
-					</BodyText>
-					<p>Download CV</p>
+					<p>
+						Atualmente adquirindo conhecimentos em Dart e Flutter para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo conhecimentos de design patterns e de
+						Clean Code/Architecture. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
+					</p>
+					<ButtonCV href={curriculoPTBR} target="_blank">
+						Download CV
+					</ButtonCV>
 				</div>
 			</div>
 			<div className="skills"></div>

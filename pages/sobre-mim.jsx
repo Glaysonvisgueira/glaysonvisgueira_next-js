@@ -183,7 +183,6 @@ const WrapperTechs = styled.div`
 		display: grid;
 		width: 100%;
 		margin: auto;
-		//background-color: #ccc;
 		grid-template-columns: repeat(2, 1fr);
 		transition: all 0.3s ease;
 		gap: 15px;
@@ -198,9 +197,7 @@ const ButtonDownloadCV = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	//margin-top: 20px;
 	height: 38px;
-	//width: 200px;
 	margin-top: 20px;
 	width: 100%;
 	border-radius: 4px;
@@ -236,7 +233,7 @@ export default function SobreMim(props) {
 
 	return (
 		<ContainerSection>
-			{/* <AboutMe /> */}
+			<AboutMe />
 			<ScrollAnimation animateIn="fadeIn" animateOnce>
 				<ContainerSobreMimHeader>
 					<div className="photo-wrapper">

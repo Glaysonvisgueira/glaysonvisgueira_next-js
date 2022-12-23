@@ -6,11 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 
+//Custom components
+import StackTech from "@/components/StackTechs";
+import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+
 //PDFs
 import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
-
-//Ícones
-import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare";
 
 const WrapperAboutMe = styled.div`
 	display: flex;
@@ -18,10 +19,9 @@ const WrapperAboutMe = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	width: 60%;
-	height: 100%;
 
-	@media (max-width: 1400px) {
-		width: 80%;
+	@media (max-width: 1600px) {
+		width: 85%;
 	}
 
 	.container {
@@ -71,6 +71,16 @@ const WrapperAboutMe = styled.div`
 			width: 70%;
 			height: 100%;
 			//background-color: #b1d5ec;
+
+			.tech-and-cv {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@media (max-width: 601px) {
+					flex-direction: column;
+				}
+			}
 
 			@media (max-width: 1200px) {
 				width: 55%;
@@ -131,20 +141,6 @@ const GithubStatsCard = styled.div`
 		width: 100%;
 	}
 
-	svg {
-		color: ${(props) => props.theme.colors.backgroundSecondary};
-		width: 28px;
-		height: 28px;
-		position: absolute;
-		top: 10px;
-		right: 10px;
-
-		&:hover {
-			opacity: 0.8;
-			cursor: pointer;
-		}
-	}
-
 	.image-rounded {
 		border-radius: 50%;
 	}
@@ -179,12 +175,17 @@ const GithubStatsCard = styled.div`
 			margin-top: 60px;
 		}
 
-		h2 {
+		a {
 			color: ${(props) => props.theme.colors.body};
 			margin-bottom: 20px;
 			font-size: 14px;
 			margin-top: 5px;
 			font-weight: 300;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
 		p {
@@ -259,18 +260,48 @@ const ButtonCV = styled.a`
 	}
 `;
 
+const GithubAncor = styled.a`
+	position: absolute;
+	top: 10px;
+	right: 10px;
+
+	svg {
+		color: ${(props) => props.theme.colors.backgroundSecondary};
+		width: 28px;
+		height: 28px;
+
+		&:hover {
+			opacity: 0.8;
+			cursor: pointer;
+		}
+	}
+`;
+
 export default function AboutMe(props) {
 	const [githubUserData, setGithubUserData] = useState({});
+	console.log("🚀 ~ file: AboutMe.jsx:267 ~ AboutMe ~ githubUserData", githubUserData);
 
 	useEffect(() => {
 		async function fetchGithubStats() {
 			const response = await fetch("https://api.github.com/users/glaysonvisgueira");
 			const json = await response.json();
-			console.log("RESPONSE: ", response);
 			setGithubUserData(json);
 		}
 		fetchGithubStats();
 	}, []);
+
+	// followers_url  //link
+	// following_url  //link
+	// repos_url      //link
+
+	// name
+	// bio
+	//login
+	//html_url
+
+	// followers
+	// following
+	// public_repos
 
 	return (
 		<WrapperAboutMe>
@@ -278,32 +309,28 @@ export default function AboutMe(props) {
 				<div className="left-view">
 					<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
 						<GithubStatsCard>
-							<GithubSquare />
 							<div className="background" />
 							<div className="img">
 								<Image src="/img/user-photo.jpg" alt="Desenvolvedor Glayson Visgueira" layout="fill" objectFit="cover" className="image-rounded" />
 							</div>
 							<div className="content">
-								<h3>Glayson Visgueira</h3>
-								<h2>@glaysonvisgueira</h2>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								<h3>{githubUserData?.name}</h3>
+								<a href={githubUserData?.html_url} target="_blank">
+									@{githubUserData?.login}
+								</a>
+								<p>{githubUserData?.bio}</p>
 								<div className="github-stats">
 									<div className="stats">
-										<p>11</p>
+										<p>{githubUserData?.followers}</p>
 										<span>Seguidores</span>
 									</div>
 									<div className="stats">
-										<p>31</p>
+										<p>{githubUserData?.following}</p>
 										<span>Seguindo</span>
 									</div>
 									<div className="stats">
-										<p>35</p>
+										<p>{githubUserData?.public_repos}</p>
 										<span>Repositórios</span>
-									</div>
-
-									<div className="stats">
-										<p>2</p>
-										<span>Estrelas</span>
 									</div>
 								</div>
 							</div>
@@ -325,13 +352,17 @@ export default function AboutMe(props) {
 							Atualmente adquirindo conhecimentos em Dart e Flutter para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo conhecimentos de design patterns e
 							de Clean Code/Architecture. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
 						</p>
-						<ButtonCV href={curriculoPTBR} target="_blank">
-							Download CV
-						</ButtonCV>
+
+						<div className="tech-and-cv">
+							<SocialNetworkRowStack />
+							<ButtonCV href={curriculoPTBR} target="_blank">
+								Download CV
+							</ButtonCV>
+						</div>
 					</ScrollAnimation>
 				</div>
 			</div>
-			<div className="skills"></div>
+			<div className="skills">{/* <StackTech /> */}</div>
 		</WrapperAboutMe>
 	);
 }

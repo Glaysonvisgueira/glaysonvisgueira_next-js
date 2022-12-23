@@ -75,6 +75,10 @@ export const ContainerTitleSection = styled.div`
 	margin-bottom: 30px;
 	width: 100%;
 
+	@media (max-width: 900px) {
+		margin-top: 40px;
+	}
+
 	svg {
 		color: ${(props) => props.theme.colors.branding};
 		width: 44px;

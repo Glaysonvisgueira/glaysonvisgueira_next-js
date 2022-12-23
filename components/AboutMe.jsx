@@ -42,16 +42,17 @@ const WrapperAboutMe = styled.div`
 
 		.left-view {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
 			justify-content: flex-start;
 			flex-direction: column;
-			width: 40%;
+			width: 30%;
 			height: 100%;
-			//margin-right: 40px;
+			margin-right: 40px;
 			//background-color: #d8f0b2;
 
-			@media (max-width: 1400px) {
+			@media (max-width: 1200px) {
 				margin-right: 20px;
+				width: 45%;
 			}
 
 			@media (max-width: 900px) {
@@ -67,9 +68,13 @@ const WrapperAboutMe = styled.div`
 			align-items: flex-start;
 			justify-content: flex-start;
 			flex-direction: column;
-			width: 60%;
+			width: 70%;
 			height: 100%;
 			//background-color: #b1d5ec;
+
+			@media (max-width: 1200px) {
+				width: 55%;
+			}
 
 			@media (max-width: 900px) {
 				width: 100%;

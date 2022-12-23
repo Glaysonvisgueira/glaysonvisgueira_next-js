@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 //PDFs
 import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
@@ -41,13 +42,17 @@ const WrapperAboutMe = styled.div`
 
 		.left-view {
 			display: flex;
-			align-items: flex-end;
+			align-items: center;
 			justify-content: flex-start;
 			flex-direction: column;
-			width: 50%;
-			//min-width: 300px;
+			width: 40%;
 			height: 100%;
+			//margin-right: 40px;
 			//background-color: #d8f0b2;
+
+			@media (max-width: 1400px) {
+				margin-right: 20px;
+			}
 
 			@media (max-width: 900px) {
 				width: 100%;
@@ -62,7 +67,7 @@ const WrapperAboutMe = styled.div`
 			align-items: flex-start;
 			justify-content: flex-start;
 			flex-direction: column;
-			width: 50%;
+			width: 60%;
 			height: 100%;
 			//background-color: #b1d5ec;
 
@@ -266,56 +271,59 @@ export default function AboutMe(props) {
 		<WrapperAboutMe>
 			<div className="container">
 				<div className="left-view">
-					<GithubStatsCard>
-						<GithubSquare />
-						<div className="background" />
-						<div className="img">
-							<Image src="/img/user-photo.jpg" alt="Desenvolvedor Glayson Visgueira" layout="fill" objectFit="cover" className="image-rounded" />
-						</div>
-						<div className="content">
-							<h3>Glayson Visgueira</h3>
-							<h2>@glaysonvisgueira</h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<div className="github-stats">
-								<div className="stats">
-									<p>11</p>
-									<span>Seguidores</span>
-								</div>
-								<div className="stats">
-									<p>31</p>
-									<span>Seguindo</span>
-								</div>
-								<div className="stats">
-									<p>35</p>
-									<span>Repositórios</span>
-								</div>
+					<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+						<GithubStatsCard>
+							<GithubSquare />
+							<div className="background" />
+							<div className="img">
+								<Image src="/img/user-photo.jpg" alt="Desenvolvedor Glayson Visgueira" layout="fill" objectFit="cover" className="image-rounded" />
+							</div>
+							<div className="content">
+								<h3>Glayson Visgueira</h3>
+								<h2>@glaysonvisgueira</h2>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								<div className="github-stats">
+									<div className="stats">
+										<p>11</p>
+										<span>Seguidores</span>
+									</div>
+									<div className="stats">
+										<p>31</p>
+										<span>Seguindo</span>
+									</div>
+									<div className="stats">
+										<p>35</p>
+										<span>Repositórios</span>
+									</div>
 
-								<div className="stats">
-									<p>2</p>
-									<span>Estrelas</span>
+									<div className="stats">
+										<p>2</p>
+										<span>Estrelas</span>
+									</div>
 								</div>
 							</div>
-						</div>
-					</GithubStatsCard>
+						</GithubStatsCard>
+					</ScrollAnimation>
 				</div>
-
 				<div className="right-view">
-					<h3>Sobre mim</h3>
-					<p>
-						Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na
-						área administrativa e a 1 ano no setor de tecnologia, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que
-						utilizam as tecnologias: Python, Django, Django REST Framework, React.js, Next.Js e PostgreSQL.
-					</p>
+					<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+						<h3>Sobre mim</h3>
+						<p>
+							Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na
+							área administrativa e a 1 ano no setor de tecnologia, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que
+							utilizam as tecnologias: Python, Django, Django REST Framework, React.js, Next.Js e PostgreSQL.
+						</p>
 
-					<p>Possuo maior aptidão para área de Front-end, com conhecimentos sólidos na stack: React.Js, Next.Js, HTML, Css e Styled components.</p>
+						<p>Possuo maior aptidão para área de Front-end, com conhecimentos sólidos na stack: React.Js, Next.Js, HTML, Css e Styled components.</p>
 
-					<p>
-						Atualmente adquirindo conhecimentos em Dart e Flutter para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo conhecimentos de design patterns e de
-						Clean Code/Architecture. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
-					</p>
-					<ButtonCV href={curriculoPTBR} target="_blank">
-						Download CV
-					</ButtonCV>
+						<p>
+							Atualmente adquirindo conhecimentos em Dart e Flutter para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo conhecimentos de design patterns e
+							de Clean Code/Architecture. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
+						</p>
+						<ButtonCV href={curriculoPTBR} target="_blank">
+							Download CV
+						</ButtonCV>
+					</ScrollAnimation>
 				</div>
 			</div>
 			<div className="skills"></div>

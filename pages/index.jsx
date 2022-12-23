@@ -147,7 +147,7 @@ const SectionSobreMim = styled.section`
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	padding-top: 60px;
+	padding-top: 80px;
 	width: 100%;
 `;
 
@@ -156,7 +156,6 @@ const SectionPortifolio = styled.section`
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	padding-top: 60px;
 	width: 100%;
 	min-height: 100vh;
 `;

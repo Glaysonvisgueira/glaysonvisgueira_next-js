@@ -234,7 +234,7 @@ export default function SobreMim(props) {
 	return (
 		<ContainerSection>
 			<AboutMe />
-			<ScrollAnimation animateIn="fadeIn" animateOnce>
+			{/* <ScrollAnimation animateIn="fadeIn" animateOnce>
 				<ContainerSobreMimHeader>
 					<div className="photo-wrapper">
 						<div className="photo">
@@ -286,9 +286,9 @@ export default function SobreMim(props) {
 					Atualmente adquirindo conhecimentos em <strong>Dart</strong> e <strong>Flutter</strong> para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo
 					conhecimentos de <strong>design patterns</strong> de <strong>Clean Code/Architecture</strong>. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
 				</BodyText>
-			</div>
+			</div> */}
 
-			<Title style={{ marginTop: 30, marginBottom: 10 }}>Skills</Title>
+			{/* <Title style={{ marginTop: 0, marginBottom: 10 }}>Skills</Title>
 
 			<WrapperTechs>
 				<div className="grid">
@@ -341,7 +341,7 @@ export default function SobreMim(props) {
 						<ProgressBarTech techName="Flutter" percent={30} />
 					</ScrollAnimation>
 				</div>
-			</WrapperTechs>
+			</WrapperTechs> */}
 		</ContainerSection>
 	);
 }

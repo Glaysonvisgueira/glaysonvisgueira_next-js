@@ -7,8 +7,8 @@ import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Custom components
-import StackTech from "@/components/StackTechs";
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+import CarrouselTechs from "@/components/CarrouselTechs";
 
 //PDFs
 import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
@@ -19,6 +19,7 @@ const WrapperAboutMe = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	width: 60%;
+	//background-color: #ccc;
 
 	@media (max-width: 1600px) {
 		width: 85%;
@@ -30,7 +31,7 @@ const WrapperAboutMe = styled.div`
 		justify-content: flex-start;
 		flex-direction: row;
 		width: 100%;
-		height: 600px;
+		//height: 600px;
 
 		@media (max-width: 900px) {
 			align-items: center;
@@ -47,11 +48,11 @@ const WrapperAboutMe = styled.div`
 			flex-direction: column;
 			width: 30%;
 			height: 100%;
-			margin-right: 40px;
+			//margin-right: 40px;
 			//background-color: #d8f0b2;
 
 			@media (max-width: 1200px) {
-				margin-right: 20px;
+				//margin-right: 20px;
 				width: 45%;
 			}
 
@@ -119,9 +120,6 @@ const WrapperAboutMe = styled.div`
 				}
 			}
 		}
-	}
-
-	.skills {
 	}
 `;
 
@@ -260,26 +258,8 @@ const ButtonCV = styled.a`
 	}
 `;
 
-const GithubAncor = styled.a`
-	position: absolute;
-	top: 10px;
-	right: 10px;
-
-	svg {
-		color: ${(props) => props.theme.colors.backgroundSecondary};
-		width: 28px;
-		height: 28px;
-
-		&:hover {
-			opacity: 0.8;
-			cursor: pointer;
-		}
-	}
-`;
-
 export default function AboutMe(props) {
 	const [githubUserData, setGithubUserData] = useState({});
-	console.log("🚀 ~ file: AboutMe.jsx:267 ~ AboutMe ~ githubUserData", githubUserData);
 
 	useEffect(() => {
 		async function fetchGithubStats() {
@@ -289,19 +269,6 @@ export default function AboutMe(props) {
 		}
 		fetchGithubStats();
 	}, []);
-
-	// followers_url  //link
-	// following_url  //link
-	// repos_url      //link
-
-	// name
-	// bio
-	//login
-	//html_url
-
-	// followers
-	// following
-	// public_repos
 
 	return (
 		<WrapperAboutMe>
@@ -362,7 +329,7 @@ export default function AboutMe(props) {
 					</ScrollAnimation>
 				</div>
 			</div>
-			<div className="skills">{/* <StackTech /> */}</div>
+			<CarrouselTechs />
 		</WrapperAboutMe>
 	);
 }

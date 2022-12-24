@@ -149,7 +149,7 @@ const SectionSobreMim = styled.section`
 	flex-direction: column;
 	padding-top: 80px;
 	width: 100%;
-	min-height: 550px;
+	//height: auto;
 `;
 
 const SectionPortifolio = styled.section`

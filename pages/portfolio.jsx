@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -107,7 +107,8 @@ const WrapperTechStack = styled.div`
 		width: 22px;
 		height: 22px;
 		margin-right: 3px;
-		color: #727272;
+		color: ${(props) => props.theme.colors.inactiveTitle};
+		transition: all 0.3s ease;
 	}
 
 	a {
@@ -428,7 +429,37 @@ const projects = [
 // Get all repos from user via API
 //https://api.github.com/users/glaysonvisgueira/repos
 
+const ChipTechOptions = styled.div`
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	span {
+		color: ${(props) => props.theme.colors.inactiveTitle};
+		padding: 2px 7px 3px 7px;
+		border: 1px solid ${(props) => props.theme.colors.inactiveTitle};
+		margin: 3px;
+		border-radius: 4px;
+		font-weight: 700;
+		transition: all 0.3s ease;
+
+		&:hover {
+			cursor: pointer;
+			border: 1px solid ${(props) => props.theme.colors.branding};
+			color: ${(props) => props.theme.colors.branding};
+			//transform: scale(1.3);
+		}
+	}
+
+	span:nth-child(-n + 3) {
+		background-color: ${(props) => props.theme.colors.branding};
+		color: ${(props) => props.theme.colors.backgroundSecondary};
+		border: 1px solid ${(props) => props.theme.colors.branding};
+	}
+`;
+
 export default function Portifolio() {
+	const [stack, setStack] = useState("");
+
 	return (
 		<>
 			<ContainerTitleSection>
@@ -436,6 +467,12 @@ export default function Portifolio() {
 				<TitleSection>Portfólio</TitleSection>
 			</ContainerTitleSection>
 
+			{/*<ChipTechOptions>
+				<span id="backend">BACKEND</span>
+				<span id="web">WEB</span>
+				<span id="mobile">MOBILE</span>
+			</ChipTechOptions>
+*/}
 			<ContainerGrid>
 				{projects.map((project, index) => (
 					<ScrollAnimation animateIn="fadeIn" animateOnce key={index}>

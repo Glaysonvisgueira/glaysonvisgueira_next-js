@@ -144,7 +144,7 @@ export const orangeTheme = {
 export const darkYellowTheme = {
 	name: "darkYellow",
 	colors: {
-		backgroundGradient: "linear-gradient(to bottom left, #252525, #0C0C0C)",
+		backgroundGradient: "linear-gradient(to left top, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",

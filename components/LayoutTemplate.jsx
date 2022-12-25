@@ -19,16 +19,8 @@ const Main = styled.main`
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	//background: ${(props) => props.theme.colors.backgroundGradient};
 	background: ${(props) => props.theme.colors.backgroundRadial};
 `;
-
-//const Video = styled.video`
-//	position: fixed;
-//	right: 0;
-//	bottom: 0;
-//	z-index: -1;
-//`;
 
 const ContainerPage = styled.div`
 	display: flex;

@@ -130,6 +130,7 @@ const GithubStatsCard = styled.div`
 	width: 300px;
 	height: 420px;
 	border: 2px solid ${(props) => props.theme.colors.branding};
+	//background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	border-radius: 8px;
 	flex-direction: column;
 	overflow: hidden;
@@ -199,6 +200,7 @@ const GithubStatsCard = styled.div`
 		width: 90%;
 		height: 60px;
 		background: ${(props) => props.theme.colors.backgroundSecondary};
+		//border: 1px solid ${(props) => props.theme.colors.branding};
 		border-radius: 8px;
 		padding: 10px;
 		position: absolute;

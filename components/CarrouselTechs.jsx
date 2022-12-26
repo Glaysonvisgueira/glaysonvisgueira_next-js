@@ -73,7 +73,7 @@ const Carrousel = styled.div`
 	.slide-track {
 		display: flex;
 		width: 100%;
-		animation: scroll 40s linear infinite;
+		animation: scroll 20s linear infinite;
 	}
 
 	.slide-track:hover {
@@ -86,7 +86,7 @@ const Carrousel = styled.div`
 		}
 		//Moves the slide track leftwards (-250px) by half (18 images / 2 = 9) of its width
 		100% {
-			transform: translateX(calc(-250px * 20));
+			transform: translateX(calc(-250px));
 		}
 	}
 

@@ -432,47 +432,73 @@ const projects = [
 const ChipTechOptions = styled.div`
 	margin-top: 20px;
 	margin-bottom: 20px;
+`;
 
-	span {
-		color: ${(props) => props.theme.colors.inactiveTitle};
-		padding: 2px 7px 3px 7px;
-		border: 1px solid ${(props) => props.theme.colors.inactiveTitle};
-		margin: 3px;
-		border-radius: 4px;
-		font-weight: 700;
-		transition: all 0.3s ease;
+const Chip = styled.span`
+	color: ${(props) => (props.active == true ? props.theme.colors.backgroundSecondary : props.theme.colors.inactiveTitle)};
+	background-color: ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.backgroundSecondary)};
+	border: 1px solid ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.inactiveTitle)};
+	padding: 2px 7px 3px 7px;
+	margin: 3px;
+	border-radius: 4px;
+	font-weight: 700;
+	transition: all 0.3s ease;
 
-		&:hover {
-			cursor: pointer;
-			border: 1px solid ${(props) => props.theme.colors.branding};
-			color: ${(props) => props.theme.colors.branding};
-			//transform: scale(1.3);
-		}
-	}
-
-	span:nth-child(-n + 3) {
-		background-color: ${(props) => props.theme.colors.branding};
-		color: ${(props) => props.theme.colors.backgroundSecondary};
-		border: 1px solid ${(props) => props.theme.colors.branding};
+	&:hover {
+		cursor: pointer;
+		border: 1px solid ${(props) => props.active == true && props.theme.colors.branding};
+		color: ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.backgroundSecondary)};
+		background-color: ${(props) => (props.active == true ? props.theme.colors.backgroundSecondary : props.theme.colors.branding)};
 	}
 `;
 
 export default function Portifolio() {
-	const [stack, setStack] = useState("");
+	const [stack, setStack] = useState([]);
 
+	function handleFilter(id) {
+		if (stack.includes(id)) {
+			stack.splice(stack.indexOf(id), 1);
+			console.log(stack);
+		} else {
+			setStack((prev) => [...prev, id]);
+		}
+		console.log(stack);
+	}
+	console.log(stack);
 	return (
 		<>
 			<ContainerTitleSection>
 				<FolderBriefcase />
 				<TitleSection>Portfólio</TitleSection>
 			</ContainerTitleSection>
+			{/*
+			<ChipTechOptions>
+				<Chip
+					id="backend"
+					onClick={(event) => {
+						handleFilter(event.target.id);
+					}}
+					active={stack.includes("backend") ? true : false}>
+					BACKEND
+				</Chip>
+				<Chip
+					id="web"
+					onClick={(event) => {
+						handleFilter(event.target.id);
+					}}
+					active={stack.includes("web") ? true : false}>
+					WEB
+				</Chip>
+				<Chip
+					id="mobile"
+					onClick={(event) => {
+						handleFilter(event.target.id);
+					}}
+					active={stack.includes("mobile") ? true : false}>
+					MOBILE
+				</Chip>
+			</ChipTechOptions> */}
 
-			{/*<ChipTechOptions>
-				<span id="backend">BACKEND</span>
-				<span id="web">WEB</span>
-				<span id="mobile">MOBILE</span>
-			</ChipTechOptions>
-*/}
 			<ContainerGrid>
 				{projects.map((project, index) => (
 					<ScrollAnimation animateIn="fadeIn" animateOnce key={index}>

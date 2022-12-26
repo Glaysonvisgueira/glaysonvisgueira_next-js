@@ -225,7 +225,6 @@ export default function SobreMim(props) {
 		async function fetchGithubStats() {
 			const response = await fetch("https://api.github.com/users/glaysonvisgueira");
 			const json = await response.json();
-			console.log("RESPONSE: ", response);
 			setGithubUserData(json);
 		}
 		fetchGithubStats();

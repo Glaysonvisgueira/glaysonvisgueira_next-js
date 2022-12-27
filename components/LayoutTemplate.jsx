@@ -19,7 +19,7 @@ const Main = styled.main`
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	background: ${(props) => props.theme.colors.backgroundRadial};
+	background: #161616;
 `;
 
 const ContainerPage = styled.div`

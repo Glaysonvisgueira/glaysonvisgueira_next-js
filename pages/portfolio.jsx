@@ -61,10 +61,17 @@ const WrapperProjectCard = styled.div`
 	width: 100%;
 	min-height: 270px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	border: 1px solid ${(props) => props.theme.colors.branding}33;
-	//border-radius: 4px;
+	border: 1px solid ${(props) => props.theme.colors.backgroundSecondary};
+	border-radius: 4px;
 	padding: 20px;
 	transition: all 0.3s ease;
+
+	.created_at {
+		color: ${(props) => props.theme.colors.inactiveTitle};
+		font-size: 12px;
+		position: absolute;
+		bottom: 10px;
+	}
 
 	:hover {
 		/* 		
@@ -95,6 +102,7 @@ const WrapperTechStack = styled.div`
 	flex-direction: row;
 	height: 34px;
 	width: 100%;
+	margin-bottom: 10px;
 
 	> div {
 		display: flex;
@@ -160,6 +168,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/jfuzzylogic_irrigador",
 		typeProject: ["BACKEND"],
+		created_at: "09/06/2019",
 	},
 	{
 		id: 2,
@@ -187,6 +196,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/DevRadar",
 		typeProject: ["BACKEND", "WEB", "MOBILE"],
+		created_at: "02/02/2020",
 	},
 	{
 		id: 3,
@@ -220,6 +230,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/be-the-hero",
 		typeProject: ["BACKEND", "WEB", "MOBILE"],
+		created_at: "26/04/2020",
 	},
 	{
 		id: 4,
@@ -235,6 +246,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegra-nodejs",
 		typeProject: ["BACKEND"],
+		created_at: "04/04/2020",
 	},
 	{
 		id: 5,
@@ -260,6 +272,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/letmeask-NLW06",
 		typeProject: ["WEB", "MOBILE"],
+		created_at: "24/06/2021",
 	},
 	{
 		id: 6,
@@ -279,6 +292,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/plantmanager",
 		typeProject: ["MOBILE"],
+		created_at: "19/04/2021",
 	},
 	{
 		id: 7,
@@ -300,6 +314,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/next-level-week-04-nodejs",
 		typeProject: ["BACKEND"],
+		created_at: "23/02/2021",
 	},
 	{
 		id: 8,
@@ -321,6 +336,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/api-fasttrack",
 		typeProject: ["BACKEND"],
+		created_at: "27/11/2020",
 	},
 	{
 		id: 9,
@@ -340,6 +356,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
 		typeProject: ["MOBILE", "BACKEND"],
+		created_at: "05/05/2020",
 	},
 	{
 		id: 10,
@@ -353,6 +370,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/crawlerRadaresVelocidade",
 		typeProject: ["BACKEND"],
+		created_at: "16/06/2019",
 	},
 	{
 		id: 11,
@@ -374,6 +392,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js",
 		typeProject: ["WEB"],
+		created_at: "10/06/2022",
 	},
 	{
 		id: 12,
@@ -389,6 +408,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/dashboard-control-mobile-implantacao",
 		typeProject: ["WEB", "BACKEND"],
+		created_at: "29/06/2021",
 	},
 	{
 		id: 13,
@@ -410,6 +430,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
 		typeProject: ["BACKEND"],
+		created_at: "02/07/2021",
 	},
 	{
 		id: 14,
@@ -423,6 +444,7 @@ const projects = [
 		],
 		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
 		typeProject: ["MOBILE"],
+		created_at: "13/08/2022",
 	},
 ];
 
@@ -473,6 +495,16 @@ export default function Portifolio() {
 			</ContainerTitleSection>
 			{/*
 			<ChipTechOptions>
+
+			<Chip
+					id="todos"
+					onClick={(event) => {
+						handleFilter(event.target.id);
+					}}
+					active={stack.includes("todos") ? true : false}>
+					TODOS
+				</Chip>
+
 				<Chip
 					id="backend"
 					onClick={(event) => {
@@ -526,6 +558,8 @@ export default function Portifolio() {
 									<GithubOutline />
 								</a>
 							</WrapperTechStack>
+
+							<span className="created_at">Criado em: {project.created_at}</span>
 						</WrapperProjectCard>
 					</ScrollAnimation>
 				))}

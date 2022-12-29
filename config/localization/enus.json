@@ -47,12 +47,7 @@
 	},
 	"footer": {
 		"labelNavigation": {
-			"title": "NAVEGAÇÃO",
-			"labelHome": "HOME",
-			"labelServices": "SERVIÇOS",
-			"labelAboutMe": "SOBRE MIM",
-			"labelPortifolio": "PORTIFÓLIO",
-			"labelExperience": "EXPERIÊNCIA"
+			"title": "NAVEGAÇÃO"
 		},
 		"labelHost": {
 			"title": "HOSPEDAGEM"

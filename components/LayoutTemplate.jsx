@@ -228,9 +228,3 @@ export default function LayoutTemplate({ children }) {
 		</>
 	);
 }
-
-/**
-	<Video autoPlay loop muted playsInline>
-					<source src="videos/background.mp4" type="video/mp4"></source>
-				</Video> 
-				*/

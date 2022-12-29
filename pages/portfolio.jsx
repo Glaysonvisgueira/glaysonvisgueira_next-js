@@ -32,6 +32,9 @@ import { Jest } from "@styled-icons/simple-icons/Jest";
 import { Leaflet } from "@styled-icons/simple-icons/Leaflet";
 import { Express } from "@styled-icons/simple-icons/Express";
 import { Flutter } from "@styled-icons/boxicons-logos/Flutter";
+import { Filter } from "@styled-icons/fa-solid/Filter";
+import { GridView } from "@styled-icons/material/GridView";
+import { List } from "@styled-icons/bootstrap/List";
 
 //Custom components
 import Tooltip from "@/components/Tooltip";
@@ -152,6 +155,55 @@ const WrapperTextChip = styled.div`
 	}
 `;
 
+const ChipTechOptions = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	//background-color: #ccc;
+	width: 60%;
+
+	svg {
+		min-width: 28px;
+		min-height: 28px;
+		width: 28px;
+		height: 28px;
+		color: ${(props) => props.theme.colors.branding};
+		margin-right: 10px;
+
+		@media (max-width: 601px) {
+			min-width: 18px;
+			min-height: 18px;
+			width: 18px;
+			height: 18px;
+		}
+	}
+
+	@media (max-width: 1600px) {
+		width: 85%;
+	}
+`;
+
+const Chip = styled.span`
+	color: ${(props) => (props.active == true ? props.theme.colors.backgroundSecondary : props.theme.colors.inactiveTitle)};
+	background-color: ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.backgroundSecondary)};
+	border: 1px solid ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.inactiveTitle)};
+	padding: 2px 7px 3px 7px;
+	margin: 3px;
+	border-radius: 4px;
+	font-weight: 700;
+	transition: all 0.3s ease;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	@media (max-width: 601px) {
+		font-weight: 700;
+		font-size: 10px;
+	}
+`;
 const projects = [
 	{
 		id: 1,
@@ -451,88 +503,65 @@ const projects = [
 // Get all repos from user via API
 //https://api.github.com/users/glaysonvisgueira/repos
 
-const ChipTechOptions = styled.div`
-	margin-top: 20px;
-	margin-bottom: 20px;
-`;
-
-const Chip = styled.span`
-	color: ${(props) => (props.active == true ? props.theme.colors.backgroundSecondary : props.theme.colors.inactiveTitle)};
-	background-color: ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.backgroundSecondary)};
-	border: 1px solid ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.inactiveTitle)};
-	padding: 2px 7px 3px 7px;
-	margin: 3px;
-	border-radius: 4px;
-	font-weight: 700;
-	transition: all 0.3s ease;
-
-	&:hover {
-		cursor: pointer;
-		border: 1px solid ${(props) => props.active == true && props.theme.colors.branding};
-		color: ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.backgroundSecondary)};
-		background-color: ${(props) => (props.active == true ? props.theme.colors.backgroundSecondary : props.theme.colors.branding)};
-	}
-`;
-
 export default function Portifolio() {
-	const [stack, setStack] = useState([]);
+	const [stack, setStack] = useState("TODOS");
+	const [view, setView] = useState("grid");
 
 	function handleFilter(id) {
-		if (stack.includes(id)) {
-			stack.splice(stack.indexOf(id), 1);
-			console.log(stack);
-		} else {
-			setStack((prev) => [...prev, id]);
-		}
-		console.log(stack);
+		setStack(id);
 	}
-	console.log(stack);
+
+	function handleView(event) {
+		setView(event.target.id);
+	}
+
+	const array_projects = stack == "TODOS" ? projects : projects.filter((item) => item.typeProject.includes(stack));
+
 	return (
 		<>
 			<ContainerTitleSection>
-				<FolderBriefcase />
-				<TitleSection>Portfólio</TitleSection>
+				<TitleSection>PROJETOS</TitleSection>
 			</ContainerTitleSection>
-			{/*
-			<ChipTechOptions>
 
-			<Chip
-					id="todos"
+			<ChipTechOptions>
+				<Filter className="svg" />
+				<Chip
+					id="TODOS"
 					onClick={(event) => {
 						handleFilter(event.target.id);
 					}}
-					active={stack.includes("todos") ? true : false}>
+					active={stack.includes("TODOS") ? true : false}>
 					TODOS
 				</Chip>
 
 				<Chip
-					id="backend"
+					id="BACKEND"
 					onClick={(event) => {
 						handleFilter(event.target.id);
 					}}
-					active={stack.includes("backend") ? true : false}>
+					active={stack.includes("BACKEND") ? true : false}>
 					BACKEND
 				</Chip>
 				<Chip
-					id="web"
+					id="WEB"
 					onClick={(event) => {
 						handleFilter(event.target.id);
 					}}
-					active={stack.includes("web") ? true : false}>
+					active={stack.includes("WEB") ? true : false}>
 					WEB
 				</Chip>
 				<Chip
-					id="mobile"
+					id="MOBILE"
 					onClick={(event) => {
 						handleFilter(event.target.id);
 					}}
-					active={stack.includes("mobile") ? true : false}>
+					active={stack.includes("MOBILE") ? true : false}>
 					MOBILE
 				</Chip>
-			</ChipTechOptions> */}
+			</ChipTechOptions>
 
-			<ContainerGrid>
-				{projects.map((project, index) => (
+			<ContainerGrid view={view}>
+				{array_projects.map((project, index) => (
 					<ScrollAnimation animateIn="fadeIn" animateOnce key={index}>
 						<WrapperProjectCard>
 							<WrapperTextChip>

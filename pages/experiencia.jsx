@@ -12,8 +12,7 @@ export default function Experiencia() {
 	return (
 		<>
 			<ContainerTitleSection>
-				<Timeline />
-				<TitleSection>Formação, cursos e trabalhos</TitleSection>
+				<TitleSection>EXPERIÊNCIA</TitleSection>
 			</ContainerTitleSection>
 			<TimelineExperienciaFormacao />
 		</>

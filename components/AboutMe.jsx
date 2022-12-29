@@ -96,7 +96,7 @@ const WrapperAboutMe = styled.div`
 
 			h3 {
 				color: ${(props) => props.theme.colors.branding};
-				font-size: 32px;
+				font-size: 20px;
 
 				@media (max-width: 600px) {
 					font-size: 22px;
@@ -308,7 +308,7 @@ export default function AboutMe(props) {
 				</div>
 				<div className="right-view">
 					<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-						<h3>Sobre mim</h3>
+						<h3>SOBRE MIM</h3>
 						<p>
 							Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na
 							área administrativa e a 1 ano no setor de tecnologia, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que

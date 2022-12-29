@@ -15,7 +15,6 @@ const ContainerLottie = styled.div`
 	width: 800px;
 	height: 800px;
 	transition: all 0.3s ease;
-	//z-index: 1;
 
 	@media (max-width: 1400px) {
 		width: 600px;

@@ -19,7 +19,6 @@ const WrapperAboutMe = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	width: 60%;
-	//background-color: #ccc;
 
 	@media (max-width: 1600px) {
 		width: 85%;
@@ -48,7 +47,6 @@ const WrapperAboutMe = styled.div`
 			flex-direction: column;
 			width: 30%;
 			height: 100%;
-			//margin-right: 40px;
 			//background-color: #d8f0b2;
 
 			@media (max-width: 1200px) {
@@ -130,7 +128,7 @@ const GithubStatsCard = styled.div`
 	width: 300px;
 	height: 420px;
 	border: 2px solid ${(props) => props.theme.colors.branding};
-	//background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	background-color: #161616;
 	border-radius: 8px;
 	flex-direction: column;
 	overflow: hidden;

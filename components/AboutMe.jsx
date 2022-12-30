@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+
+//Contexto
+import { SettingsContext } from "@/context/SettingsContext";
 
 //Third's librarys
 import styled from "styled-components";
@@ -259,6 +262,7 @@ const ButtonCV = styled.a`
 `;
 
 export default function AboutMe(props) {
+	const { language } = useContext(SettingsContext);
 	const [githubUserData, setGithubUserData] = useState({});
 
 	useEffect(() => {
@@ -278,7 +282,7 @@ export default function AboutMe(props) {
 						<GithubStatsCard>
 							<div className="background" />
 							<div className="img">
-								<Image src="/img/user-photo.jpg" alt="Desenvolvedor Glayson Visgueira" layout="fill" objectFit="cover" className="image-rounded" />
+								<Image src="/img/user-photo.jpg" alt={language.aboutMePage.alt_dev_img} layout="fill" objectFit="cover" className="image-rounded" />
 							</div>
 							<div className="content">
 								<h3>{githubUserData?.name}</h3>
@@ -289,15 +293,15 @@ export default function AboutMe(props) {
 								<div className="github-stats">
 									<div className="stats">
 										<p>{githubUserData?.followers}</p>
-										<span>Seguidores</span>
+										<span>{language.aboutMePage.github_card.followers}</span>
 									</div>
 									<div className="stats">
 										<p>{githubUserData?.following}</p>
-										<span>Seguindo</span>
+										<span>{language.aboutMePage.github_card.following}</span>
 									</div>
 									<div className="stats">
 										<p>{githubUserData?.public_repos}</p>
-										<span>Repositórios</span>
+										<span>{language.aboutMePage.github_card.repos}</span>
 									</div>
 								</div>
 							</div>
@@ -306,20 +310,10 @@ export default function AboutMe(props) {
 				</div>
 				<div className="right-view">
 					<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-						<h3>SOBRE MIM</h3>
-						<p>
-							Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na
-							área administrativa e a 1 ano no setor de tecnologia, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que
-							utilizam as tecnologias: Python, Django, Django REST Framework, React.js, Next.Js e PostgreSQL.
-						</p>
-
-						<p>Possuo maior aptidão para área de Front-end, com conhecimentos sólidos na stack: React.Js, Next.Js, HTML, Css e Styled components.</p>
-
-						<p>
-							Atualmente adquirindo conhecimentos em Dart e Flutter para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo conhecimentos de design patterns e
-							de Clean Code/Architecture. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.
-						</p>
-
+						<h3>{language.aboutMePage.title}</h3>
+						<p>{language.aboutMePage.paragraph_one}</p>
+						<p>{language.aboutMePage.paragraph_two}</p>
+						<p>{language.aboutMePage.paragraph_three}</p>
 						<div className="tech-and-cv">
 							<SocialNetworkRowStack />
 							<ButtonCV href={curriculoPTBR} target="_blank">

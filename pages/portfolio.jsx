@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
+
+//Contexto
+import { SettingsContext } from "@/context/SettingsContext";
 
 //Styled-components
 import { TitleSection, ContainerTitleSection, TitleH3, BodyText } from "@/styles/ui";
@@ -33,8 +36,6 @@ import { Leaflet } from "@styled-icons/simple-icons/Leaflet";
 import { Express } from "@styled-icons/simple-icons/Express";
 import { Flutter } from "@styled-icons/boxicons-logos/Flutter";
 import { Filter } from "@styled-icons/fa-solid/Filter";
-import { GridView } from "@styled-icons/material/GridView";
-import { List } from "@styled-icons/bootstrap/List";
 
 //Custom components
 import Tooltip from "@/components/Tooltip";
@@ -77,16 +78,8 @@ const WrapperProjectCard = styled.div`
 	}
 
 	:hover {
-		/* 		
-		//transform: translateY(-5px);
-		//box-shadow: 0px 0px 20px 0px ${(props) => props.theme.colors.branding}5E;
-		 */
-		border-radius: 0px;
 		border: 1px solid ${(props) => props.theme.colors.branding};
-		box-shadow: 1px 1px ${(props) => props.theme.colors.branding}, 2px 2px ${(props) => props.theme.colors.branding}, 3px 3px ${(props) => props.theme.colors.branding}, 4px 4px ${(props) => props.theme.colors.branding},
-			5px 5px ${(props) => props.theme.colors.branding};
-		-webkit-transform: translateX(-5px);
-		transform: translateX(-5px);
+		transform: scale(1.01);
 	}
 
 	.title-body {
@@ -504,6 +497,7 @@ const projects = [
 //https://api.github.com/users/glaysonvisgueira/repos
 
 export default function Portifolio() {
+	const { language } = useContext(SettingsContext);
 	const [stack, setStack] = useState("TODOS");
 	const [view, setView] = useState("grid");
 
@@ -520,7 +514,7 @@ export default function Portifolio() {
 	return (
 		<>
 			<ContainerTitleSection>
-				<TitleSection>PROJETOS</TitleSection>
+				<TitleSection>{language.portifolioPage.title}</TitleSection>
 			</ContainerTitleSection>
 
 			<ChipTechOptions>
@@ -588,7 +582,9 @@ export default function Portifolio() {
 								</a>
 							</WrapperTechStack>
 
-							<span className="created_at">Criado em: {project.created_at}</span>
+							<span className="created_at">
+								{language.portifolioPage.createdLabel}: {project.created_at}
+							</span>
 						</WrapperProjectCard>
 					</ScrollAnimation>
 				))}

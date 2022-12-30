@@ -34,14 +34,22 @@
 		}
 	},
 	"aboutMePage": {
-		"typeDevText": "Desenvolvedor Front-end",
 		"title": "SOBRE MIM",
 		"paragraph_one": "Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que utilizam as tecnologias: Python, Django, Django REST Framework, React.js, Next.Js e PostgreSQL.",
 		"paragraph_two": "Possuo maior aptidão para área de Front-end e conhecimentos sólidos na stack: React.Js, Next.Js, HTML, Css e Styled components.",
 		"paragraph_three": "Atualmente adquirindo conhecimentos em Dart e Flutter para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo conhecimentos de design patterns de Clean Code/Architecture. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.",
-		"labelSkills": "Habilidades"
+		"github_card": {
+			"followers": "Seguidores",
+			"following": "Seguindo",
+			"repos": "Repositórios"
+		},
+		"alt_dev_img": "Desenvolvedor Glayson Visgueira"
 	},
-	"portifolioPage": {},
+	"portifolioPage": {
+		"title": "PROJETOS",
+		"filterLabel": "TODOS",
+		"createdLabel": "Criado em"
+	},
 	"experiencePage": {
 		"title": "EXPERIÊNCIA"
 	},
@@ -57,6 +65,7 @@
 		},
 		"labelTechs": {
 			"title": "TECNOLOGIAS"
-		}
+		},
+		"labelBuildVersion": "Versão"
 	}
 }

@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
-import Tooltip from "@/components/Tooltip";
 
 //Ícones
 import { KeyboardArrowUp } from "@styled-icons/material-outlined/KeyboardArrowUp";
+
+//Contexto
+import { SettingsContext } from "@/context/SettingsContext";
 
 const FooterContainer = styled.footer`
 	display: flex;
@@ -73,6 +75,7 @@ const FooterText = styled.span`
 	transition: all 0.3s ease;
 	margin-top: 3px;
 	margin-bottom: 3px;
+	text-transform: capitalize;
 
 	&:hover {
 		cursor: pointer;
@@ -222,7 +225,9 @@ const ButtonUpToTop = styled.div`
 `;
 
 export default function FooterPage(props) {
+	const { language } = useContext(SettingsContext);
 	const [commit, setCommit] = useState("");
+	const [versionNumber, setVersionNumber] = useState(0);
 
 	useEffect(() => {
 		getLastCommit();
@@ -234,6 +239,7 @@ export default function FooterPage(props) {
 
 		//Setar no state somente as 6 primeiras letras do SHA code do último commit
 		setCommit(json[0].sha.slice(0, 6));
+		setVersionNumber(json.length);
 	}
 
 	//Função para subir ao topo da página.
@@ -249,28 +255,28 @@ export default function FooterPage(props) {
 			<div id="grid">
 				<ScrollAnimation animateIn="fadeIn" animateOnce>
 					<SectionFooterMenu>
-						<FooterTextTitle>NAVEGAÇÃO</FooterTextTitle>
+						<FooterTextTitle>{language.footer.labelNavigation.title}</FooterTextTitle>
 						<Link href="#section-home" passHref>
-							<FooterText>Home</FooterText>
+							<FooterText>{language.navbarMenu.labelHome}</FooterText>
 						</Link>
 						<Link href="#section-services" passHref>
-							<FooterText>Serviços</FooterText>
+							<FooterText>{language.navbarMenu.labelServices}</FooterText>
 						</Link>
 						<Link href="#section-sobre-mim" passHref>
-							<FooterText>Sobre mim</FooterText>
+							<FooterText>{language.navbarMenu.labelAboutMe}</FooterText>
 						</Link>
 						<Link href="#section-portifolio" passHref>
-							<FooterText>Projetos</FooterText>
+							<FooterText>{language.navbarMenu.labelPortifolio}</FooterText>
 						</Link>
 						<Link href="#section-experiencia" passHref>
-							<FooterText>Experiência</FooterText>
+							<FooterText>{language.navbarMenu.labelExperience}</FooterText>
 						</Link>
 					</SectionFooterMenu>
 				</ScrollAnimation>
 
 				<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
 					<SectionFooterMenu>
-						<FooterTextTitle>HOSPEDAGEM</FooterTextTitle>
+						<FooterTextTitle>{language.footer.labelHost.title}</FooterTextTitle>
 
 						<FooterTextExternalLink href="https://vercel.com/" target="_blank">
 							Vercel
@@ -280,7 +286,7 @@ export default function FooterPage(props) {
 
 				<ScrollAnimation animateIn="fadeIn" animateOnce delay={400}>
 					<SectionFooterMenu>
-						<FooterTextTitle>CÓDIGO FONTE</FooterTextTitle>
+						<FooterTextTitle>{language.footer.labelSourceCode.title}</FooterTextTitle>
 						<FooterTextExternalLink href="https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js" target="_blank">
 							Github
 						</FooterTextExternalLink>
@@ -289,7 +295,7 @@ export default function FooterPage(props) {
 
 				<ScrollAnimation animateIn="fadeIn" animateOnce delay={600}>
 					<SectionFooterMenu>
-						<FooterTextTitle>TECNOLOGIAS</FooterTextTitle>
+						<FooterTextTitle>{language.footer.labelTechs.title}</FooterTextTitle>
 
 						<FooterTextExternalLink href="https://pt-br.reactjs.org/" target="_blank">
 							React.Js
@@ -309,7 +315,9 @@ export default function FooterPage(props) {
 			<ContainerBuildCopyright>
 				<SocialNetworkRowStack />
 				<div className="build-and-button-top">
-					<TextBuildProject>Build: {commit || ""}</TextBuildProject>
+					<TextBuildProject>
+						{language.footer.labelBuildVersion}: {versionNumber || ""}.{commit || ""}
+					</TextBuildProject>
 					<ButtonUpToTop onClick={goToTop}>
 						<KeyboardArrowUp />
 					</ButtonUpToTop>

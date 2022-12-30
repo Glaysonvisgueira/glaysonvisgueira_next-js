@@ -13,50 +13,59 @@
 		"buttonText": "Learn more"
 	},
 	"servicesOffer": {
-		"title": "Serviços oferecidos",
+		"title": "Services offered",
 		"cards": {
 			"seo": {
 				"title": "SEO",
-				"contentText": "Através de técnicas de SEO, irei elevar a taxa de conversão do seu produto e aumentar sua visibilidade online de forma orgânica, ou seja, sem depender de anúncios para serem bem sucedidas."
+				"contentText": "Through SEO techniques, I will increase the conversion rate of your product and increase its online visibility organically, that is, without depending on ads to be successful."
 			},
 			"ux": {
 				"title": "UX/UI",
-				"contentText": "Criação de design web responsivo, focado em usabilidade para prover a melhor experiência de usuário para gerar leads para seu produto."
+				"contentText": "Creation of responsive web design, focused on usability to provide the best user experience to generate leads for your product."
 			},
 			"branding": {
 				"title": "BRANDING",
-				"contentText": "Ajudo você a posicionar sua marca da forma correta, potencializando resultados positivos através das boas práticas do marketing digital."
+				"contentText": "I help you position your brand correctly, boosting positive results through good digital marketing practices."
 			},
 			"development": {
-				"title": "DESENVOLVIMENTO",
-				"contentText": "Desenvolvimento de sistemas 100% personalizados que vão automatizar a administração do seu negócio."
+				"title": "DEVELOPMENT",
+				"contentText": "Development of 100% personalized systems that will automate the administration of your business."
 			}
 		}
 	},
 	"aboutMePage": {
-		"typeDevText": "Desenvolvedor Front-end",
-		"title": "Sobre mim",
-		"paragraph_one": "Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que utilizam as tecnologias: Python, Django, Django REST Framework, React.js, Next.Js e PostgreSQL.",
-		"paragraph_two": "Possuo maior aptidão para área de Front-end e conhecimentos sólidos na stack: React.Js, Next.Js, HTML, Css e Styled components.",
-		"paragraph_three": "Atualmente adquirindo conhecimentos em Dart e Flutter para desenvolvimento de aplicações para multiplataformas. Possuo inglês intermediário (autodidata) e diariamente absorvendo conhecimentos de design patterns de Clean Code/Architecture. Sou proativo, curioso e motivado em encontrar soluções para problemas utilizando tecnologia.",
-		"labelSkills": "Habilidades"
+		"title": "ABOUT ME",
+		"paragraph_one": "Bachelor in Information Systems from Centro Universitário Maurício de Nassau, with graduation completed in the first half of 2021. I worked for 9 years at Claudino S/A, 8 of which were at administrative area and 1 year in the technology sector, more specifically in the team responsible for the company's Ecommerce, where I carry out daily maintenance or development of new functionalities that use technologies: Python, Django, Django REST Framework, React.js, Next.Js and PostgreSQL.",
+		"paragraph_two": "I have greater aptitude for the Front-end area, with solid knowledge in the stack: React.Js, Next.Js, HTML, Css and Styled components.",
+		"paragraph_three": "Currently acquiring knowledge in Dart and Flutter to develop applications for multiplatforms. I have intermediate English (self-taught) and daily absorbing knowledge of design patterns and from Clean Code/Architecture. I am proactive, curious and motivated to find solutions to problems using technology.",
+		"github_card": {
+			"followers": "Followers",
+			"following": "Following",
+			"repos": "Repos"
+		},
+		"alt_dev_img": "Glayson Visgueira Developer"
 	},
-	"portifolioPage": {},
+	"portifolioPage": {
+		"title": "PROJECTS",
+		"filterLabel": "ALL",
+		"createdLabel": "Created at"
+	},
 	"experiencePage": {
-		"title": "Formação, cursos e trabalhos"
+		"title": "EXPERIENCE"
 	},
 	"footer": {
 		"labelNavigation": {
-			"title": "NAVEGAÇÃO"
+			"title": "NAVIGATION"
 		},
 		"labelHost": {
-			"title": "HOSPEDAGEM"
+			"title": "WEBSITE HOSTING"
 		},
 		"labelSourceCode": {
-			"title": "CÓDIGO FONTE"
+			"title": "SOURCE CODE"
 		},
 		"labelTechs": {
-			"title": "TECNOLOGIAS"
-		}
+			"title": "TECHNOLOGIES"
+		},
+		"labelBuildVersion": "Build"
 	}
 }

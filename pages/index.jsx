@@ -15,7 +15,6 @@ import FooterPage from "@/components/FooterPage";
 import ServicesOffer from "@/components/ServicesOffer";
 import FloatNavigationBar from "@/components/FloatNavigationBar";
 import ScrollDownAnimation from "@/components/ScrollDownAnimation";
-// import ParallaxTransitionDiv from "@/components/ParallaxTransitionDiv";
 //import CounterDescription from "@/components/CounterDescription";
 
 //Pages
@@ -159,6 +158,7 @@ const SectionPortifolio = styled.section`
 	flex-direction: column;
 	width: 100%;
 	min-height: 100vh;
+	padding-top: 60px;
 `;
 
 const SectionExperiencia = styled.section`

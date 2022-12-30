@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -7,6 +7,9 @@ import { Robot } from "@styled-icons/fa-solid/Robot";
 import { DesignServices } from "@styled-icons/material-rounded/DesignServices";
 import { DesignIdeas } from "@styled-icons/fluentui-system-filled/DesignIdeas";
 import { CodeBlock } from "@styled-icons/boxicons-regular/CodeBlock";
+
+//Contexto
+import { SettingsContext } from "@/context/SettingsContext";
 
 const CardService = styled.div`
 	display: flex;
@@ -74,35 +77,37 @@ const ContainerGrid = styled.div`
 `;
 
 export default function _ServicesOffer() {
+	const { language } = useContext(SettingsContext);
+
 	return (
 		<ContainerGrid>
 			<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
 				<CardService>
 					<Robot />
-					<h3>SEO</h3>
-					<p>Através de técnicas de SEO, irei elevar a taxa de conversão do seu produto e aumentar sua visibilidade online de forma orgânica, ou seja, sem depender de anúncios para serem bem sucedidas.</p>
+					<h3>{language.servicesOffer.cards.seo.title}</h3>
+					<p>{language.servicesOffer.cards.seo.contentText}</p>
 				</CardService>
 			</ScrollAnimation>
 
 			<ScrollAnimation animateIn="fadeIn" animateOnce delay={400}>
 				<CardService>
 					<DesignIdeas />
-					<h3>UX/UI</h3>
-					<p>Criação de design web responsivo, focado em usabilidade para prover a melhor experiência de usuário para gerar leads para seu produto.</p>
+					<h3>{language.servicesOffer.cards.ux.title}</h3>
+					<p>{language.servicesOffer.cards.ux.contentText}</p>
 				</CardService>
 			</ScrollAnimation>
 			<ScrollAnimation animateIn="fadeIn" animateOnce delay={600}>
 				<CardService>
 					<DesignServices />
-					<h3>BRANDING</h3>
-					<p>Ajudo você a posicionar sua marca da forma correta, potencializando resultados positivos através das boas práticas do marketing digital.</p>
+					<h3>{language.servicesOffer.cards.branding.title}</h3>
+					<p>{language.servicesOffer.cards.branding.contentText}</p>
 				</CardService>
 			</ScrollAnimation>
 			<ScrollAnimation animateIn="fadeIn" animateOnce delay={800}>
 				<CardService>
 					<CodeBlock />
-					<h3>DESENVOLVIMENTO</h3>
-					<p>Desenvolvimento de sistemas 100% personalizados que vão automatizar a administração do seu negócio.</p>
+					<h3>{language.servicesOffer.cards.development.title}</h3>
+					<p>{language.servicesOffer.cards.development.contentText}</p>
 				</CardService>
 			</ScrollAnimation>
 		</ContainerGrid>

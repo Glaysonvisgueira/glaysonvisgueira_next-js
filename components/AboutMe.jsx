@@ -316,7 +316,7 @@ export default function AboutMe(props) {
 						<p>{language.aboutMePage.paragraph_three}</p>
 						<div className="tech-and-cv">
 							<SocialNetworkRowStack />
-							<ButtonCV href={curriculoPTBR} target="_blank">
+							<ButtonCV href={curriculoPTBR} target="_blank" data-splitbee-event="Download CV">
 								Download CV
 							</ButtonCV>
 						</div>

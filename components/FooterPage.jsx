@@ -257,19 +257,19 @@ export default function FooterPage(props) {
 					<SectionFooterMenu>
 						<FooterTextTitle>{language.footer.labelNavigation.title}</FooterTextTitle>
 						<Link href="#section-home" passHref>
-							<FooterText>{language.navbarMenu.labelHome}</FooterText>
+							<FooterText>{language.footer.labelNavigation.labelHome}</FooterText>
 						</Link>
 						<Link href="#section-services" passHref>
-							<FooterText>{language.navbarMenu.labelServices}</FooterText>
+							<FooterText>{language.footer.labelNavigation.labelServices}</FooterText>
 						</Link>
 						<Link href="#section-sobre-mim" passHref>
-							<FooterText>{language.navbarMenu.labelAboutMe}</FooterText>
+							<FooterText>{language.footer.labelNavigation.labelAboutMe}</FooterText>
 						</Link>
 						<Link href="#section-portifolio" passHref>
-							<FooterText>{language.navbarMenu.labelPortifolio}</FooterText>
+							<FooterText>{language.footer.labelNavigation.labelPortifolio}</FooterText>
 						</Link>
 						<Link href="#section-experiencia" passHref>
-							<FooterText>{language.navbarMenu.labelExperience}</FooterText>
+							<FooterText>{language.footer.labelNavigation.labelExperience}</FooterText>
 						</Link>
 					</SectionFooterMenu>
 				</ScrollAnimation>

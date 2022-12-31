@@ -289,7 +289,7 @@ export default function AboutMe(props) {
 								<a href={githubUserData?.html_url} target="_blank">
 									@{githubUserData?.login}
 								</a>
-								<p>{githubUserData?.bio}</p>
+								<p>{language.aboutMePage.github_card.bio}</p>
 								<div className="github-stats">
 									<div className="stats">
 										<p>{githubUserData?.followers}</p>

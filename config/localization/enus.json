@@ -1,4 +1,5 @@
 {
+	"id": "enus",
 	"navbarMenu": {
 		"labelHome": "HOME",
 		"labelServices": "SERVICES",
@@ -39,6 +40,7 @@
 		"paragraph_two": "I have greater aptitude for the Front-end area, with solid knowledge in the stack: React.Js, Next.Js, HTML, Css and Styled components.",
 		"paragraph_three": "Currently acquiring knowledge in Dart and Flutter to develop applications for multiplatforms. I have intermediate English (self-taught) and daily absorbing knowledge of design patterns and from Clean Code/Architecture. I am proactive, curious and motivated to find solutions to problems using technology.",
 		"github_card": {
+			"bio": "Fullstack developer with more experience in the Javascript stack, Node.js, React, React Native and Next.js.",
 			"followers": "Followers",
 			"following": "Following",
 			"repos": "Repos"
@@ -47,15 +49,88 @@
 	},
 	"portifolioPage": {
 		"title": "PROJECTS",
-		"filterLabel": "ALL",
-		"createdLabel": "Created at"
+		"labelFilter": "ALL",
+		"createdLabel": "Created at",
+		"projects": {
+			"id_1": {
+				"title": "AUTOMATIC IRRIGATION SYSTEM",
+				"description": "Implementation of an artificial intelligence algorithm, known as fuzzy algorithm (or fuzzy logic) that uses the jFuzzyLogic library. In this implementation, artificial intelligence is used so that depending on the current situation of three aspects, which are: temperature, luminosity and humidity, there is automatic activation of an irrigation system for agricultural crops."
+			},
+			"id_2": {
+				"title": "DEVRADAR",
+				"description": "Application resulting from the week Omnistack #10 by Rocketseat. The application aims to connect developers close to your current location and working with the same technologies."
+			},
+			"id_3": {
+				"title": "BE THE HERO",
+				"description": "Application resulting from Rocketseat's Omnistack #11 week. The application is a way to connect people to NGOs that need some kind of help."
+			},
+			"id_4": {
+				"title": "INTEGRA API WRAPPER",
+				"description": "Node.js server for using the Inthegra API provided by STRANS from Teresina - PI."
+			},
+			"id_5": {
+				"title": "LETMEASK",
+				"description": "Application resulting from Rocketseat's Next Level Week #06. The application provides an environment where the user can log in using his Google account and create rooms on subjects of interest for other users to create questions."
+			},
+			"id_6": {
+				"title": "PLANTMANAGER",
+				"description": "Application resulting from Rocketseat's Next Level Week #05. The application provides an irrigation scheduler for your plants, giving tips on each species, as well as the best irrigation schedules. The app displays a push notification whenever it's time to water your plant."
+			},
+			"id_7": {
+				"title": "NPS SURVEY SYSTEM",
+				"description": "Application resulting from Rocketseat's Next Level Week #04. The application allows calculating the company's NPS (Net Promoter Score) through satisfaction surveys sent to users by email."
+			},
+			"id_8": {
+				"title": "FASTTRACK API",
+				"description": "Backend of a Node.js server that provides a REST API that allows sharing the smartphone's geolocation to a cloud database maintained by MongoDB."
+			},
+			"id_9": {
+				"title": "INTHEGRE-SE APP",
+				"description": "Application that monitors the public bus fleet in the city of Teresina - PI, and displays on a map the current location of each bus in activity at the moment, with intervals of 30 seconds between each position update."
+			},
+			"id_10": {
+				"title": "RADAR POSITION CRAWLER",
+				"description": "Study of the BeautifulSoup library that, used with the Python programming language, makes it possible to collect data from websites. This algorithm searches the website of Teresina City Hall - PI and provides the download link of the current position of speed cameras in the city."
+			},
+			"id_11": {
+				"title": "PORTFOLIO PAGE",
+				"description": "Personal portfolio page, built using React.js, Next.js, Styled Components and hosted on the Vercel platform."
+			},
+			"id_12": {
+				"title": "LOGISTICS INFORMATION AGGREGATE",
+				"description": "System to aggregate the company's internal logistic information."
+			},
+			"id_13": {
+				"title": "LOGISTICS INFORMATION AGGREGATOR API",
+				"description": "API written in Javascript/Node.js and hosted on an EC2 server on AWS to provide the company's internal logistical information."
+			},
+			"id_14": {
+				"title": "BYTEBANK",
+				"description": "App resulting from Alura's Flutter track. Using Flutter to generate the cross-platform application, this application serves to register account numbers and their respective values ​​to be recorded in dynamic states for display in the app."
+			}
+		}
 	},
 	"experiencePage": {
-		"title": "EXPERIENCE"
+		"title": "EXPERIENCE",
+		"timeline": {
+			"labelPosition": "Position",
+			"labelTitle": "Title",
+			"labelCompany": "Company",
+			"labelCategory": "Category",
+			"labelInstitution": "Institution",
+			"labelProfessionalCourse": "Professional course",
+			"labelBachelorDegree": "Bachelor degree",
+			"labelExtensionCourse": "Extension course"
+		}
 	},
 	"footer": {
 		"labelNavigation": {
-			"title": "NAVIGATION"
+			"title": "NAVIGATION",
+			"labelHome": "Home",
+			"labelServices": "Services",
+			"labelAboutMe": "About me",
+			"labelPortifolio": "Projects",
+			"labelExperience": "Experience"
 		},
 		"labelHost": {
 			"title": "WEBSITE HOSTING"

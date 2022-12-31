@@ -197,309 +197,301 @@ const Chip = styled.span`
 		font-size: 10px;
 	}
 `;
-const projects = [
-	{
-		id: 1,
-		title: "SISTEMA DE IRRIGAÇÃO AUTOMÁTICO",
-		description:
-			"Implementação de um algoritmo de inteligência artificial, conhecido como algoritmo nebuloso (ou lógica difusa) que utiliza a biblioteca jFuzzyLogic. Nessa implementação, há uso da inteligência artificial para que dependendo da situação atual de três aspectos, que são: temperatura, luminosidade e umidade, haja ativação automática de um sistema de irrigação de culturas agrícolas.",
-		techs: [
-			<Tooltip toolTipText="Java">
-				<Java />
-			</Tooltip>,
-			<Tooltip toolTipText="SEO">
-				<Robot />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/jfuzzylogic_irrigador",
-		typeProject: ["BACKEND"],
-		created_at: "09/06/2019",
-	},
-	{
-		id: 2,
-		title: "DEVRADAR",
-		description: "Aplicativo resultante da semana Omnistack #10 da Rocketseat. A aplicação visa conectar desenvolvedores próximos de sua localização atual e que trabalham com as mesmas tecnologias.",
-		techs: [
-			<Tooltip toolTipText="ReactJS">
-				<ReactLogo />
-			</Tooltip>,
-			<Tooltip toolTipText="Expo">
-				<Expo />
-			</Tooltip>,
-			<Tooltip toolTipText="Javascript">
-				<Javascript />
-			</Tooltip>,
-			<Tooltip toolTipText="NodeJS">
-				<Nodejs />
-			</Tooltip>,
-			<Tooltip toolTipText="CSS">
-				<Css3 />
-			</Tooltip>,
-			<Tooltip toolTipText="MongoDB">
-				<Mongodb />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/DevRadar",
-		typeProject: ["BACKEND", "WEB", "MOBILE"],
-		created_at: "02/02/2020",
-	},
-	{
-		id: 3,
-		title: "BE THE HERO",
-		description: "Aplicativo resultante da semana Omnistack #11 da Rocketseat. A aplicação é um meio de conectar pessoas à ONGS que necessitam de algum tipo de ajuda.",
-		techs: [
-			<Tooltip toolTipText="ReactJS">
-				<ReactLogo />
-			</Tooltip>,
-			<Tooltip toolTipText="Expo">
-				<Expo />
-			</Tooltip>,
-			<Tooltip toolTipText="Javascript">
-				<Javascript />
-			</Tooltip>,
-			<Tooltip toolTipText="NodeJS">
-				<Nodejs />
-			</Tooltip>,
-			<Tooltip toolTipText="CSS">
-				<Css3 />
-			</Tooltip>,
-			<Tooltip toolTipText="MongoDB">
-				<Mongodb />
-			</Tooltip>,
-			<Tooltip toolTipText="Jest">
-				<Jest />
-			</Tooltip>,
-			<Tooltip toolTipText="SqLite">
-				<Sqlite />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/be-the-hero",
-		typeProject: ["BACKEND", "WEB", "MOBILE"],
-		created_at: "26/04/2020",
-	},
-	{
-		id: 4,
-		title: "INTEGRA API WRAPPER",
-		description: "Servidor Node.js para utilização da API Inthegra fornecida pela STRANS de Teresina - PI.",
-		techs: [
-			<Tooltip toolTipText="NodeJS">
-				<Nodejs />
-			</Tooltip>,
-			<Tooltip toolTipText="Javascript">
-				<Javascript />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegra-nodejs",
-		typeProject: ["BACKEND"],
-		created_at: "04/04/2020",
-	},
-	{
-		id: 5,
-		title: "LETMEASK",
-		description:
-			"Aplicativo resultante da Next Level Week #06 da Rocketseat. A aplicação fornece um ambiente onde o usuário pode logar utilizando sua conta Google e criar salas sobre assuntos de seu interesse para que outros usuários criem perguntas.",
-		techs: [
-			<Tooltip toolTipText="ReactJs">
-				<ReactLogo />
-			</Tooltip>,
-			<Tooltip toolTipText="Javascript">
-				<Javascript />
-			</Tooltip>,
-			<Tooltip toolTipText="Google Cloud">
-				<GoogleCloud />
-			</Tooltip>,
-			<Tooltip toolTipText="Sass">
-				<Sass />
-			</Tooltip>,
-			<Tooltip toolTipText="Firebase">
-				<Firebase />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/letmeask-NLW06",
-		typeProject: ["WEB", "MOBILE"],
-		created_at: "24/06/2021",
-	},
-	{
-		id: 6,
-		title: "PLANTMANAGER",
-		description:
-			"Aplicativo resultante da Next Level Week #05 da Rocketseat. A aplicação fornece um agendador de irrigação para suas plantas, dando dicas sobre  cada espécie, assim como os melhores horários de irrigação. O aplicativo exibe uma notificação em push sempre que estiver no horário de irrigar sua planta.",
-		techs: [
-			<Tooltip toolTipText="ReactJS">
-				<ReactLogo />
-			</Tooltip>,
-			<Tooltip toolTipText="Typescript">
-				<Typescript />
-			</Tooltip>,
-			<Tooltip toolTipText="SqLite">
-				<Sqlite />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/plantmanager",
-		typeProject: ["MOBILE"],
-		created_at: "19/04/2021",
-	},
-	{
-		id: 7,
-		title: "SISTEMA DE PESQUISAS NPS",
-		description: "Aplicativo resultante da Next Level Week #04 da Rocketseat. A aplicação permite calcular o NPS (Net Promoter Score) da empresa, através de pesquisas de satisfação enviadas a usuários por e-mail.",
-		techs: [
-			<Tooltip toolTipText="NodeJS">
-				<Nodejs />
-			</Tooltip>,
-			<Tooltip toolTipText="Typescript">
-				<Typescript />
-			</Tooltip>,
-			<Tooltip toolTipText="SqLite">
-				<Sqlite />
-			</Tooltip>,
-			<Tooltip toolTipText="Jest">
-				<Jest />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/next-level-week-04-nodejs",
-		typeProject: ["BACKEND"],
-		created_at: "23/02/2021",
-	},
-	{
-		id: 8,
-		title: "FASTTRACK API",
-		description: "Backend de um servidor em Node.js que fornece uma API REST que permite o compartilhamento de geolocalização do smartphone para um banco de dados em nuvem mantido pelo MongoDB.",
-		techs: [
-			<Tooltip toolTipText="NodeJS">
-				<Nodejs />
-			</Tooltip>,
-			<Tooltip toolTipText="Javascript">
-				<Javascript />
-			</Tooltip>,
-			<Tooltip toolTipText="MongoDB">
-				<Mongodb />
-			</Tooltip>,
-			<Tooltip toolTipText="AWS">
-				<Amazonaws />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/api-fasttrack",
-		typeProject: ["BACKEND"],
-		created_at: "27/11/2020",
-	},
-	{
-		id: 9,
-		title: "INTHEGRE-SE APP",
-		description:
-			"Aplicativo que monitora a frota de ônibus público da cidade de Teresina - PI, e exibe em um mapa a localização atual de cada ônibus em atividade no momento, com intervalos de 30 segundos entre cada atualização de posição.",
-		techs: [
-			<Tooltip toolTipText="ReactJS">
-				<ReactLogo />
-			</Tooltip>,
-			<Tooltip toolTipText="Expo">
-				<Expo />
-			</Tooltip>,
-			<Tooltip toolTipText="Javascript">
-				<Javascript />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
-		typeProject: ["MOBILE", "BACKEND"],
-		created_at: "05/05/2020",
-	},
-	{
-		id: 10,
-		title: "CRAWLER DAS POSIÇÃO DE RADARES",
-		description:
-			"Estudo da biblioteca BeautifulSoup que utilizada com a linguagem de programação Python, possibilita coletar dados de websites. Este algoritmo busca no site da prefeitura da cidade de Teresina - PI e fornece o link de download da posição atual dos radares de velocidade na cidade.",
-		techs: [
-			<Tooltip toolTipText="Python">
-				<Python />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/crawlerRadaresVelocidade",
-		typeProject: ["BACKEND"],
-		created_at: "16/06/2019",
-	},
-	{
-		id: 11,
-		title: "PÁGINA PORTIFÓLIO",
-		description: "Página portifólio pessoal, contruída utilizando React.js, Next.js, Styled Components e hospedado na plataforma da Vercel.",
-		techs: [
-			<Tooltip toolTipText="ReactJS">
-				<ReactLogo />
-			</Tooltip>,
-			<Tooltip toolTipText="NextJS">
-				<Nextdotjs />
-			</Tooltip>,
-			<Tooltip toolTipText="Styled Components">
-				<Styledcomponents />
-			</Tooltip>,
-			<Tooltip toolTipText="Vercel">
-				<LogoVercel />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js",
-		typeProject: ["WEB"],
-		created_at: "10/06/2022",
-	},
-	{
-		id: 12,
-		title: "AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
-		description: "Sistema para agregar as informações lógisticas internas da empresa.",
-		techs: [
-			<Tooltip toolTipText="ReactJS">
-				<ReactLogo />
-			</Tooltip>,
-			<Tooltip toolTipText="Leaflet">
-				<Leaflet />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/dashboard-control-mobile-implantacao",
-		typeProject: ["WEB", "BACKEND"],
-		created_at: "29/06/2021",
-	},
-	{
-		id: 13,
-		title: "API AGREGADOR DE INFORMAÇÕES LOGÍSTICAS",
-		description: "API escrita em Javascript/Node.js e hospedada em um servidor EC2 na AWS para prover as informações logísticas internas da empresa.",
-		techs: [
-			<Tooltip toolTipText="NodeJS">
-				<Nodejs />
-			</Tooltip>,
-			<Tooltip toolTipText="AWS">
-				<Amazonaws />
-			</Tooltip>,
-			<Tooltip toolTipText="Express">
-				<Express />
-			</Tooltip>,
-			<Tooltip toolTipText="MongoDB">
-				<Mongodb />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
-		typeProject: ["BACKEND"],
-		created_at: "02/07/2021",
-	},
-	{
-		id: 14,
-		title: "BYTEBANK",
-		description:
-			"Aplicativo resultante da trilha Flutter da Alura. Utilizando o Flutter para gerar o aplicativo multiplataforma, esta aplicação serve para cadastrar números de conta e seus respectivos valores para serem gravados em estados dinâmicos para exibição no app. ",
-		techs: [
-			<Tooltip toolTipText="Flutter">
-				<Flutter />
-			</Tooltip>,
-		],
-		sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
-		typeProject: ["MOBILE"],
-		created_at: "13/08/2022",
-	},
-];
-
-// Get all repos from user via API
-//https://api.github.com/users/glaysonvisgueira/repos
 
 export default function Portifolio() {
 	const { language } = useContext(SettingsContext);
 	const [stack, setStack] = useState("TODOS");
 	const [view, setView] = useState("grid");
+
+	const projects = [
+		{
+			id: 1,
+			title: language.portifolioPage.projects.id_1.title,
+			description: language.portifolioPage.projects.id_1.description,
+			techs: [
+				<Tooltip toolTipText="Java">
+					<Java />
+				</Tooltip>,
+				<Tooltip toolTipText="SEO">
+					<Robot />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/jfuzzylogic_irrigador",
+			typeProject: ["BACKEND"],
+			created_at: "09/06/2019",
+		},
+		{
+			id: 2,
+			title: language.portifolioPage.projects.id_2.title,
+			description: language.portifolioPage.projects.id_2.description,
+			techs: [
+				<Tooltip toolTipText="ReactJS">
+					<ReactLogo />
+				</Tooltip>,
+				<Tooltip toolTipText="Expo">
+					<Expo />
+				</Tooltip>,
+				<Tooltip toolTipText="Javascript">
+					<Javascript />
+				</Tooltip>,
+				<Tooltip toolTipText="NodeJS">
+					<Nodejs />
+				</Tooltip>,
+				<Tooltip toolTipText="CSS">
+					<Css3 />
+				</Tooltip>,
+				<Tooltip toolTipText="MongoDB">
+					<Mongodb />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/DevRadar",
+			typeProject: ["BACKEND", "WEB", "MOBILE"],
+			created_at: "02/02/2020",
+		},
+		{
+			id: 3,
+			title: language.portifolioPage.projects.id_3.title,
+			description: language.portifolioPage.projects.id_3.description,
+			techs: [
+				<Tooltip toolTipText="ReactJS">
+					<ReactLogo />
+				</Tooltip>,
+				<Tooltip toolTipText="Expo">
+					<Expo />
+				</Tooltip>,
+				<Tooltip toolTipText="Javascript">
+					<Javascript />
+				</Tooltip>,
+				<Tooltip toolTipText="NodeJS">
+					<Nodejs />
+				</Tooltip>,
+				<Tooltip toolTipText="CSS">
+					<Css3 />
+				</Tooltip>,
+				<Tooltip toolTipText="MongoDB">
+					<Mongodb />
+				</Tooltip>,
+				<Tooltip toolTipText="Jest">
+					<Jest />
+				</Tooltip>,
+				<Tooltip toolTipText="SqLite">
+					<Sqlite />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/be-the-hero",
+			typeProject: ["BACKEND", "WEB", "MOBILE"],
+			created_at: "26/04/2020",
+		},
+		{
+			id: 4,
+			title: language.portifolioPage.projects.id_4.title,
+			description: language.portifolioPage.projects.id_4.description,
+			techs: [
+				<Tooltip toolTipText="NodeJS">
+					<Nodejs />
+				</Tooltip>,
+				<Tooltip toolTipText="Javascript">
+					<Javascript />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegra-nodejs",
+			typeProject: ["BACKEND"],
+			created_at: "04/04/2020",
+		},
+		{
+			id: 5,
+			title: language.portifolioPage.projects.id_5.title,
+			description: language.portifolioPage.projects.id_5.description,
+			techs: [
+				<Tooltip toolTipText="ReactJs">
+					<ReactLogo />
+				</Tooltip>,
+				<Tooltip toolTipText="Javascript">
+					<Javascript />
+				</Tooltip>,
+				<Tooltip toolTipText="Google Cloud">
+					<GoogleCloud />
+				</Tooltip>,
+				<Tooltip toolTipText="Sass">
+					<Sass />
+				</Tooltip>,
+				<Tooltip toolTipText="Firebase">
+					<Firebase />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/letmeask-NLW06",
+			typeProject: ["WEB", "MOBILE"],
+			created_at: "24/06/2021",
+		},
+		{
+			id: 6,
+			title: language.portifolioPage.projects.id_6.title,
+			description: language.portifolioPage.projects.id_6.description,
+			techs: [
+				<Tooltip toolTipText="ReactJS">
+					<ReactLogo />
+				</Tooltip>,
+				<Tooltip toolTipText="Typescript">
+					<Typescript />
+				</Tooltip>,
+				<Tooltip toolTipText="SqLite">
+					<Sqlite />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/plantmanager",
+			typeProject: ["MOBILE"],
+			created_at: "19/04/2021",
+		},
+		{
+			id: 7,
+			title: language.portifolioPage.projects.id_7.title,
+			description: language.portifolioPage.projects.id_7.description,
+			techs: [
+				<Tooltip toolTipText="NodeJS">
+					<Nodejs />
+				</Tooltip>,
+				<Tooltip toolTipText="Typescript">
+					<Typescript />
+				</Tooltip>,
+				<Tooltip toolTipText="SqLite">
+					<Sqlite />
+				</Tooltip>,
+				<Tooltip toolTipText="Jest">
+					<Jest />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/next-level-week-04-nodejs",
+			typeProject: ["BACKEND"],
+			created_at: "23/02/2021",
+		},
+		{
+			id: 8,
+			title: language.portifolioPage.projects.id_8.title,
+			description: language.portifolioPage.projects.id_8.description,
+			techs: [
+				<Tooltip toolTipText="NodeJS">
+					<Nodejs />
+				</Tooltip>,
+				<Tooltip toolTipText="Javascript">
+					<Javascript />
+				</Tooltip>,
+				<Tooltip toolTipText="MongoDB">
+					<Mongodb />
+				</Tooltip>,
+				<Tooltip toolTipText="AWS">
+					<Amazonaws />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/api-fasttrack",
+			typeProject: ["BACKEND"],
+			created_at: "27/11/2020",
+		},
+		{
+			id: 9,
+			title: language.portifolioPage.projects.id_9.title,
+			description: language.portifolioPage.projects.id_9.description,
+			techs: [
+				<Tooltip toolTipText="ReactJS">
+					<ReactLogo />
+				</Tooltip>,
+				<Tooltip toolTipText="Expo">
+					<Expo />
+				</Tooltip>,
+				<Tooltip toolTipText="Javascript">
+					<Javascript />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
+			typeProject: ["MOBILE", "BACKEND"],
+			created_at: "05/05/2020",
+		},
+		{
+			id: 10,
+			title: language.portifolioPage.projects.id_10.title,
+			description: language.portifolioPage.projects.id_10.description,
+			techs: [
+				<Tooltip toolTipText="Python">
+					<Python />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/crawlerRadaresVelocidade",
+			typeProject: ["BACKEND"],
+			created_at: "16/06/2019",
+		},
+		{
+			id: 11,
+			title: language.portifolioPage.projects.id_11.title,
+			description: language.portifolioPage.projects.id_11.description,
+			techs: [
+				<Tooltip toolTipText="ReactJS">
+					<ReactLogo />
+				</Tooltip>,
+				<Tooltip toolTipText="NextJS">
+					<Nextdotjs />
+				</Tooltip>,
+				<Tooltip toolTipText="Styled Components">
+					<Styledcomponents />
+				</Tooltip>,
+				<Tooltip toolTipText="Vercel">
+					<LogoVercel />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js",
+			typeProject: ["WEB"],
+			created_at: "10/06/2022",
+		},
+		{
+			id: 12,
+			title: language.portifolioPage.projects.id_12.title,
+			description: language.portifolioPage.projects.id_12.description,
+			techs: [
+				<Tooltip toolTipText="ReactJS">
+					<ReactLogo />
+				</Tooltip>,
+				<Tooltip toolTipText="Leaflet">
+					<Leaflet />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/dashboard-control-mobile-implantacao",
+			typeProject: ["WEB", "BACKEND"],
+			created_at: "29/06/2021",
+		},
+		{
+			id: 13,
+			title: language.portifolioPage.projects.id_13.title,
+			description: language.portifolioPage.projects.id_13.description,
+			techs: [
+				<Tooltip toolTipText="NodeJS">
+					<Nodejs />
+				</Tooltip>,
+				<Tooltip toolTipText="AWS">
+					<Amazonaws />
+				</Tooltip>,
+				<Tooltip toolTipText="Express">
+					<Express />
+				</Tooltip>,
+				<Tooltip toolTipText="MongoDB">
+					<Mongodb />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
+			typeProject: ["BACKEND"],
+			created_at: "02/07/2021",
+		},
+		{
+			id: 14,
+			title: language.portifolioPage.projects.id_14.title,
+			description: language.portifolioPage.projects.id_14.description,
+			techs: [
+				<Tooltip toolTipText="Flutter">
+					<Flutter />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
+			typeProject: ["MOBILE"],
+			created_at: "13/08/2022",
+		},
+	];
 
 	function handleFilter(id) {
 		setStack(id);
@@ -525,7 +517,7 @@ export default function Portifolio() {
 						handleFilter(event.target.id);
 					}}
 					active={stack.includes("TODOS") ? true : false}>
-					TODOS
+					{language.portifolioPage.labelFilter}
 				</Chip>
 
 				<Chip

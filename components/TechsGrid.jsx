@@ -98,6 +98,7 @@ export default function TechsGrid(props) {
 					<Amazonaws />
 				</Tech>
 			</ScrollAnimation>
+
 			<ScrollAnimation animateIn="fadeIn" animateOnce>
 				<Tech>
 					<GoogleCloud />
@@ -108,117 +109,216 @@ export default function TechsGrid(props) {
 					<Firebase />
 				</Tech>
 			</ScrollAnimation>
-			<Tech>
-				<Visualstudiocode />
-			</Tech>
-			<Tech>
-				<Mongodb />
-			</Tech>
-			<Tech>
-				<Postgresql />
-			</Tech>
-			<Tech>
-				<Sqlite />
-			</Tech>
-			<Tech>
-				<Javascript />
-			</Tech>
-			<Tech>
-				<Java />
-			</Tech>
-			<Tech>
-				<ReactLogo />
-			</Tech>
-			<Tech>
-				<Nextdotjs />
-			</Tech>
-			<Tech>
-				<Python />
-			</Tech>
-			<Tech>
-				<Flutter />
-			</Tech>
-			<Tech>
-				<Django />
-			</Tech>
-			<Tech>
-				<Nodejs />
-			</Tech>
-			<Tech>
-				<LogoVercel />
-			</Tech>
-			<Tech>
-				<Netlify />
-			</Tech>
-			<Tech>
-				<Materialui />
-			</Tech>
-			<Tech>
-				<Styledcomponents />
-			</Tech>
-			<Tech>
-				<Css3 />
-			</Tech>
-			<Tech>
-				<Html5 />
-			</Tech>
-			<Tech>
-				<Amazons3 />
-			</Tech>
-			<Tech>
-				<Git />
-			</Tech>
-			<Tech>
-				<LogoBitbucket />
-			</Tech>
-			<Tech>
-				<GithubOutline />
-			</Tech>
-			<Tech>
-				<Api />
-			</Tech>
-			<Tech>
-				<Oracle />
-			</Tech>
-			<Tech>
-				<Bootstrap />
-			</Tech>
-			<Tech>
-				<TailwindCss />
-			</Tech>
-			<Tech>
-				<Mysql />
-			</Tech>
-			<Tech>
-				<Linux />
-			</Tech>
-			<Tech>
-				<Windows />
-			</Tech>
-			<Tech>
-				<Android />
-			</Tech>
-			<Tech>
-				<Ios />
-			</Tech>
-			<Tech>
-				<Typescript />
-			</Tech>
-			<Tech>
-				<Sass />
-			</Tech>
-			<Tech>
-				<Jquery />
-			</Tech>
-			<Tech>
-				<Figma />
-			</Tech>
-			<Tech>
-				<Adobephotoshop />
-			</Tech>
-			<Tech>
-				<Trello />
-			</Tech>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Visualstudiocode />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Mongodb />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Postgresql />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Sqlite />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Javascript />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Java />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<ReactLogo />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Nextdotjs />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Python />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Flutter />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Django />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Nodejs />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<LogoVercel />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Netlify />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Materialui />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Styledcomponents />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Css3 />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Html5 />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Amazons3 />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Git />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<LogoBitbucket />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<GithubOutline />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Api />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Oracle />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Bootstrap />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<TailwindCss />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Mysql />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Linux />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Windows />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Android />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Ios />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Typescript />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Sass />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Jquery />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Figma />
+				</Tech>
+			</ScrollAnimation>
+
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Adobephotoshop />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Trello />
+				</Tech>
+			</ScrollAnimation>
 		</TechGrid>
 	);
 }

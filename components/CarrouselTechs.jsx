@@ -45,6 +45,7 @@ import { Trello } from "@styled-icons/boxicons-logos/Trello";
 const Carrousel = styled.div`
 	margin-top: 20px;
 	margin-bottom: 20px;
+
 	svg {
 		width: 38px;
 		height: 38px;
@@ -126,51 +127,6 @@ const Carrousel = styled.div`
 
 export default function SlideTechs() {
 	return (
-		// <ContainerTechs>
-		// 	<div className="grid">
-		// 		<Adobephotoshop />
-		// 		<Amazons3 />
-		// 		<Visualstudiocode />
-		// 		<Trello />
-		// 		<Oracle />
-		// 		<Amazonaws />
-		// 		<GoogleCloud />
-		// 		<Firebase />
-		// 		<Mongodb />
-		// 		<Postgresql />
-		// 		<Sqlite />
-		// 		<Javascript />
-		// 		<Java />
-		// 		<ReactLogo />
-		// 		<Nextdotjs />
-		// 		<Python />
-		// 		<Flutter />
-		// 		<Django />
-		// 		<Nodejs />
-		// 		<LogoVercel />
-		// 		<Netlify />
-		// 		<Materialui />
-		// 		<Styledcomponents />
-		// 		<Css3 />
-		// 		<Html5 />
-		// 		<Git />
-		// 		<LogoBitbucket />
-		// 		<GithubOutline />
-		// 		<Api />
-		// 		<Bootstrap />
-		// 		<TailwindCss />
-		// 		<Mysql />
-		// 		<Linux />
-		// 		<Windows />
-		// 		<Android />
-		// 		<Ios />
-		// 		<Typescript />
-		// 		<Sass />
-		// 		<Jquery />
-		// 		<Figma />
-		// 	</div>
-		// </ContainerTechs>
-
 		<Carrousel>
 			<div className="slider">
 				<div className="slide-track">

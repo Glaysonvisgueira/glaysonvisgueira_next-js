@@ -5,13 +5,13 @@ import { SettingsContext } from "@/context/SettingsContext";
 
 //Third's librarys
 import styled from "styled-components";
-import Link from "next/link";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import CarrouselTechs from "@/components/CarrouselTechs";
+import TechGrid from "@/components/TechsGrid";
 
 //PDFs
 import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
@@ -97,10 +97,10 @@ const WrapperAboutMe = styled.div`
 
 			h3 {
 				color: ${(props) => props.theme.colors.branding};
-				font-size: 20px;
+				font-size: 26px;
 
-				@media (max-width: 600px) {
-					font-size: 22px;
+				@media (max-width: 900px) {
+					font-size: 18px;
 				}
 			}
 
@@ -323,7 +323,8 @@ export default function AboutMe(props) {
 					</ScrollAnimation>
 				</div>
 			</div>
-			<CarrouselTechs />
+			{/* <CarrouselTechs /> */}
+			<TechGrid />
 		</WrapperAboutMe>
 	);
 }

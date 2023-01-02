@@ -8,8 +8,6 @@ import { LogoWhatsapp } from "@styled-icons/ionicons-solid/LogoWhatsapp";
 import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare";
 import { Github } from "@styled-icons/bootstrap/Github";
 
-//Material icons
-
 const SocialMediaContainer = styled.div`
 	display: flex;
 	align-items: center;
@@ -30,9 +28,9 @@ const ButtonSocialMediaIcon = styled.a`
 	margin-right: 5px;
 	width: 32px;
 	height: 32px;
-	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	transition: all 0.3s ease;
 	border-radius: 4px;
+	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 
 	&:hover {
 		cursor: pointer;
@@ -46,6 +44,11 @@ const ButtonSocialMediaIcon = styled.a`
 		color: ${(props) => props.theme.colors.branding};
 		width: 24px;
 		height: 24px;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: ${(props) => props.theme.colors.branding};
+		}
 	}
 
 	@media (max-width: 600px) {
@@ -53,9 +56,9 @@ const ButtonSocialMediaIcon = styled.a`
 		margin-right: 3px;
 	}
 
-	:hover {
+	/* :hover {
 		transform: translateY(-7px);
-	}
+	} */
 `;
 
 export default function SocialNetworkRowStack() {

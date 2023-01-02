@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
@@ -92,15 +93,21 @@ export const TitleSection = styled.h2`
 export default function TechsGrid(props) {
 	return (
 		<TechGrid>
-			<Tech>
-				<Amazonaws />
-			</Tech>
-			<Tech>
-				<GoogleCloud />
-			</Tech>
-			<Tech>
-				<Firebase />
-			</Tech>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Amazonaws />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<GoogleCloud />
+				</Tech>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeIn" animateOnce>
+				<Tech>
+					<Firebase />
+				</Tech>
+			</ScrollAnimation>
 			<Tech>
 				<Visualstudiocode />
 			</Tech>

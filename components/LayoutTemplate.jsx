@@ -6,8 +6,6 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 //Custom components
-import ThemeButtons from "@/components/ThemeButtons";
-import BurgerMenu from "@/components/BurgerMenu";
 import LanguageSwitchButton from "@/components/LanguageSwitchButton";
 
 //Contexto
@@ -39,7 +37,6 @@ const HeaderContainer = styled.header`
 	position: fixed;
 	top: 0;
 	z-index: 3;
-	//background-color: ${(props) => props.theme.colors.background};
 
 	//Deixar header com efeito de Glassmorphin
 	//background-color: rgba(0, 0, 0, 0.1) !important;
@@ -91,7 +88,7 @@ const NavbarOptionContainer = styled.div`
 	}
 `;
 
-const BurgerMenuContainer = styled.div`
+const SwitchMenuContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -213,10 +210,9 @@ export default function LayoutTemplate({ children }) {
 					</Fade>
 				</NavbarOptionContainer>
 
-				<BurgerMenuContainer>
-					{/* <BurgerMenu /> */}
+				<SwitchMenuContainer>
 					<LanguageSwitchButton />
-				</BurgerMenuContainer>
+				</SwitchMenuContainer>
 			</HeaderContainer>
 			<Fade left>
 				<SideBarTheme>{/* <ThemeButtons /> */}</SideBarTheme>

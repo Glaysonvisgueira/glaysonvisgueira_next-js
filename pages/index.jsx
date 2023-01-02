@@ -15,7 +15,6 @@ import FooterPage from "@/components/FooterPage";
 import ServicesOffer from "@/components/ServicesOffer";
 import FloatNavigationBar from "@/components/FloatNavigationBar";
 import ScrollDownAnimation from "@/components/ScrollDownAnimation";
-//import CounterDescription from "@/components/CounterDescription";
 
 //Pages
 import SobreMimPage from "../pages/sobre-mim";

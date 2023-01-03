@@ -2,7 +2,7 @@ import React, { useEffect, useState, createContext } from "react";
 import { ThemeProvider } from "styled-components";
 
 //Lista de temas
-import { orangeTheme, redTheme, purpleTheme, greenTheme, lightBlueTheme, darkYellowTheme, lightTheme } from "@/styles/Theme";
+import { darkTheme, lightTheme } from "@/styles/Theme";
 
 //Pacotes com textos de linguagens
 import ptbrJson from "@/config/localization/ptbr.json";
@@ -11,17 +11,12 @@ import enusJson from "@/config/localization/enus.json";
 export const SettingsContext = createContext({});
 
 const listaTemas = {
-	orange: orangeTheme,
-	red: redTheme,
-	purple: purpleTheme,
-	lightBlue: lightBlueTheme,
-	green: greenTheme,
-	darkYellow: darkYellowTheme,
+	dark: darkTheme,
 	light: lightTheme,
 };
 
 export default function SettingsProvider({ children }) {
-	const [theme, setTheme] = useState(darkYellowTheme);
+	const [theme, setTheme] = useState(darkTheme);
 	const [changeLanguage, setLanguage] = useState(false);
 
 	function changeTheme(newTheme) {

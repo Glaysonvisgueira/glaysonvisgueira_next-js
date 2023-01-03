@@ -41,7 +41,7 @@ const CardService = styled.div`
 	}
 
 	p {
-		color: ${(props) => props.theme.colors.subtitle};
+		color: ${(props) => props.theme.colors.body};
 		font-size: 16px;
 		font-weight: 400;
 		text-align: center;

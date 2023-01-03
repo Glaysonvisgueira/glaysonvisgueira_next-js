@@ -4,18 +4,14 @@ import Lottie from "react-lottie";
 import { useTheme } from "styled-components";
 
 import AnimationYellowBackground from "@/public/lotties/landing-page-yellow.json";
-import AnimationGreenBackground from "@/public/lotties/landing-page-green.json";
-import AnimationOrangeBackground from "@/public/lotties/landing-page-orange.json";
-import AnimationPurpleBackground from "@/public/lotties/landing-page-purple.json";
-import AnimationRedBackground from "@/public/lotties/landing-page-red.json";
-import AnimationLightBlueBackground from "@/public/lotties/landing-page-lightblue.json";
 import AnimationLightBackground from "@/public/lotties/landing-page-light.json";
 
 const ContainerLottie = styled.div`
 	width: 800px;
 	height: 800px;
 	transition: all 0.3s ease;
-	background-image: url("/img/bg_circle.png");
+	/* background-image: url("/img/bg_circle.png"); */
+	background-image: ${(props) => props.theme.imageBlur};
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: contain; /*Resize the background image to cover the entire container */
@@ -42,12 +38,7 @@ const ContainerLottie = styled.div`
 `;
 
 const AnimationsToShow = {
-	darkYellow: AnimationYellowBackground,
-	green: AnimationGreenBackground,
-	orange: AnimationOrangeBackground,
-	lightBlue: AnimationLightBlueBackground,
-	red: AnimationRedBackground,
-	purple: AnimationPurpleBackground,
+	dark: AnimationYellowBackground,
 	light: AnimationLightBackground,
 };
 

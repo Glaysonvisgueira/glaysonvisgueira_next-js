@@ -5,6 +5,10 @@ import styled from "styled-components";
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
 
+//ícones
+import { DarkMode } from "@styled-icons/material-rounded/DarkMode";
+import { LightDown } from "@styled-icons/entypo/LightDown";
+
 const SwitchButton = styled.div`
 	margin-left: 8px;
 	margin-right: 8px;
@@ -72,30 +76,33 @@ const LanguageWrapper = styled.div`
 	flex-direction: row;
 	margin-left: 15px;
 
-	@media (max-width: 601px) {
-		margin-bottom: 30px;
+	svg {
+		width: 28px;
+		height: 28px;
+		color: ${(props) => props.theme.colors.branding};
 	}
 `;
 
-export default function LanguageSwitchButton() {
-	const { changeLanguageLocalization } = useContext(SettingsContext);
+export default function SwitchThemeButton() {
+	const { changeLanguageLocalization, changeTheme } = useContext(SettingsContext);
 	const [checked, setChecked] = useState(false);
 
 	function handleCheckSwitch() {
 		setChecked(!checked);
-		changeLanguageLocalization();
+		//changeLanguageLocalization();
+		changeTheme(checked ? "dark" : "light");
 	}
 
 	return (
 		<LanguageWrapper>
-			<Image src="/img/ptbr.png" alt="Bandeira do Brasil" width={28} height={28} objectFit="cover" />
+			<DarkMode />
 			<SwitchButton>
 				<label className="switch">
 					<input type="checkbox" checked={checked} onClick={handleCheckSwitch} readOnly />
 					<span className="slider round"></span>
 				</label>
 			</SwitchButton>
-			<Image src="/img/enus.png" alt="Bandeira dos Estados unidos da América" width={28} height={28} objectFit="cover" />
+			<LightDown />
 		</LanguageWrapper>
 	);
 }

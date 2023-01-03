@@ -3,14 +3,15 @@ import styled from "styled-components";
 import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
 
+//Contexto
+import { SettingsContext } from "@/context/SettingsContext";
+
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+import LanguageSwitchButton from "@/components/LanguageSwitchButton";
 
 //Ícones
 import { KeyboardArrowUp } from "@styled-icons/material-outlined/KeyboardArrowUp";
-
-//Contexto
-import { SettingsContext } from "@/context/SettingsContext";
 
 const FooterContainer = styled.footer`
 	display: flex;
@@ -227,7 +228,6 @@ const ButtonUpToTop = styled.div`
 export default function FooterPage(props) {
 	const { language } = useContext(SettingsContext);
 	const [commit, setCommit] = useState("");
-	const [versionNumber, setVersionNumber] = useState(0);
 
 	useEffect(() => {
 		getLastCommit();
@@ -236,10 +236,8 @@ export default function FooterPage(props) {
 	async function getLastCommit() {
 		const response = await fetch("https://api.github.com/repos/glaysonvisgueira/glaysonvisgueira_next-js/commits");
 		const json = await response.json();
-
 		//Setar no state somente as 6 primeiras letras do SHA code do último commit
 		setCommit(json[0].sha.slice(0, 6));
-		setVersionNumber(json.length);
 	}
 
 	//Função para subir ao topo da página.
@@ -313,10 +311,10 @@ export default function FooterPage(props) {
 			</div>
 			<Divider />
 			<ContainerBuildCopyright>
-				<SocialNetworkRowStack />
+				<LanguageSwitchButton />
 				<div className="build-and-button-top">
 					<TextBuildProject>
-						{language.footer.labelBuildVersion}: {versionNumber || ""}.{commit || ""}
+						{language.footer.labelBuildVersion}: {commit || ""}
 					</TextBuildProject>
 					<ButtonUpToTop onClick={goToTop}>
 						<KeyboardArrowUp />

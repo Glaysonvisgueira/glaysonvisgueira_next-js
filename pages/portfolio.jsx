@@ -198,6 +198,11 @@ const Chip = styled.span`
 	}
 `;
 
+//Estilo para neon em components
+// -webkit-box-shadow:0px 0px 300px 45px rgba(45,255,196,0.9);
+// -moz-box-shadow: 0px 0px 300px 45px rgba(45,255,196,0.9);
+// box-shadow: 0px 0px 300px 45px rgba(45,255,196,0.9);
+
 export default function Portifolio() {
 	const { language } = useContext(SettingsContext);
 	const [stack, setStack] = useState("TODOS");

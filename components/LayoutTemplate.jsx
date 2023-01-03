@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 //Custom components
-import LanguageSwitchButton from "@/components/LanguageSwitchButton";
+import SwitchThemeButton from "@/components/SwitchThemeButton";
 
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
@@ -17,7 +17,7 @@ const Main = styled.main`
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	background: #161616;
+	background-color: ${(props) => props.theme.colors.backgroundPage};
 `;
 
 const ContainerPage = styled.div`
@@ -206,12 +206,14 @@ export default function LayoutTemplate({ children }) {
 						</Link>
 					</Fade>
 					<Fade top delay={600} duration={200}>
-						<LanguageSwitchButton />
+						{/* <LanguageSwitchButton /> */}
+						<SwitchThemeButton />
 					</Fade>
 				</NavbarOptionContainer>
 
 				<SwitchMenuContainer>
-					<LanguageSwitchButton />
+					{/* <LanguageSwitchButton /> */}
+					<SwitchThemeButton />
 				</SwitchMenuContainer>
 			</HeaderContainer>
 			<Fade left>

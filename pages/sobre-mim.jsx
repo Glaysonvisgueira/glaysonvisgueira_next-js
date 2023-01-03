@@ -126,7 +126,7 @@ const GithubStatsCard = styled.div`
 	width: 300px;
 	height: 420px;
 	border: 2px solid ${(props) => props.theme.colors.branding};
-	background-color: #161616;
+	background-color: ${(props) => props.theme.colors.backgroundPage};
 	border-radius: 8px;
 	flex-direction: column;
 	overflow: hidden;

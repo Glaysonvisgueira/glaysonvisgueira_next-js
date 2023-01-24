@@ -9,7 +9,6 @@ import { SettingsContext } from "@/context/SettingsContext";
 import { TitleSection, ContainerTitleSection, TitleH3, BodyText } from "@/styles/ui";
 
 //Ícones
-import { FolderBriefcase } from "@styled-icons/fluentui-system-filled/FolderBriefcase";
 import { Robot } from "@styled-icons/fa-solid/Robot";
 import { GithubOutline } from "@styled-icons/evaicons-outline/GithubOutline";
 import { Java } from "@styled-icons/fa-brands/Java";
@@ -79,11 +78,14 @@ const WrapperProjectCard = styled.div`
 
 	:hover {
 		border: 1px solid ${(props) => props.theme.colors.branding};
-		transform: scale(1.01);
+		//transform: scale(1.01);
+		//box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
+		// -webkit-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
+		// -moz-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
 	}
 
 	.title-body {
-		margin-top: 20px;
+		margin-top: 50px;
 
 		.divider {
 			margin-bottom: 20px;
@@ -145,6 +147,15 @@ const WrapperTextChip = styled.div`
 			margin-right: 3px;
 			margin-left: 3px;
 		}
+
+		@media (max-width: 601px) {
+			margin-bottom: 10px;
+			font-size: 10px;
+		}
+	}
+
+	@media (max-width: 601px) {
+		display: none;
 	}
 `;
 
@@ -176,6 +187,10 @@ const ChipTechOptions = styled.div`
 	@media (max-width: 1600px) {
 		width: 85%;
 	}
+
+	@media (max-width: 601px) {
+		display: none;
+	}
 `;
 
 const Chip = styled.span`
@@ -198,10 +213,25 @@ const Chip = styled.span`
 	}
 `;
 
-//Estilo para neon em components
-// -webkit-box-shadow:0px 0px 300px 45px rgba(45,255,196,0.9);
-// -moz-box-shadow: 0px 0px 300px 45px rgba(45,255,196,0.9);
-// box-shadow: 0px 0px 300px 45px rgba(45,255,196,0.9);
+export const TitleSpan = styled.h3`
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px 15px 5px 10px;
+	color: ${(props) => props.theme.colors.backgroundPage};
+	background-color: ${(props) => props.theme.colors.branding};
+	font-size: ${(props) => props.theme.fontSizes.md};
+	border-radius: 4px 0 18px 0;
+
+	@media (max-width: 900px) {
+		font-size: ${(props) => props.theme.fontSizes.sm};
+	}
+
+	@media (max-width: 600px) {
+		font-size: ${(props) => props.theme.fontSizes.xs};
+	}
+`;
 
 export default function Portifolio() {
 	const { language } = useContext(SettingsContext);
@@ -563,9 +593,9 @@ export default function Portifolio() {
 								))}
 							</WrapperTextChip>
 
+							<TitleSpan>{project.title}</TitleSpan>
+
 							<div className="title-body">
-								<TitleH3>{project.title}</TitleH3>
-								<div className="divider" />
 								<BodyText>{project.description}</BodyText>
 							</div>
 							<WrapperTechStack>

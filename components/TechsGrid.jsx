@@ -66,15 +66,19 @@ const Tech = styled.div`
 	width: 100%;
 	min-width: 100px;
 	height: 44px;
-	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	//background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	padding: 15px;
 	border-radius: 4px;
 
 	svg {
 		width: 34px;
 		height: 34px;
-		color: ${(props) => props.theme.colors.branding};
+		color: ${(props) => props.theme.colors.backgroundSecondary};
 		transition: all 0.3s ease;
+	}
+
+	svg:hover {
+		color: ${(props) => props.theme.colors.branding};
 	}
 `;
 

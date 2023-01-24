@@ -232,6 +232,16 @@ export const TitleSpan = styled.h3`
 	}
 `;
 
+const SectionPortifolio = styled.section`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	padding-top: 60px;
+`;
+
 export default function Portifolio() {
 	const { language } = useContext(SettingsContext);
 	const [stack, setStack] = useState("TODOS");
@@ -538,7 +548,7 @@ export default function Portifolio() {
 	const array_projects = stack == "TODOS" ? projects : projects.filter((item) => item.typeProject.includes(stack));
 
 	return (
-		<>
+		<SectionPortifolio id="section-portifolio">
 			<ContainerTitleSection>
 				<TitleSection>{language.portifolioPage.title}</TitleSection>
 			</ContainerTitleSection>
@@ -615,6 +625,6 @@ export default function Portifolio() {
 					</ScrollAnimation>
 				))}
 			</ContainerGrid>
-		</>
+		</SectionPortifolio>
 	);
 }

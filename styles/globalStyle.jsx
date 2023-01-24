@@ -11,9 +11,8 @@ const GlobalStyle = createGlobalStyle`
 
 html, body, :root {
     //font-family: 'Open Sans', sans-serif;    
-    //font-family: 'Fira Sans', sans-serif;
-    font-family: 'Lato', sans-serif;
-    //font-family: 'Nunito', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    //font-family: 'Lato', sans-serif;
     min-height: 100%;    
     scroll-behavior: smooth;
     overflow-x: hidden;

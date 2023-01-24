@@ -255,6 +255,16 @@ const ButtonCV = styled.a`
 	}
 `;
 
+const SectionSobreMim = styled.section`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding-top: 80px;
+	width: 100%;
+	//height: auto;
+`;
+
 export default function SobreMim(props) {
 	const { language } = useContext(SettingsContext);
 	const [githubUserData, setGithubUserData] = useState({});
@@ -269,55 +279,58 @@ export default function SobreMim(props) {
 	}, []);
 
 	return (
-		<WrapperAboutMe>
-			<div className="container">
-				<div className="left-view">
-					<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-						<GithubStatsCard>
-							<div className="background" />
-							<div className="img">
-								<Image src="/img/user-photo.jpg" alt={language.aboutMePage.alt_dev_img} layout="fill" objectFit="cover" className="image-rounded" />
-							</div>
-							<div className="content">
-								<h3>{githubUserData?.name}</h3>
-								<a href={githubUserData?.html_url} target="_blank">
-									@{githubUserData?.login}
-								</a>
-								<p>{language.aboutMePage.github_card.bio}</p>
-								<div className="github-stats">
-									<div className="stats">
-										<p>{githubUserData?.followers}</p>
-										<span>{language.aboutMePage.github_card.followers}</span>
-									</div>
-									<div className="stats">
-										<p>{githubUserData?.following}</p>
-										<span>{language.aboutMePage.github_card.following}</span>
-									</div>
-									<div className="stats">
-										<p>{githubUserData?.public_repos}</p>
-										<span>{language.aboutMePage.github_card.repos}</span>
+		<SectionSobreMim id="section-sobre-mim">
+			<WrapperAboutMe>
+				<TechGrid />
+				<div className="container">
+					<div className="left-view">
+						<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+							<GithubStatsCard>
+								<div className="background" />
+								<div className="img">
+									<Image src="/img/user-photo.jpg" alt={language.aboutMePage.alt_dev_img} layout="fill" objectFit="cover" className="image-rounded" />
+								</div>
+								<div className="content">
+									<h3>{githubUserData?.name}</h3>
+									<a href={githubUserData?.html_url} target="_blank">
+										@{githubUserData?.login}
+									</a>
+									<p>{language.aboutMePage.github_card.bio}</p>
+									<div className="github-stats">
+										<div className="stats">
+											<p>{githubUserData?.followers}</p>
+											<span>{language.aboutMePage.github_card.followers}</span>
+										</div>
+										<div className="stats">
+											<p>{githubUserData?.following}</p>
+											<span>{language.aboutMePage.github_card.following}</span>
+										</div>
+										<div className="stats">
+											<p>{githubUserData?.public_repos}</p>
+											<span>{language.aboutMePage.github_card.repos}</span>
+										</div>
 									</div>
 								</div>
+							</GithubStatsCard>
+						</ScrollAnimation>
+					</div>
+					<div className="right-view">
+						<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+							<h3>{language.aboutMePage.title}</h3>
+							<p>{language.aboutMePage.paragraph_one}</p>
+							<p>{language.aboutMePage.paragraph_two}</p>
+							<p>{language.aboutMePage.paragraph_three}</p>
+							<div className="tech-and-cv">
+								<SocialNetworkRowStack />
+								<ButtonCV href={curriculoPTBR} target="_blank" data-splitbee-event="Download CV">
+									Download CV
+								</ButtonCV>
 							</div>
-						</GithubStatsCard>
-					</ScrollAnimation>
+						</ScrollAnimation>
+					</div>
 				</div>
-				<div className="right-view">
-					<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-						<h3>{language.aboutMePage.title}</h3>
-						<p>{language.aboutMePage.paragraph_one}</p>
-						<p>{language.aboutMePage.paragraph_two}</p>
-						<p>{language.aboutMePage.paragraph_three}</p>
-						<div className="tech-and-cv">
-							<SocialNetworkRowStack />
-							<ButtonCV href={curriculoPTBR} target="_blank" data-splitbee-event="Download CV">
-								Download CV
-							</ButtonCV>
-						</div>
-					</ScrollAnimation>
-				</div>
-			</div>
-			<TechGrid />
-		</WrapperAboutMe>
+				<TechGrid />
+			</WrapperAboutMe>
+		</SectionSobreMim>
 	);
 }

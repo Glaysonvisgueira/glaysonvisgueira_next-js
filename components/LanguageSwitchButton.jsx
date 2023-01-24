@@ -91,7 +91,7 @@ export default function LanguageSwitchButton() {
 			<Image src="/img/ptbr.png" alt="Bandeira do Brasil" width={28} height={28} objectFit="cover" />
 			<SwitchButton>
 				<label className="switch">
-					<input type="checkbox" checked={checked} onClick={handleCheckSwitch} readOnly />
+					<input type="checkbox" checked={checked} onClick={handleCheckSwitch} readOnly data-splitbee-event="language-change" />
 					<span className="slider round"></span>
 				</label>
 			</SwitchButton>

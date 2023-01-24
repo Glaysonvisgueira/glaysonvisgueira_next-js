@@ -61,13 +61,12 @@ const WrapperProjectCard = styled.div`
 	align-items: flex-start;
 	justify-content: space-between;
 	flex-direction: column;
-	width: 100%;
 	min-height: 270px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	border: 1px solid ${(props) => props.theme.colors.backgroundSecondary};
 	border-radius: 4px;
 	padding: 20px;
 	transition: all 0.3s ease;
+	border: 1px solid ${(props) => props.theme.colors.backgroundPage};
 
 	.created_at {
 		color: ${(props) => props.theme.colors.inactiveTitle};
@@ -138,8 +137,8 @@ const WrapperTextChip = styled.div`
 
 	div {
 		span {
-			border: 1px solid ${(props) => props.theme.colors.branding};
-			color: ${(props) => props.theme.colors.branding};
+			//border: 1px solid ${(props) => props.theme.colors.branding};
+			color: ${(props) => props.theme.colors.inactiveTitle};
 			font-size: 12px;
 			font-weight: 800;
 			padding: 2px 8px 2px 8px;

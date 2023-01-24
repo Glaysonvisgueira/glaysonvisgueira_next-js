@@ -36,9 +36,9 @@
 	},
 	"aboutMePage": {
 		"title": "ABOUT ME",
-		"paragraph_one": "Bachelor in Information Systems from Centro Universitário Maurício de Nassau, with graduation completed in the first half of 2021. I worked for 9 years at Claudino S/A, 8 of which were at administrative area and 1 year in the technology sector, more specifically in the team responsible for the company's Ecommerce, where I carry out daily maintenance or development of new functionalities that use technologies: Python, Django, Django REST Framework, React.js, Next.Js and PostgreSQL.",
+		"paragraph_one": "I'm a highly motivated front-end developer and always looking to learn new technologies. I have solid experience in React, React Native and Next.js, and I'm always available to face new challenges and improve my skills. I have a passion for creating amazing, responsive user interfaces, and I enjoy working on challenging problems. Furthermore, I am able to work effectively in a team and communicate clearly with other team members. I am always willing to learn and adapt to new situations, making me a flexible and reliable developer for any project.",
 		"paragraph_two": "I have greater aptitude for the Front-end area, with solid knowledge in the stack: React.Js, Next.Js, HTML, Css and Styled components.",
-		"paragraph_three": "Currently acquiring knowledge in Dart and Flutter to develop applications for multiplatforms. I have intermediate English (self-taught) and daily absorbing knowledge of design patterns and from Clean Code/Architecture. I am proactive, curious and motivated to find solutions to problems using technology.",
+		"paragraph_three": "Bachelor in Information Systems from Centro Universitário Maurício de Nassau, with graduation completed in the first half of 2021. I worked for 9 years at Claudino S/A, in which 8 years were in the administrative area and 1 year in the company's IT sector , more specifically in the team responsible for the company's Ecommerce, where I carry out daily maintenance or development of new functionalities that use the technologies: Python, Django, Django REST Framework, React.js, Next.Js and PostgreSQL.",
 		"github_card": {
 			"bio": "Fullstack developer with more experience in the Javascript stack, Node.js, React, React Native and Next.js.",
 			"followers": "Followers",

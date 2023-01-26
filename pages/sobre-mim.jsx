@@ -281,7 +281,6 @@ export default function SobreMim(props) {
 	return (
 		<SectionSobreMim id="section-sobre-mim">
 			<WrapperAboutMe>
-				<TechGrid />
 				<div className="container">
 					<div className="left-view">
 						<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>

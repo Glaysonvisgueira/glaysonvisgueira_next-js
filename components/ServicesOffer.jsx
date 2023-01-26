@@ -21,6 +21,22 @@ const CardService = styled.div`
 	transition: all 0.3s ease;
 	border: 3px solid transparent;
 
+	//Espelhar elemento
+	//-webkit-box-reflect: below px linear-gradient(transparent, transparent, #0004);
+
+	/* 
+	transform-origin: center;
+	transform: perspective(800px) rotateY(25deg);
+	transition: 0.5s;
+
+	&:hover img {
+		opacity: 0.3;
+	}
+	&:hover {
+		transform: perspective(800px) rotateY(0deg);
+		opacity: 1;
+	} */
+
 	svg {
 		color: ${(props) => props.theme.colors.branding};
 		width: 70px;

@@ -206,19 +206,14 @@ export default function LayoutTemplate({ children }) {
 						</Link>
 					</Fade>
 					<Fade top delay={600} duration={200}>
-						{/* <LanguageSwitchButton /> */}
 						<SwitchThemeButton />
 					</Fade>
 				</NavbarOptionContainer>
 
 				<SwitchMenuContainer>
-					{/* <LanguageSwitchButton /> */}
 					<SwitchThemeButton />
 				</SwitchMenuContainer>
 			</HeaderContainer>
-			<Fade left>
-				<SideBarTheme>{/* <ThemeButtons /> */}</SideBarTheme>
-			</Fade>
 
 			<Main>
 				<ContainerPage>{children}</ContainerPage>

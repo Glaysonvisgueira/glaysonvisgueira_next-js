@@ -10,7 +10,6 @@ import { TitleSection, ContainerTitleSection, TitleH3, BodyText } from "@/styles
 
 //Ícones
 import { Robot } from "@styled-icons/fa-solid/Robot";
-import { GithubOutline } from "@styled-icons/evaicons-outline/GithubOutline";
 import { Java } from "@styled-icons/fa-brands/Java";
 import { Amazonaws } from "@styled-icons/simple-icons/Amazonaws";
 import { GoogleCloud } from "@styled-icons/boxicons-logos/GoogleCloud";
@@ -35,6 +34,9 @@ import { Leaflet } from "@styled-icons/simple-icons/Leaflet";
 import { Express } from "@styled-icons/simple-icons/Express";
 import { Flutter } from "@styled-icons/boxicons-logos/Flutter";
 import { Filter } from "@styled-icons/fa-solid/Filter";
+import { Svelte } from "@styled-icons/simple-icons/Svelte";
+import { GithubOutline } from "@styled-icons/evaicons-outline/GithubOutline";
+import { Live } from "@styled-icons/fluentui-system-filled/Live";
 
 //Custom components
 import Tooltip from "@/components/Tooltip";
@@ -192,6 +194,30 @@ const ChipTechOptions = styled.div`
 	}
 `;
 
+const WrapperButtons = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	/* position: absolute;
+	right: 10px;
+	bottom: 10px; */
+	transition: all 0.3s ease;
+
+	a {
+		//background-color: ${(props) => props.theme.colors.branding};
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		padding: 5px;
+		color: ${(props) => props.theme.colors.branding};
+		//border: solid 1px ${(props) => props.theme.colors.branding};
+		border-radius: 4px;
+		//margin-left: 3px;
+	}
+`;
+
 const Chip = styled.span`
 	color: ${(props) => (props.active == true ? props.theme.colors.backgroundSecondary : props.theme.colors.inactiveTitle)};
 	background-color: ${(props) => (props.active == true ? props.theme.colors.branding : props.theme.colors.backgroundSecondary)};
@@ -252,6 +278,7 @@ export default function Portifolio() {
 			id: 1,
 			title: language.portifolioPage.projects.id_1.title,
 			description: language.portifolioPage.projects.id_1.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="Java">
 					<Java />
@@ -268,6 +295,7 @@ export default function Portifolio() {
 			id: 2,
 			title: language.portifolioPage.projects.id_2.title,
 			description: language.portifolioPage.projects.id_2.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="ReactJS">
 					<ReactLogo />
@@ -296,6 +324,7 @@ export default function Portifolio() {
 			id: 3,
 			title: language.portifolioPage.projects.id_3.title,
 			description: language.portifolioPage.projects.id_3.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="ReactJS">
 					<ReactLogo />
@@ -330,6 +359,7 @@ export default function Portifolio() {
 			id: 4,
 			title: language.portifolioPage.projects.id_4.title,
 			description: language.portifolioPage.projects.id_4.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="NodeJS">
 					<Nodejs />
@@ -346,6 +376,7 @@ export default function Portifolio() {
 			id: 5,
 			title: language.portifolioPage.projects.id_5.title,
 			description: language.portifolioPage.projects.id_5.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="ReactJs">
 					<ReactLogo />
@@ -371,6 +402,7 @@ export default function Portifolio() {
 			id: 6,
 			title: language.portifolioPage.projects.id_6.title,
 			description: language.portifolioPage.projects.id_6.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="ReactJS">
 					<ReactLogo />
@@ -390,6 +422,7 @@ export default function Portifolio() {
 			id: 7,
 			title: language.portifolioPage.projects.id_7.title,
 			description: language.portifolioPage.projects.id_7.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="NodeJS">
 					<Nodejs />
@@ -412,6 +445,7 @@ export default function Portifolio() {
 			id: 8,
 			title: language.portifolioPage.projects.id_8.title,
 			description: language.portifolioPage.projects.id_8.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="NodeJS">
 					<Nodejs />
@@ -434,6 +468,7 @@ export default function Portifolio() {
 			id: 9,
 			title: language.portifolioPage.projects.id_9.title,
 			description: language.portifolioPage.projects.id_9.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="ReactJS">
 					<ReactLogo />
@@ -453,6 +488,7 @@ export default function Portifolio() {
 			id: 10,
 			title: language.portifolioPage.projects.id_10.title,
 			description: language.portifolioPage.projects.id_10.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="Python">
 					<Python />
@@ -466,6 +502,7 @@ export default function Portifolio() {
 			id: 11,
 			title: language.portifolioPage.projects.id_11.title,
 			description: language.portifolioPage.projects.id_11.description,
+			liveDemoUrl: "https://glaysonvisgueira.vercel.app/",
 			techs: [
 				<Tooltip toolTipText="ReactJS">
 					<ReactLogo />
@@ -488,6 +525,7 @@ export default function Portifolio() {
 			id: 12,
 			title: language.portifolioPage.projects.id_12.title,
 			description: language.portifolioPage.projects.id_12.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="ReactJS">
 					<ReactLogo />
@@ -504,6 +542,7 @@ export default function Portifolio() {
 			id: 13,
 			title: language.portifolioPage.projects.id_13.title,
 			description: language.portifolioPage.projects.id_13.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="NodeJS">
 					<Nodejs />
@@ -526,6 +565,7 @@ export default function Portifolio() {
 			id: 14,
 			title: language.portifolioPage.projects.id_14.title,
 			description: language.portifolioPage.projects.id_14.description,
+			liveDemoUrl: null,
 			techs: [
 				<Tooltip toolTipText="Flutter">
 					<Flutter />
@@ -534,6 +574,43 @@ export default function Portifolio() {
 			sourceCodeLink: "https://github.com/Glaysonvisgueira/controlmobile-dashboard-api",
 			typeProject: ["MOBILE"],
 			created_at: "13/08/2022",
+		},
+		{
+			id: 15,
+			title: language.portifolioPage.projects.id_15.title,
+			description: language.portifolioPage.projects.id_15.description,
+			liveDemoUrl: null,
+			techs: [
+				<Tooltip toolTipText="Svelte">
+					<Svelte />
+				</Tooltip>,
+				<Tooltip toolTipText="Typescript">
+					<Typescript />
+				</Tooltip>,
+				<Tooltip toolTipText="Html">
+					<Html5 />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/svelte-calculadora",
+			typeProject: ["WEB"],
+			created_at: "28/01/2023",
+		},
+		{
+			id: 16,
+			title: language.portifolioPage.projects.id_16.title,
+			description: language.portifolioPage.projects.id_16.description,
+			liveDemoUrl: "https://layout-mui-boilerplate.vercel.app/dashboards",
+			techs: [
+				<Tooltip toolTipText="React.JS">
+					<ReactLogo />
+				</Tooltip>,
+				<Tooltip toolTipText="Next.JS">
+					<Nextdotjs />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/svelte-calculadora",
+			typeProject: ["WEB"],
+			created_at: "28/01/2023",
 		},
 	];
 
@@ -613,9 +690,20 @@ export default function Portifolio() {
 										<div key={i}>{icone}</div>
 									))}
 								</div>
-								<a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
+								{/* <a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
 									<GithubOutline />
-								</a>
+								</a> */}
+								<WrapperButtons>
+									{project.liveDemoUrl != null && (
+										<a href={project.liveDemoUrl} target="_blank" rel="noreferrer">
+											<Live />
+										</a>
+									)}
+
+									<a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
+										<GithubOutline />
+									</a>
+								</WrapperButtons>
 							</WrapperTechStack>
 
 							<span className="created_at">

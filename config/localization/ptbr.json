@@ -107,6 +107,14 @@
 			"id_14": {
 				"title": "BYTEBANK",
 				"description": "Aplicativo resultante da trilha Flutter da Alura. Utilizando o Flutter para gerar o aplicativo multiplataforma, esta aplicação serve para cadastrar números de conta e seus respectivos valores para serem gravados em estados dinâmicos para exibição no app."
+			},
+			"id_15": {
+				"title": "CALCULADORA WEB",
+				"description": "Web aplicativo de uma calculadora, escrito com typescript e utilizando o framework/compilador Svelte."
+			},
+			"id_16": {
+				"title": "LAYOUT MATERIAL DESIGN",
+				"description": "Estrutura boilerplate para uma aplicação utilizando o framework frontend Material UI."
 			}
 		}
 	},

@@ -107,6 +107,14 @@
 			"id_14": {
 				"title": "BYTEBANK",
 				"description": "App resulting from Alura's Flutter track. Using Flutter to generate the cross-platform application, this application serves to register account numbers and their respective values ​​to be recorded in dynamic states for display in the app."
+			},
+			"id_15": {
+				"title": "WEB CALCULATOR",
+				"description": "Web application of a calculator, written with typescript and using the Svelte Framework/Compiler."
+			},
+			"id_16": {
+				"title": "LAYOUT MATERIAL DESIGN",
+				"description": "Boilerplate structure for an application using the Material UI frontend framework."
 			}
 		}
 	},

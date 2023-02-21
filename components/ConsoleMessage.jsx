@@ -21,4 +21,6 @@ export default function ConsoleMessage() {
 		"font-family: Inter, sans-serif; font-size: 1.2rem; font-weight: 500; color: #FCD434;",
 		"font-family: Inter, sans-serif; font-size: 1.2rem; font-weight: 500;"
 	);
+
+	return <></>;
 }

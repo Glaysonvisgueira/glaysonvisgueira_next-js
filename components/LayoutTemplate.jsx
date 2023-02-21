@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 //Third part librarys
 import Link from "next/link";
@@ -130,7 +130,6 @@ const NavbarOption = styled.h4`
 	&:hover {
 		cursor: pointer;
 		color: ${(props) => props.theme.colors.branding};
-		//border-bottom: 4px solid ${(props) => props.theme.colors.branding};
 	}
 
 	@media (max-width: 1400px) {

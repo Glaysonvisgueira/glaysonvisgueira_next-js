@@ -23,7 +23,7 @@ const FooterContainer = styled.footer`
 
 	#grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: 1fr;
 		grid-column-gap: 20px;
 		grid-row-gap: 0px;
@@ -33,6 +33,10 @@ const FooterContainer = styled.footer`
 
 		@media (max-width: 1200px) {
 			width: 80%;
+		}
+
+		@media (max-width: 1000px) {
+			grid-template-columns: repeat(4, 1fr);
 		}
 
 		@media (max-width: 800px) {
@@ -305,6 +309,16 @@ export default function FooterPage(props) {
 
 						<FooterTextExternalLink href="https://styled-components.com/" target="_blank">
 							Styled components
+						</FooterTextExternalLink>
+					</SectionFooterMenu>
+				</ScrollAnimation>
+
+				<ScrollAnimation animateIn="fadeIn" animateOnce delay={800}>
+					<SectionFooterMenu>
+						<FooterTextTitle>{language.footer.labelStats.title}</FooterTextTitle>
+
+						<FooterTextExternalLink href="https://analytics.umami.is/share/6fxpADR03bK8xSHp/web%20portfolio" target="_blank">
+							{language.footer.labelStats.stats}
 						</FooterTextExternalLink>
 					</SectionFooterMenu>
 				</ScrollAnimation>

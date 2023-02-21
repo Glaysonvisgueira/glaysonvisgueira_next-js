@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<SettingsContext>
 			<Script src="https://cdn.splitbee.io/sb.js" />
+			<Script async defer src="https://analytics.umami.is/script.js" data-website-id="dfbb47c9-f3d1-415b-9405-e61bdee1c171" />
 			<GlobalStyle />
 			<LayoutTemplate>
 				<Component {...pageProps} />

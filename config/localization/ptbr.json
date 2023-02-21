@@ -149,6 +149,10 @@
 		"labelTechs": {
 			"title": "TECNOLOGIAS"
 		},
+		"labelStats": {
+			"title": "ESTATÍSTICAS",
+			"stats": "Dashboard"
+		},
 		"labelBuildVersion": "Versão"
 	}
 }

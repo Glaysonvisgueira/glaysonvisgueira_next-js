@@ -8,16 +8,17 @@ import HomePage from "../pages/homepage";
 //Components
 import ServicesOffer from "@/components/ServicesOffer";
 import FooterPage from "@/components/FooterPage";
+import ContactMeEmail from "@/components/ContactMeEmail";
 
 let flagMessage = false;
 export default function Index() {
 	function ConsoleMessage() {
 		console.log(
 			"%c██   ██ ███████ ██      ██       ██████      ██████  ███████ ██    ██ ███████ ██       ██████  ██████  ███████ ██████  ██\n" +
-			"%c██   ██ ██      ██      ██      ██    ██     ██   ██ ██      ██    ██ ██      ██      ██    ██ ██   ██ ██      ██   ██ ██\n" +
-			"%c███████ █████   ██      ██      ██    ██     ██   ██ █████   ██    ██ █████   ██      ██    ██ ██████  █████   ██████  ██\n" +
-			"%c██   ██ ██      ██      ██      ██    ██     ██   ██ ██       ██  ██  ██      ██      ██    ██ ██      ██      ██   ██   \n" +
-			"%c██   ██ ███████ ███████ ███████  ██████      ██████  ███████   ████   ███████ ███████  ██████  ██      ███████ ██   ██ ██",
+				"%c██   ██ ██      ██      ██      ██    ██     ██   ██ ██      ██    ██ ██      ██      ██    ██ ██   ██ ██      ██   ██ ██\n" +
+				"%c███████ █████   ██      ██      ██    ██     ██   ██ █████   ██    ██ █████   ██      ██    ██ ██████  █████   ██████  ██\n" +
+				"%c██   ██ ██      ██      ██      ██    ██     ██   ██ ██       ██  ██  ██      ██      ██    ██ ██      ██      ██   ██   \n" +
+				"%c██   ██ ███████ ███████ ███████  ██████      ██████  ███████   ████   ███████ ███████  ██████  ██      ███████ ██   ██ ██",
 			"color: #FCD434;",
 			"color: #FCD434;",
 			"color: #FCD434;",
@@ -45,6 +46,7 @@ export default function Index() {
 			<SobreMimPage />
 			<PortfolioPage />
 			<ExperienciaPage />
+			{/* <ContactMeEmail /> */}
 			<FooterPage />
 		</>
 	);

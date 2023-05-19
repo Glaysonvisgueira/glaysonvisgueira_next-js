@@ -117,15 +117,15 @@
 				"description": "Estrutura boilerplate para uma aplicação utilizando o framework frontend Material UI."
 			},
 			"id_17": {
-				"title": "RN Maps",
+				"title": "RN MAPS",
 				"description": "Pequena aplicação de teste que utiliza o framework React Native para construir uma visão de mapas utilizando o SDK do Google Maps."
 			},
 			"id_18": {
-				"title": "RN e-commerce UI",
+				"title": "RN E-COMMERCE UI",
 				"description": "UI que imita alguns componentes, páginas e dinâmicas existentes em aplicativos móveis nativos para e-commerce."
 			},
 			"id_19": {
-				"title": "Firebase API Boilerplate",
+				"title": "FIREBASE API BOILERPLATE",
 				"description": "Estrutura boilerplate que integra um CRUD no banco de dados Firestore utilizando API do firebase."
 			}
 		}

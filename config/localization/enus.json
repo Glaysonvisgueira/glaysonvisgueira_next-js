@@ -115,6 +115,10 @@
 			"id_16": {
 				"title": "LAYOUT MATERIAL DESIGN",
 				"description": "Boilerplate structure for an application using the Material UI frontend framework."
+			},
+			"id_17": {
+				"title": "RN Maps",
+				"description": "Small test application that uses the React Native framework to build a map view using the Google Maps SDK."
 			}
 		}
 	},

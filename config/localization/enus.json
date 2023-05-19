@@ -119,6 +119,14 @@
 			"id_17": {
 				"title": "RN Maps",
 				"description": "Small test application that uses the React Native framework to build a map view using the Google Maps SDK."
+			},
+			"id_18": {
+				"title": "RN e-commerce UI",
+				"description": "UI that mimics some existing components, pages and dynamics in native mobile apps for e-commerce."
+			},
+			"id_19": {
+				"title": "Firebase API Boilerplate",
+				"description": "Boilerplate structure that integrates a CRUD in the Firestore database using firebase API."
 			}
 		}
 	},

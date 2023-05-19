@@ -626,6 +626,40 @@ export default function Portifolio() {
 			typeProject: ["MOBILE"],
 			created_at: "27/03/2023",
 		},
+		{
+			id: 18,
+			title: language.portifolioPage.projects.id_18.title,
+			description: language.portifolioPage.projects.id_18.description,
+			liveDemoUrl: null,
+			techs: [
+				<Tooltip toolTipText="React Native">
+					<ReactLogo />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/rn-ecommerce-ui",
+			typeProject: ["MOBILE"],
+			created_at: "10/04/2023",
+		},
+		{
+			id: 19,
+			title: language.portifolioPage.projects.id_19.title,
+			description: language.portifolioPage.projects.id_19.description,
+			liveDemoUrl: null,
+			techs: [
+				<Tooltip toolTipText="Firebase">
+					<Firebase />
+				</Tooltip>,
+				<Tooltip toolTipText="Javascript">
+					<Javascript />
+				</Tooltip>,
+				<Tooltip toolTipText="NodeJS">
+					<Nodejs />
+				</Tooltip>,
+			],
+			sourceCodeLink: "https://github.com/Glaysonvisgueira/firebase-nodejs-api",
+			typeProject: ["BACKEND"],
+			created_at: "27/03/2023",
+		},
 	];
 
 	function handleFilter(id) {

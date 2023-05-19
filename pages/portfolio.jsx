@@ -666,10 +666,6 @@ export default function Portifolio() {
 		setStack(id);
 	}
 
-	function handleView(event) {
-		setView(event.target.id);
-	}
-
 	const array_projects = stack == "TODOS" ? projects : projects.filter((item) => item.typeProject.includes(stack));
 
 	return (
@@ -738,9 +734,7 @@ export default function Portifolio() {
 										<div key={i}>{icone}</div>
 									))}
 								</div>
-								{/* <a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
-									<GithubOutline />
-								</a> */}
+
 								<WrapperButtons>
 									{project.liveDemoUrl != null && (
 										<a href={project.liveDemoUrl} target="_blank" rel="noreferrer">

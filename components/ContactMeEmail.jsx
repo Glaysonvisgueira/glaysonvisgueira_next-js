@@ -19,15 +19,10 @@ const ContactMeContainer = styled.div`
 	width: 100%;
 	height: 400px;
 	padding: 20px;
-	background-color: ${(props) => props.theme.colors.branding};
-	/* background-color: ${(props) => props.theme.colors.backgroundSecondary}; */
 `;
 
 const ContainerForm = styled.form`
 	width: 40%;
-	padding: 20px;
-	border-radius: 8px;
-	border: 1px solid ${(props) => props.theme.colors.background};
 `;
 
 const WrapperInput = styled.div`
@@ -39,9 +34,9 @@ const WrapperInput = styled.div`
 	margin-bottom: 5px;
 
 	label {
-		color: ${(props) => props.theme.colors.background};
-		font-size: 1rem;
-		margin-bottom: 5px;
+		color: ${(props) => props.theme.colors.branding};
+		font-size: 0.8rem;
+		margin-bottom: 10px;
 		margin-top: 10px;
 		font-weight: bold;
 	}
@@ -49,15 +44,17 @@ const WrapperInput = styled.div`
 	input {
 		border: none;
 		width: 100%;
-		height: 34px;
-		border-radius: 4px;
+		height: 44px;
+		border-radius: 2px;
 		padding: 0 10px;
-		border: 2px solid transparent;
-		caret-color: ${(props) => props.theme.colors.branding};
+		border-bottom: 3px solid ${(props) => props.theme.colors.branding};
+		background-color: ${(props) => props.theme.colors.body};
+		//caret-color: ${(props) => props.theme.colors.branding};
 	}
 
+	textarea:focus,
 	input:focus {
-		border: 2px solid ${(props) => props.theme.colors.background};
+		outline: none;
 	}
 
 	textarea {
@@ -68,11 +65,9 @@ const WrapperInput = styled.div`
 		border-radius: 4px;
 		max-height: 120px;
 		padding: 10px;
+		background-color: ${(props) => props.theme.colors.body};
+		border-bottom: 3px solid ${(props) => props.theme.colors.branding};
 		/* resize: vertical; */
-	}
-
-	textarea:focus {
-		border: 2px solid ${(props) => props.theme.colors.background};
 	}
 `;
 
@@ -83,18 +78,20 @@ export default function ContactMeEmail() {
 		<ContactMeContainer>
 			<ContainerForm>
 				<WrapperInput>
-					<label for="nome">Nome</label>
-					<input type="text" placeholder="Seu nome" id="nome" name="nome" />
+					<label for="nome" htmlFor="name">
+						NOME
+					</label>
+					<input type="text" placeholder="Seu nome" id="name" />
 				</WrapperInput>
 
 				<WrapperInput>
-					<label>E-mail</label>
-					<input type="text" placeholder="seuemail@email.com" />
+					<label htmlFor="email">E-MAIL</label>
+					<input type="text" placeholder="seuemail@email.com" id="email" />
 				</WrapperInput>
 
 				<WrapperInput>
-					<label>Mensagem</label>
-					<textarea placeholder="Sua mensagem..." />
+					<label htmlFor="message">MENSAGEM</label>
+					<textarea placeholder="Sua mensagem..." id="message" />
 				</WrapperInput>
 			</ContainerForm>
 		</ContactMeContainer>

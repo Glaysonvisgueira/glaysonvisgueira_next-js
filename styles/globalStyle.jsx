@@ -22,22 +22,17 @@ html, body, :root {
   }
        
   ::-webkit-scrollbar {
-    width: 4px;
+    width: 8px;   
   }
   
   ::-webkit-scrollbar-track {
-    background: #a8a8a8;
+    background: ${(props) => props.theme.colors.backgroundSecondary};
   }
   
   ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
+    border-radius: 8px;
     background: ${(props) => props.theme.colors.branding}; 
-    //border: 1px solid #ffffff;
   }
-
-  ::-webkit-scrollbar-thumb:hover {
-    opacity: 0.8;
-    cursor: pointer;
-  }  
+  
 `;
 export default GlobalStyle;

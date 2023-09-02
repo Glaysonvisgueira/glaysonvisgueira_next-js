@@ -47,6 +47,8 @@ const ContainerGrid = styled.div`
 	width: 60%;
 	gap: 20px;
 	transition: all 0.3s ease;
+	grid-auto-rows: 1fr; /* Todas as linhas terão a mesma altura */
+	align-items: stretch;
 
 	@media (max-width: 1600px) {
 		width: 85%;
@@ -79,10 +81,10 @@ const WrapperProjectCard = styled.div`
 
 	:hover {
 		border: 1px solid ${(props) => props.theme.colors.branding};
-		//transform: scale(1.01);
-		//box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
-		// -webkit-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
-		// -moz-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
+		transform: scale(1.01);
+		box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
+		-webkit-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
+		-moz-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
 	}
 
 	.title-body {
@@ -247,7 +249,7 @@ export const TitleSpan = styled.h3`
 	color: ${(props) => props.theme.colors.backgroundPage};
 	background-color: ${(props) => props.theme.colors.branding};
 	font-size: ${(props) => props.theme.fontSizes.md};
-	border-radius: 4px 0 18px 0;
+	border-radius: 2px 0 18px 0;
 
 	@media (max-width: 900px) {
 		font-size: ${(props) => props.theme.fontSizes.sm};

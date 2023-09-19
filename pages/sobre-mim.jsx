@@ -11,6 +11,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import TechGrid from "@/components/TechsGrid";
+import CarrouselTechs from "@/components/CarrouselTechs";
 
 //PDFs
 import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
@@ -327,8 +328,10 @@ export default function SobreMim(props) {
 						</ScrollAnimation>
 					</div>
 				</div>
-				<TechGrid />
 			</WrapperAboutMe>
+			<CarrouselTechs direction="left" />
+			<CarrouselTechs direction="right" />
+			<CarrouselTechs direction="left" />
 		</SectionSobreMim>
 	);
 }

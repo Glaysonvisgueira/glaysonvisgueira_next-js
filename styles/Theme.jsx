@@ -3,6 +3,7 @@ export const darkTheme = {
 	colors: {
 		imageBlur: "url('/img/bg_circle-dark.png')",
 		backgroundPage: "#161616",
+		backgroundPageRgb: [22, 22, 22],
 		backgroundGradient: "linear-gradient(to left top, #252525, #0C0C0C)",
 		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
@@ -33,6 +34,7 @@ export const lightTheme = {
 	colors: {
 		imageBlur: "url('/img/bg_circle-light.png')",
 		backgroundPage: "#eeeeee",
+		backgroundPageRgb: [238, 238, 238],
 		backgroundGradient: "linear-gradient(202deg, #ffffff 0%, #e6e6e6 100%)",
 		backgroundRadial: "radial-gradient(circle, #ffffff 0%, #e6e6e6 100%)",
 		background: "#ffffff",

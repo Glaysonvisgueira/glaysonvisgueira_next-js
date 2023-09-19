@@ -7,7 +7,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { SettingsContext } from "@/context/SettingsContext";
 
 //Custom components
-import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+//import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LanguageSwitchButton from "@/components/LanguageSwitchButton";
 
 //Ícones

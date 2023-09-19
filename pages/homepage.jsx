@@ -9,11 +9,11 @@ import ProgressBar from "react-progressbar-on-scroll";
 
 //Custom components
 import Head from "@/components/Head";
-import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+//import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LandingAnimation from "@/components/LandingPageAnimation";
-import FooterPage from "@/components/FooterPage";
 import FloatNavigationBar from "@/components/FloatNavigationBar";
 import ScrollDownAnimation from "@/components/ScrollDownAnimation";
+import CarrouselTechs from "@/components/CarrouselTechs";
 
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
@@ -72,6 +72,16 @@ const TitleLandingContainer = styled.div`
 
 	@media (max-width: 601px) {
 		align-items: center;
+	}
+`;
+
+const BackgroundCarrousel = styled.div`
+	position: absolute;
+	bottom: 80px;
+	width: 100%;
+
+	@media (max-width: 601px) {
+		bottom: 100px;
 	}
 `;
 
@@ -152,6 +162,7 @@ const SectionHomePage = styled.section`
 	justify-content: center;
 	width: 80%;
 	min-height: 100vh;
+	position: relative;
 `;
 
 export default function HomePage() {
@@ -170,18 +181,21 @@ export default function HomePage() {
 			<LandingPageContainer>
 				<TitleLandingContainer>
 					<SubTitleLanding>{language.landingPage.apresentationText}</SubTitleLanding>
-					<Typed strings={["Glayson Visgueira"]} typeSpeed={80} className="type-string " />
+					<Typed strings={["o Dev que você precisa...", "Glayson Visgueira"]} typeSpeed={30} className="type-string " />
 					<SubTitleLanding>{language.landingPage.resumeText}</SubTitleLanding>
 					<Link href="#section-sobre-mim" passHref>
 						<ButtonSaibaMais>{language.landingPage.buttonText}</ButtonSaibaMais>
 					</Link>
-					{/* <SocialNetworkRowStack /> */}
 				</TitleLandingContainer>
 				<ContainerAnimation>
 					<LandingAnimation />
 				</ContainerAnimation>
 			</LandingPageContainer>
 			<ScrollDownAnimation />
+
+			<BackgroundCarrousel>
+				<CarrouselTechs direction="left" colorIcon="brand" />
+			</BackgroundCarrousel>
 		</SectionHomePage>
 	);
 }

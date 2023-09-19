@@ -1,5 +1,7 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
 import styled from "styled-components";
+import { useTheme } from "styled-components";
 
 import { Amazonaws } from "@styled-icons/simple-icons/Amazonaws";
 import { GoogleCloud } from "@styled-icons/boxicons-logos/GoogleCloud";
@@ -43,215 +45,173 @@ import { Visualstudiocode } from "@styled-icons/simple-icons/Visualstudiocode";
 import { Trello } from "@styled-icons/boxicons-logos/Trello";
 
 const Carrousel = styled.div`
-	margin-top: 20px;
-	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
 
-	svg {
-		width: 38px;
-		height: 38px;
-		color: #4b4b4b;
+	.slide {
+		margin: 10px;
+	}
+
+	.slide svg {
+		width: 78px;
+		height: 78px;
+		color: ${(props) => (props.colorIcon == "brand" ? props.theme.colors.branding : props.theme.colors.backgroundSecondary)};
 		transition: all 0.3s ease;
 	}
 
-	svg:hover {
-		transform: translateZ(20px);
+	.slide svg:hover {
 		color: ${(props) => props.theme.colors.branding};
-		scale: 1.3;
 	}
 
-	.slider {
-		height: 80px;
-		margin: auto;
-		position: relative;
-		width: 100%;
-		display: grid;
-		place-items: center;
-		overflow: hidden;
-		/* background-color: #ccc; */
-	}
-
-	//Slide track width = total number of slides (9x2=18) x individual slide width (250px)
-	.slide-track {
-		display: flex;
-		width: 100%;
-		animation: scroll 20s linear infinite;
-	}
-
-	.slide-track:hover {
-		animation-play-state: paused;
-	}
-
-	@keyframes scroll {
-		0% {
-			transform: translateX(0);
-		}
-		//Moves the slide track leftwards (-250px) by half (18 images / 2 = 9) of its width
-		100% {
-			transform: translateX(calc(-250px));
+	@media (max-width: 1200px) {
+		.slide svg {
+			width: 58px;
+			height: 58px;
 		}
 	}
 
-	.slide {
-		height: 50px;
-		width: 100px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		//padding: 10px;
-		//perspective: 100px;
-		//background-color: #683636;
-		//margin: 10px;
-	}
-
-	.slider::before,
-	.slider::after {
-		background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-		content: "";
-		height: 100%;
-		position: absolute;
-		width: 15%;
-		z-index: 2;
-	}
-
-	.slider::before {
-		left: 0;
-		top: 0;
-	}
-
-	.slider::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
+	@media (max-width: 600px) {
+		.slide svg {
+			width: 38px;
+			height: 38px;
+		}
 	}
 `;
 
-export default function SlideTechs() {
+export default function CarrouselTechs(props) {
+	const theme = useTheme();
+
+	const { direction, colorIcon } = props;
+
 	return (
-		<Carrousel>
-			<div className="slider">
-				<div className="slide-track">
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Amazons3 />
-					</div>
-					<div className="slide">
-						<Visualstudiocode />
-					</div>
-					<div className="slide">
-						<Trello />
-					</div>
-					<div className="slide">
-						<Oracle />
-					</div>
-					<div className="slide">
-						<Amazonaws />
-					</div>
-					<div className="slide">
-						<GoogleCloud />
-					</div>
-					<div className="slide">
-						<Firebase />
-					</div>
-					<div className="slide">
-						<Mongodb />
-					</div>
-					<div className="slide">
-						<Postgresql />
-					</div>
-					<div className="slide">
-						<Sqlite />
-					</div>
-					<div className="slide">
-						<Javascript />
-					</div>
-					<div className="slide">
-						<Java />
-					</div>
-					<div className="slide">
-						<ReactLogo />
-					</div>
-					<div className="slide">
-						<Nextdotjs />
-					</div>
-					<div className="slide">
-						<Python />
-					</div>
-					<div className="slide">
-						<Flutter />
-					</div>
-					<div className="slide">
-						<Django />
-					</div>
-					<div className="slide">
-						<Nodejs />
-					</div>
-					<div className="slide">
-						<LogoVercel />
-					</div>
-					<div className="slide">
-						<Netlify />
-					</div>
-					<div className="slide">
-						<Materialui />
-					</div>
-					<div className="slide">
-						<Styledcomponents />
-					</div>
-					<div className="slide">
-						<Css3 />
-					</div>
-					<div className="slide">
-						<Html5 />
-					</div>
-					<div className="slide">
-						<Git />
-					</div>
-					<div className="slide">
-						<LogoBitbucket />
-					</div>
-					<div className="slide">
-						<GithubOutline />
-					</div>
-					<div className="slide">
-						<Api />
-					</div>
-					<div className="slide">
-						<Bootstrap />
-					</div>
-					<div className="slide">
-						<TailwindCss />
-					</div>
-					<div className="slide">
-						<Mysql />
-					</div>
-					<div className="slide">
-						<Linux />
-					</div>
-					<div className="slide">
-						<Windows />
-					</div>
-					<div className="slide">
-						<Android />
-					</div>
-					<div className="slide">
-						<Ios />
-					</div>
-					<div className="slide">
-						<Typescript />
-					</div>
-					<div className="slide">
-						<Sass />
-					</div>
-					<div className="slide">
-						<Jquery />
-					</div>
-					<div className="slide">
-						<Figma />
-					</div>
+		<Marquee autoFill gradient loop={0} gradientColor={theme.colors.backgroundPageRgb} direction={direction}>
+			<Carrousel colorIcon={colorIcon}>
+				<div className="slide">
+					<Adobephotoshop />
 				</div>
-			</div>
-		</Carrousel>
+				<div className="slide">
+					<Amazons3 />
+				</div>
+				<div className="slide">
+					<Visualstudiocode />
+				</div>
+				<div className="slide">
+					<Trello />
+				</div>
+				<div className="slide">
+					<Oracle />
+				</div>
+				<div className="slide">
+					<Amazonaws />
+				</div>
+				<div className="slide">
+					<GoogleCloud />
+				</div>
+				<div className="slide">
+					<Firebase />
+				</div>
+				<div className="slide">
+					<Mongodb />
+				</div>
+				<div className="slide">
+					<Postgresql />
+				</div>
+				<div className="slide">
+					<Sqlite />
+				</div>
+				<div className="slide">
+					<Javascript />
+				</div>
+				<div className="slide">
+					<Java />
+				</div>
+				<div className="slide">
+					<ReactLogo />
+				</div>
+				<div className="slide">
+					<Nextdotjs />
+				</div>
+				<div className="slide">
+					<Python />
+				</div>
+				<div className="slide">
+					<Flutter />
+				</div>
+				<div className="slide">
+					<Django />
+				</div>
+				<div className="slide">
+					<Nodejs />
+				</div>
+				<div className="slide">
+					<LogoVercel />
+				</div>
+				<div className="slide">
+					<Netlify />
+				</div>
+				<div className="slide">
+					<Materialui />
+				</div>
+				<div className="slide">
+					<Styledcomponents />
+				</div>
+				<div className="slide">
+					<Css3 />
+				</div>
+				<div className="slide">
+					<Html5 />
+				</div>
+				<div className="slide">
+					<Git />
+				</div>
+				<div className="slide">
+					<LogoBitbucket />
+				</div>
+				<div className="slide">
+					<GithubOutline />
+				</div>
+				<div className="slide">
+					<Api />
+				</div>
+				<div className="slide">
+					<Bootstrap />
+				</div>
+				<div className="slide">
+					<TailwindCss />
+				</div>
+				<div className="slide">
+					<Mysql />
+				</div>
+				<div className="slide">
+					<Linux />
+				</div>
+				<div className="slide">
+					<Windows />
+				</div>
+				<div className="slide">
+					<Android />
+				</div>
+				<div className="slide">
+					<Ios />
+				</div>
+				<div className="slide">
+					<Typescript />
+				</div>
+				<div className="slide">
+					<Sass />
+				</div>
+				<div className="slide">
+					<Jquery />
+				</div>
+				<div className="slide">
+					<Figma />
+				</div>
+			</Carrousel>
+		</Marquee>
 	);
 }

@@ -81,7 +81,7 @@ const BackgroundCarrousel = styled.div`
 	width: 100%;
 
 	@media (max-width: 601px) {
-		bottom: 100px;
+		top: 60px;
 	}
 `;
 

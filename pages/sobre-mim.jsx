@@ -10,7 +10,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
-import TechGrid from "@/components/TechsGrid";
 import CarrouselTechs from "@/components/CarrouselTechs";
 
 //PDFs
@@ -151,8 +150,8 @@ const GithubStatsCard = styled.div`
 		width: 140px;
 		height: 140px;
 		border-radius: 50%;
-		//border: 5px solid ${(props) => props.theme.colors.backgroundSecondary};
-		//background-color: ${(props) => props.theme.colors.backgroundSecondary};
+		border: 5px solid ${(props) => props.theme.colors.branding};
+		background-color: ${(props) => props.theme.colors.branding};
 		position: absolute;
 		top: 30px;
 	}

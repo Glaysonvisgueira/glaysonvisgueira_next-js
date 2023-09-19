@@ -56,9 +56,9 @@ const ButtonSocialMediaIcon = styled.a`
 		margin-right: 3px;
 	}
 
-	/* :hover {
-		transform: translateY(-7px);
-	} */
+	:hover {
+		transform: scale(1.1);
+	}
 `;
 
 export default function SocialNetworkRowStack() {

@@ -175,7 +175,7 @@ export default function HomePage() {
 					<Link href="#section-sobre-mim" passHref>
 						<ButtonSaibaMais>{language.landingPage.buttonText}</ButtonSaibaMais>
 					</Link>
-					<SocialNetworkRowStack />
+					{/* <SocialNetworkRowStack /> */}
 				</TitleLandingContainer>
 				<ContainerAnimation>
 					<LandingAnimation />

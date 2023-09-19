@@ -125,7 +125,7 @@ const GithubStatsCard = styled.div`
 	justify-content: flex-start;
 	width: 300px;
 	height: 420px;
-	border: 2px solid ${(props) => props.theme.colors.branding};
+	//border: 2px solid ${(props) => props.theme.colors.backgroundSecondary};
 	background-color: ${(props) => props.theme.colors.backgroundPage};
 	border-radius: 8px;
 	flex-direction: column;
@@ -143,15 +143,15 @@ const GithubStatsCard = styled.div`
 	.background {
 		width: 100%;
 		height: 150px;
-		background-color: ${(props) => props.theme.colors.branding};
+		background-color: ${(props) => props.theme.colors.backgroundPage};
 	}
 
 	.img {
 		width: 140px;
 		height: 140px;
 		border-radius: 50%;
-		border: 5px solid ${(props) => props.theme.colors.branding};
-		background-color: ${(props) => props.theme.colors.backgroundSecondary};
+		//border: 5px solid ${(props) => props.theme.colors.backgroundSecondary};
+		//background-color: ${(props) => props.theme.colors.backgroundSecondary};
 		position: absolute;
 		top: 30px;
 	}
@@ -195,7 +195,7 @@ const GithubStatsCard = styled.div`
 		justify-content: space-evenly;
 		width: 90%;
 		height: 60px;
-		background: ${(props) => props.theme.colors.backgroundSecondary};
+		//background: ${(props) => props.theme.colors.backgroundSecondary};
 		border-radius: 8px;
 		padding: 10px;
 		position: absolute;
@@ -262,7 +262,6 @@ const SectionSobreMim = styled.section`
 	flex-direction: column;
 	padding-top: 80px;
 	width: 100%;
-	//height: auto;
 `;
 
 export default function SobreMim(props) {
@@ -291,7 +290,7 @@ export default function SobreMim(props) {
 								</div>
 								<div className="content">
 									<h3>{githubUserData?.name}</h3>
-									<a href={githubUserData?.html_url} target="_blank">
+									<a href={githubUserData?.html_url} target="_blank" rel="noreferrer">
 										@{githubUserData?.login}
 									</a>
 									<p>{language.aboutMePage.github_card.bio}</p>

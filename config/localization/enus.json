@@ -9,7 +9,8 @@
 	},
 	"landingPage": {
 		"apresentationText": "Hello, I'm",
-		"typeText": "Glayson Visgueira",
+		"firstTypeText": "the Dev you need...",
+		"secondTypeText": "Glayson Visgueira",
 		"resumeText": "Front-End Developer and I develop modern and high quality interfaces, focusing on performance, animations, responsiveness and built with SEO optimization.",
 		"buttonText": "Learn more"
 	},

@@ -71,10 +71,6 @@ const LanguageWrapper = styled.div`
 	align-items: center;
 	flex-direction: row;
 	margin-left: 15px;
-
-	@media (max-width: 601px) {
-		margin-bottom: 30px;
-	}
 `;
 
 export default function LanguageSwitchButton() {
@@ -82,7 +78,7 @@ export default function LanguageSwitchButton() {
 	const [checked, setChecked] = useState(false);
 
 	function handleCheckSwitch() {
-		setChecked(!checked);
+		setChecked((checked) => !checked);
 		changeLanguageLocalization();
 	}
 

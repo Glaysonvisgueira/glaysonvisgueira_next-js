@@ -181,7 +181,7 @@ export default function HomePage() {
 			<LandingPageContainer>
 				<TitleLandingContainer>
 					<SubTitleLanding>{language.landingPage.apresentationText}</SubTitleLanding>
-					<Typed strings={["o Dev que você precisa...", "Glayson Visgueira"]} typeSpeed={30} className="type-string " />
+					<Typed strings={[language.landingPage.firstTypeText, language.landingPage.secondTypeText]} typeSpeed={30} className="type-string " />
 					<SubTitleLanding>{language.landingPage.resumeText}</SubTitleLanding>
 					<Link href="#section-sobre-mim" passHref>
 						<ButtonSaibaMais>{language.landingPage.buttonText}</ButtonSaibaMais>

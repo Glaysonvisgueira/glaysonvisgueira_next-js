@@ -7,8 +7,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { SettingsContext } from "@/context/SettingsContext";
 
 //Custom components
-//import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
-import LanguageSwitchButton from "@/components/LanguageSwitchButton";
+import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 
 //Ícones
 import { KeyboardArrowUp } from "@styled-icons/material-outlined/KeyboardArrowUp";
@@ -325,7 +324,7 @@ export default function FooterPage(props) {
 			</div>
 			<Divider />
 			<ContainerBuildCopyright>
-				<LanguageSwitchButton />
+				<SocialNetworkRowStack />
 				<div className="build-and-button-top">
 					<TextBuildProject>
 						{language.footer.labelBuildVersion}: {commit || ""}

@@ -279,6 +279,7 @@ export default function SobreMim(props) {
 
 	return (
 		<SectionSobreMim id="section-sobre-mim">
+			<CarrouselTechs direction="right" />
 			<WrapperAboutMe>
 				<div className="container">
 					<div className="left-view">
@@ -328,8 +329,6 @@ export default function SobreMim(props) {
 					</div>
 				</div>
 			</WrapperAboutMe>
-			<CarrouselTechs direction="left" />
-			<CarrouselTechs direction="right" />
 			<CarrouselTechs direction="left" />
 		</SectionSobreMim>
 	);

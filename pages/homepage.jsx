@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import Link from "next/link";
 
 //Third's librarys
-import Link from "next/link";
 import styled from "styled-components";
 import Typed from "react-typed";
 import { useTheme } from "styled-components";
@@ -9,11 +9,10 @@ import ProgressBar from "react-progressbar-on-scroll";
 
 //Custom components
 import Head from "@/components/Head";
-//import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import LandingAnimation from "@/components/LandingPageAnimation";
 import FloatNavigationBar from "@/components/FloatNavigationBar";
 import ScrollDownAnimation from "@/components/ScrollDownAnimation";
-import CarrouselTechs from "@/components/CarrouselTechs";
+//import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
@@ -72,16 +71,6 @@ const TitleLandingContainer = styled.div`
 
 	@media (max-width: 601px) {
 		align-items: center;
-	}
-`;
-
-const BackgroundCarrousel = styled.div`
-	position: absolute;
-	bottom: 80px;
-	width: 100%;
-
-	@media (max-width: 601px) {
-		top: 60px;
 	}
 `;
 
@@ -192,10 +181,6 @@ export default function HomePage() {
 				</ContainerAnimation>
 			</LandingPageContainer>
 			<ScrollDownAnimation />
-
-			<BackgroundCarrousel>
-				<CarrouselTechs direction="left" colorIcon="brand" />
-			</BackgroundCarrousel>
 		</SectionHomePage>
 	);
 }

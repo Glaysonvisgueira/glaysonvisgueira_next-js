@@ -23,6 +23,23 @@ const ContactMeContainer = styled.div`
 
 const ContainerForm = styled.form`
 	width: 40%;
+	transition: all 0.3s ease;
+
+	@media (max-width: 1400px) {
+		width: 50%;
+	}
+
+	@media (max-width: 1200px) {
+		width: 70%;
+	}
+
+	@media (max-width: 1000px) {
+		width: 80%;
+	}
+
+	@media (max-width: 601px) {
+		width: 100%;
+	}
 `;
 
 const WrapperInput = styled.div`
@@ -34,7 +51,7 @@ const WrapperInput = styled.div`
 	margin-bottom: 5px;
 
 	label {
-		color: ${(props) => props.theme.colors.branding};
+		color: ${(props) => props.theme.colors.subtitle};
 		font-size: 0.8rem;
 		margin-bottom: 10px;
 		margin-top: 10px;
@@ -44,12 +61,9 @@ const WrapperInput = styled.div`
 	input {
 		border: none;
 		width: 100%;
-		height: 44px;
+		height: 38px;
 		border-radius: 2px;
 		padding: 0 10px;
-		border-bottom: 3px solid ${(props) => props.theme.colors.branding};
-		background-color: ${(props) => props.theme.colors.body};
-		//caret-color: ${(props) => props.theme.colors.branding};
 	}
 
 	textarea:focus,
@@ -65,9 +79,30 @@ const WrapperInput = styled.div`
 		border-radius: 4px;
 		max-height: 120px;
 		padding: 10px;
-		background-color: ${(props) => props.theme.colors.body};
-		border-bottom: 3px solid ${(props) => props.theme.colors.branding};
-		/* resize: vertical; */
+	}
+`;
+
+const Button = styled.button`
+	position: relative;
+	width: 200px;
+	height: 44px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	transition: all 0.3s ease;
+	font-size: ${(props) => props.theme.fontSizes.lg};
+	border: none;
+	color: ${(props) => props.theme.colors.background};
+	border-radius: 4px;
+	background-color: ${(props) => props.theme.colors.branding};
+	font-weight: 700;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+
+	@media (max-width: 601px) {
+		width: 100%;
 	}
 `;
 
@@ -93,6 +128,8 @@ export default function ContactMeEmail() {
 					<label htmlFor="message">MENSAGEM</label>
 					<textarea placeholder="Sua mensagem..." id="message" />
 				</WrapperInput>
+
+				<Button>Enviar</Button>
 			</ContainerForm>
 		</ContactMeContainer>
 	);

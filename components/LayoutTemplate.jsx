@@ -79,7 +79,7 @@ const CaracteresLogo = styled.span`
 	font-weight: 700;
 `;
 
-const NavbarOptionContainer = styled.div`
+const NavbarOptionContainer = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: center;

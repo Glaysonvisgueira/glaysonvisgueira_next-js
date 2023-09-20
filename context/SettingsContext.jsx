@@ -24,7 +24,7 @@ export default function SettingsProvider({ children }) {
 	}
 
 	function changeLanguageLocalization() {
-		setLanguage(!changeLanguage);
+		setLanguage((changeLanguage) => !changeLanguage);
 	}
 
 	var language = changeLanguage == true ? enusJson : ptbrJson;

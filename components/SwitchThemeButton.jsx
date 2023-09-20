@@ -14,11 +14,17 @@ const LanguageWrapper = styled.div`
 	align-items: center;
 	flex-direction: row;
 	margin-left: 15px;
+	cursor: pointer;
 
 	svg {
 		width: 28px;
 		height: 28px;
 		color: ${(props) => props.theme.colors.branding};
+		transition: all 0.3s ease;
+	}
+
+	svg:hover {
+		transform: scale(1.2);
 	}
 `;
 

@@ -8,7 +8,7 @@ import HomePage from "../pages/homepage";
 //Components
 import ServicesOffer from "@/components/ServicesOffer";
 import FooterPage from "@/components/FooterPage";
-import ContactMeEmail from "@/components/ContactMeEmail";
+//import ContactMeEmail from "@/components/ContactMeEmail";
 
 let flagMessage = false;
 export default function Index() {

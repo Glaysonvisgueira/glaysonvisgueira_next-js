@@ -15,10 +15,6 @@ const ContainerLottie = styled.div`
 	width: 800px;
 	height: 800px;
 	transition: all 0.3s ease;
-	// background-image: url("/img/bg_circle.png");
-	// background: ${(props) => props.theme.colors.imageBlur};
-	// background: transparent ${(props) => props.theme.colors.imageBlur} no-repeat center;
-	// background-size: contain; /*Resize the background image to cover the entire container */
 
 	@media (max-width: 1400px) {
 		width: 600px;

@@ -367,7 +367,6 @@ export default function TimelinePortifolio(props) {
 					</BoldText>
 				</TimelineContent>
 			</VerticalTimelineElement>
-			{/*<VerticalTimelineElement iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }} icon={<LearningAppIcon />} /> */}
 		</VerticalTimeline>
 	);
 }

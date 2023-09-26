@@ -42,7 +42,7 @@ const AnimationsToShow = {
 	light: AnimationLightBackground,
 };
 
-export default function LogoReact() {
+export default function LandingPageAnimation() {
 	const theme = useTheme();
 	const [isStopped] = useState(false);
 	const [isPaused] = useState(false);

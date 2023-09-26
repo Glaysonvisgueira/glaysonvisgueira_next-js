@@ -8,7 +8,7 @@ export const darkTheme = {
 		backgroundRadial: "radial-gradient(ellipse at center, #2e2e2e, #0C0C0C)",
 		background: "#000",
 		backgroundSecondary: "#272727",
-		branding: "#FCD434",
+		branding: "#fec800",
 		title: "#fff",
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#ccc",

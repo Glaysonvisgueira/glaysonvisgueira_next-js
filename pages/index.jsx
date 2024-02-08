@@ -8,6 +8,7 @@ import HomePage from "../pages/homepage";
 //Components
 import ServicesOffer from "@/components/ServicesOffer";
 import FooterPage from "@/components/FooterPage";
+import CarrouselTechsDivContainer from "@/components/CarrouselTechsDivContainer";
 //import ContactMeEmail from "@/components/ContactMeEmail";
 
 let flagMessage = false;
@@ -43,6 +44,7 @@ export default function Index() {
 		<>
 			<HomePage />
 			<ServicesOffer />
+			<CarrouselTechsDivContainer />
 			<SobreMimPage />
 			<PortfolioPage />
 			<ExperienciaPage />

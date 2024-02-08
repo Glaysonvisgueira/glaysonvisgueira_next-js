@@ -3,12 +3,10 @@ import styled from "styled-components";
 
 //Custom components
 import TimelineExperienciaFormacao from "@/components/TimelineExperienciaFormacao";
+import TitlePageSection from "@/components/TitlePageSection";
 
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
-
-//Styled-components
-import { TitleSection, ContainerTitleSection } from "@/styles/ui";
 
 const SectionExperiencia = styled.section`
 	display: flex;
@@ -24,9 +22,7 @@ export default function Experiencia() {
 	const { language } = useContext(SettingsContext);
 	return (
 		<SectionExperiencia id="section-experiencia">
-			<ContainerTitleSection>
-				<TitleSection>{language.experiencePage.title}</TitleSection>
-			</ContainerTitleSection>
+			<TitlePageSection title={language.experiencePage.title} />
 			<TimelineExperienciaFormacao />
 		</SectionExperiencia>
 	);

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useMemo } from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -6,7 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { SettingsContext } from "@/context/SettingsContext";
 
 //Styled-components
-import { TitleSection, ContainerTitleSection, TitleH3, BodyText } from "@/styles/ui";
+import { BodyText } from "@/styles/ui";
 
 //Ícones
 import { Robot } from "@styled-icons/fa-solid/Robot";
@@ -25,7 +25,6 @@ import { LogoVercel } from "@styled-icons/ionicons-solid/LogoVercel";
 import { Styledcomponents } from "@styled-icons/simple-icons/Styledcomponents";
 import { Css3 } from "@styled-icons/boxicons-logos/Css3";
 import { Html5 } from "@styled-icons/boxicons-logos/Html5";
-import { Amazons3 } from "@styled-icons/simple-icons/Amazons3";
 import { Typescript } from "@styled-icons/simple-icons/Typescript";
 import { Sass } from "@styled-icons/fa-brands/Sass";
 import { Expo } from "@styled-icons/simple-icons/Expo";
@@ -40,6 +39,7 @@ import { Live } from "@styled-icons/fluentui-system-filled/Live";
 
 //Custom components
 import Tooltip from "@/components/Tooltip";
+import TitlePageSection from "@/components/TitlePageSection";
 
 const ContainerGrid = styled.div`
 	display: grid;
@@ -81,10 +81,10 @@ const WrapperProjectCard = styled.div`
 
 	:hover {
 		border: 1px solid ${(props) => props.theme.colors.branding};
-		transform: scale(1.01);
-		box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
+		//transform: scale(1.01);
+		/* box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
 		-webkit-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
-		-moz-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
+		-moz-box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E; */
 	}
 
 	.title-body {
@@ -228,10 +228,12 @@ const Chip = styled.span`
 	margin: 3px;
 	border-radius: 4px;
 	font-weight: 700;
-	transition: all 0.3s ease;
+	//transition: all 0.3s ease;
 
 	&:hover {
 		cursor: pointer;
+		color: ${(props) => props.active == false && props.theme.colors.branding};
+		border: 1px solid ${(props) => props.theme.colors.branding};
 	}
 
 	@media (max-width: 601px) {
@@ -668,13 +670,17 @@ export default function Portifolio() {
 		setStack(id);
 	}
 
-	const array_projects = stack == "TODOS" ? projects : projects.filter((item) => item.typeProject.includes(stack));
+	const array_projects = useMemo(() => {
+		if (stack === "TODOS") {
+			return projects;
+		} else {
+			return projects.filter((item) => item.typeProject.includes(stack));
+		}
+	}, [stack, projects]);
 
 	return (
 		<SectionPortifolio id="section-portifolio">
-			<ContainerTitleSection>
-				<TitleSection>{language.portifolioPage.title}</TitleSection>
-			</ContainerTitleSection>
+			<TitlePageSection title={language.portifolioPage.title} />
 
 			<ChipTechOptions>
 				<Filter className="svg" />

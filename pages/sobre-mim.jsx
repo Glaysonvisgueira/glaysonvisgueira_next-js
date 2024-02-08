@@ -10,7 +10,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
-import CarrouselTechs from "@/components/CarrouselTechs";
 
 //PDFs
 import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
@@ -279,7 +278,6 @@ export default function SobreMim(props) {
 
 	return (
 		<SectionSobreMim id="section-sobre-mim">
-			<CarrouselTechs direction="right" />
 			<WrapperAboutMe>
 				<div className="container">
 					<div className="left-view">
@@ -329,7 +327,6 @@ export default function SobreMim(props) {
 					</div>
 				</div>
 			</WrapperAboutMe>
-			<CarrouselTechs direction="left" />
 		</SectionSobreMim>
 	);
 }

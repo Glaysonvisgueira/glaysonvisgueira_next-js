@@ -59,7 +59,7 @@ export const TitleContentTimeline = styled.h3`
 `;
 
 const BoldText = styled.h4`
-	color: ${(props) => props.theme.colors.contrastText};
+	color: ${(props) => props.theme.colors.title};
 	font-weight: 800;
 	margin-top: 2px;
 	margin-bottom: 2px;
@@ -76,11 +76,18 @@ export default function TimelinePortifolio(props) {
 		<VerticalTimeline lineColor={theme.colors.branding}>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{
+					borderBottom: `8px solid ${theme.colors.branding}`,
+					boxShadow: "0px 0px 0px 0px #ccc",
+					backgroundColor: theme.colors.backgroundSecondary,
+				}}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2011</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2011</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>S.O.S. Educação Profissional</span>
 					</BoldText>
@@ -96,11 +103,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<WorkIcon />}>
+				icon={<WorkIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2013</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2013</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelCompany}: <span>Armazém Paraíba</span>
 					</BoldText>
@@ -112,11 +122,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2014</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2014</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>SENAC - Serviço Nacional de Aprendizagem Comercial</span>
 					</BoldText>
@@ -131,11 +144,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<SchoolIcon />}>
+				icon={<SchoolIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2014</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2014</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Centro Universitário Maurício de Nassau</span>
 					</BoldText>
@@ -150,11 +166,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2018</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2018</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Centro Universitário Maurício de Nassau</span>
 					</BoldText>
@@ -168,11 +187,14 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, boxShadow: `0 0 0 0 ` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2018</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2018</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Fábrica de Gênios</span>
 					</BoldText>
@@ -186,11 +208,14 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2019</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Udemy</span>
 					</BoldText>
@@ -204,11 +229,14 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2019</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Udemy</span>
 					</BoldText>
@@ -222,11 +250,14 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2019</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Udemy</span>
 					</BoldText>
@@ -240,11 +271,14 @@ export default function TimelinePortifolio(props) {
 			</VerticalTimelineElement>
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2019</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Udemy</span>
 					</BoldText>
@@ -259,11 +293,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2019</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>SENAC - Serviço Nacional de Aprendizagem Comercial</span>
 					</BoldText>
@@ -278,11 +315,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2019</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2019</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>The Forense</span>
 					</BoldText>
@@ -297,11 +337,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2020</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2020</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Udemy</span>
 					</BoldText>
@@ -316,11 +359,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2020</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2020</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Udemy</span>
 					</BoldText>
@@ -335,11 +381,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<LearningAppIcon />}>
+				icon={<LearningAppIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2020</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2020</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelInstitution}: <span>Alura</span>
 					</BoldText>
@@ -354,11 +403,14 @@ export default function TimelinePortifolio(props) {
 
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				contentStyle={{ color: "#000", borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc" }}
+				contentStyle={{ borderBottom: `8px solid ${theme.colors.branding}`, boxShadow: "0px 0px 0px 0px #ccc", backgroundColor: theme.colors.backgroundSecondary }}
 				iconStyle={{ background: theme.colors.branding, color: "#fff", boxShadow: `0 0 0 0px ${theme.colors.branding}` }}
-				icon={<WorkIcon />}>
+				icon={<WorkIcon />}
+				contentArrowStyle={{
+					borderRight: `7px solid ${theme.colors.backgroundSecondary}`,
+				}}>
 				<TimelineContent>
-					<h3 style={{ color: theme.colors.backgroundSecondary, backgroundColor: theme.colors.branding, padding: "0 6px 0 6px", borderRadius: "4px" }}>2021</h3>
+					<h3 style={{ color: theme.colors.branding, padding: "0 10px", borderRadius: "200px", border: `2px solid ${theme.colors.branding}`, marginBottom: "10px" }}>2021</h3>
 					<BoldText>
 						{language.experiencePage.timeline.labelCompany}: <span>Armazém Paraíba</span>
 					</BoldText>

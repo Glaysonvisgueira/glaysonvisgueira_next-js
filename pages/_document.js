@@ -24,27 +24,4 @@ export default class MyDocument extends Document {
 			sheet.seal();
 		}
 	}
-
-	// render() {
-	// 	return (
-	// 	  <Html>
-	// 		<Head>
-	// 		  <title>My page</title>
-	// 		  <script
-	// 			async
-	// 			src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-	// 		  ></script>
-
-	// 		  <script>
-	// 			var googletag = googletag || { };
-	// 			googletag.cmd = googletag.cmd || [];
-	// 		  </script>
-	// 		</Head>
-	// 		<body>
-	// 		  <Main />
-	// 		  <NextScript />
-	// 		</body>
-	// 	  </ Html>
-	// 	);
-	//   }
 }

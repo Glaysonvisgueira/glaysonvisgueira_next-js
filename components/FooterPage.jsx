@@ -83,6 +83,7 @@ const FooterText = styled.span`
 
 	&:hover {
 		cursor: pointer;
+		color: ${(props) => props.theme.colors.branding};
 	}
 
 	&::before,
@@ -127,6 +128,10 @@ const FooterTextExternalLink = styled.a`
 	margin-top: 3px;
 	margin-bottom: 3px;
 	text-decoration: none;
+
+	&:hover {
+		color: ${(props) => props.theme.colors.branding};
+	}
 
 	&::before,
 	&::after {
@@ -260,9 +265,9 @@ export default function FooterPage(props) {
 						<Link href="#section-home" passHref>
 							<FooterText>{language.footer.labelNavigation.labelHome}</FooterText>
 						</Link>
-						<Link href="#section-services" passHref>
+						{/* <Link href="#section-services" passHref>
 							<FooterText>{language.footer.labelNavigation.labelServices}</FooterText>
-						</Link>
+						</Link> */}
 						<Link href="#section-sobre-mim" passHref>
 							<FooterText>{language.footer.labelNavigation.labelAboutMe}</FooterText>
 						</Link>

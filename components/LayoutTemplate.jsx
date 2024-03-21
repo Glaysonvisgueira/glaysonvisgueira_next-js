@@ -184,28 +184,28 @@ export default function LayoutTemplate({ children }) {
 						</Link>
 					</Fade>
 
-					<Fade top delay={200} duration={200}>
+					{/* <Fade top delay={200} duration={200}>
 						<Link href="#section-services" passHref>
 							<NavbarOption>{language.navbarMenu.labelServices}</NavbarOption>
 						</Link>
-					</Fade>
+					</Fade> */}
 
-					<Fade top delay={300} duration={200}>
+					<Fade top delay={200} duration={200}>
 						<Link href="#section-sobre-mim" passHref>
 							<NavbarOption>{language.navbarMenu.labelAboutMe}</NavbarOption>
 						</Link>
 					</Fade>
-					<Fade top delay={400} duration={200}>
+					<Fade top delay={300} duration={200}>
 						<Link href="#section-portifolio" passHref>
 							<NavbarOption>{language.navbarMenu.labelPortifolio}</NavbarOption>
 						</Link>
 					</Fade>
-					<Fade top delay={500} duration={200}>
+					<Fade top delay={400} duration={200}>
 						<Link href="#section-experiencia" passHref>
 							<NavbarOption>{language.navbarMenu.labelExperience}</NavbarOption>
 						</Link>
 					</Fade>
-					<Fade top delay={600} duration={200}>
+					<Fade top delay={500} duration={200}>
 						<LanguageSwitchButton />
 						<SwitchThemeButton />
 					</Fade>

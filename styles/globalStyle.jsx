@@ -30,7 +30,7 @@ html, body, :root {
   }
   
   ::-webkit-scrollbar-thumb {
-    border-radius: 8px;
+    //border-radius: 8px;
     background: ${(props) => props.theme.colors.branding}; 
   }
   

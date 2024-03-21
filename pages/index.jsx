@@ -43,7 +43,7 @@ export default function Index() {
 	return (
 		<>
 			<HomePage />
-			<ServicesOffer />
+			{/* <ServicesOffer /> */}
 			<CarrouselTechsDivContainer />
 			<SobreMimPage />
 			<PortfolioPage />

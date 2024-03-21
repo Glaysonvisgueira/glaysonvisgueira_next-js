@@ -70,7 +70,8 @@ export default function FloatNavigationBar(props) {
 					<Home />
 				</NavOption>
 			</Link>
-			<Link href="#section-services" passHref>
+
+			{/* <Link href="#section-services" passHref>
 				<NavOption
 					className="button"
 					isActive={active == "#section-services" ? true : false}
@@ -79,7 +80,7 @@ export default function FloatNavigationBar(props) {
 					}}>
 					<Code />
 				</NavOption>
-			</Link>
+			</Link> */}
 
 			<Link href="#section-sobre-mim" passHref>
 				<NavOption
@@ -88,7 +89,7 @@ export default function FloatNavigationBar(props) {
 					onClick={() => {
 						setActive("#section-sobre-mim");
 					}}>
-					<Timeline />
+					<Badge />
 				</NavOption>
 			</Link>
 			<Link href="#section-portifolio" passHref>
@@ -109,7 +110,7 @@ export default function FloatNavigationBar(props) {
 					onClick={() => {
 						setActive("#section-experiencia");
 					}}>
-					<Badge />
+					<Timeline />
 				</NavOption>
 			</Link>
 		</NavigationBar>

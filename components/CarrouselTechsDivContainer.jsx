@@ -12,8 +12,8 @@ const SpaceDiv = styled.div`
 export default function CarrouselTechsDivContainer(props) {
 	return (
 		<SpaceDiv>
-			<CarrouselTechs direction="right" speed={90} />
-			<CarrouselTechs direction="right" speed={70} />
+			<CarrouselTechs direction="right" speed={50} />
+			<CarrouselTechs direction="left" speed={50} />
 			<CarrouselTechs direction="right" speed={50} />
 		</SpaceDiv>
 	);

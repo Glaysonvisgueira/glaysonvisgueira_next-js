@@ -54,6 +54,8 @@ export const BodyText = styled.p`
 	color: ${(props) => props.theme.colors.body};
 	font-size: ${(props) => props.theme.fontSizes.md};
 
+	${({ centerText }) => centerText && "text-align: center;"}
+
 	@media (max-width: 600px) {
 		font-size: ${(props) => props.theme.fontSizes.sm};
 	}
@@ -95,4 +97,15 @@ export const ContainerTitleSection = styled.div`
 			height: 28px;
 		}
 	}
+`;
+
+export const FluidContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	${({ hasMinHeight }) => hasMinHeight && "min-height: 100vh;"}
+
+	${({ hasBackgroundSecondary, theme }) => hasBackgroundSecondary && `background-color: ${theme.colors.backgroundSecondary};`}
 `;

@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
 //Pages
-import SobreMimPage from "../pages/sobre-mim";
-import PortfolioPage from "../pages/portfolio";
-import ExperienciaPage from "../pages/experiencia";
-import HomePage from "../pages/homepage";
+import SobreMimPage from "./sobre-mim";
+import PortfolioPage from "./portfolio";
+import ExperienciaPage from "./experiencia";
+import HomePage from "./homepage";
+import Asks from "./Asks";
+import Testimonials from "./Testimonials";
+
 //Components
 import ServicesOffer from "@/components/ServicesOffer";
 import FooterPage from "@/components/FooterPage";
 import CarrouselTechsDivContainer from "@/components/CarrouselTechsDivContainer";
-//import ContactMeEmail from "@/components/ContactMeEmail";
+import SatisfactionIndicators from "@/components/SatisfactionIndicators";
 
 let flagMessage = false;
 export default function Index() {
@@ -43,12 +46,15 @@ export default function Index() {
 	return (
 		<>
 			<HomePage />
-			{/* <ServicesOffer /> */}
+			<ServicesOffer />
 			<CarrouselTechsDivContainer />
 			<SobreMimPage />
+			<SatisfactionIndicators />
+			<CarrouselTechsDivContainer direction="left" />
 			<PortfolioPage />
 			<ExperienciaPage />
-			{/* <ContactMeEmail /> */}
+			{/* <Asks />
+			<Testimonials /> */}
 			<FooterPage />
 		</>
 	);

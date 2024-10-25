@@ -76,7 +76,7 @@ const FooterText = styled.span`
 	font-weight: 400;
 	font-size: 14px;
 	color: ${(props) => props.theme.colors.subtitle};
-	transition: all 0.3s ease;
+	/* transition: all 0.3s ease; */
 	margin-top: 3px;
 	margin-bottom: 3px;
 	text-transform: capitalize;
@@ -86,7 +86,7 @@ const FooterText = styled.span`
 		color: ${(props) => props.theme.colors.branding};
 	}
 
-	&::before,
+	/* &::before,
 	&::after {
 		content: "";
 		position: absolute;
@@ -116,7 +116,7 @@ const FooterText = styled.span`
 	&:hover::after {
 		transform-origin: center right;
 		transform: scaleX(1);
-	}
+	} */
 `;
 
 const FooterTextExternalLink = styled.a`
@@ -145,7 +145,7 @@ const FooterTextExternalLink = styled.a`
 		transition: transform 0.5s ease;
 	}
 
-	&::before {
+	/* &::before {
 		top: 0;
 		transform-origin: center right;
 	}
@@ -163,7 +163,7 @@ const FooterTextExternalLink = styled.a`
 	&:hover::after {
 		transform-origin: center right;
 		transform: scaleX(1);
-	}
+	} */
 `;
 
 const TextBuildProject = styled.h4`
@@ -218,12 +218,12 @@ const ButtonUpToTop = styled.div`
 	right: 20px;
 	z-index: 1;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
-	transition: all 0.3s ease;
+	transition: all 0.1s ease;
 	margin-left: 15px;
 
 	&:hover {
 		cursor: pointer;
-		//transform: translateY(-7px);
+		border: 2px solid ${(props) => props.theme.colors.branding};
 	}
 
 	svg {
@@ -235,20 +235,19 @@ const ButtonUpToTop = styled.div`
 
 export default function FooterPage(props) {
 	const { language } = useContext(SettingsContext);
-	const [commit, setCommit] = useState("");
+	const [version, setVersion] = useState("");
 
 	useEffect(() => {
-		getLastCommit();
+		const fetchVersion = async () => {
+			const response = await fetch("https://api.github.com/repos/Glaysonvisgueira/glaysonvisgueira_next-js/contents/package.json");
+			const data = await response.json();
+			const packageJson = JSON.parse(Buffer.from(data.content, "base64").toString("utf-8")); // Decodifica o conteúdo base64
+			setVersion(packageJson.version);
+		};
+
+		fetchVersion();
 	}, []);
 
-	async function getLastCommit() {
-		const response = await fetch("https://api.github.com/repos/glaysonvisgueira/glaysonvisgueira_next-js/commits");
-		const json = await response.json();
-		//Setar no state somente as 6 primeiras letras do SHA code do último commit
-		setCommit(json[0].sha.slice(0, 6));
-	}
-
-	//Função para subir ao topo da página.
 	const goToTop = () => {
 		window.scrollTo({
 			top: 0,
@@ -332,7 +331,7 @@ export default function FooterPage(props) {
 				<SocialNetworkRowStack />
 				<div className="build-and-button-top">
 					<TextBuildProject>
-						{language.footer.labelBuildVersion}: {commit || ""}
+						{language.footer.labelBuildVersion}: {version || ""}
 					</TextBuildProject>
 					<ButtonUpToTop onClick={goToTop}>
 						<KeyboardArrowUp />

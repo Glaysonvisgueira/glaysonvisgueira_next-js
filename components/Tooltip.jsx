@@ -8,7 +8,6 @@ const ToolTip = styled.div`
 	.tooltip {
 		position: relative;
 		display: inline-block;
-		//border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 
 		&:hover {
 			svg {
@@ -20,11 +19,12 @@ const ToolTip = styled.div`
 	/* Tooltip text */
 	.tooltip .tooltiptext {
 		visibility: hidden;
-		width: 120px;
+		width: max-content;
 		background-color: ${(props) => props.theme.colors.branding};
+		z-index: 10 !important;
 		color: ${(props) => props.theme.colors.background};
 		text-align: center;
-		padding: 3px 0;
+		padding: 3px 10px;
 		border-radius: 4px;
 		font-weight: 900;
 		font-size: 14px;
@@ -34,7 +34,7 @@ const ToolTip = styled.div`
 		z-index: 1;
 		bottom: 125%;
 		left: 50%;
-		margin-left: -60px;
+		transform: translateX(-50%); /* Center horizontally */
 
 		/* Fade in tooltip */
 		opacity: 0;
@@ -47,7 +47,7 @@ const ToolTip = styled.div`
 		position: absolute;
 		top: 100%;
 		left: 50%;
-		margin-left: -5px;
+		transform: translateX(-50%);
 		border-width: 5px;
 		border-style: solid;
 		border-color: ${(props) => props.theme.colors.branding} transparent transparent transparent;

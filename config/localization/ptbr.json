@@ -9,34 +9,50 @@
 	},
 	"landingPage": {
 		"apresentationText": "Olá, eu sou",
-		"firstTypeText": "o Dev que você precisa...",
-		"secondTypeText": "Glayson Visgueira",
-		"resumeText": "Desenvolvedor Front-End e desenvolvo interfaces modernas e de alta qualidade, com foco em performance, animações, responsividade e construídas com otimização em SEO.",
+		"firstTypeText": "Glayson Visgueira",
+		"resumeText": "Desenvolvedor fullstack com expertise em criar soluções completas, sempre focado em entregar experiências frontend inovadoras e intuitivas que conectam o usuário ao produto",
 		"buttonText": "Saiba mais"
 	},
 	"servicesOffer": {
-		"title": "Serviços oferecidos",
+		"title": "Resolva seus problemas com software_",
+		"subtitle": "Nossas soluções de software são completamente personalizadas, garantindo que sua empresa obtenha exatamente o que precisa para se destacar no mercado",
 		"cards": {
+			"development": {
+				"title": "DESENVOLVIMENTO DE SISTEMAS",
+				"contentText": "Criação de soluções personalizadas que atendem às necessidades específicas do seu negócio, com tecnologias modernas e eficientes, garantindo alta performance e escalabilidade"
+			},
 			"seo": {
 				"title": "SEO",
-				"contentText": "Através de técnicas de SEO, irei elevar a taxa de conversão do seu produto e aumentar sua visibilidade online de forma orgânica, ou seja, sem depender de anúncios para serem bem sucedidas."
+				"contentText": "Otimização do seu site para motores de busca, aumentando a visibilidade e o tráfego orgânico, garantindo que seu público-alvo encontre seu negócio com mais facilidade"
 			},
 			"ux": {
-				"title": "UX/UI",
-				"contentText": "Criação de design web responsivo, focado em usabilidade para prover a melhor experiência de usuário para gerar leads para seu produto."
+				"title": "UI/UX DESIGN",
+				"contentText": "Foco em melhorar a usabilidade e a experiência do usuário, projetando interfaces que não só impressionam, mas também maximizam a interação e satisfação do cliente"
 			},
 			"branding": {
 				"title": "BRANDING",
 				"contentText": "Ajudo você a posicionar sua marca da forma correta, potencializando resultados positivos através das boas práticas do marketing digital."
 			},
-			"development": {
-				"title": "DESENVOLVIMENTO",
-				"contentText": "Desenvolvimento de sistemas 100% personalizados que vão automatizar a administração do seu negócio."
+			"consultancy": {
+				"title": "CONSULTORIA DE TI",
+				"contentText": "Análise estratégica e personalizada para adotar as tecnologias mais adequadas, otimizando processos e acelerando resultados no seu negócio"
+			},
+			"mobile_devlopment": {
+				"title": "APLICATIVOS MÓVEIS",
+				"contentText": "Criação de aplicativos nativos e híbridos para Android e iOS"
+			},
+			"chatbot": {
+				"title": "DESENVOLVIMENTO DE CHATBOT",
+				"contentText": "Implementação de chatbots inteligentes para otimizar o atendimento ao cliente e automatizar interações"
+			},
+			"support": {
+				"title": "SUPORTE E SUSTENTAÇÃO",
+				"contentText": "Oferecemos suporte técnico contínuo e manutenção proativa, garantindo que seus sistemas permaneçam estáveis, seguros e atualizados"
 			}
 		}
 	},
 	"aboutMePage": {
-		"title": "SOBRE MIM",
+		"title": "Sobre mim_",
 		"paragraph_one": "Sou um desenvolvedor front-end altamente motivado e sempre buscando aprender novas tecnologias. Tenho experiência sólida em React, React Native e Next.js, e estou sempre disponível para enfrentar novos desafios e aprimorar minhas habilidades. Tenho paixão por criar interfaces de usuário incríveis e responsivas, e gosto de trabalhar em problemas desafiadores. Além disso, sou capaz de trabalhar eficazmente em equipe e comunicar claramente com outros membros do time. Estou sempre disposto a aprender e me adaptar a novas situações, fazendo com que eu seja um desenvolvedor flexível e confiável para qualquer projeto. ",
 		"paragraph_two": "Possuo maior aptidão para área de Front-end e conhecimentos sólidos na stack: React.Js, Next.Js, HTML, Css e Styled components.",
 		"paragraph_three": "Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que utilizam as tecnologias: Python, Django, Django REST Framework, React.js, Next.Js e PostgreSQL.",
@@ -46,10 +62,17 @@
 			"following": "Seguindo",
 			"repos": "Repositórios"
 		},
-		"alt_dev_img": "Desenvolvedor Glayson Visgueira"
+		"alt_dev_img": "Desenvolvedor Glayson Visgueira",
+		"stats": {
+			"stat_1": "5+ anos de experiência no mercado de tecnologia",
+			"stat_2": "Mais de 15 projetos entregues com sucesso",
+			"stat_3": "90% dos nossos clientes voltam para novos projetos",
+			"stat_4": "Mais de 10 clientes satisfeitos em diversos setores"
+		}
 	},
 	"portifolioPage": {
-		"title": "PROJETOS",
+		"title": "Portfólio_",
+		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
 		"labelFilter": "TODOS",
 		"createdLabel": "Criado em",
 		"projects": {
@@ -128,11 +151,24 @@
 			"id_19": {
 				"title": "FIREBASE API BOILERPLATE",
 				"description": "Estrutura boilerplate que integra um CRUD no banco de dados Firestore utilizando API do firebase."
+			},
+			"id_20": {
+				"title": "MATERIAL V6 DASH",
+				"description": "Estrutura boilerplate de app que utiliza o framework Material UI na versão 6."
+			},
+			"id_21": {
+				"title": "GERENCIADOR DE ESTADO GLOBAL",
+				"description": "Estudo de implementação das libs Zustand e Jotai para gerenciar os estados globais da aplicação web."
+			},
+			"id_22": {
+				"title": "CÉDULA PROMOTORA",
+				"description": "Landing page da Cédula Promotora, empresa de empréstimo consignado."
 			}
 		}
 	},
 	"experiencePage": {
-		"title": "EXPERIÊNCIA",
+		"title": "Experiência_",
+		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
 		"timeline": {
 			"labelPosition": "Cargo",
 			"labelTitle": "Título",

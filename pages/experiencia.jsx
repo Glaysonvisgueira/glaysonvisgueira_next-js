@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 //Custom components
 import TimelineExperienciaFormacao from "@/components/TimelineExperienciaFormacao";
-import TitlePageSection from "@/components/TitlePageSection";
+import TitleSection from "@/components/TitleSection";
 
-//Contexto
+//Context
 import { SettingsContext } from "@/context/SettingsContext";
 
 const SectionExperiencia = styled.section`
@@ -20,9 +20,10 @@ const SectionExperiencia = styled.section`
 
 export default function Experiencia() {
 	const { language } = useContext(SettingsContext);
+
 	return (
 		<SectionExperiencia id="section-experiencia">
-			<TitlePageSection title={language.experiencePage.title} />
+			<TitleSection title={language.experiencePage.title} subtitle={language.experiencePage.subtitle} hasMarginBottom />
 			<TimelineExperienciaFormacao />
 		</SectionExperiencia>
 	);

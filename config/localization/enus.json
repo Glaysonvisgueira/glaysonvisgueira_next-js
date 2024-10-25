@@ -9,29 +9,44 @@
 	},
 	"landingPage": {
 		"apresentationText": "Hello, I'm",
-		"firstTypeText": "the Dev you need...",
-		"secondTypeText": "Glayson Visgueira",
-		"resumeText": "Front-End Developer and I develop modern and high quality interfaces, focusing on performance, animations, responsiveness and built with SEO optimization.",
+		"firstTypeText": "Glayson Visgueira",
+		"resumeText": "Fullstack developer with expertise in creating complete solutions, always focused on delivering innovative and intuitive frontend experiences that connect the user to the product",
 		"buttonText": "Learn more"
 	},
 	"servicesOffer": {
 		"title": "Services offered",
 		"cards": {
+			"development": {
+				"title": "SYSTEM DEVELOPMENT",
+				"contentText": "Creation of customized solutions that meet the specific needs of your business, using modern and efficient technologies, ensuring high performance and scalability"
+			},
 			"seo": {
 				"title": "SEO",
-				"contentText": "Through SEO techniques, I will increase the conversion rate of your product and increase its online visibility organically, that is, without depending on ads to be successful."
+				"contentText": "Optimization of your website for search engines, increasing visibility and organic traffic, ensuring that your target audience finds your business more easily"
 			},
 			"ux": {
-				"title": "UX/UI",
-				"contentText": "Creation of responsive web design, focused on usability to provide the best user experience to generate leads for your product."
+				"title": "UI/UX DESIGN",
+				"contentText": "Focus on improving usability and user experience, designing interfaces that not only impress but also maximize interaction and customer satisfaction"
 			},
 			"branding": {
 				"title": "BRANDING",
-				"contentText": "I help you position your brand correctly, boosting positive results through good digital marketing practices."
+				"contentText": "I help you position your brand correctly, boosting positive results through best practices in digital marketing"
 			},
-			"development": {
-				"title": "DEVELOPMENT",
-				"contentText": "Development of 100% personalized systems that will automate the administration of your business."
+			"consultancy": {
+				"title": "IT CONSULTING",
+				"contentText": "Strategic and personalized analysis to adopt the most suitable technologies, optimizing processes and accelerating results in your business"
+			},
+			"mobile_devlopment": {
+				"title": "MOBILE APPLICATIONS",
+				"contentText": "Creation of native and hybrid applications for Android and iOS"
+			},
+			"chatbot": {
+				"title": "CHATBOT DEVELOPMENT",
+				"contentText": "Implementation of intelligent chatbots to optimize customer service and automate interactions"
+			},
+			"support": {
+				"title": "SUPPORT AND MAINTENANCE",
+				"contentText": "We offer continuous technical support and proactive maintenance, ensuring that your systems remain stable, secure, and up to date"
 			}
 		}
 	},
@@ -46,7 +61,13 @@
 			"following": "Following",
 			"repos": "Repos"
 		},
-		"alt_dev_img": "Glayson Visgueira Developer"
+		"alt_dev_img": "Glayson Visgueira Developer",
+		"stats": {
+			"stat_1": "5+ years of experience in the technology market",
+			"stat_2": "More than 15 successful projects delivered",
+			"stat_3": "90% of our clients return for new projects",
+			"stat_4": "Over 10 satisfied clients in various sectors"
+		}
 	},
 	"portifolioPage": {
 		"title": "PROJECTS",
@@ -128,6 +149,18 @@
 			"id_19": {
 				"title": "FIREBASE API BOILERPLATE",
 				"description": "Boilerplate structure that integrates a CRUD in the Firestore database using firebase API."
+			},
+			"id_20": {
+				"title": "MATERIAL V6 DASH",
+				"description": "App boilerplate structure that uses the Material UI framework in version 6."
+			},
+			"id_21": {
+				"title": "GLOBAL STATE MANAGER",
+				"description": "Implementation study of the Zustand and Jotai libs to manage the global states of the web application."
+			},
+			"id_22": {
+				"title": "CÉDULA PROMOTORA",
+				"description": "Landing page of Cédula Promotora, a payroll loan company."
 			}
 		}
 	},

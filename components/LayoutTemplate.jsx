@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 //Third part librarys
 import Link from "next/link";
@@ -9,7 +9,7 @@ import Fade from "react-reveal/Fade";
 import SwitchThemeButton from "@/components/SwitchThemeButton";
 import LanguageSwitchButton from "@/components/LanguageSwitchButton";
 
-//Contexto
+//Context
 import { SettingsContext } from "@/context/SettingsContext";
 
 const Main = styled.main`
@@ -87,6 +87,16 @@ const NavbarOptionContainer = styled.nav`
 	@media (max-width: 600px) {
 		display: none;
 	}
+
+	.links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover h4:not(:hover) {
+			opacity: 0.3;
+		}
+	}
 `;
 
 const SwitchMenuContainer = styled.div`
@@ -146,21 +156,6 @@ const NavbarOption = styled.h4`
 	}
 `;
 
-const SideBarTheme = styled.aside`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 60px;
-	height: 100vh;
-	position: fixed;
-	left: 0;
-
-	@media (max-width: 600px) {
-		display: none;
-	}
-`;
-
 export default function LayoutTemplate({ children }) {
 	const { language } = useContext(SettingsContext);
 
@@ -178,36 +173,38 @@ export default function LayoutTemplate({ children }) {
 				</Fade>
 
 				<NavbarOptionContainer>
-					<Fade top delay={100} duration={200}>
-						<Link href="#section-home" passHref>
-							<NavbarOption>{language.navbarMenu.labelHome}</NavbarOption>
-						</Link>
-					</Fade>
+					<div className="links">
+						<Fade top delay={100} duration={200}>
+							<Link href="#section-home" passHref>
+								<NavbarOption>{language.navbarMenu.labelHome}</NavbarOption>
+							</Link>
+						</Fade>
 
-					{/* <Fade top delay={200} duration={200}>
+						{/* <Fade top delay={200} duration={200}>
 						<Link href="#section-services" passHref>
 							<NavbarOption>{language.navbarMenu.labelServices}</NavbarOption>
 						</Link>
 					</Fade> */}
 
-					<Fade top delay={200} duration={200}>
-						<Link href="#section-sobre-mim" passHref>
-							<NavbarOption>{language.navbarMenu.labelAboutMe}</NavbarOption>
-						</Link>
-					</Fade>
-					<Fade top delay={300} duration={200}>
-						<Link href="#section-portifolio" passHref>
-							<NavbarOption>{language.navbarMenu.labelPortifolio}</NavbarOption>
-						</Link>
-					</Fade>
-					<Fade top delay={400} duration={200}>
-						<Link href="#section-experiencia" passHref>
-							<NavbarOption>{language.navbarMenu.labelExperience}</NavbarOption>
-						</Link>
-					</Fade>
+						<Fade top delay={200} duration={200}>
+							<Link href="#section-sobre-mim" passHref>
+								<NavbarOption>{language.navbarMenu.labelAboutMe}</NavbarOption>
+							</Link>
+						</Fade>
+						<Fade top delay={300} duration={200}>
+							<Link href="#section-portifolio" passHref>
+								<NavbarOption>{language.navbarMenu.labelPortifolio}</NavbarOption>
+							</Link>
+						</Fade>
+						<Fade top delay={400} duration={200}>
+							<Link href="#section-experiencia" passHref>
+								<NavbarOption>{language.navbarMenu.labelExperience}</NavbarOption>
+							</Link>
+						</Fade>
+					</div>
 					<Fade top delay={500} duration={200}>
 						<LanguageSwitchButton />
-						<SwitchThemeButton />
+						{/* <SwitchThemeButton /> */}
 					</Fade>
 				</NavbarOptionContainer>
 

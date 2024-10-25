@@ -1,7 +1,6 @@
 export const darkTheme = {
 	name: "dark",
 	colors: {
-		imageBlur: "url('/img/bg_circle-dark.png')",
 		backgroundPage: "#161616",
 		backgroundPageRgb: [22, 22, 22],
 		backgroundGradient: "linear-gradient(to left top, #252525, #0C0C0C)",
@@ -9,9 +8,10 @@ export const darkTheme = {
 		background: "#000",
 		backgroundSecondary: "#272727",
 		branding: "#fec800",
+		brandingDarker: "#c79d07",
 		title: "#fff",
 		inactiveTitle: "#8b8b8b",
-		subtitle: "#ccc",
+		subtitle: "#b1b1b1",
 		body: "#ccc",
 		contrastText: "#2b2b2b",
 		caption: "#ccc",
@@ -32,14 +32,14 @@ export const darkTheme = {
 export const lightTheme = {
 	name: "light",
 	colors: {
-		imageBlur: "url('/img/bg_circle-light.png')",
 		backgroundPage: "#ffffff",
 		backgroundPageRgb: [238, 238, 238],
 		backgroundGradient: "linear-gradient(202deg, #ffffff 0%, #e6e6e6 100%)",
 		backgroundRadial: "radial-gradient(circle, #ffffff 0%, #e6e6e6 100%)",
 		background: "#ffffff",
-		backgroundSecondary: "#d3d3d3",
-		branding: "#9d4eaa",
+		backgroundSecondary: "#f0f0f0",
+		branding: "#2505b6",
+		brandingDarker: "#a00030",
 		title: "#362f2f",
 		inactiveTitle: "#8b8b8b",
 		subtitle: "#383838",

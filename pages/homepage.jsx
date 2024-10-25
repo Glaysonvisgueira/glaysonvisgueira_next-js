@@ -14,6 +14,9 @@ import FloatNavigationBar from "@/components/FloatNavigationBar";
 import ScrollDownAnimation from "@/components/ScrollDownAnimation";
 //import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 
+//UI Components
+import { FluidContainer } from "@/styles/ui";
+
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
 
@@ -159,28 +162,30 @@ export default function HomePage() {
 	const { language } = useContext(SettingsContext);
 
 	return (
-		<SectionHomePage id="section-home">
-			<FloatNavigationBar />
-			<ProgressBar color={theme.colors.branding} height={5} />
-			<Head
-				title="Portfólio de projetos de programação"
-				metaDescription="Web portifólio de projetos de programação do Dev Glayson Visgueira."
-				keywords="Glayson Visgueira, Glayson, Visgueira, Programação, Portifólio, Dev, Programador, Developer, Desenvolvedor"
-			/>
-			<LandingPageContainer>
-				<TitleLandingContainer>
-					<SubTitleLanding>{language.landingPage.apresentationText}</SubTitleLanding>
-					<Typed strings={[language.landingPage.firstTypeText, language.landingPage.secondTypeText]} typeSpeed={30} className="type-string " />
-					<SubTitleLanding>{language.landingPage.resumeText}</SubTitleLanding>
-					<Link href="#section-sobre-mim" passHref>
-						<ButtonSaibaMais>{language.landingPage.buttonText}</ButtonSaibaMais>
-					</Link>
-				</TitleLandingContainer>
-				<ContainerAnimation>
-					<LandingAnimation />
-				</ContainerAnimation>
-			</LandingPageContainer>
-			<ScrollDownAnimation />
-		</SectionHomePage>
+		<FluidContainer id="section-home" hasMinHeight>
+			<SectionHomePage>
+				<FloatNavigationBar />
+				<ProgressBar color={theme.colors.branding} height={5} />
+				<Head
+					title="Portfólio de projetos de programação"
+					metaDescription="Web portifólio de projetos de programação do Dev Glayson Visgueira."
+					keywords="Glayson Visgueira, Glayson, Visgueira, Programação, Portifólio, Dev, Programador, Developer, Desenvolvedor"
+				/>
+				<LandingPageContainer>
+					<TitleLandingContainer>
+						<SubTitleLanding>{language.landingPage.apresentationText}</SubTitleLanding>
+						<Typed strings={[language.landingPage.firstTypeText]} typeSpeed={30} className="type-string " />
+						<SubTitleLanding>{language.landingPage.resumeText}</SubTitleLanding>
+						<Link href="#section-sobre-mim" passHref>
+							<ButtonSaibaMais>{language.landingPage.buttonText}</ButtonSaibaMais>
+						</Link>
+					</TitleLandingContainer>
+					<ContainerAnimation>
+						<LandingAnimation />
+					</ContainerAnimation>
+				</LandingPageContainer>
+				<ScrollDownAnimation />
+			</SectionHomePage>
+		</FluidContainer>
 	);
 }

@@ -9,12 +9,6 @@ const SpaceDiv = styled.div`
 	width: 100%;
 `;
 
-export default function CarrouselTechsDivContainer(props) {
-	return (
-		<SpaceDiv>
-			<CarrouselTechs direction="right" speed={50} />
-			<CarrouselTechs direction="left" speed={50} />
-			<CarrouselTechs direction="right" speed={50} />
-		</SpaceDiv>
-	);
+export default function CarrouselTechsDivContainer({ direction }) {
+	return <SpaceDiv>{direction === "left" ? <CarrouselTechs direction="left" speed={50} /> : <CarrouselTechs direction="right" speed={50} />}</SpaceDiv>;
 }

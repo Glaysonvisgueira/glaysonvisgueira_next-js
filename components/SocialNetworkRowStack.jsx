@@ -28,12 +28,13 @@ const ButtonSocialMediaIcon = styled.a`
 	margin-right: 5px;
 	width: 32px;
 	height: 32px;
-	transition: all 0.3s ease;
+	transition: all 0.1s ease;
 	border-radius: 4px;
 	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 
 	&:hover {
 		cursor: pointer;
+		border: 2px solid ${(props) => props.theme.colors.branding};
 	}
 
 	&:active {
@@ -42,8 +43,8 @@ const ButtonSocialMediaIcon = styled.a`
 
 	svg {
 		color: ${(props) => props.theme.colors.branding};
-		width: 24px;
-		height: 24px;
+		width: 20px;
+		height: 20px;
 		transition: all 0.3s ease;
 
 		&:hover {

@@ -10,6 +10,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 //Custom components
 import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
+import TitleSection from "@/components/TitleSection";
 
 //PDFs
 import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
@@ -259,7 +260,6 @@ const SectionSobreMim = styled.section`
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	padding-top: 80px;
 	width: 100%;
 `;
 
@@ -313,7 +313,8 @@ export default function SobreMim(props) {
 					</div>
 					<div className="right-view">
 						<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-							<h3>{language.aboutMePage.title}</h3>
+							{/* <h3>{language.aboutMePage.title}</h3> */}
+							<TitleSection title={language.aboutMePage.title} alignTitle="left" />
 							<p>{language.aboutMePage.paragraph_one}</p>
 							<p>{language.aboutMePage.paragraph_two}</p>
 							<p>{language.aboutMePage.paragraph_three}</p>

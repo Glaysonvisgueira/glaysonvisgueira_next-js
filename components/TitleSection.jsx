@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Typed from "react-typed";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import { BodyText } from "@/styles/ui";
@@ -33,7 +32,7 @@ const Wrapper = styled.div`
 const TitleSection = ({ title, subtitle, hasMarginBottom, alignTitle }) => (
 	<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
 		<Wrapper hasMarginBottom={hasMarginBottom} alignTitle={alignTitle}>
-			<Typed strings={[title]} typeSpeed={30} className="type-string" />
+			<h2 className="type-string">{title}</h2>
 			{subtitle && <BodyText centerText>{subtitle}</BodyText>}
 		</Wrapper>
 	</ScrollAnimation>

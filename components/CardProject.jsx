@@ -143,12 +143,12 @@ const Card = styled.div`
 			width: 100%;
 			text-decoration: none;
 			cursor: pointer;
+			gap: 10px;
 
 			svg {
 				width: 26px;
 				height: 26px;
 				color: ${(props) => props.theme.colors.branding};
-				margin-left: 10px;
 			}
 
 			&:hover {
@@ -227,19 +227,15 @@ export default function CardProject({ title, description, typeProject, techs, cr
 				<div className="container-buttons">
 					{liveDemoUrl != null && (
 						<a href={liveDemoUrl} target="_blank" rel="noreferrer">
-							<div className="link">
-								<span>Live demo</span>
-								<ExternalLinkOutline />
-							</div>
+							<span>{language.portifolioPage.demoLabel.toUpperCase()}</span>
+							<ExternalLinkOutline />
 						</a>
 					)}
 
 					{sourceCodeLink != null && (
 						<a href={sourceCodeLink} target="_blank" rel="noreferrer">
-							<div className="link">
-								<span>Código fonte</span>
-								<GithubOutline />
-							</div>
+							<span>{language.portifolioPage.sourceCodeLabel.toUpperCase()}</span>
+							<GithubOutline />
 						</a>
 					)}
 				</div>

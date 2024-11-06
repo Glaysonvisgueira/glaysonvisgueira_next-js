@@ -71,7 +71,7 @@ export default function FloatNavigationBar(props) {
 				</NavOption>
 			</Link>
 
-			{/* <Link href="#section-services" passHref>
+			<Link href="#section-services" passHref>
 				<NavOption
 					className="button"
 					isActive={active == "#section-services" ? true : false}
@@ -80,7 +80,7 @@ export default function FloatNavigationBar(props) {
 					}}>
 					<Code />
 				</NavOption>
-			</Link> */}
+			</Link>
 
 			<Link href="#section-sobre-mim" passHref>
 				<NavOption

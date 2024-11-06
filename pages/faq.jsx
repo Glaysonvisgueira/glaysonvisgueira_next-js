@@ -1,21 +1,17 @@
 /* eslint-disable react/jsx-key */
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
 
 //Custom components
 import TitleSection from "@/components/TitleSection";
+import { BodyText } from "@/styles/ui";
 
-const faqData = [
-	{ question: "O que é React?", answer: "React é uma biblioteca JavaScript para construção de interfaces de usuário." },
-	{ question: "Como funciona o seguro desemprego?", answer: "O seguro-desemprego é um benefício que oferece auxílio financeiro ao trabalhador demitido sem justa causa." },
-	{ question: "O que é styled-components?", answer: "Styled-components é uma biblioteca que permite escrever CSS dentro de componentes JavaScript." },
-	{ question: "O que é React?", answer: "React é uma biblioteca JavaScript para construção de interfaces de usuário." },
-	{ question: "Como funciona o seguro desemprego?", answer: "O seguro-desemprego é um benefício que oferece auxílio financeiro ao trabalhador demitido sem justa causa." },
-	{ question: "O que é styled-components?", answer: "Styled-components é uma biblioteca que permite escrever CSS dentro de componentes JavaScript." },
-];
+//Icons
+import { ArrowIosDownward, ArrowIosUpward } from "@styled-icons/evaicons-solid";
 
 const AccordionContainer = styled.div`
 	width: 60%;
@@ -54,7 +50,7 @@ const Section = styled.section`
 
 const Question = styled.div`
 	padding: 22px;
-	/* background-color: ${(props) => props.theme.colors.backgroundSecondary}; */
+	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	font-weight: 900;
 	cursor: pointer;
 	display: flex;
@@ -62,7 +58,7 @@ const Question = styled.div`
 	justify-content: space-between;
 
 	h3 {
-		color: ${({ isOpen, theme }) => (isOpen ? theme.colors.branding : theme.colors.title)};
+		color: ${({ isOpen, theme }) => (isOpen ? theme.colors.branding : theme.colors.body)};
 		font-size: 18px;
 		font-weight: 900;
 	}
@@ -72,18 +68,21 @@ const Question = styled.div`
 		}
 	}
 
-	span {
+	svg {
 		color: ${(props) => props.theme.colors.branding};
-		font-size: 40px;
+		width: 36px;
+		height: 44px;
 	}
 `;
 
 const Answer = styled.div`
 	overflow: hidden;
 	padding: ${({ isOpen }) => (isOpen ? "10px 20px 40px 20px" : "0 15px")};
+	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 
 	p {
-		color: ${(props) => props.theme.colors.title};
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 `;
 
@@ -91,13 +90,14 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => (
 	<div>
 		<Question onClick={onClick} isOpen={isOpen}>
 			<h3>{question}</h3>
-			<span>{isOpen ? "-" : "+"}</span>
+			<span>{isOpen ? <ArrowIosUpward /> : <ArrowIosDownward />}</span>
 		</Question>
-		<Answer isOpen={isOpen}>{isOpen && <p>{answer}</p>}</Answer>
+		<Answer isOpen={isOpen}>{isOpen && <BodyText>{answer}</BodyText>}</Answer>
 	</div>
 );
 
 const Accordion = () => {
+	const { language } = useContext(SettingsContext);
 	const [openIndex, setOpenIndex] = useState(null);
 
 	const toggleAccordion = (index) => {
@@ -106,19 +106,21 @@ const Accordion = () => {
 
 	return (
 		<AccordionContainer>
-			{faqData.map((item, index) => (
-				<AccordionItem key={index} question={item.question} answer={item.answer} isOpen={openIndex === index} onClick={() => toggleAccordion(index)} />
+			{language.faq.questions.map((item, index) => (
+				<ScrollAnimation animateIn="fadeIn" animateOnce key={item.id}>
+					<AccordionItem key={index} question={`${index + 1} - ${item.question}`} answer={item.answer} isOpen={openIndex === index} onClick={() => toggleAccordion(index)} />
+				</ScrollAnimation>
 			))}
 		</AccordionContainer>
 	);
 };
 
-export default function Asks() {
+export default function Faq() {
 	const { language } = useContext(SettingsContext);
 
 	return (
 		<Section id="section-ask">
-			<TitleSection title="Título" subtitle="Subtítulo" hasMarginBottom />
+			<TitleSection title={language.faq.title} subtitle={language.faq.subtitle} hasMarginBottom />
 			<Accordion />
 		</Section>
 	);

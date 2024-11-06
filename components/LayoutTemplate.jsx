@@ -180,11 +180,11 @@ export default function LayoutTemplate({ children }) {
 							</Link>
 						</Fade>
 
-						{/* <Fade top delay={200} duration={200}>
-						<Link href="#section-services" passHref>
-							<NavbarOption>{language.navbarMenu.labelServices}</NavbarOption>
-						</Link>
-					</Fade> */}
+						<Fade top delay={200} duration={200}>
+							<Link href="#section-services" passHref>
+								<NavbarOption>{language.navbarMenu.labelServices}</NavbarOption>
+							</Link>
+						</Fade>
 
 						<Fade top delay={200} duration={200}>
 							<Link href="#section-sobre-mim" passHref>

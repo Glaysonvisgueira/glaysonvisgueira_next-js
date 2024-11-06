@@ -15,6 +15,7 @@
 	},
 	"servicesOffer": {
 		"title": "Services offered",
+		"subtitle": "Our software solutions are fully customized, ensuring that your business gets exactly what it needs to stand out in the market",
 		"cards": {
 			"development": {
 				"title": "SYSTEM DEVELOPMENT",
@@ -51,7 +52,7 @@
 		}
 	},
 	"aboutMePage": {
-		"title": "ABOUT ME",
+		"title": "About me",
 		"paragraph_one": "I'm a highly motivated front-end developer and always looking to learn new technologies. I have solid experience in React, React Native and Next.js, and I'm always available to face new challenges and improve my skills. I have a passion for creating amazing, responsive user interfaces, and I enjoy working on challenging problems. Furthermore, I am able to work effectively in a team and communicate clearly with other team members. I am always willing to learn and adapt to new situations, making me a flexible and reliable developer for any project.",
 		"paragraph_two": "I have greater aptitude for the Front-end area, with solid knowledge in the stack: React.Js, Next.Js, HTML, Css and Styled components.",
 		"paragraph_three": "Bachelor in Information Systems from Centro Universitário Maurício de Nassau, with graduation completed in the first half of 2021. I worked for 9 years at Claudino S/A, in which 8 years were in the administrative area and 1 year in the company's IT sector , more specifically in the team responsible for the company's Ecommerce, where I carry out daily maintenance or development of new functionalities that use the technologies: Python, Django, Django REST Framework, React.js, Next.Js and PostgreSQL.",
@@ -70,9 +71,12 @@
 		}
 	},
 	"portifolioPage": {
-		"title": "PROJECTS",
+		"title": "Portfolio",
+		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
 		"labelFilter": "ALL",
 		"createdLabel": "Created at",
+		"sourceCodeLabel": "Code",
+		"demoLabel": "Demo",
 		"projects": {
 			"id_1": {
 				"title": "AUTOMATIC IRRIGATION SYSTEM",
@@ -165,7 +169,8 @@
 		}
 	},
 	"experiencePage": {
-		"title": "EXPERIENCE",
+		"title": "Experience",
+		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
 		"timeline": {
 			"labelPosition": "Position",
 			"labelTitle": "Title",
@@ -176,6 +181,86 @@
 			"labelBachelorDegree": "Bachelor degree",
 			"labelExtensionCourse": "Extension course"
 		}
+	},
+	"testimonialPage": {
+		"title": "What clients are saying",
+		"subtitle": "Discover what my clients are saying about their experiences with my services"
+	},
+	"faq": {
+		"title": "Frequently asked questions",
+		"subtitle": "Here are some of the most frequently asked questions about my software development services",
+		"questions": [
+			{
+				"id": 1,
+				"question": "How long does it take to develop custom software?",
+				"answer": "The development time varies depending on the complexity and scope of the project. Simple projects may take 4 to 6 weeks, while more complex solutions can take several months. During our initial consultation, I can provide a more accurate estimate based on your needs."
+			},
+			{
+				"id": 2,
+				"question": "What is the process for developing custom software?",
+				"answer": "The process generally follows these steps: initial consultation, requirement definition, interface design, development, testing, and launch. After the launch, I provide support and maintenance to ensure everything runs smoothly."
+			},
+			{
+				"id": 3,
+				"question": "Do you provide maintenance and support after the project delivery?",
+				"answer": "Yes, I offer support and maintenance to ensure the software continues to function correctly. We can discuss ongoing maintenance packages or on-demand support."
+			},
+			{
+				"id": 4,
+				"question": "Can I track the progress of my project?",
+				"answer": "Yes, I maintain regular communication with clients throughout the project. I use project management tools for frequent updates and hold meetings to discuss progress and any necessary adjustments."
+			},
+			{
+				"id": 5,
+				"question": "What are the costs involved in developing custom software?",
+				"answer": "The cost depends on the complexity of the project, the desired features, and the time needed for development. After discussing your requirements, I will provide a detailed cost estimate."
+			},
+			{
+				"id": 6,
+				"question": "Do you work with user interface (UI) design and user experience (UX)?",
+				"answer": "Yes, I believe a good interface and an intuitive user experience are crucial for software success. I focus on UI/UX design with an emphasis on usability and user satisfaction."
+			},
+			{
+				"id": 7,
+				"question": "Do you offer consulting services before starting development?",
+				"answer": "Yes, I offer consulting to better understand your needs and help define the project requirements. This phase is essential to ensure all important details are covered."
+			},
+			{
+				"id": 8,
+				"question": "Can you integrate the software with other platforms or systems?",
+				"answer": "Yes, I develop solutions that can integrate with other platforms or systems, such as databases, third-party services, APIs, and more. Integrations are planned according to the specific needs of the project."
+			},
+			{
+				"id": 9,
+				"question": "Will the software be responsive and optimized for mobile devices?",
+				"answer": "Yes, all the software I develop is optimized to work well on various devices, including desktops, tablets, and smartphones, ensuring a consistent experience for all users."
+			},
+			{
+				"id": 10,
+				"question": "What types of projects have you developed?",
+				"answer": "I have experience with a wide range of projects, such as e-commerce applications, content management systems, service booking platforms, data analysis dashboards, among others. You can check out examples of previous work in my portfolio."
+			},
+			{
+				"id": 11,
+				"question": "Can I request changes to the project during development?",
+				"answer": "Yes, but depending on the project's phase, changes may affect the timeline and budget. However, I am always flexible and work with clients to accommodate their needs as best as possible."
+			},
+			{
+				"id": 12,
+				"question": "Do you handle the launch and hosting of the software?",
+				"answer": "Yes, I can assist with the software launch and advise you on the best hosting options based on the scale and expected traffic of your project."
+			},
+			{
+				"id": 13,
+				"question": "Do you offer performance optimization services?",
+				"answer": "Yes, performance is a critical factor for any software. I optimize the code and structures to ensure the software is fast and efficient, even under load."
+			},
+			{
+				"id": 14,
+				"question": "Do you work with agile methodologies in development?",
+				"answer": "Yes, I use agile methodologies such as Scrum or Kanban to ensure collaborative and efficient development. This allows for regular reviews and quick adjustments as needed."
+			}
+		]
 	},
 	"footer": {
 		"labelNavigation": {

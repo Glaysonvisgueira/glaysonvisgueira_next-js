@@ -14,7 +14,7 @@
 		"buttonText": "Saiba mais"
 	},
 	"servicesOffer": {
-		"title": "Resolva seus problemas com software_",
+		"title": "Resolva seus problemas com software",
 		"subtitle": "Nossas soluções de software são completamente personalizadas, garantindo que sua empresa obtenha exatamente o que precisa para se destacar no mercado",
 		"cards": {
 			"development": {
@@ -52,7 +52,7 @@
 		}
 	},
 	"aboutMePage": {
-		"title": "Sobre mim_",
+		"title": "Sobre mim",
 		"paragraph_one": "Sou um desenvolvedor front-end altamente motivado e sempre buscando aprender novas tecnologias. Tenho experiência sólida em React, React Native e Next.js, e estou sempre disponível para enfrentar novos desafios e aprimorar minhas habilidades. Tenho paixão por criar interfaces de usuário incríveis e responsivas, e gosto de trabalhar em problemas desafiadores. Além disso, sou capaz de trabalhar eficazmente em equipe e comunicar claramente com outros membros do time. Estou sempre disposto a aprender e me adaptar a novas situações, fazendo com que eu seja um desenvolvedor flexível e confiável para qualquer projeto. ",
 		"paragraph_two": "Possuo maior aptidão para área de Front-end e conhecimentos sólidos na stack: React.Js, Next.Js, HTML, Css e Styled components.",
 		"paragraph_three": "Bacharel em Sistemas de informações pelo Centro Universitário Maurício de Nassau, com graduação finalizada no primeiro semestre de 2021. Trabalhei durante 9 anos na empresa Claudino S/A, nos quais 8 anos foram na área administrativa e a 1 ano no setor de TI da empresa, mais especificamente na equipe responsável pelo Ecommerce da empresa, onde diariamente realizo manutenções ou desenvolvimento de novas funcionalidades que utilizam as tecnologias: Python, Django, Django REST Framework, React.js, Next.Js e PostgreSQL.",
@@ -71,10 +71,12 @@
 		}
 	},
 	"portifolioPage": {
-		"title": "Portfólio_",
+		"title": "Portfólio",
 		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
 		"labelFilter": "TODOS",
 		"createdLabel": "Criado em",
+		"sourceCodeLabel": "Código",
+		"demoLabel": "Demo",
 		"projects": {
 			"id_1": {
 				"title": "SISTEMA DE IRRIGAÇÃO AUTOMÁTICO",
@@ -167,7 +169,7 @@
 		}
 	},
 	"experiencePage": {
-		"title": "Experiência_",
+		"title": "Experiência",
 		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
 		"timeline": {
 			"labelPosition": "Cargo",
@@ -180,6 +182,87 @@
 			"labelExtensionCourse": "Curso de extensão"
 		}
 	},
+	"testimonialPage": {
+		"title": "O que os clientes falam",
+		"subtitle": "Descubra o que meus clientes falam sobre suas experiências com meus serviços"
+	},
+	"faq": {
+		"title": "Perguntas frequentes",
+		"subtitle": "Aqui estão algumas das perguntas mais frequentes sobre os meus serviços de desenvolvimento de sistemas",
+		"questions": [
+			{
+				"id": 1,
+				"question": "Quanto tempo leva para desenvolver um software personalizado?",
+				"answer": "O tempo de desenvolvimento varia de acordo com a complexidade e o escopo do projeto. Para projetos simples, pode levar de 4 a 6 semanas, enquanto soluções mais complexas podem levar vários meses. Durante nossa consulta inicial, posso fornecer uma estimativa mais precisa com base nas suas necessidades."
+			},
+			{
+				"id": 2,
+				"question": "Qual é o processo de desenvolvimento de um software sob encomenda?",
+				"answer": "O processo geralmente segue estas etapas: consulta inicial, definição de requisitos, design de interface, desenvolvimento, testes, e lançamento. Depois do lançamento, ofereço suporte e manutenção para garantir que tudo funcione sem problemas."
+			},
+			{
+				"id": 3,
+				"question": "Você faz manutenção e suporte após a entrega do projeto?",
+				"answer": "Sim, ofereço suporte e manutenção para garantir que o software continue funcionando corretamente. Podemos discutir pacotes de manutenção contínua ou suporte sob demanda."
+			},
+			{
+				"id": 4,
+				"question": "Posso acompanhar o progresso do meu projeto?",
+				"answer": "Sim, mantenho uma comunicação regular com os clientes durante todo o projeto. Utilizo ferramentas de gerenciamento de projetos para atualizações frequentes e reuniões para discutir o progresso e quaisquer ajustes necessários."
+			},
+			{
+				"id": 5,
+				"question": "Quais são os custos envolvidos no desenvolvimento de software personalizado?",
+				"answer": "O custo depende da complexidade do projeto, das funcionalidades desejadas, e do tempo necessário para o desenvolvimento. Após discutirmos seus requisitos, fornecerei uma estimativa detalhada de custos."
+			},
+			{
+				"id": 6,
+				"question": "Você trabalha com design de interface de usuário (UI) e experiência de usuário (UX)?",
+				"answer": "Sim, acredito que uma boa interface e uma experiência de usuário intuitiva são fundamentais para o sucesso de um software. Trabalho no design de UI/UX com foco na usabilidade e na satisfação do usuário."
+			},
+			{
+				"id": 7,
+				"question": "Você oferece serviços de consultoria antes de iniciar o desenvolvimento?",
+				"answer": "Sim, ofereço consultoria para entender melhor suas necessidades e ajudá-lo a definir os requisitos do projeto. Esta fase é essencial para garantir que todos os detalhes importantes sejam cobertos."
+			},
+			{
+				"id": 8,
+				"question": "Você consegue integrar o software com outras plataformas ou sistemas?",
+				"answer": "Sim, desenvolvo soluções que podem ser integradas com outras plataformas ou sistemas, como bancos de dados, serviços de terceiros, APIs e muito mais. As integrações são planejadas de acordo com as necessidades específicas do projeto."
+			},
+			{
+				"id": 9,
+				"question": "O software será responsivo e otimizado para dispositivos móveis?",
+				"answer": "Sim, todo o software que desenvolvo é otimizado para funcionar bem em diferentes dispositivos, incluindo desktops, tablets e smartphones, garantindo uma experiência consistente para todos os usuários."
+			},
+			{
+				"id": 10,
+				"question": "Que tipo de projetos você já desenvolveu?",
+				"answer": "Tenho experiência em uma ampla gama de projetos, como aplicativos de comércio eletrônico, sistemas de gerenciamento de conteúdo, plataformas de reserva de serviços, dashboards de análise de dados, entre outros. No meu portfólio, você pode conferir exemplos de trabalhos anteriores."
+			},
+			{
+				"id": 11,
+				"question": "Posso solicitar alterações no projeto durante o desenvolvimento?",
+				"answer": "Sim, mas dependendo da fase em que o projeto está, as mudanças podem afetar o prazo e o orçamento. No entanto, sempre sou flexível e trabalho junto com o cliente para acomodar as necessidades o melhor possível."
+			},
+			{
+				"id": 12,
+				"question": "Você também cuida do lançamento e da hospedagem do software?",
+				"answer": "Sim, posso ajudar com o lançamento do software e aconselhá-lo sobre as melhores opções de hospedagem, dependendo da escala e do tráfego esperado do seu projeto."
+			},
+			{
+				"id": 13,
+				"question": "Você oferece serviços de otimização de performance?",
+				"answer": "Sim, a performance é um fator crítico para qualquer software. Otimizo o código e as estruturas para garantir que o software seja rápido e eficiente, mesmo sob carga."
+			},
+			{
+				"id": 14,
+				"question": "Você trabalha com metodologias ágeis no desenvolvimento?",
+				"answer": "Sim, utilizo metodologias ágeis, como Scrum ou Kanban, para garantir um desenvolvimento colaborativo e eficiente. Isso permite revisões regulares e ajustes rápidos conforme necessário."
+			}
+		]
+	},
+
 	"footer": {
 		"labelNavigation": {
 			"title": "NAVEGAÇÃO",

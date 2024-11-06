@@ -5,7 +5,7 @@ import SobreMimPage from "./sobre-mim";
 import PortfolioPage from "./portfolio";
 import ExperienciaPage from "./experiencia";
 import HomePage from "./homepage";
-import Asks from "./Asks";
+import Faq from "./faq";
 import Testimonials from "./Testimonials";
 
 //Components
@@ -53,8 +53,8 @@ export default function Index() {
 			<CarrouselTechsDivContainer direction="left" />
 			<PortfolioPage />
 			<ExperienciaPage />
-			{/* <Asks />
-			<Testimonials /> */}
+			<Testimonials />
+			<Faq />
 			<FooterPage />
 		</>
 	);

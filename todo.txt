@@ -1,3 +1,4 @@
+- Verificar os bugs na troca de idioma
 - trocar a animação por outra imagem na homepage
 - Auditar informações dos cards dos projetos
 - organizar as labels em ptbr e enus

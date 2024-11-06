@@ -47,6 +47,7 @@ const ContainerGrid = styled.div`
 	@media (max-width: 600px) {
 		grid-template-columns: repeat(1, 1fr);
 		width: 100%;
+		justify-items: left;
 	}
 `;
 

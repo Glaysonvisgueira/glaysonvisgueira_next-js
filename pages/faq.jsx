@@ -73,6 +73,17 @@ const Question = styled.div`
 		width: 36px;
 		height: 44px;
 	}
+
+	@media (max-width: 900px) {
+		h3 {
+			font-size: 14px;
+		}
+
+		svg {
+			width: 26px;
+			height: 34px;
+		}
+	}
 `;
 
 const Answer = styled.div`

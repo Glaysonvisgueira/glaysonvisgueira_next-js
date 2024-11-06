@@ -210,7 +210,7 @@ export default function LayoutTemplate({ children }) {
 
 				<SwitchMenuContainer>
 					<LanguageSwitchButton />
-					<SwitchThemeButton />
+					{/* <SwitchThemeButton /> */}
 				</SwitchMenuContainer>
 			</HeaderContainer>
 

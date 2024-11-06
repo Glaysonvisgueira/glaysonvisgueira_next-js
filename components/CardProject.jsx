@@ -159,6 +159,10 @@ const Card = styled.div`
 					color: ${(props) => props.theme.colors.backgroundSecondary};
 				}
 			}
+
+			@media (max-width: 601px) {
+				font-size: 14px;
+			}
 		}
 
 		a:first-of-type:not(:only-of-type) {

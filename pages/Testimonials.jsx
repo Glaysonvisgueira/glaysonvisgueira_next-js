@@ -70,6 +70,11 @@ const Testimonial = styled.div`
 		font-weight: 900;
 		letter-spacing: 3px;
 		margin-bottom: 40px;
+		font-size: 18px;
+
+		@media (max-width: 601px) {
+			font-size: 14px;
+		}
 	}
 
 	.user-star-container {
@@ -126,6 +131,18 @@ const Testimonial = styled.div`
 				span {
 					color: ${(props) => props.theme.colors.body};
 					font-weight: 400;
+				}
+			}
+
+			@media (max-width: 601px) {
+				.user-data {
+					h4 {
+						font-size: 14px;
+					}
+
+					span {
+						font-size: 14px;
+					}
 				}
 			}
 		}

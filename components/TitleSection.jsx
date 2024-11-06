@@ -9,15 +9,16 @@ const Wrapper = styled.div`
 	justify-content: center;
 	align-items: ${({ alignTitle }) => (alignTitle === "left" ? "flex-start" : "center")};
 	flex-direction: column;
-	padding: 0 30px;
+	padding: 0 40px;
 
-	${({ hasMarginBottom }) => hasMarginBottom && "margin-bottom: 90px;"}
+	${({ hasMarginBottom }) => hasMarginBottom && "margin-bottom: 90px; @media (max-width: 900px) {	margin-bottom: 40px; }"}
 
 	.type-string {
 		font-size: 32px;
 		font-weight: 800;
 		color: ${(props) => props.theme.colors.branding};
 		margin-bottom: 10px;
+		text-align: center;
 
 		@media (max-width: 1200px) {
 			font-size: 28px;

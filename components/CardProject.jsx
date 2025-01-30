@@ -8,6 +8,7 @@ import { SettingsContext } from "@/context/SettingsContext";
 //Icons
 import { GithubOutline, ExternalLinkOutline } from "@styled-icons/evaicons-outline";
 import { NoPhotography } from "@styled-icons/material-outlined";
+import { TextboxMore } from "@styled-icons/fluentui-system-regular/TextboxMore";
 
 const Card = styled.div`
 	display: flex;
@@ -47,7 +48,7 @@ const Card = styled.div`
 	}
 
 	&:hover {
-		border: 2px solid ${(props) => props.theme.colors.branding};
+		/* border: 2px solid ${(props) => props.theme.colors.branding}; */
 
 		.image img {
 			transition: transform 0.3s ease;
@@ -127,15 +128,17 @@ const Card = styled.div`
 	.container-buttons {
 		display: flex;
 		align-items: flex-start;
-		justify-content: space-between;
+		justify-content: space-around;
 		flex-direction: row;
 		width: 100%;
+		gap: 10px;
 
-		a {
+		a,
+		div {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			border: 2px solid ${(props) => props.theme.colors.branding};
+			/* border: 2px solid ${(props) => props.theme.colors.branding}; */
 			padding: 8px 10px;
 			border-radius: 4px;
 			color: ${(props) => props.theme.colors.branding};
@@ -143,12 +146,13 @@ const Card = styled.div`
 			width: 100%;
 			text-decoration: none;
 			cursor: pointer;
-			gap: 10px;
+
+			background-color: ${(props) => props.theme.colors.backgroundTertiary};
 
 			svg {
 				width: 26px;
 				height: 26px;
-				color: ${(props) => props.theme.colors.branding};
+				color: ${(props) => props.theme.colors.inactiveTitle};
 			}
 
 			&:hover {
@@ -163,10 +167,6 @@ const Card = styled.div`
 			@media (max-width: 601px) {
 				font-size: 14px;
 			}
-		}
-
-		a:first-of-type:not(:only-of-type) {
-			margin-right: 10px;
 		}
 	}
 
@@ -186,7 +186,7 @@ const Card = styled.div`
 	}
 `;
 
-export default function CardProject({ title, description, typeProject, techs, createdAt, liveDemoUrl, sourceCodeLink, imageSourcePath }) {
+export default function CardProject({ title, description, typeProject, techs, createdAt, liveDemoUrl, sourceCodeLink, imageSourcePath, handleModal }) {
 	const { language } = useContext(SettingsContext);
 
 	return (
@@ -231,17 +231,19 @@ export default function CardProject({ title, description, typeProject, techs, cr
 				<div className="container-buttons">
 					{liveDemoUrl != null && (
 						<a href={liveDemoUrl} target="_blank" rel="noreferrer">
-							<span>{language.portifolioPage.demoLabel.toUpperCase()}</span>
 							<ExternalLinkOutline />
 						</a>
 					)}
 
 					{sourceCodeLink != null && (
 						<a href={sourceCodeLink} target="_blank" rel="noreferrer">
-							<span>{language.portifolioPage.sourceCodeLabel.toUpperCase()}</span>
 							<GithubOutline />
 						</a>
 					)}
+
+					<div onClick={handleModal} target="_blank" rel="noreferrer">
+						<TextboxMore />
+					</div>
 				</div>
 			</div>
 		</Card>

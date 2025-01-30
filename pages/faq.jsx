@@ -14,12 +14,12 @@ import { BodyText } from "@/styles/ui";
 import { ArrowIosDownward, ArrowIosUpward } from "@styled-icons/evaicons-solid";
 
 const AccordionContainer = styled.div`
-	width: 60%;
+	width: 50%;
 	border-radius: 12px;
 	overflow: hidden;
 
 	> div:not(:last-child) {
-		border-bottom: 1px solid ${(props) => props.theme.colors.inactiveTitle};
+		border-bottom: 2px solid ${(props) => props.theme.colors.backgroundSecondary};
 	}
 
 	@media (max-width: 1600px) {
@@ -50,7 +50,7 @@ const Section = styled.section`
 
 const Question = styled.div`
 	padding: 22px;
-	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	/* background-color: ${(props) => props.theme.colors.backgroundSecondary}; */
 	font-weight: 900;
 	cursor: pointer;
 	display: flex;
@@ -69,7 +69,7 @@ const Question = styled.div`
 	}
 
 	svg {
-		color: ${(props) => props.theme.colors.branding};
+		color: ${({ isOpen, theme }) => (isOpen ? theme.colors.branding : theme.colors.body)};
 		width: 36px;
 		height: 44px;
 	}
@@ -89,7 +89,7 @@ const Question = styled.div`
 const Answer = styled.div`
 	overflow: hidden;
 	padding: ${({ isOpen }) => (isOpen ? "10px 20px 40px 20px" : "0 15px")};
-	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	/* background-color: ${(props) => props.theme.colors.backgroundSecondary}; */
 
 	p {
 		padding-left: 20px;
@@ -119,7 +119,7 @@ const Accordion = () => {
 		<AccordionContainer>
 			{language.faq.questions.map((item, index) => (
 				<ScrollAnimation animateIn="fadeIn" animateOnce key={item.id}>
-					<AccordionItem key={index} question={`${index + 1} - ${item.question}`} answer={item.answer} isOpen={openIndex === index} onClick={() => toggleAccordion(index)} />
+					<AccordionItem key={index} question={`${item.question}`} answer={item.answer} isOpen={openIndex === index} onClick={() => toggleAccordion(index)} />
 				</ScrollAnimation>
 			))}
 		</AccordionContainer>

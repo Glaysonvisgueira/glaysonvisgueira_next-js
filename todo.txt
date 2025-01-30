@@ -2,25 +2,23 @@
 - trocar a animação por outra imagem na homepage
 - Auditar informações dos cards dos projetos
 - organizar as labels em ptbr e enus
-- Sessão de testemunhos
-- Sessão de dúvidas frequentes
-- trocar o arquivo do currículo para um atualizado
 - refatorar homepage para aceitar imagem de background com opacity por cima
 
 
-FINALIZADO
-- verificar bug nos numbers count ao alterar o idioma
-- Adicionar nova cor do tema para o light theme
-- Adicionar sessão que demonstra tempo de experiência, quantidade de projetos e qualquer outro indicador útil
-- Adicionar imagens aos projetos existentes
-- Adicionar novos projetos
-- Refatorar o componente de animações em com scroll horizontal das techs
-- Refazer os cards do portifolio com imagens e preview
-- Verificar possibilidade de inserir versao no homepage e deixar ela mais versionada numericamente
-- atualizar todos os titulos das sessoes para o novo componente
-- Alterar efeitos do hover do navbar desktop
-- adicionar border no hover no button to top do footer
-- adicionar border no hover no button dos links buttons das redes sociais
-- Adicionar novas experiências ao componente de timeline
-- Alterar efeitos de hover dos links do footer
 
+bugs:
+alterar os subtitles das paginas
+
+
+refatorar:
+footer
+home com novo estilo
+adicionar sessão de testemunhos
+
+alterar versao
+clicar no card abre o modal
+comentar o que clientes falam
+faq accordion
+adicionar novo projeto aos cards
+trocar o arquivo do currículo para um atualizado
+ir para sessao sobre mim pelo link esta cobrindo title

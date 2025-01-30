@@ -192,6 +192,10 @@ const ContainerBuildCopyright = styled.div`
 		justify-content: center;
 	}
 
+	span {
+		color: ${(props) => props.theme.colors.body};
+	}
+
 	@media (max-width: 1200px) {
 		width: 80%;
 	}
@@ -328,7 +332,9 @@ export default function FooterPage(props) {
 			</div>
 			<Divider />
 			<ContainerBuildCopyright>
-				<SocialNetworkRowStack />
+				{/* <SocialNetworkRowStack /> */}
+
+				<span>© {new Date().getFullYear()} Glayson Visgueira. Todos os direitos reservados.</span>
 				<div className="build-and-button-top">
 					<TextBuildProject>
 						{language.footer.labelBuildVersion}: {version || ""}

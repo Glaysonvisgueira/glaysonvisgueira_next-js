@@ -13,7 +13,7 @@ import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import TitleSection from "@/components/TitleSection";
 
 //PDFs
-import curriculoPTBR from "../public/pdf/curriculo-ptbr.pdf";
+import curriculoPTBR from "../public/pdf/curriculo.pdf";
 
 const WrapperAboutMe = styled.div`
 	display: flex;
@@ -261,6 +261,7 @@ const SectionSobreMim = styled.section`
 	justify-content: flex-start;
 	flex-direction: column;
 	width: 100%;
+	scroll-margin-top: 80px;
 `;
 
 export default function SobreMim(props) {

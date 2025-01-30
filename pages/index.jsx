@@ -53,7 +53,7 @@ export default function Index() {
 			<CarrouselTechsDivContainer direction="left" />
 			<PortfolioPage />
 			<ExperienciaPage />
-			<Testimonials />
+			{/* <Testimonials /> */}
 			<Faq />
 			<FooterPage />
 		</>

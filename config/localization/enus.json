@@ -72,7 +72,7 @@
 	},
 	"portifolioPage": {
 		"title": "Portfolio",
-		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+		"subtitle": "Browse and learn more about my study projects and work carried out",
 		"labelFilter": "ALL",
 		"createdLabel": "Created at",
 		"sourceCodeLabel": "Code",
@@ -165,6 +165,10 @@
 			"id_22": {
 				"title": "CÉDULA PROMOTORA",
 				"description": "Landing page of Cédula Promotora, a payroll loan company."
+			},
+			"id_23": {
+				"title": "PRÓDOS DIGITAL",
+				"description": "Landing page of PRÓDOS DIGITAL, a software development and digital marketing company."
 			}
 		}
 	},

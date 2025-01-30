@@ -146,13 +146,105 @@ const SectionPortifolio = styled.section`
 	padding-top: 60px;
 `;
 
+const Modal = styled.div`
+	display: ${(props) => (props.show ? "flex" : "none")};
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+`;
+
+const ModalContent = styled.div`
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	background: ${(props) => props.theme.colors.backgroundSecondary};
+	padding: 30px;
+	border-radius: 8px;
+	width: 100%;
+	max-height: 90%;
+	overflow-y: auto;
+	max-width: 900px;
+
+	h2 {
+		color: ${(props) => props.theme.colors.title};
+	}
+
+	p {
+		margin: 20px 0;
+		text-align: left;
+		color: ${(props) => props.theme.colors.body};
+	}
+
+	@media (max-width: 600px) {
+		width: 90%;
+	}
+`;
+
+const CloseButton = styled.button`
+	background: ${(props) => props.theme.colors.branding};
+	color: ${(props) => props.theme.colors.backgroundPage};
+	border: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: ${(props) => props.theme.fontSizes.md};
+	margin-top: 30px;
+
+	&:hover {
+		background: ${(props) => props.theme.colors.brandingHover};
+	}
+`;
+
 export default function Portifolio() {
 	const { language } = useContext(SettingsContext);
 	const [stack, setStack] = useState("TODOS");
 	const [view, setView] = useState("grid");
+	const [showModal, setShowModal] = useState(false);
+	const [selectedProject, setSelectedProject] = useState(null);
+
+	const handleCardClick = (project) => {
+		setSelectedProject(project);
+		setShowModal(true);
+	};
+
+	const handleCloseModal = () => {
+		setShowModal(false);
+		setSelectedProject(null);
+	};
 
 	const projects = useMemo(
 		() => [
+			{
+				id: 23,
+				title: language.portifolioPage.projects.id_23.title,
+				description: language.portifolioPage.projects.id_23.description,
+				liveDemoUrl: "https://www.prodosdigital.com.br/",
+				imageSourcePath: "/img/portfolio-projects/prodos-digital.png",
+				techs: [
+					<Tooltip toolTipText="React.JS">
+						<ReactLogo />
+					</Tooltip>,
+					<Tooltip toolTipText="Next.JS">
+						<Nextdotjs />
+					</Tooltip>,
+					<Tooltip toolTipText="Sass">
+						<Sass />
+					</Tooltip>,
+					<Tooltip toolTipText="Javascript">
+						<Javascript />
+					</Tooltip>,
+				],
+				sourceCodeLink: null,
+				typeProject: ["WEB"],
+				created_at: "12/12/2024",
+			},
 			{
 				id: 1,
 				title: language.portifolioPage.projects.id_1.title,
@@ -682,10 +774,19 @@ export default function Portifolio() {
 							liveDemoUrl={project.liveDemoUrl}
 							imageSourcePath={project.imageSourcePath}
 							sourceCodeLink={project.sourceCodeLink}
+							handleModal={() => handleCardClick(project)}
 						/>
 					</ScrollAnimation>
 				))}
 			</ContainerGrid>
+
+			<Modal show={showModal}>
+				<ModalContent>
+					<h2>{selectedProject?.title}</h2>
+					<p>{selectedProject?.description}</p>
+					<CloseButton onClick={handleCloseModal}>Fechar</CloseButton>
+				</ModalContent>
+			</Modal>
 		</SectionPortifolio>
 	);
 }

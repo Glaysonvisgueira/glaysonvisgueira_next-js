@@ -20,6 +20,9 @@ import { FluidContainer } from "@/styles/ui";
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
 
+//Arquivo curriculo
+import curriculo from "../public/pdf/curriculo.pdf";
+
 const LandingPageContainer = styled.div`
 	display: flex;
 	align-items: center;
@@ -124,14 +127,41 @@ const ButtonSaibaMais = styled.button`
 	position: relative;
 	width: 200px;
 	height: 44px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+
 	transition: all 0.3s ease;
 	font-size: ${(props) => props.theme.fontSizes.lg};
 	border: none;
 	color: ${(props) => props.theme.colors.background};
 	border-radius: 4px;
 	background-color: ${(props) => props.theme.colors.branding};
+	font-weight: 700;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+
+	@media (max-width: 601px) {
+		width: 70%;
+	}
+
+	@media (max-width: 425px) {
+		width: 100%;
+	}
+`;
+
+const ButtonDownloadCV = styled.button`
+	z-index: 1;
+	position: relative;
+	width: 200px;
+	height: 44px;
+	transition: all 0.3s ease;
+	font-size: ${(props) => props.theme.fontSizes.lg};
+	/* border: 2px solid ${(props) => props.theme.colors.branding}; */
+	border: none;
+	color: ${(props) => props.theme.colors.branding};
+	border-radius: 4px;
+	background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	font-weight: 700;
 
 	&:hover {
@@ -157,9 +187,65 @@ const SectionHomePage = styled.section`
 	position: relative;
 `;
 
+const TextBrandingDev = styled.span`
+	font-weight: 700;
+	color: ${(props) => props.theme.colors.branding};
+	font-size: 16px;
+	margin-bottom: 12px;
+
+	@media (max-width: 601px) {
+		text-align: center;
+		width: 100%;
+	}
+`;
+
+const ChipTechWrapper = styled.span`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	margin-top: 10px;
+	flex-wrap: wrap;
+
+	@media (max-width: 601px) {
+		justify-content: center;
+	}
+
+	.chip-tech {
+		font-size: 14px;
+		padding: 2px 8px;
+		border-radius: 4px;
+		color: ${(props) => props.theme.colors.branding};
+		background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	}
+`;
+
+const WrapperButtons = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row;
+	gap: 10px;
+	width: 100%;
+	margin-top: 20px;
+
+	@media (max-width: 601px) {
+		flex-direction: column;
+	}
+`;
+
 export default function HomePage() {
 	const theme = useTheme();
 	const { language } = useContext(SettingsContext);
+
+	const handleDownload = () => {
+		const link = document.createElement("a");
+		link.href = curriculo;
+		link.download = "curriculo_glayson_visgueira.pdf"; // Nome do arquivo baixado
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
 
 	return (
 		<FluidContainer id="section-home" hasMinHeight>
@@ -169,16 +255,32 @@ export default function HomePage() {
 				<Head
 					title="Portfólio de projetos de programação"
 					metaDescription="Web portifólio de projetos de programação do Dev Glayson Visgueira."
-					keywords="Glayson Visgueira, Glayson, Visgueira, Programação, Portifólio, Dev, Programador, Developer, Desenvolvedor"
+					keywords="Glayson Visgueira, Glayson, Visgueira, Programação, Portifólio, Dev, Programador, Developer, Desenvolvedor de software, analista de sistemas, programador fullstack, desenvolvedor frontend"
 				/>
 				<LandingPageContainer>
 					<TitleLandingContainer>
-						<SubTitleLanding>{language.landingPage.apresentationText}</SubTitleLanding>
+						<TextBrandingDev>Desenvolvedor Front-end | Fullstack</TextBrandingDev>
+						{/* <SubTitleLanding>{language.landingPage.apresentationText}</SubTitleLanding> */}
 						<Typed strings={[language.landingPage.firstTypeText]} typeSpeed={30} className="type-string " />
 						<SubTitleLanding>{language.landingPage.resumeText}</SubTitleLanding>
-						<Link href="#section-sobre-mim" passHref>
-							<ButtonSaibaMais>{language.landingPage.buttonText}</ButtonSaibaMais>
-						</Link>
+						<ChipTechWrapper>
+							<span className="chip-tech">React</span>
+							<span className="chip-tech">Python</span>
+							<span className="chip-tech">Javascript</span>
+							<span className="chip-tech">Next.js</span>
+							<span className="chip-tech">Django</span>
+							<span className="chip-tech">Typescript</span>
+							<span className="chip-tech">Node.js</span>
+						</ChipTechWrapper>
+
+						<WrapperButtons>
+							<Link href="#section-sobre-mim" passHref>
+								<ButtonSaibaMais>{language.landingPage.buttonText}</ButtonSaibaMais>
+							</Link>
+							<ButtonDownloadCV onClick={handleDownload} target="_blank" data-splitbee-event="Download CV">
+								Download CV
+							</ButtonDownloadCV>
+						</WrapperButtons>
 					</TitleLandingContainer>
 					<ContainerAnimation>
 						<LandingAnimation />

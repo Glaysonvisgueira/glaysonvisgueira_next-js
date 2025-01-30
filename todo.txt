@@ -1,24 +1,16 @@
-- Verificar os bugs na troca de idioma
-- trocar a animação por outra imagem na homepage
-- Auditar informações dos cards dos projetos
-- organizar as labels em ptbr e enus
-- refatorar homepage para aceitar imagem de background com opacity por cima
+REFATORAR:
+Footer
+Adicionar sessão de testemunhos
 
-
-
-bugs:
+REALIZADO:
 alterar os subtitles das paginas
-
-
-refatorar:
-footer
+Adicionar novo projeto aos cards (TDAH CLASS)
 home com novo estilo
-adicionar sessão de testemunhos
-
 alterar versao
 clicar no card abre o modal
 comentar o que clientes falam
+abrir o modal ainda deixa o usuario rolar o scroll da pagina
 faq accordion
-adicionar novo projeto aos cards
 trocar o arquivo do currículo para um atualizado
 ir para sessao sobre mim pelo link esta cobrindo title
+transformar o botao de download de link para bottao de download do curriculo

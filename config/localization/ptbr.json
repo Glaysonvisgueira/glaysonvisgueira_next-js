@@ -169,12 +169,16 @@
 			"id_23": {
 				"title": "PRÓDOS DIGITAL",
 				"description": "Landing page da PRÓDOS DIGITAL, empresa de desenvolvimento de software e marketing digital."
+			},
+			"id_24": {
+				"title": "TDAH CLASS",
+				"description": "Aplicativo móvel para sistema operacional Android, que simula através de perguntas e respostas a probabilidade do aluno ter um diagnóstico de TDAH."
 			}
 		}
 	},
 	"experiencePage": {
 		"title": "Experiência",
-		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+		"subtitle": "Uma visão geral sobre minha formação complementar, certificações relevantes e trajetória profissional",
 		"timeline": {
 			"labelPosition": "Cargo",
 			"labelTitle": "Título",

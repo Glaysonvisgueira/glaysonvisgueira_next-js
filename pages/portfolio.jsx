@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import React, { useState, useContext, useMemo } from "react";
+import React, { useState, useContext, useMemo, useEffect } from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -209,6 +209,26 @@ export default function Portifolio() {
 	const [showModal, setShowModal] = useState(false);
 	const [selectedProject, setSelectedProject] = useState(null);
 
+	useEffect(() => {
+		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+		if (showModal) {
+			document.body.style.overflow = "hidden";
+			document.documentElement.style.overflow = "hidden";
+			document.body.style.paddingRight = `${scrollbarWidth}px`;
+		} else {
+			document.body.style.overflow = "auto";
+			document.documentElement.style.overflow = "auto";
+			document.body.style.paddingRight = "0px";
+		}
+
+		return () => {
+			document.body.style.overflow = "auto";
+			document.documentElement.style.overflow = "auto";
+			document.body.style.paddingRight = "0px";
+		};
+	}, [showModal]);
+
 	const handleCardClick = (project) => {
 		setSelectedProject(project);
 		setShowModal(true);
@@ -221,6 +241,24 @@ export default function Portifolio() {
 
 	const projects = useMemo(
 		() => [
+			{
+				id: 24,
+				title: language.portifolioPage.projects.id_24.title,
+				description: language.portifolioPage.projects.id_24.description,
+				liveDemoUrl: null,
+				imageSourcePath: null,
+				techs: [
+					<Tooltip toolTipText="React.JS">
+						<ReactLogo />
+					</Tooltip>,
+					<Tooltip toolTipText="Javascript">
+						<Javascript />
+					</Tooltip>,
+				],
+				sourceCodeLink: null,
+				typeProject: ["WEB"],
+				created_at: "29/08/2024",
+			},
 			{
 				id: 23,
 				title: language.portifolioPage.projects.id_23.title,

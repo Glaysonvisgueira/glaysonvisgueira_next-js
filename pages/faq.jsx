@@ -70,7 +70,7 @@ const Question = styled.div`
 
 	svg {
 		color: ${({ isOpen, theme }) => (isOpen ? theme.colors.branding : theme.colors.body)};
-		width: 36px;
+		width: 28px;
 		height: 44px;
 	}
 

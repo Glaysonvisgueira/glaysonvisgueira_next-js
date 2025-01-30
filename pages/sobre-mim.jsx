@@ -13,7 +13,7 @@ import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import TitleSection from "@/components/TitleSection";
 
 //PDFs
-import curriculoPTBR from "../public/pdf/curriculo.pdf";
+import curriculo from "../public/pdf/curriculo.pdf";
 
 const WrapperAboutMe = styled.div`
 	display: flex;
@@ -222,7 +222,7 @@ const GithubStatsCard = styled.div`
 	}
 `;
 
-const ButtonCV = styled.a`
+const ButtonCV = styled.button`
 	z-index: 1;
 	position: relative;
 	width: 200px;
@@ -277,6 +277,15 @@ export default function SobreMim(props) {
 		fetchGithubStats();
 	}, []);
 
+	const handleDownload = () => {
+		const link = document.createElement("a");
+		link.href = curriculo;
+		link.download = "curriculo_glayson_visgueira.pdf"; // Nome do arquivo baixado
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+
 	return (
 		<SectionSobreMim id="section-sobre-mim">
 			<WrapperAboutMe>
@@ -321,7 +330,7 @@ export default function SobreMim(props) {
 							<p>{language.aboutMePage.paragraph_three}</p>
 							<div className="tech-and-cv">
 								<SocialNetworkRowStack />
-								<ButtonCV href={curriculoPTBR} target="_blank" data-splitbee-event="Download CV">
+								<ButtonCV onClick={handleDownload} data-splitbee-event="Download CV">
 									Download CV
 								</ButtonCV>
 							</div>

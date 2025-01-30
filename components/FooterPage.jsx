@@ -66,6 +66,22 @@ const SectionFooterMenu = styled.div`
 	padding: 5px;
 `;
 
+const BrandFooterWrapper = styled.div`
+	display: flex;
+	align-content: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	//border: 1px solid #000;
+	padding: 5px;
+
+	span {
+		color: ${(props) => props.theme.colors.body};
+		margin: 10px 0;
+	}
+`;
+
 const FooterTextTitle = styled.h4`
 	font-weight: 800;
 	color: ${(props) => props.theme.colors.branding};
@@ -75,7 +91,7 @@ const FooterText = styled.span`
 	position: relative;
 	font-weight: 400;
 	font-size: 14px;
-	color: ${(props) => props.theme.colors.subtitle};
+	color: ${(props) => props.theme.colors.body};
 	/* transition: all 0.3s ease; */
 	margin-top: 3px;
 	margin-bottom: 3px;
@@ -123,7 +139,7 @@ const FooterTextExternalLink = styled.a`
 	position: relative;
 	font-weight: 400;
 	font-size: 14px;
-	color: ${(props) => props.theme.colors.subtitle};
+	color: ${(props) => props.theme.colors.body};
 	transition: all 0.3s ease;
 	margin-top: 3px;
 	margin-bottom: 3px;
@@ -194,6 +210,7 @@ const ContainerBuildCopyright = styled.div`
 
 	span {
 		color: ${(props) => props.theme.colors.body};
+		font-size: 14px;
 	}
 
 	@media (max-width: 1200px) {
@@ -262,6 +279,12 @@ export default function FooterPage(props) {
 	return (
 		<FooterContainer>
 			<div id="grid">
+				{/* <BrandFooterWrapper>
+					<FooterTextTitle>GLAYSON VISGUEIRA</FooterTextTitle>
+					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+					<SocialNetworkRowStack />
+				</BrandFooterWrapper> */}
+
 				<ScrollAnimation animateIn="fadeIn" animateOnce>
 					<SectionFooterMenu>
 						<FooterTextTitle>{language.footer.labelNavigation.title}</FooterTextTitle>
@@ -280,16 +303,6 @@ export default function FooterPage(props) {
 						<Link href="#section-experiencia" passHref>
 							<FooterText>{language.footer.labelNavigation.labelExperience}</FooterText>
 						</Link>
-					</SectionFooterMenu>
-				</ScrollAnimation>
-
-				<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
-					<SectionFooterMenu>
-						<FooterTextTitle>{language.footer.labelHost.title}</FooterTextTitle>
-
-						<FooterTextExternalLink href="https://vercel.com/" target="_blank">
-							Vercel
-						</FooterTextExternalLink>
 					</SectionFooterMenu>
 				</ScrollAnimation>
 
@@ -316,6 +329,9 @@ export default function FooterPage(props) {
 
 						<FooterTextExternalLink href="https://styled-components.com/" target="_blank">
 							Styled components
+						</FooterTextExternalLink>
+						<FooterTextExternalLink href="https://vercel.com/" target="_blank">
+							Vercel
 						</FooterTextExternalLink>
 					</SectionFooterMenu>
 				</ScrollAnimation>

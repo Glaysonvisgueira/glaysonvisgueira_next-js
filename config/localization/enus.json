@@ -169,12 +169,16 @@
 			"id_23": {
 				"title": "PRÓDOS DIGITAL",
 				"description": "Landing page of PRÓDOS DIGITAL, a software development and digital marketing company."
+			},
+			"id_24": {
+				"title": "TDAH CLASS",
+				"description": "Mobile application for the Android operating system, which simulates, through questions and answers, the probability of a student having an ADHD diagnosis."
 			}
 		}
 	},
 	"experiencePage": {
 		"title": "Experience",
-		"subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+		"subtitle": "An overview of my additional training, relevant certifications and professional trajectory",
 		"timeline": {
 			"labelPosition": "Position",
 			"labelTitle": "Title",

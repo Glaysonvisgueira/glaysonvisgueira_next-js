@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import styled from "styled-components";
-import Lottie from "react-lottie";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 import { useTheme } from "styled-components";
 
 //Lotties

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useTheme } from "styled-components";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+
+//Animations
 import ScrollDownLottie from "@/public/lotties/scroll-down.json";
 import ScrollDownLottieLight from "@/public/lotties/scroll-down-light.json";
 

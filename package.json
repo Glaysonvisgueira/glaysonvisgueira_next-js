@@ -8,10 +8,9 @@
 		"start": "next start",
 		"lint": "next lint"
 	},
-	
-		"engines": {
-		  "node": "22.x"
-		},
+	"engines": {
+		"node": "22.x"
+	},
 	"dependencies": {
 		"@emotion/react": "^11.9.0",
 		"@emotion/styled": "^11.8.1",

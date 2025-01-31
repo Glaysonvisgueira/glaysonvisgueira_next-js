@@ -241,7 +241,7 @@ export default function HomePage() {
 	const handleDownload = () => {
 		const link = document.createElement("a");
 		link.href = curriculo;
-		link.download = "curriculo_glayson_visgueira.pdf"; // Nome do arquivo baixado
+		link.download = "curriculo_glayson_visgueira.pdf";
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);
@@ -259,7 +259,7 @@ export default function HomePage() {
 				/>
 				<LandingPageContainer>
 					<TitleLandingContainer>
-						<TextBrandingDev>Desenvolvedor Front-end | Fullstack</TextBrandingDev>
+						<TextBrandingDev>Dev Frontend | Fullstack</TextBrandingDev>
 						{/* <SubTitleLanding>{language.landingPage.apresentationText}</SubTitleLanding> */}
 						<Typed strings={[language.landingPage.firstTypeText]} typeSpeed={30} className="type-string " />
 						<SubTitleLanding>{language.landingPage.resumeText}</SubTitleLanding>

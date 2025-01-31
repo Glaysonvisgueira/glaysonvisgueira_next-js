@@ -256,7 +256,7 @@ export default function Portifolio() {
 					</Tooltip>,
 				],
 				sourceCodeLink: null,
-				typeProject: ["WEB"],
+				typeProject: ["MOBILE"],
 				created_at: "29/08/2024",
 			},
 			{

@@ -66,6 +66,10 @@ const Question = styled.div`
 		h3 {
 			color: ${(props) => props.theme.colors.branding};
 		}
+
+		svg {
+			color: ${(props) => props.theme.colors.branding};
+		}
 	}
 
 	svg {

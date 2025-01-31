@@ -79,6 +79,17 @@ const BrandFooterWrapper = styled.div`
 	span {
 		color: ${(props) => props.theme.colors.body};
 		margin: 10px 0;
+		text-align: left;
+		font-size: 16px;
+	}
+
+	@media (max-width: 601px) {
+		padding: 0 30px;
+
+		span {
+			text-align: center;
+			margin: 20px 0;
+		}
 	}
 `;
 
@@ -87,10 +98,20 @@ const FooterTextTitle = styled.h4`
 	color: ${(props) => props.theme.colors.branding};
 `;
 
+const FooterBrandTextTitle = styled.h4`
+	font-weight: 800;
+	color: ${(props) => props.theme.colors.branding};
+	text-align: left;
+
+	@media (max-width: 601px) {
+		text-align: center;
+	}
+`;
+
 const FooterText = styled.span`
 	position: relative;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 16px;
 	color: ${(props) => props.theme.colors.body};
 	/* transition: all 0.3s ease; */
 	margin-top: 3px;
@@ -220,6 +241,10 @@ const ContainerBuildCopyright = styled.div`
 	@media (max-width: 601px) {
 		flex-direction: column;
 		margin-bottom: 110px;
+
+		span {
+			margin-bottom: 10px;
+		}
 	}
 
 	@media (max-width: 425px) {
@@ -279,11 +304,11 @@ export default function FooterPage(props) {
 	return (
 		<FooterContainer>
 			<div id="grid">
-				{/* <BrandFooterWrapper>
-					<FooterTextTitle>GLAYSON VISGUEIRA</FooterTextTitle>
-					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+				<BrandFooterWrapper>
+					<FooterBrandTextTitle>GLAYSON VISGUEIRA</FooterBrandTextTitle>
+					<span>{language.landingPage.resumeText}</span>
 					<SocialNetworkRowStack />
-				</BrandFooterWrapper> */}
+				</BrandFooterWrapper>
 
 				<ScrollAnimation animateIn="fadeIn" animateOnce>
 					<SectionFooterMenu>
